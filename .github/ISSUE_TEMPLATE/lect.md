@@ -1,9 +1,9 @@
 ---
 name: Lecture
 about: Track team details for lectures.
-title: 'Lecture - Date'
-labels: 'meeting'
-assignees: ''
+title: Lecture - Date
+labels: documentation
+assignees: AH-Huynh942
 
 ---
 
