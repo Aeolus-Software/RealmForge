@@ -1,4 +1,46 @@
 \begin{itemize}
-    \item Are we doing Godot, LibGDX, GameMaker, Unity or what?
-    \item How are we c
+    \item Specific programming Language
+    \begin{itemize}
+        \item If we Godot, Gamemaker, then we follow their specific languages GDScript or GameMakerLanguage(GML), if Unity its C\#, and if Libgdx it is Java
+    \end{itemize}
+    \item What frameworks
+    \begin{itemize}
+        \item we utilize Godot, GameMaker, Unity and LibGDX's relative frameworks 
+    \end{itemize}
+    \item What Libraries
+    \begin{itemize}
+        \item again, based off the engines respective built-in libraries 
+    \end{itemize}
+    \item linter tools
+    \begin{itemize}
+        \item Spotbugs, Checkstyle, relative Linter tools (GDLint), GUD for godot
+    \end{itemize}
+    \item unit testing framework
+    \begin{itemize}
+        \item JUnit (if LibGDX)
+    \end{itemize}
+    \item code coverage measure tools
+    \begin{itemize}
+        \item JaCoCo for code coverage and Mockito for mocking dependencies if needed
+    \end{itemize}
+    \item Plans for Continuous Integration (CI)
+    \begin{itemize}
+        \item The project will utilize GitHub Actions that will perform certain CI steps to ensure proper bugs and errors are caught immediately. 
+        A team-member will be required to work on a sub branch and perform pull requests and pushes. This will trigger GitHub actions to set-up the
+        framework environment, build the project, and perform all specified unit tests and code coverage. If the a push or pull request fails one of the
+        code coverage or unit tests, then the push is rejected.   
+    \end{itemize}
+    \item Performance tools (if necessary)
+    \item Any other tools you will likely be using
+    \begin{itemize}
+        \item Git for version control
+        \item GitHub Actions
+    \end{itemize}
+    \item Major compponents of the implementation you will implement despite existence implementations
+    \begin{itemize}
+        \item The team will implement the roguelike concept instead previous implements (if any) as well as the main gameplay loop in order 
+        full control and familiarity over manipulating game mechanics, game variables and other processes. 
+    \end{itemize}
+    \item Any Technology constraints
+
 \end{itemize}
