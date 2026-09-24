@@ -1,44 +1,79 @@
-\textbf{Git Development Workflow:} The project will be version controlled through the use of a GitHub repository, with reviewed and tested source code and documentation stored in the 'main' branch. The project's files will be managed using the Feature Branch Git Workflow. The complete planned workflow is described below. When working on source code or documentation, team members will:
+\textbf{Git Development Workflow:} The project will be version controlled 
+through the use of a GitHub repository, with reviewed and tested source code 
+and documentation stored in the `main' branch. The project's files will be 
+managed using the Feature Branch Git Workflow. The complete planned workflow is 
+described below. When working on source code or documentation, team members 
+will:
 
 \begin{itemize}
 	\item Start from the main branch, and ensure their local copy is up to date.
 	\item Create a new Git feature branch to push their work to.
-	\item Complete their work, and regularly stage and commit changes to the feature branch.
+	\item Complete their work, and regularly stage and commit changes to the 
+	feature branch.
 	\item Push their changes to the feature branch.
 	\item Create a pull request to merge their changes with the main branch.
 	\item Request fellow team members to review their pull request.
-	\item Merge the pull request with the main branch, once other team members have completed their review and approved the request.
+	\item Merge the pull request with the main branch, once other team members 
+	have completed their review and approved the request.
 \end{itemize}
 
-\noindent \textbf{Branches:} Branches should have descriptive names, related to the work being done. They should be written with lower case text, and multiple words should be hyphenated.
+\noindent \textbf{Branches:} Branches should have descriptive names, related to 
+the work being done. They should be written with lower case text, and multiple 
+words should be hyphenated.
 
-\noindent \textbf{Pull Requests:} Pull Requests (PRs) should follow the guidelines below:
+\noindent \textbf{Pull Requests:} Pull Requests (PRs) should follow the 
+guidelines below:
 
 \begin{itemize}
-	\item PRs should have descriptive names, detailing the feature or document section being updated, and what was changed.
-	\item PRs should have detailed descriptions, explaining the work that was done in their changes, and what must be reviewed.
-	\item PRs should be linked to GitHub issues that are related to their changes, such as the feature(s) or documentation section(s) that were completed through the changes.
-	\item PRs should state the reviewer(s) that are planned to approve them. Reviewers can be previously planned when beginning work on the issue, or selected when the changes are planned to be merged (after discussion with the team). Aside from these specific reviewers, all team members are permitted to provide feedback on PRs, if necessary.
-	\item Team members that created a PR and worked on its content, as well as planned reviewers, should be assigned to the PR on GitHub.
+	\item PRs should have descriptive names, detailing the feature or document 
+	section being updated, and what was changed.
+	\item PRs should have detailed descriptions, explaining the work that was 
+	done in their changes, and what must be reviewed.
+	\item PRs should be linked to GitHub issues that are related to their 
+	changes, such as the feature(s) or documentation section(s) that were 
+	completed through the changes.
+	\item PRs should state the reviewer(s) that are planned to approve them. 
+	Reviewers can be previously planned when beginning work on the issue, or 
+	selected when the changes are planned to be merged (after discussion with 
+	the team). Aside from these specific reviewers, all team members are 
+	permitted to provide feedback on PRs, if necessary.
+	\item Team members that created a PR and worked on its content, as well as 
+	planned reviewers, should be assigned to the PR on GitHub.
 \end{itemize}
 
 \noindent \textbf{Issues:} Issues should follow the guidelines below:
 
 \begin{itemize}
-	\item Issues should have descriptive, title case names, detailing the work product involved (e.g. 'Feature A'). If needed, issue names can also contain descriptions of what will be done to complete them (e.g. 'Build System B', or 'Fix System C Bug). For documentation, issues pertaining to a specific document section should be named using the format 'Document: Section'.
-	\item Issues should have detailed descriptions, clearly stating the work required to complete each issue.
+	\item Issues should have descriptive, title case names, detailing the work 
+	product involved (e.g. `Feature A'). If needed, issue names can also 
+	contain descriptions of what will be done to complete them (e.g. `Build 
+	System B', or `Fix System C Bug'). For documentation, issues pertaining to 
+	a specific document section should be named using the format `Document: 
+	Section'.
+	\item Issues should have detailed descriptions, clearly stating the work 
+	required to complete each issue.
 	\item Issues should have their task/issue owner assigned to them on GitHub.
 	\item Sub issues will not be used, to minimize unneeded overhead.
-	\item Documentation focused issues should use the Documentation issue template.
-	\item Source code feature focused issues should use the Feature issue template.
+	\item Documentation focused issues should use the Documentation issue 
+	template.
+	\item Source code feature focused issues should use the Feature issue 
+	template.
 	\item Bug fix focused issues should use the Bug issue template.
 	\item Issues may use other labels and priorities as needed.
 	\item Issues should be linked to relevant Projects and Milestones.
 \end{itemize}
 
-\noindent \textbf{Checklists:} Provided deliverable checklists should be reviewed by all team members before any required course deliverables are submitted.
+\noindent \textbf{Checklists:} Provided deliverable checklists should be 
+reviewed by all team members before any required course deliverables are 
+submitted.
 
-\noindent \textbf{Milestones:} Milestones should be created for each major course deliverable. They should have a descriptive name, detailed description, and be linked to the issues required to complete the deliverable.
+\noindent \textbf{Milestones:} Milestones should be created for each major 
+course deliverable. They should have a descriptive name, detailed description, 
+and be linked to the issues required to complete the deliverable.
 
-\noindent \textbf{CI/CD:} CI/CD pipelines will be used in the project's repository, through GitHub Actions. At a baseline level, CI/CD will be used for automated tests of source code, merged into the main project repository branch. Use of CI/CD pipelines may be expanded to pull request testing, code linting, or other purposes if needed (and time is available for their construction).
+\noindent \textbf{CI/CD:} CI/CD pipelines will be used in the project's 
+repository, through GitHub Actions. At a baseline level, CI/CD will be used for 
+automated tests of source code, merged into the main project repository branch. 
+Use of CI/CD pipelines may be expanded to pull request testing, code linting, 
+or other purposes if needed (and time is available for their construction).
 
