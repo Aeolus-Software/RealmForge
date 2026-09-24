@@ -1,11 +1,12 @@
 %% Common Parts
 
-\newcommand{\progname}{ProgName} % PUT YOUR PROGRAM NAME HERE
-\newcommand{\authname}{Team 20 \#, Aeolus Software
-\\ Student 1 Andy Huynh
-\\ Student 2 name
-\\ Student 3 name
-\\ Student 4 name} % AUTHOR NAMES                  
+\newcommand{\progname}{Software Engineering} % PUT YOUR PROGRAM NAME HERE
+\newcommand{\authname}{Team 20, Aeolus Software
+\\ Andy Huynh
+\\ Andreas Sideris
+\\ Humna Saeed
+\\ Christopher Ludwig
+\\ Owen Johnson} % AUTHOR NAMES                  
 
 \usepackage{hyperref}
     \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue,
