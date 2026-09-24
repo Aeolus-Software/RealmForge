@@ -1,10 +1,10 @@
-# Project Name
+# RealmForge
 
 Developer Names: Andy Huynh, Andreas Sideris, Owen John, Humna Saeed, Christoper Ludwig
 
 Date of project start: Sept 18, 2025
 
-This project is about the creation of a central hub-focused roguelite adventure game.
+RealmForge is a central hub-focused roguelite adventure game.
 
 The folders and files for this project are as follows:
 
