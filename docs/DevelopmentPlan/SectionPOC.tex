@@ -1,34 +1,34 @@
-The main risks the team is worried about are an initial \textbf{Learning Curve}, the possibility of \textbf{Scope Creep}, and the resulting implementation being \textbf{Hard to Modify/Vary}.
+The main risks identified are an initial \textbf{Learning Curve}, the possibility of \textbf{Scope Creep}, and the resulting implementation being \textbf{Hard to Modify/Vary}.
 \\
 
-\noindent With whatever expected technology the team will use, there will certainly be a learning curve for the game engine/framework chosen. This could prove to be a barrier when attempting to create more complex portions of the project, and can make it hard to write robust code stright away since this is new software. 
+\noindent With whatever expected technology the team will use, there will certainly be a learning curve for the game engine/framework chosen. This could prove to be a barrier when creating complex portions of the project, and can make it hard to write robust code straight away since this is new software. 
 \\ 
 
-\noindent Scope creep is something the team sees as a risk as well. With today's technologies such as AI and LLMs it is much easier to implement new features without thinking it all the way through. If scope creep becomes an issue it may become more and more difficult to implement new features, since building features without solidifying the core components of the project leads to them being more complex and taking more time to implement. 
+\noindent Scope creep is an important risk to acknowledge as well. With today's technologies such as AI and LLMs it is much easier to implement new features without thinking it all the way through. If scope creep becomes an issue it may become more difficult to implement new features, since building features without solidifying the core components of the project leads to them being more complex and taking more time to implement. 
 \\
 
-\noindent The aforementioned risks culminate into a weak code base, which could be less modifiable and extendable than the project demands it to be. This would make implementing the myriad of feature variations a very difficult task to the point of not being able to meet deadlines.
+\noindent The aforementioned risks culminate into a weak code base, which could be less modifiable and extendable than the project demands it to be. This would make implementing the myriad of feature variation points a very difficult task to the point of not being able to meet deadlines.
 \\
 
 \noindent To prove these risks can be overcome, the proof of concept demonstration will include strong core components. To avoid scope creep it will stick to these core components so that they are very robust and extendable by the time they are finished. This means:
 \begin{itemize}
         \item Basic unit testing with good code coverage
-        \item Traversal to different areas/encounters through variable branched paths (the "map")
-        \item The main encounter/combat loop, with features like:
+        \item Traversal to different areas/encounters (the "map")
+        \item The main encounter/combat loop, with variation points for features:
         \begin{itemize}
-                 \item At least 2 distinct encounters, with some varying properties for each
-                 \item At least 2 Player/Enemy properties affecting gameplay
+                 \item At least 2 distinct enemies, with some varying properties
+                 \item At least 2 Player/Enemy properties
                  \item Central Hub operations to gather resources and upgrade production for at least 2 resources
-                 \item At least 3 items or skills that uniquely affect Player/Enemy properties when used
+                 \item At least 3 items or skills that uniquely affect Player/Enemy/Hub properties when used
                  \item Encounter completion conditions and reward options (different between runs)
         \end{itemize}
 \end{itemize}
 
 
-\noindent Important gameplay features will have elements of \textbf{modifiability} and \textbf{scalability}. This will ensure that the features are robust and that the current \textbf{feature variability} demonstrated sets a good precedent for implementing further variability, which won't hinder the project more than the team can handle. This variability is important, as it is the basis of the subsequent usability testing.
+\noindent It is imperative that important gameplay features have elements of \textbf{modifiability} and \textbf{scalability}. This will ensure that the features are robust and that the current \textbf{feature variation points} set a good precedent for implementing further variability. This variability is important, as it forms the basis of the subsequent usability testing.
 \\
 
-\noindent In the event of a failed proof of concept, the team has various methods of regrouping. First, the project's timeline could be reworked to have more rigid plans and deadlines for features. This would aid the direction of the project and ensure that it stays on course, avoiding scope creep through adding unnecessary features. Another method to refocus could be pivoting some key structure of the game to make it easier to fully flesh out. For example, changing the game engine/framework to something more familiar would allow the team to worry more about the quality of the work rather than learning while developing features. 
+\noindent In the event of a failed proof of concept, the team has various methods of regrouping. First, the scope of the project could be pared down, focusing on more rigid plans and deadlines for core features. This would aid the direction of the project and ensure that it stays on course, avoiding scope creep through adding unnecessary features. Another method to refocus could be pivoting some key structure of the game to make it easier to fully flesh out. For example, changing the game engine/framework to something more familiar would allow the team to worry more about the quality of the work rather than learning while developing features. 
 
 
 %\begin{itemize}
