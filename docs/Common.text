@@ -6,7 +6,7 @@
 \\ Andreas Sideris
 \\ Humna Saeed
 \\ Christopher Ludwig
-\\ Owen Johnson} % AUTHOR NAMES                  
+\\ Owen Johnson} % AUTHOR NAMES                
 
 \usepackage{hyperref}
     \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue,
