@@ -1,20 +1,34 @@
-The main risks the team is worried about are an initial \textbf{Learning Curve} and the possibility of \textbf{Scope Creep}.
+The main risks the team is worried about are an initial \textbf{Learning Curve}, the possibility of \textbf{Scope Creep}, and the resulting implementation being \textbf{Hard to Modify/Vary}.
 \\
 
-\noindent With whatever expected technology the team will use, there will certainly be a learning curve for the game engine/framework chosen. This could prove to be a barrier when attempting to create more complex portions of the project. Although today's technologies such as AI and LLMs and other tools have made learning and writing code physically easier, there is still a limit to how much automated code generation can be trusted. These tools could make code more difficult to refactor and extend later, along with possibly causing massive amounts of bugs and unforeseen errors. 
+\noindent With whatever expected technology the team will use, there will certainly be a learning curve for the game engine/framework chosen. This could prove to be a barrier when attempting to create more complex portions of the project, and can make it hard to write robust code stright away since this is new software. 
+\\ 
+
+\noindent Scope creep is something the team sees as a risk as well. With today's technologies such as AI and LLMs it is much easier to implement new features without thinking it all the way through. If scope creep becomes an issue it may become more and more difficult to implement new features, since building features without solidifying the core components of the project leads to them being more complex and taking more time to implement. 
 \\
 
-\noindent With the development tools available, it may become difficult to avoid scope creep since there can always be another feature to add, which then requires more complexity and more time to implement. This is especially relevant as you iterate on and refactor your code more and more, and can lead to not being able to finish components of the game by the deadlines.
+\noindent The aforementioned risks culminate into a weak code base, which could be less modifiable and extendable than the project demands it to be. This would make implementing the myriad of feature variations a very difficult task to the point of not being able to meet deadlines.
 \\
 
-\noindent To prove this risk can be overcome, the proof of concept demonstration may include elements such as:
+\noindent To prove these risks can be overcome, the proof of concept demonstration will include strong core components. To avoid scope creep it will stick to these core components so that they are very robust and extendable by the time they are finished. This means:
 \begin{itemize}
-        \item Basic unit testing
-        \item Traversal to different areas through simple branched paths
-        \item The core compnents of the main encounter/combat loop
-        \item Reward options upon encounter completion (different between runs)
+        \item Basic unit testing with good code coverage
+        \item Traversal to different areas/encounters through variable branched paths
+        \item The main encounter/combat loop, with features like:
+        \begin{itemize}
+                 \item Turns/Turn order
+                 \item Player/Enemy properties affecting gameplay
+                 \item Items/Skills affecting Player/Enemy properties
+                 \item Encounter completion conditions and reward options (different between runs)
+        \end{itemize}
 \end{itemize}
-Important gameplay features will have some element of modifiability and/or scalability to them to prove that they are robust and that added complexity will not hinder the project more than the team can handle.
+
+
+\noindent Important gameplay features will have elements of \textbf{modifiability} and \textbf{scalability}. This will ensure that the features are robust and that the current \textbf{feature variability} demonstrated sets a good precedent for implementing further variability, which won't hinder the project more than the team can handle.
+\\
+
+\noindent In the event of a failed proof of concept, the team has various methods of regrouping. First, the project's timeline could be reworked to have more rigid plans and deadlines for features. This would aid the direction of the project and ensure that it stays on course, avoiding scope creep through adding unnecessary features. Another method to refocus could be pivoting some key structure of the game to make it easier to fully flesh out. For example, changing the game engine/framework to something more familiar would allow the team to worry more about the quality of the work rather than learning while developing features. 
+
 
 %\begin{itemize}
 %    \item What will you demonstrate?
