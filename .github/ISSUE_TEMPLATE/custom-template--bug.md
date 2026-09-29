@@ -1,23 +1,23 @@
 ---
 name: 'Custom Template: Bug'
 about: Describes the work needed to complete a bug fix.
+title: ''
+labels: ''
+assignees: ''
 type: Bug
 
 ---
 
-# What topics are covered
-[ ] topic #1
-[ ] topic #2
-[ ] topic #3
+# Description of the bug
+When the player hits the enemy, the enemy does not lose health
 
-# What needs to be done
-[ ] research a
-[ ] research b
-[ ] talk to c
+# What steps are needed to re-create the bug
+- Player enters combat
+- Player press button X
+- Player Opens menu
+- Player hits attack on enemy
 
-# Who is reviewing
-[ ] Andy Huynh
-[ ] Andreas Sideris
-[ ] Owen Johnson
-[ ] Christopher Ludwig
-[ ] Humna Saeed
+# What actions that need to be done
+- [ ] Need to produce trace of enemy health
+- [ ] Need to look at code for decrease enemy health
+- [ ] Need to look at code for hitting enemy

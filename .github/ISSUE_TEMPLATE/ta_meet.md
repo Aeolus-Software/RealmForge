@@ -20,5 +20,4 @@ assignees: ''
 - [ ] team member5
 
 **Questions to Ask**
-
--
+- *When is lunch?*
