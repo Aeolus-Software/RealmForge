@@ -65,7 +65,21 @@
     "docs/Comments.text",
     "docs/Common.text",
     "docs/DevelopmentPlan/DevelopmentPlan.tex",
-    "docs/Reflection.text"
+    "docs/DevelopmentPlan/SectionAIUse.text",
+    "docs/DevelopmentPlan/SectionCodingStandard.text",
+    "docs/DevelopmentPlan/SectionConfidentialInformation.text",
+    "docs/DevelopmentPlan/SectionCopyright.text",
+    "docs/DevelopmentPlan/SectionExpectedTechnology.text",
+    "docs/DevelopmentPlan/SectionIPToProtect.text",
+    "docs/DevelopmentPlan/SectionIntro.text",
+    "docs/DevelopmentPlan/SectionPOC.text",
+    "docs/DevelopmentPlan/SectionProjDecomp.text",
+    "docs/DevelopmentPlan/SectionTeamCharter.text",
+    "docs/DevelopmentPlan/SectionTeamCommunication.text",
+    "docs/DevelopmentPlan/SectionTeamMeetings.text",
+    "docs/DevelopmentPlan/SectionTeamRoles.text",
+    "docs/DevelopmentPlan/SectionWorkflowPlan.text",
+    "refs/References.bib"
   ],
   "docs/HazardAnalysis/HazardAnalysis.tex": [
     "docs/Comments.text",
@@ -77,7 +91,13 @@
     "docs/Comments.text",
     "docs/Common.text",
     "docs/ProblemStatementAndGoals/ProblemStatement.tex",
-    "docs/Reflection.text"
+    "docs/ProblemStatementAndGoals/SectionCD.text",
+    "docs/ProblemStatementAndGoals/SectionEnvironment.text",
+    "docs/ProblemStatementAndGoals/SectionGoals.text",
+    "docs/ProblemStatementAndGoals/SectionIO.text",
+    "docs/ProblemStatementAndGoals/SectionProblem.text",
+    "docs/ProblemStatementAndGoals/SectionStakeholders.text",
+    "docs/ProblemStatementAndGoals/SectionStretchGoals.text"
   ],
   "docs/ReflectAndTrace/ReflectAndTrace.tex": [
     "docs/Comments.text",
