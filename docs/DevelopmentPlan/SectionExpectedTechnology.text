@@ -1,0 +1,15 @@
+There are a number of game engines and frameworks that vary between ease of use, flexibility, cross-platform availability and other capabilities.
+The team has narrowed it down to mainly Godot, GameMaker, Unity and LibGdx based on their respective pros and cons, although more programming technologies can be postulated if those prove not-suitable to the task. 
+If the project uses Godot or GameMaker then the team follows the engine's respective language GDScript or GameMakerLanguage(GML), similarly if the project uses Unity or LibGDX then the strongly typed languages C\# or Java will be used.
+\newline
+\newline
+The project will then have access to the above engine/framework's libraries and built-in APIs for use. The linter tools, code-coverage, and unit-test modules will once again vary depending on the engine. For example, if the libGDX framework is
+is used, then the project can use the combination of JUnit (unit testing), JaCoCo (code coverage) and Spotbugs+Checkstyle (linting) for continuous integration/development (CI/CD). As for Godot, GdUnit4, GdUnit4 coverage, and GdLint are 
+available and so on so forth with the others.
+\newline
+\newline
+The project will utilize GitHub Actions for CI/CD after installation of the code testing modules to ensure proper bugs and errors are caught immediately.
+A team-member will have the luxury to work on a sub-branch and perform pull requests and pushes without having to worry about breaking another teammates codebase.
+This will trigger GitHub actions to set-up the framework environment, build the project, and perform all specified unit tests and code coverage. If the push or pull request fails one of the code coverage or unit tests, then the push is rejected.
+Git and GitHub projects will be used for proper version-control of the code and ease of access via the cloud storage.
+The team will then implement the roguelike functionality instead of using previous implements (if any) as well as the main gameplay loop in order to have full control and familiarity over manipulating game mechanics, game variables and other processes.

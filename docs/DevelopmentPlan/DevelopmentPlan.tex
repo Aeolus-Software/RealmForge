@@ -22,190 +22,153 @@
 \toprule
 \textbf{Date} & \textbf{Developer(s)} & \textbf{Change}\\
 \midrule
-Date1 & Name(s) & Description of changes\\
-Date2 & Name(s) & Description of changes\\
-... & ... & ...\\
+September 22, 2026 & Andy & added rough draft for PoC and Expected Tech \\
+September 23, 2026 & Andreas Sideris & Initial draft of Workflow 
+Plan\\
+September 23, 2026 & Andy & added revisions to PoC and Expected Tech \\
+September 24, 2026 & Andreas Sideris & Initial draft of Project 
+Decomposition and Scheduling\\
+September 25, 2026 & Andreas Sideris & Use of AI and LLMs Completed\\
+September 26, 2026 & Owen Johnson & Confidential Information and IP to Protect 
+Completed\\
+September 26, 2026 & Christopher Ludwig & Team Charter, Communication, 
+Meetings, Roles Rough Draft\\
+September 26, 2026 & Andreas Sideris & Coding Standard Added\\
+September 27, 2026 & Owen Johnson & PoC Demo Plan Expanded, Expected 
+Technology Slightly Edited\\
+September 27, 2026 & Humna Saeed & Introduction, Team Charter\\ 
+September 27, 2026 & Andreas Sideris & Added Reflection\\ 
+September 27, 2026 & Owen Johnson & PoC Demo Plan Rewritten, Added 
+Reflection\\
+September 28, 2026 & Owen Johnson & PoC Demo Plan Edited, Added 
+Copyright License\\
+September 28, 2026 & Humna Saeed & Added reflection \\
+September 28, 2026 & Christopher Ludwig & Fixed formatting and cleaned up contents 
+of Team Meeting Plan, Communication Plan, and Team Roles, as well as adding reflection\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \newpage{}
 
-\wss{Put your introductory blurb here.  Often the blurb is a brief roadmap of
-what is contained in the report.}
 
-\wss{Additional information on the development plan can be found in the
-\href{https://gitlab.cas.mcmaster.ca/courses/capstone/-/blob/main/Lectures/L02b_POCAndDevPlan/POCAndDevPlan.pdf?ref_type=heads}
-{lecture slides}.}
+
+\input{SectionIntro.text}
+
+%\wss{Additional information on the development plan can be found in the
+%\href{https://gitlab.cas.mcmaster.ca/courses/capstone/-/blob/main/Lectures/L02b_POCAndDevPlan/POCAndDevPlan.pdf?ref_type=heads}
+%{lecture slides}.}
 
 \section{Confidential Information?}
 
-\wss{State whether your project has confidential information from industry, or
-not.  If there is confidential information, point to the agreement you have in
-place.}
+\input{SectionConfidentialInformation.text}
 
-\wss{For most teams this section will just state that there is no confidential
-information to protect.}
 \section{IP to Protect}
 
-\wss{State whether there is IP to protect.  If there is, point to the agreement.
-All students who are working on a project that requires an IP agreement are also
-required to sign the ``Intellectual Property Guide Acknowledgement.''}
+\input{SectionIPToProtect.text}
 
 \section{Copyright License}
 
-\wss{What copyright license is your team adopting.  Point to the license in your
-repo.}
+\input{SectionCopyright.text}
 
 \section{Team Meeting Plan}
 
-\wss{This section is for meetings between the team members, and meetings between 
-the team and their supervisor/advisor (as appropriate).}
-
-\wss{How often will the team meet? where? when?}
-
-\wss{If the meeting is a physical location (not virtual), out of an abundance of
-caution for safety reasons you shouldn't put the location online}
-
-\wss{To help schedule meetings, you can use the lecture/tutorial time when we do 
-not have anything else scheduled.}
-
-\wss{How often will you meet with your supervisor/advisor?  when?  where?}
-
-\wss{Will meetings be virtual?  At least some meetings should likely be
-in-person.}
-
-\wss{How will the meetings be structured?  There should be a chair for all meetings.  
-There should be an agenda for all meetings.}
+\input{SectionTeamMeetings.text}
 
 \section{Team Communication Plan}
 
-\wss{Issues on GitHub should be part of your communication plan.}
+\input{SectionTeamCommunication.text}
 
 \section{Team Member Roles}
 
-\wss{You should identify the types of roles you anticipate, like notetaker,
-leader, meeting chair, reviewer.  Assigning specific people to those roles is
-not necessary at this stage.  In a student team the role of the individuals will
-likely change throughout the year.}
+\input{SectionTeamRoles.text}
 
 \section{Workflow Plan}
 
-\begin{itemize}
-	\item How will you be using git, including branches, pull request, etc.?
-	\item How will you be managing issues, including template issues, issue
-	classification, etc.?
-  \item Use of CI/CD
-\end{itemize}
+\input{SectionWorkflowPlan.text}
 
 \section{Project Decomposition and Scheduling}
 
-\begin{itemize}
-  \item How will you be using GitHub projects?
-  \item Include a link to your GitHub project
-\end{itemize}
-
-\wss{How will the project be scheduled?  This is the big picture schedule, not
-details. You will need to reproduce information that is in the course outline
-for deadlines.}
+\input{SectionProjDecomp.text}
 
 \section{Proof of Concept Demonstration Plan}
 
-What is the main risk, or risks, for the success of your project?  What will you
-demonstrate during your proof of concept demonstration to convince yourself that
-you will be able to overcome this risk?
+\input{SectionPOC.text}
 
 \section{Expected Technology}
 
-\wss{What programming language or languages do you expect to use?  What external
-libraries?  What frameworks?  What technologies.  Are there major components of
-the implementation that you expect you will implement, despite the existence of
-libraries that provide the required functionality.  For projects with machine
-learning, will you use pre-trained models, or be training your own model?  }
+%\wss{What programming language or languages do you expect to use?  What external
+%libraries?  What frameworks?  What technologies.  Are there major components of
+%the implementation that you expect you will implement, despite the existence of
+%libraries that provide the required functionality.  For projects with machine
+%learning, will you use pre-trained models, or be training your own model?  }
 
-\wss{The implementation decisions can, and likely will, change over the course
-of the project.  The initial documentation should be written in an abstract way;
-it should be agnostic of the implementation choices, unless the implementation
-choices are project constraints.  However, recording our initial thoughts on
-implementation helps understand the challenge level and feasibility of a
-project.  It may also help with early identification of areas where project
-members will need to augment their training.}
+%\wss{The implementation decisions can, and likely will, change over the course
+%of the project.  The initial documentation should be written in an abstract way;
+%it should be agnostic of the implementation choices, unless the implementation
+%choices are project constraints.  However, recording our initial thoughts on
+%implementation helps understand the challenge level and feasibility of a
+%project.  It may also help with early identification of areas where project
+%members will need to augment their training.}
 
-Topics to discuss include the following:
+%Topics to discuss include the following:
 
-\begin{itemize}
-\item Specific programming language
-\item Specific libraries
-\item Pre-trained models
-\item Specific linter tool (if appropriate)
-\item Specific unit testing framework
-\item Investigation of code coverage measuring tools
-\item Specific plans for Continuous Integration (CI), or an explanation that CI
-  is not being done
-\item Specific performance measuring tools (like Valgrind), if
-  appropriate
-\item Tools you will likely be using?
-\end{itemize}
+% \begin{itemize}
+% \item Specific programming language
+% \item Specific libraries
+% \item Pre-trained models
+% \item Specific linter tool (if appropriate)
+% \item Specific unit testing framework
+% \item Investigation of code coverage measuring tools
+% \item Specific plans for Continuous Integration (CI), or an explanation that CI
+%   is not being done
+% \item Specific performance measuring tools (like Valgrind), if
+%   appropriate
+% \item Tools you will likely be using?
+% \end{itemize}
 
-\wss{git, GitHub and GitHub projects should be part of your technology.}
+%\wss{git, GitHub and GitHub projects should be part of your technology.}
+
+\input{SectionExpectedTechnology.text}
 
 \section{Use of AI and LLMs}
 
-\wss{This section is a continuation of the previous section.  The role of LLMs
-in your project as important enough to warrant their own section.  
-How will your team be using LLMs for code and documentation development?  
-What tools will you be using?  How will you verify the output of your LLMs?}
+\input{SectionAIUse.text}
 
 \section{Coding Standard}
 
-\wss{What coding standard will you adopt?}
+\input{SectionCodingStandard.text}
 
 \newpage{}
 
 \section{Appendix --- Generative AI Use Disclosure}
 
-\wss{ChatGPT (version 5) was used to brainstorm ideas for the template for this disclose section.}
-
-\wss{This section is about the use of AI to write this document, not your
-planned use of AI for your project.  You discuss that topic in one of the
-sections in the body of this report.}
-
 \subsection{AI Tools Used}
 
-\wss{Give the name of the AI tool(s) used and the version.}
+\begin{itemize}
+	\item OpenAI GPT-5.6 Sol
+	\item OpenAI GPT-5.6 Luna
+	\item Google Search AI Overview (Google Gemini)
+\end{itemize}
 
 \subsection{How and Where Used}
 
-\wss{Explain what the tool(s) were used for.  Examples include: brainstorming,
-explaining a technical concept, reviewing the document, generating or modifying
-text, generating or modifying diagrams, identifying errors or omissions or
-inconsistencies.}
-
-\wss{For each of the uses, identify which parts of the document were affected.}
-
-\wss{You do not need to report every interaction, but you should disclose the 
-uses that materially contributed to your work}
+AI tools were used for assistance with LaTeX syntax and commands, during the 
+development of the Workflow Plan, Project Decomposition and Scheduling, Use of 
+AI and LLMs, and Coding Standard sections. AI was used in Team Roles to help brainstorm
+a list of roles to choose from. AI tools were not used to generate any text.
 
 \subsection{Verification of AI-Generated Content}
 
-\wss{\begin{itemize}
-    \item Describe how the team checked AI-generated or AI-assisted material
-    before including it in the document.
-    \item In particular, verify factual claims, technical assertions,
-    requirements, calculations, references, and other information for which an
-    AI system may produce incorrect or fabricated results.
-    \item \textbf{The team is responsible for the accuracy, completeness,
-consistency, and appropriateness of the submitted document, regardless of
-whether material was generated by a human or an AI system.}
-\end{itemize}}
+Any LaTeX syntax provided by AI tools was verified by testing compilation in 
+LaTeX documents, and testing the resulting output. Text was not generated by AI 
+tools, and therefore no AI-generated text was required to be verified.
 
 \newpage{}
 
 \section*{Appendix --- Reflection}
 
-\wss{Not required for CAS 741}
-
-\input{../Reflection.text}
+\noindent \textbf{Reflection Questions Answered:}
 
 \begin{enumerate}
     \item Why is it important to create a development plan prior to starting the
@@ -216,78 +179,108 @@ whether material was generated by a human or an AI system.}
     and how did you resolve them?
 \end{enumerate}
 
+\noindent \textbf{Andreas:}
+
+\begin{enumerate}
+	\item A development plan is crucial to decide on various project details as 
+	a team before work on the project begins. This helps to ensure that all 
+	team members and project supervisors understand the specifics of project 
+	planning (Git workflows, meeting planning, etc.), to avoid any development 
+	risk incurred by delaying or failing to note important project details.
+	\item CI/CD pipelines offer many advantages through automation, by 
+	automating portions of many crucial development activities such as code 
+	linting, unit testing, and pull request review when team members push their 
+	code. A disadvantage of utilizing extensive CI/CD pipelines could be the 
+	overhead work required to create and maintain the pipelines, so a balance 
+	should be struck to ensure any CI/CD used assists development work as much 
+	as possible, without requiring any high-effort maintenance.
+	\item Our team had some small disagreements in different sections of the 
+	document and aspects of the development plan, such as concerning project 
+	planning / project workflow decisions, proof of concept ideas, and others. 
+	As with any team disconnect on project decisions, our team reviewed the 
+	decisions to be made together, collaboratively discussed the pros and 
+	cons of each option, and reached a conclusion as a team.
+\end{enumerate}
+
+\noindent \textbf{Owen:}
+
+\begin{enumerate}
+	\item Having a development plan before starting the project is crucial to really 
+	map out where the project will go. This is especially important in a team of 
+	people, since keeping everyone on the same page and planning logistics is the 
+	highest priority, and much different to a solo project, or one of a lower scope. 
+	Having a development plan, for the above reasons and more, help to avoid 
+	typical pitfalls of development like scope creep or a bad workflow.
+	\item CI/CD pipelines are extremely advantageous to use for a project, since it 
+	can help automate portions of the development cycle and make iterations easier. 
+	The initial setup of the pipelines and the potential upkeep are both potential 
+	disadvantages since they would take more time, but the opposite argument 
+	could also be made. This argument is that if enough care and effort is put into 
+	creating the pipelines, then through the setup process the team would grow to 
+	understand their design process and goals more during this process.
+	\item In this deliverable our team disagreed on some small aspects, like idea 
+	specifics, wording, or design decisions. Resolutions were quite straightforward, 
+	since everyone communicates quite well so far. This makes it easy to review and 	
+	discuss decisions while ensuring everyone stays informed, since discussions were 
+	civil and productive, reaching verdicts where everyone has had input.
+\end{enumerate}
+
+\noindent \textbf{Humna:}
+
+\begin{enumerate}
+	\item A development plan is crucial prior to starting the project as it allows for overall team 
+	organization and management, logistical details, expected technologies, workflow planning, and 
+	proof of concept planning. All of these factors are important to discuss as a group before starting 
+	the implementation stage to ensure that the team members are on the same page. Through this deliverable, 
+	our team specified a meeting schedule, the technologies we expect to use, how we will collaborate through 
+	our workflow plan, and our understanding of the proof of concept. As a team, we also set expectations on 
+	AI usage and held open discussions on our expectations.
+	\item There are many advantages of using CI/CD. It can allow for smoother progression as we develop our software 
+	by automatically checking changes and helping identify issues before they are merged into the main branch. It can 
+	also help make collaboration between team members more organized. However, one limitation to this approach is that 
+	it can take more time to set up and maintain, and workflow issues can take time to troubleshoot.
+	\item There were no major disagreements during the deliverable. Our group shared a similar vision of what we wanted to 
+	achieve from this project. Conversations were held regarding the team's openness and willingness to explore new technologies, 
+	and because we are in the same program, we generally use technologies such as GitHub and Git similarly.
+\end{enumerate}
+
+\noindent \textbf{Christopher:}
+	
+\begin{enumerate}
+	\item A development plan is essential for any project to succeed, as it allows team members to be coordinated in their efforts
+	and have a common understanding of how they want this project to move forward. They are very helpful in providing a guideline 
+	for the future of how we want things to be done and ensure that when we start our project, we are working with good principles 
+	and planning so we do not have to return later and fix incorrect or messy work. Without a development plan, progress would be 
+	much more disorganized between team members, resulting in slower development with the end quality being significantly reduced.
+	\item CI/CD pipelines are helpful in the development process, allowing for automated processes to be run on code as it is developed, 
+	and can quickly be verified. Having code verified as it is developed will reduce technical debt, catching bugs early and preventing 
+	the need to revisit old code to debug. These changes speed up the development process significantly, giving developers instant feedback 
+	and reducing their workload.
+	\item Some disagreements occurred during this deliverable, but they were all quickly resolved. Any disagreement would be 
+	posted as a comment under the corresponding issue, and we would then come to a compromise. We also held a meeting to iron
+	out larger disagreements and review documents as a team to ensure we agree with all information written down.
+\end{enumerate}
+
+\textbf{Andy: }
+\begin {enumerate}
+    \item It is important to implement a plan early on because it helps with thinking about the future actions that would otherwise
+    be looked over. It also helps as a good document to look back on in case there are some things the team forgets about during development of the project.
+
+    \item The main benefit is the insurance that proper bug fixes and coding standards will be applied consistently throughout the whole project timeline.
+    The main drawback is the large amount of overhead it takes to correctly implement the process. 
+    \item There were several disagreements about the Proof of Concept; what needs to be added in the demo process, how narrow is PoC etc. There was constant
+    debate on the technologies used as well; mainly the conversation on which engine/framework that the team will move on with.
+\end{enumerate}
+
 \newpage{}
 
 \section*{Appendix --- Team Charter}
 
-\wss{borrows from
-\href{https://engineering.up.edu/industry_partnerships/files/team-charter.pdf}
-{University of Portland Team Charter}}
+\input{SectionTeamCharter.text}
 
-\subsection*{External Goals}
+\newpage{}
 
-\wss{What are your team's external goals for this project? These are not the
-goals related to the functionality or quality fo the project.  These are the
-goals on what the team wishes to achieve with the project.  Potential goals are
-to win a prize at the Capstone EXPO, or to have something to talk about in
-interviews, or to get an A+, etc.}
-
-\subsection*{Attendance}
-
-\subsubsection*{Expectations}
-
-\wss{What are your team's expectations regarding meeting attendance (being on
-time, leaving early, missing meetings, etc.)?}
-
-\subsubsection*{Acceptable Excuse}
-
-\wss{What constitutes an acceptable excuse for missing a meeting or a deadline?
-What types of excuses will not be considered acceptable?}
-
-\subsubsection*{In Case of Emergency}
-
-\wss{What process will team members follow if they have an emergency and cannot
-attend a team meeting or complete their individual work promised for a team
-deliverable?}
-
-\subsection*{Accountability and Teamwork}
-
-\subsubsection*{Quality} 
-
-\wss{What are your team's expectations regarding the quality
-of team members' preparation for team meetings and the quality of the
-deliverables that members bring to the team?}
-
-\subsubsection*{Attitude}
-
-\wss{What are your team's expectations regarding team members' ideas,
-interactions with the team, cooperation, attitudes, and anything else regarding
-team member contributions?  Do you want to introduce a code of conduct?  Do you
-want a conflict resolution plan?  Can adopt existing codes of conduct.}
-
-\subsubsection*{Stay on Track}
-
-\wss{What methods will be used to keep the team on track? How will your team
-ensure that members contribute as expected to the team and that the team
-performs as expected? How will your team reward members who do well and manage
-members whose performance is below expectations?  What are the consequences for
-someone not contributing their fair share?}
-
-\wss{You may wish to use the project management metrics collected for the TA and
-instructor for this.}
-
-\wss{You can set target metrics for attendance, commits, etc.  What are the
-consequences if someone doesn't hit their targets?  Do they need to bring the
-coffee to the next team meeting?  Does the team need to make an appointment with
-their TA, or the instructor?  Are there incentives for reaching targets early?}
-
-\subsubsection*{Team Building}
-
-\wss{How will you build team cohesion (fun time, group rituals, etc.)? }
-
-\subsubsection*{Decision Making} 
-
-\wss{How will you make decisions in your group? Consensus?  Vote? How will you
-handle disagreements? }
+\bibliographystyle{IEEEtran}
+\bibliography{../../refs/References}
 
 \end{document}
