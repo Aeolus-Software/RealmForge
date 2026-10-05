@@ -1,7 +1,7 @@
 ---
 name: 'Custom Template: Documentation'
 about: Keeps track of documentation details
-title: "[Document Name] - [Section Name]"
+title: 'document_name: section_name'
 labels: documentation
 assignees: ''
 type: Task
