@@ -1,6 +1,6 @@
 ---
 name: 'Custom Template: Documentation'
-about: Keeps track of documentation details
+about: Keeps track of documentation details and helps formatting
 title: 'document_name: section_name'
 labels: documentation
 assignees: ''
