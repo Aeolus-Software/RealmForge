@@ -1,0 +1,7 @@
+
+The system will allow the user to pick and change various settings duing the start of the application, so that 
+the user can experiment with different variants of the game. After the user has changed some properties or just simply 
+pressed the play option menu button, the game begins and the system displays the HUD 
+
+\Gls{UI}\\
+\Gls{HUD}
