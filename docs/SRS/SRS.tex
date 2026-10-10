@@ -58,7 +58,8 @@
 \newcommand{\comment}[1]{\mynote[red]{Comment:}{#1}}
 %\newcommand{\comment}[1]{}
 \newcommand{\notEmpty}{\comment{This chapter should not be empty!}}
-
+%--------------------- Glossary ---------------
+\newcommand{\glossaryDef}[3]{\item \hypertarget{{#2}}{\textbf{#1} - {#3}}}
 \begin{document}
 	
 	\begin{center}
@@ -156,6 +157,8 @@
 	\comment{Overview of the functions (behavior) of the system. Principal 
 	properties only (details are in the System book).}
 	
+	\input{G4FunctionalRequirements.txt}
+	
 	\nsection{G.5 High-level usage scenarios}
 	\comment{Fundamental usage paths through the system.}
 	
@@ -184,6 +187,8 @@
 	the application domain, including technical terms, words from ordinary 
 	language used in a special meaning, and acronyms.
 		This chapter should not be empty!}
+
+	\input{Glossary.txt}
 	
 	\nsection{E.2 Components}
 	\comment{List of elements of the environment that may affect or be affected 

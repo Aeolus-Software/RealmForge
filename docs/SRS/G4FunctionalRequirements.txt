@@ -1,0 +1,14 @@
+The system application starts up and the the \hyperlink{user}{user} is shown options that will allow the user to pick and change various settings 
+during the start of the application, so that the user can experiment with different variants of the game. After the \hyperlink{player}{player}
+has changed some properties or just simply pressed the play option menu button, the game begins and the system displays the \hyperlink{HUD}{HUD} as well other \hyperlink{UI}{UI}
+components such as the main game screen and travel options. The player can navigate to another area by pressing the up, down, left, or right menu option
+buttons go to another area indicated by the change in the background scenery. The player enters combat randomly when traversing through areas.
+Once in combat, the battle screen is shown as well as the enemy the player has to defeat. The player is shown options to attack or escape during the encounter.
+If the player chooses to attack the enemy, an attack action is displayed followed by the enemies opposing attack. If the player defeats
+the enemy, the player is rewarded with resources at the end. If the player escapes, then there is no reward and the player goes back to
+the main game screen. The gameplay loop of traveling and encounter enemies continues until the player returns to the starting zone (the main hub), with the
+return option or when the player is defeated. If the player returns to the starting zone, the player is allowed to spend the resources
+accumulated throughout the journey to construct buildings and upgrades that will enhance the experience of the next gameplay loop.
+Once the player finishes spending resources, the player may return to the main gameplay loop of traveling and fighting enemies to gain resources.
+If the player is defeated, the game ends and player is returned to the start of the game where the player chooses
+options for changing parameters.  
