@@ -16,8 +16,6 @@
 \usepackage[bookmarks=true]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage{glossaries}
-\makeglossaries
 \hypersetup{
 	bookmarks=false,    % show bookmarks bar?
 	pdftitle={Software Requirement Specification},    % title
@@ -60,7 +58,8 @@
 \newcommand{\comment}[1]{\mynote[red]{Comment:}{#1}}
 %\newcommand{\comment}[1]{}
 \newcommand{\notEmpty}{\comment{This chapter should not be empty!}}
-
+%--------------------- Glossary ---------------
+\newcommand{\glossaryDef}[3]{\item \hypertarget{{#2}}{\textbf{#1} - {#3}}}
 \begin{document}
 	
 	\begin{center}
