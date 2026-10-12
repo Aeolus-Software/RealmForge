@@ -111,7 +111,9 @@
     "docs/SRS/SRS.mtc2",
     "docs/SRS/SRS.mtc3",
     "docs/SRS/SRS.mtc4",
-    "docs/SRS/SRS.tex"
+    "docs/SRS/SRS.tex",
+    "docs/SRS/SectionP3.text",
+    "docs/SRS/SectionP4.text"
   ],
   "docs/UserGuide/UserGuide.tex": [
     "docs/Comments.text",
