@@ -35,10 +35,31 @@
 \def\datecreated{Oct 5, 2026}
 \date{}
 
+% --- REQUIREMENT COUNTERS ---
+\newcounter{ENV}
+\newcounter{SFR}
+\newcounter{SNFR}
+\renewcommand{\theENV}{ENV-\reqnumber{\value{ENV}}}
+\renewcommand{\theSFR}{SFR-\reqnumber{\value{SFR}}}
+\renewcommand{\theSNFR}{SNFR-\reqnumber{\value{SNFR}}}
+
+% Format numbers as 001, 002, 003, etc.
+\newcommand{\reqnumber}[1]{%
+	\ifnum#1<10 00%
+	\else\ifnum#1<100 0%
+	\fi\fi
+	\number#1%
+}
+
 % --- REQUIREMENT MACRO SETUP ---
 \newcommand{\requirement}[5]{%
 	\par\noindent
 	\begingroup
+	
+	% Increment the appropriate counter
+	\refstepcounter{#1}%
+	\edef\reqid{\csname the#1\endcsname}%
+	\label{\reqid}%
 	
 	% Adjustable formatting
 	\def\reqindent{2.3cm}
@@ -46,7 +67,7 @@
 	
 	% Requirement ID and description
 	\noindent
-	\makebox[0pt][l]{\textbf{#1:}}%
+	\makebox[0pt][l]{\textbf{\reqid:}}%
 	\hspace*{\reqindent}%
 	\parbox[t]{\dimexpr\linewidth-\reqindent\relax}{%
 		\parindent=0pt #2%
