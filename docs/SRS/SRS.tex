@@ -13,6 +13,7 @@
 \usepackage{minitoc}	% For table of content in chapters
 \usepackage{listings}
 \usepackage{underscore}
+\usepackage{enumitem}
 \usepackage[bookmarks=true]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -33,6 +34,43 @@
 \def\myversion{0}
 \def\datecreated{Oct 5, 2026}
 \date{}
+
+% --- REQUIREMENT MACRO SETUP ---
+\newcommand{\requirement}[5]{%
+	\par\noindent
+	\begingroup
+	
+	% Adjustable formatting
+	\def\reqindent{2.3cm}
+	\setlength{\parindent}{0pt}
+	
+	% Requirement ID and description
+	\noindent
+	\makebox[0pt][l]{\textbf{#1:}}%
+	\hspace*{\reqindent}%
+	\parbox[t]{\dimexpr\linewidth-\reqindent\relax}{%
+		\parindent=0pt #2%
+	}%
+	\par\vspace{8pt}
+	
+	% Indented fields
+	\leftskip=\reqindent
+	\noindent\textbf{Rationale:} #3\par\vspace{5pt}
+	\noindent\textbf{Fit Criterion:} #4\par\vspace{5pt}
+	\noindent\textbf{Traceability:} #5\par
+	
+	\endgroup
+	\vspace{0.8em}
+}
+
+% --- HOW TO USE IT ---
+
+%\requirement{Tag/ID}
+%{Description}
+%{Rationale}
+%{Fit Criterion}
+%{Traceability tags}
+
 %\title{%
 	
 	%}
