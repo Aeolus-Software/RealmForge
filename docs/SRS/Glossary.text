@@ -1,0 +1,20 @@
+
+\begin{itemize}
+    \glossaryDef {User}{user}{The main stakeholder that is operating the system; providing inputs and receiving outputs.}
+
+
+    \glossaryDef {Player}{player}{Is another name refering the user.}
+
+
+    \glossaryDef {User-Interface (UI)}{UI}{The entire set of displayed service elements the player used to navigate the system.}
+    % PLEASE REF! https://vsquad.art/blog/articles/what-hud-games-complete-guide-game-interfaces/
+
+    \glossaryDef {Heads-Up-Display (HUD)}{HUD}{The set of interface elements displayed ontop of the actually gameplay that contains
+    vital information helpful to the player or user.}
+
+
+    % EXAMPLE
+    % \glossaryDef{NAME_OF_WHAT_IS_IN_BOLD}{ACROYNYM_ID <-- this you use in hyperlink}{Description of glossary term}
+    % When you want to point to glossary term
+    % \hyperlink{ACRONYM_ID}{text that gets displayed and turns blue to show its linked}
+\end{itemize}
