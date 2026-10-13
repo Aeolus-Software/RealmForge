@@ -2,21 +2,23 @@
 {The system shall be compatible with user machines running Windows 10 or 11 
 (64-bit) operating systems that meet the following recommended specifications:
 \begin{itemize}
-	\item \textbf{CPU:} x86\_64 CPU with SSE4.2 support, with 4 physical cores 
+	\item \textbf{CPU:} x86\_64 \hyperlink{CPU}{CPU} with SSE4.2 support, with 
+	4 physical cores 
 	or more. Example: Intel Core i5-6600K, AMD Ryzen 5 1600.
-	\item \textbf{GPU:} Dedicated graphics with full OpenGL 4.6 support. 
+	\item \textbf{GPU:} Dedicated graphics \hyperlink{GPU}{GPU} with full 
+	\hyperlink{OpenGL}{OpenGL} 4.6 support. 
 	Example: NVIDIA GeForce GTX 650, AMD Radeon HD 7750 (GCN 1.0).
-	\item \textbf{RAM:} 8 GB
+	\item \textbf{RAM:} 8 GB of \hyperlink{RAM}{RAM}.
 \end{itemize}}
 {This environment constraint is imposed to focus development of RealmForge on 
-the most commonly used operating system for PC (Personal Computer) video games, 
+the most commonly used operating system for \hyperlink{PC}{PC} video games, 
 Windows. The system may be extended to support other operating systems in the 
 future if possible. The recommended specifications are included to ensure user 
 machines can fully execute the system, accompanying any future decisions to 
 extend its capabilities.}
 {The system can be compiled and executed on machines running Windows 10 or 11 
 (64-bit) operating systems, meeting the recommended specifications outlined 
-above, at a stable 60 fps (frames per second).}
+above, at a stable 60 \hyperlink{FPS}{fps}.}
 {N/A}
 
 \requirement{ENV}

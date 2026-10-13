@@ -11,6 +11,27 @@
 
     \glossaryDef {Heads-Up-Display (HUD)}{HUD}{The set of interface elements displayed ontop of the actually gameplay that contains
     vital information helpful to the player or user.}
+    
+    \glossaryDef {Central Processing Unit (CPU)}{CPU}{The central processor for 
+    a computer.}
+    
+    \glossaryDef {Graphics Processing Unit (GPU)}{GPU}{A computer's processor 
+    for displayed graphics.}
+    
+    \glossaryDef {Random Access Memory (RAM)}{RAM}{Short-term memory used by a 
+    computer's processor.}
+    
+    \glossaryDef {Streaming Single Instruction, Multiple Data Extentions 4 
+    (SSE4.2)}{SSE4}{A processor instruction set used by most modern processors.}
+    
+    \glossaryDef {Open Graphics Library (OpenGL)}{OpenGL}{An application 
+    programming interface used to render computer graphics.}
+    
+    \glossaryDef {Frames per Second (FPS)}{FPS}{The number of graphical frames 
+    displayed by a computer program per second.}
+    
+    \glossaryDef {Personal Computer (PC)}{PC}{A computer owned by individuals, 
+    for personal use.}
 
 
     % EXAMPLE

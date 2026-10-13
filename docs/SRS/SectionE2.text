@@ -1,0 +1,28 @@
+Included below is a System Context Diagram, outlining at a high level how the 
+system will interact with external components:
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{RealmForgeSystemContextDiagram.png}
+	\caption{RealmForge System Context Diagram}
+	\label{fig:systemcontext}
+\end{figure}
+
+\noindent The RealmForge software (also denoted as the system) will require the 
+use of the following external components to operate successfully:
+
+\begin{itemize}
+	\item \textbf{Control Input Peripherals:} Devices used to provide input to 
+	the system. This could include a keyboard and mouse, or a controller used 
+	to provide input. The system will require inputs from these devices to 
+	affect the state of 
+	the video game it executes (during gameplay), and to configure 
+	the system's feature variation points during testing.
+	\item \textbf{Output Display Peripherals:} A device used to display outputs 
+	provided by the system. This could be fulfilled by a monitor, or another 
+	display device (such as a television). The system will require this device 
+	to display graphical outputs during gameplay (video game graphics), 
+	as well as 
+	confirmation of feature variation configurations (variation config. menu 
+	graphics). 
+\end{itemize}
