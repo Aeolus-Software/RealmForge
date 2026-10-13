@@ -105,6 +105,8 @@
     "docs/ReflectAndTrace/ReflectAndTrace.tex"
   ],
   "docs/SRS/SRS.tex": [
+    "docs/SRS/G4FunctionalRequirements.text",
+    "docs/SRS/Glossary.text",
     "docs/SRS/SRS.mtc",
     "docs/SRS/SRS.mtc0",
     "docs/SRS/SRS.mtc1",
