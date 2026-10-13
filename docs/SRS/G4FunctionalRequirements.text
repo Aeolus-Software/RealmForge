@@ -39,6 +39,6 @@ Once the player finishes spending resources, the player may return to the main g
 If the player is defeated, the game ends and player is returned to the start of the game where the player chooses
 options for changing parameters.  
 
-\huge{Non-Functional Requirements}
-\noindent
-\newline
+% \huge{Non-Functional Requirements}
+% \noindent
+% \newline
