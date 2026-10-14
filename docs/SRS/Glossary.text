@@ -41,6 +41,17 @@
     
     \glossaryDef {Personal Computer (PC)}{PC}{A computer owned by individuals, 
     for personal use.}
+    
+    \glossaryDef {Verification and Validation (VnV)}{VnV}{The process of 
+    ensuring that a design satisfies its requirements, and its requirements are 
+    aligned with the design's purpose (generally).}
+    
+    \glossaryDef {Feature-Oriented Domain Analysis (FODA)}{FODA}{A domain 
+    analysis method, focusing on features of a design and their variations.}
+    
+    \glossaryDef {Proof of Concept (POC)}{POC}{An initial version of a design, 
+    intended to demonstrate the possibility of its implementation without being 
+    a full prototype.}
 
 
     % EXAMPLE
