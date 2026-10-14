@@ -12,6 +12,8 @@
     \glossaryDef {Heads-Up-Display (HUD)}{HUD}{The set of interface elements displayed ontop of the actually gameplay that contains
     vital information helpful to the player or user.}
 
+    \glossaryDef {Inventory}{inventory} {The set of resources, items, and currency store within code and available to access for the player}
+
 
     % EXAMPLE
     % \glossaryDef{NAME_OF_WHAT_IS_IN_BOLD}{ACROYNYM_ID <-- this you use in hyperlink}{Description of glossary term}
