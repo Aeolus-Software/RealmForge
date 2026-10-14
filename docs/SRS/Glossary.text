@@ -15,17 +15,26 @@
     \glossaryDef {Central Processing Unit (CPU)}{CPU}{The central processor for 
     a computer.}
     
-    \glossaryDef {Graphics Processing Unit (GPU)}{GPU}{A computer's processor 
-    for displayed graphics.}
-    
-    \glossaryDef {Random Access Memory (RAM)}{RAM}{Short-term memory used by a 
-    computer's processor.}
-    
     \glossaryDef {Streaming Single Instruction, Multiple Data Extentions 4 
     (SSE4.2)}{SSE4}{A processor instruction set used by most modern processors.}
     
+    \glossaryDef {Advanced Micro Devices (AMD)}{AMD}{An American semiconductor 
+    company that produces processors.}
+    
+    \glossaryDef {Graphics Processing Unit (GPU)}{GPU}{A computer's processor 
+    for displayed graphics.}
+    
     \glossaryDef {Open Graphics Library (OpenGL)}{OpenGL}{An application 
     programming interface used to render computer graphics.}
+    
+    \glossaryDef {NVIDIA Corporation}{NVIDIA}{An American technology company 
+    that produces graphics processors.}
+    
+    \glossaryDef {Graphics Core Next (GCN)}{GCN}{A series of graphics processor 
+    architectures that is used in AMD graphics processors.}
+    
+    \glossaryDef {Random Access Memory (RAM)}{RAM}{Short-term memory used by a 
+    computer's processor.}
     
     \glossaryDef {Frames per Second (FPS)}{FPS}{The number of graphical frames 
     displayed by a computer program per second.}
