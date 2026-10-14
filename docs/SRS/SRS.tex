@@ -14,6 +14,7 @@
 \usepackage{listings}
 \usepackage{underscore}
 \usepackage{enumitem}
+\usepackage{graphicx}
 \usepackage[bookmarks=true]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -34,6 +35,9 @@
 \def\myversion{0}
 \def\datecreated{Oct 5, 2026}
 \date{}
+
+% Setting up graphics path
+\graphicspath{{./images/}}
 
 % --- REQUIREMENT COUNTERS ---
 \newcounter{ENV}
@@ -154,6 +158,10 @@
 			\hline
 			Andreas Sideris & 2026-10-10    & P3 and P4 drafts & 1.0\\
 			\hline
+			Andreas Sideris & 2026-10-12    & E3 draft & 1.0\\
+			\hline
+			Andreas Sideris & 2026-10-13    & E2 draft & 1.0\\
+			\hline
 		\end{tabular}
 	\end{center}
 	
@@ -250,18 +258,15 @@
 
 	\input{Glossary.text}
 	
+	\clearpage
+	
 	\nsection{E.2 Components}
-	\comment{List of elements of the environment that may affect or be affected 
-	by the system and project. Includes other systems to which the system must 
-	be interfaced.}
+	
+	\input{SectionE2.text}
 	
 	\nsection{E.3 Constraints}
-	\comment{Obligations and limits imposed on the project and system by the 
-	environment.}
-	%---------------------------------
-	\notEmpty{}
-	%---------------------------------
 	
+	\input{SectionE3.text}
 	
 	\nsection{E.4 Assumptions}
 	\comment{Properties of the environment that may be assumed, with the goal 
