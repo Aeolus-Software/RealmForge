@@ -1,0 +1,47 @@
+\requirement{ENV}
+{The system shall be compatible with user machines running Windows 10 or 11 
+(64-bit) operating systems that meet the following recommended specifications:
+\begin{itemize}
+	\item \textbf{CPU:} x86\_64 \hyperlink{CPU}{CPU} with 
+	\hyperlink{SSE4}{SSE4.2} support, with 
+	4 physical cores 
+	or more. Example: Intel Core i5-6600K, \hyperlink{AMD}{AMD} Ryzen 5 1600.
+	\item \textbf{GPU:} Dedicated graphics \hyperlink{GPU}{GPU} with full 
+	\hyperlink{OpenGL}{OpenGL} 4.6 support. 
+	Example: \hyperlink{NVIDIA}{NVIDIA} GeForce GTX 650, AMD Radeon HD 7750 
+	(\hyperlink{GCN}{GCN} 1.0).
+	\item \textbf{RAM:} A minimum of 8 GB of \hyperlink{RAM}{RAM}.
+\end{itemize}}
+{This environment constraint is imposed to focus development of RealmForge on 
+the most commonly used operating system for \hyperlink{PC}{PC} video games, 
+Windows. The system may be extended to support other operating systems in the 
+future if possible. The recommended specifications are included to ensure user 
+machines can fully execute the system, accompanying any future decisions to 
+extend its capabilities.}
+{The system can be compiled and executed on machines running Windows 10 or 11 
+(64-bit) operating systems, meeting the recommended specifications outlined 
+above, at a stable 60 \hyperlink{FPS}{fps}.}
+{N/A}
+
+\requirement{ENV}
+{The system shall provide user input capabilities for keyboard and mouse 
+peripherals, as well as common controllers (PlayStation, Xbox).}
+{The system must accommodate the use of various input methods (keyboard and 
+mouse, different controllers) to facilitate usability studies incorporating 
+these varying input methods.}
+{The system can receive all game inputs required for its successful operation 
+from the following input methods: USB Keyboard and Mouse, Xbox Series X/S, Xbox 
+One, or Xbox 360 controllers, and PlayStation DualSense or DualShock 4 
+controllers.}
+{N/A}
+
+\requirement{ENV}
+{The system shall provide at least one explicit feature variation capability, 
+that can be selected without recompiling the system's executable file.}
+{This constraint is imposed by the purpose of the development project (outlined 
+in the Problem Statement document). The system must provide explicit feature 
+variation capabilities to facilitate usability testing that will focus on the 
+effectiveness of different variations.}
+{The system provides at least one explicit feature variation capability, that 
+can be selected and managed at run time, while the system is executing.}
+{N/A}

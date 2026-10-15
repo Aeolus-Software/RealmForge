@@ -11,6 +11,47 @@
 
     \glossaryDef {Heads-Up-Display (HUD)}{HUD}{The set of interface elements displayed ontop of the actually gameplay that contains
     vital information helpful to the player or user.}
+    
+    \glossaryDef {Central Processing Unit (CPU)}{CPU}{The central processor for 
+    a computer.}
+    
+    \glossaryDef {Streaming Single Instruction, Multiple Data Extentions 4 
+    (SSE4.2)}{SSE4}{A processor instruction set used by most modern processors.}
+    
+    \glossaryDef {Advanced Micro Devices (AMD)}{AMD}{An American semiconductor 
+    company that produces processors.}
+    
+    \glossaryDef {Graphics Processing Unit (GPU)}{GPU}{A computer's processor 
+    for displayed graphics.}
+    
+    \glossaryDef {Open Graphics Library (OpenGL)}{OpenGL}{An application 
+    programming interface used to render computer graphics.}
+    
+    \glossaryDef {NVIDIA Corporation}{NVIDIA}{An American technology company 
+    that produces graphics processors.}
+    
+    \glossaryDef {Graphics Core Next (GCN)}{GCN}{A series of graphics processor 
+    architectures that is used in AMD graphics processors.}
+    
+    \glossaryDef {Random Access Memory (RAM)}{RAM}{Short-term memory used by a 
+    computer's processor.}
+    
+    \glossaryDef {Frames per Second (FPS)}{FPS}{The number of graphical frames 
+    displayed by a computer program per second.}
+    
+    \glossaryDef {Personal Computer (PC)}{PC}{A computer owned by individuals, 
+    for personal use.}
+    
+    \glossaryDef {Verification and Validation (VnV)}{VnV}{The process of 
+    ensuring that a design satisfies its requirements, and its requirements are 
+    aligned with the design's purpose (generally).}
+    
+    \glossaryDef {Feature-Oriented Domain Analysis (FODA)}{FODA}{A domain 
+    analysis method, focusing on features of a design and their variations.}
+    
+    \glossaryDef {Proof of Concept (POC)}{POC}{An initial version of a design, 
+    intended to demonstrate the possibility of its implementation without being 
+    a full prototype.}
 
     \glossaryDef {Inventory}{inventory} {The set of resources, items, and currency store within code and available to access for the player}
 
