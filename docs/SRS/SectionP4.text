@@ -1,0 +1,82 @@
+The tasks required to be completed to develop RealmForge (and its feature 
+variation capabilities) will be managed using an iterative and incremental 
+approach. Within each milestone (in this context the milestones associated with 
+source code development), team members will divide the work to be done 
+into suitable issues, viewable in RealmForge's 
+\href{https://github.com/orgs/Aeolus-Software/projects/2}{{GitHub Project}}. 
+The issues will be coordinated using a Kanban method, tracking their progress 
+and review status.
+The software features associated with these issues will be regularly planned, 
+developed, reviewed, tested, and deployed using a feature branch workflow, 
+contributing towards each set milestone. 
+
+\noindent \newline
+A schedule of development deliverables
+pertaining to the milestones listed above is available below, complete with 
+relevant requirement sets that are planned to be implemented at the completion 
+of 
+each deliverable. Milestones that purely involve documentation development are 
+omitted, as this schedule is intended to outline the completion of software 
+development tasks and their associated requirements.
+
+\noindent \newline
+Detailed Schedule:
+
+\begin{itemize}
+	\item M5 \hyperlink{POC}{PoC} Demo
+	\begin{itemize}
+		\item \textbf{Deadline:} November 23, 2026
+		\item \textbf{Software Deliverables:} RealmForge Proof of Concept Build
+		\begin{itemize}
+			\item \textbf{Associated Software Tasks:} 
+			\item Review \hyperlink{POC}{PoC} plan and requirements
+			\item Develop \hyperlink{POC}{PoC} features
+			\item Review implemented \hyperlink{POC}{PoC} features on a 
+			recurring basis during 
+			development
+			\item Test \hyperlink{POC}{PoC} features
+			\item Verify associated requirements (outlined below)
+			\item Deploy \hyperlink{POC}{PoC}
+		\end{itemize}
+		\item \textbf{High Priority Requirements:} NEED TO ADD
+		\item \textbf{Requirement Sets Implemented:} NEED TO ADD
+	\end{itemize}
+	\item M7 Revision 0 Demo
+	\begin{itemize}
+		\item \textbf{Deadline:} February 1, 2027
+		\item \textbf{Software Deliverables:} RealmForge Revision 0 Build
+		\begin{itemize}
+			\item \textbf{Associated Software Tasks:}  
+			\item Review Revision 0 design documentation and requirements
+			\item Develop Revision 0 features
+			\item Review implemented Revision 0 features on a recurring basis 
+			during 
+			development
+			\item Test Revision 0 features
+			\item Verify associated requirements (outlined below)
+			\item Deploy Revision 0
+		\end{itemize}
+		\item \textbf{High Priority Requirements:} NEED TO ADD
+		\item \textbf{Requirement Sets Implemented:} NEED TO ADD
+	\end{itemize}
+	\item M9 Final Demonstration Revision 1, EXPO Demonstration
+	\begin{itemize}
+		\item \textbf{Deadline:} March 15, 2027
+		\item \textbf{Software Deliverables:} RealmForge Revision 1 Build
+		\begin{itemize}
+			\item \textbf{Associated Software Tasks:} 
+			\item Review Revision 1 design documentation (in progress) and 
+			requirements
+			\item Develop Revision 1 features
+			\item Review implemented Revision 1 features on a recurring basis 
+			during 
+			development
+			\item Test Revision 1 features
+			\item Verify associated requirements (outlined below)
+			\item Deploy Revision 1
+		\end{itemize}
+		\item \textbf{High Priority Requirements:} NEED TO ADD
+		\item \textbf{Requirement Sets Implemented:} NEED TO ADD
+	\end{itemize}
+\end{itemize}
+
