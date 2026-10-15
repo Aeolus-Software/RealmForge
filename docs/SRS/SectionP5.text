@@ -1,6 +1,6 @@
 \noindent
 \newline
-The application will be run, developed and tested using hardware that supports the Window's \hyperlink{OS}{OS}. Other OS's such as Apple's or other platforms
+The RealmForge software will be run, developed and tested using hardware that supports the Window's 10/11 \hyperlink{OS}{OS}. Other OS's such as Apple's or other platforms
 will be considered after the initial development showcase. Inputs are handled either with a standard keyboard and mouse or
 with a connected controller using standard button layout (analog sticks, d-pads, shoulder and 4-buttons layout). The controller
 should be compatible with any Windows OS, similarly to the mouse and keyboard. No unique gaming peripheral is necessary.
@@ -8,7 +8,9 @@ No enhanced audio peripheral is necessary. The game output will be displayed usi
 
 \noindent
 \newline
-The system will be built using the Godot game engine including using Godot's own coding language, GDScript. The \hyperlink{IDE}{IDE} will be up to
+The system will be built using the Godot game engine including using Godot's own coding language, GDScript.
+Godot is an open-source application and has an easy learning curve to implement features which is main concern the 
+The \hyperlink{IDE}{IDE} will be up to
 each individual team member's preference. \hyperlink{GDUnit4}{GDUnit4} and \hyperlink{GDLint}{GDLint} and other external third-party modules will be used for \hyperlink{CI/CD}{CI/CD}
 as a safeguard for good coding practices and coverage. The project will use Github's version control and cloud storage 
 for the source code and documents. The GDLint and GdUnit4 unit tests and linting will be implemented using using Github Actions available
