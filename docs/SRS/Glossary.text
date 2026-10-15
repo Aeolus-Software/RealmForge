@@ -53,7 +53,17 @@
     intended to demonstrate the possibility of its implementation without being 
     a full prototype.}
 
+    \glossaryDef {GDUnit4}{GDUnit4} {A Godot module that can be added to any base godot project. 
+    The module allows for the creation of unit test cases.}
 
+    \glossaryDef {GDLint} {GDLint} {A Godot module that can be added to any base godot project. 
+    The module is a linting tool to help will proper coding styles and errors for the Godot language.}
+    
+    \glossaryDef{Integrated Development Environment}{IDE} {A set of software applications and tools within a programmer's arsenal
+    to help develop software code efficiently.}
+
+    \glossaryDef{Operation System}{OS}{A collection of software that manages a computer's hardware and software applications by
+    handling allocation of resources.}
     % EXAMPLE
     % \glossaryDef{NAME_OF_WHAT_IS_IN_BOLD}{ACROYNYM_ID <-- this you use in hyperlink}{Description of glossary term}
     % When you want to point to glossary term
