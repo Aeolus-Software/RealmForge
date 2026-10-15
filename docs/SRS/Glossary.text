@@ -53,6 +53,8 @@
     intended to demonstrate the possibility of its implementation without being 
     a full prototype.}
 
+    \glossaryDef {Inventory}{inventory} {The set of resources, items, and currency store within code and available to access for the player}
+
 
     % EXAMPLE
     % \glossaryDef{NAME_OF_WHAT_IS_IN_BOLD}{ACROYNYM_ID <-- this you use in hyperlink}{Description of glossary term}
