@@ -1,62 +1,41 @@
 \noindent
 \textbf{Use Case 001 (\hypertarget{UC-001}{UC-001}): Selecting Properties}
 \begin{enumerate}
-    \item User opens application.
-    \item User selects "Variantions" option.
-    \item System displays list of effective variables with select variable highlighted.
-    \item User changes highlighted variable using the control interface element.
-    \item User finishes deciding on variable value and moves selects another.
-    \item User repeats step 4.
-    \item User finishes changing all the variables he/she wanted and exits the screen.
+    \item User launches the RealmForge software.
+    \item User selects the "Variantions" option.
+    \item RealmForge developer helps in assisting/explaining the options to the user and collect data on user metrics.
+    \item User sets up the variation of the game based on suggestions and criterias from the developer for usability testing.
+    \item User finishes setting up by beginning the game.
 \end{enumerate}
 \textbf{Use Case 002 (\hypertarget{UC-002}{UC-002}): Traversal}
 \begin{enumerate}
-    \item User begins game.
-    \item System display \hyperlink{HUD}{HUD} and other \hyperlink{UI}{UI} elements.
-    \item Users the travel option.
-    \item System displays all the areas available to travel to user.
-    \item User uses controler to select and highlight area he/she wants to travel.
-    \item System shows visual indication of the in-game character traveling to new area.
-    \item User enters and exits combat.
-    \item Repeat steps 4-6.
+    \item User enters the game world.
+    \item User decides which area of the game world to go to based on the information given for each area.
+    \item User selects which area to go to and begins traveling.
+    \item User enters a new area and begins an encounter with an enemy (see \hyperlink{UC-003}{UC-003}.).
+    \item User wins the encounter. 
+    \item User begins traveling again (repeats step 2 and below).
 \end{enumerate}
 \textbf{Use Case 003 (\hypertarget{UC-003}{UC-003}): Combat}
 \begin{enumerate}
-    \item User enters combat after having finished traveling to new area.
-    \item System shows in-game \hyperlink{player}{player} character, enemy, and the battle screen including combat UI elements.
-    \item User attacks the the enemy by hovering and selecting the "fight" option.
-    \item System shows attack animations from both the in-game character and opposing enemy attack.
-    \item System shows both the player and enemy health points changing.
-    \item User repeats step 3.
-    \item System shows either in-game character or enemy health reach zero.
-    \item If the player health reaches zero see \hyperlink{UC-006}{UC-006} - user's in-game character dies.
-    \item If the enemy health reaches zero see \hyperlink{UC-004}{UC-004} - user defeats the enemy.
+    \item User enters an encounter with the enemy.
+    \item User selects attacks to defeat the enemy.
+    \item User repeats step 2 until the enemy is defeated.
+    \item User picks and collects rewards
+    \item User leaves the encounter.
 \end{enumerate}
-\textbf{Use Case 004 (\hypertarget{UC-004}{UC-004}): Collecting Rewards}
+\textbf{Use Case 004 (\hypertarget{UC-005}{UC-005}): Spending Resources}
 \begin{enumerate}
-    \item User defeats the enemy.
-    \item System displays a pool of rewards and items based on area, enemy, and other variable.
-    \item User selects the an array of rewards from the reward pool.
-    \item System indicates the rewards are collected in the player's \hyperlink{inventory}{inventory}.
-    \item User finishes collecting rewards.
-\end{enumerate}
-\textbf{Use Case 005 (\hypertarget{UC-005}{UC-005}): Spending Resources}
-\begin{enumerate}
-    \item User enter town/city/main hub.
-    \item System displays the list of available (and non-available) options for the player to purchase and upgrade along with cost of resources.
-    \item User chooses and selects an avaiable option for obtain.
-    \item System display confirmation menu.
+    \item User enter town/city/central hub.
+    \item User chooses and selects an available option for purchasing.
     \item User confirms the purchase.
-    \item System reduces the resources with the player's inventory based on the purchase.
-    \item User repeats step 3.
-    \item User chooses to begin travel again - see \hyperlink{UC-002}{UC-002}.
+    \item User repeats steps 2 and 3 until the user is satisfied or resources are spent.
+    \item User leaves the town/city/central hub.
 \end{enumerate}
-\textbf{Use Case 006 (\hypertarget{UC-006}{UC-006}): Begin Again}
+\textbf{Use Case 005 (\hypertarget{UC-006}{UC-006}): Begin Again}
 \begin{enumerate}
-    \item User's in-game character dies.
-    \item System shows option to return to main hub (see \hyperlink{UC-005}{UC-005}) or to end game (see below).
-    \item System display "Game Over" message.
-    \item System displays start screen.
-    \item User choose selects "Variations" (see UC-001) or to play again.
+    \item User loses the encounter.
+    \item User returns to the start screen
+    \item User selects the "Variations" option (see UC-001) or to play again using same variation.
     \item User selects play.
 \end{enumerate}
