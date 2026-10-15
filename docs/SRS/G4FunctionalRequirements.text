@@ -24,7 +24,7 @@ the enemy, the player is rewarded with resources at the end.
 \newline
 \textbf{Returning to the Hub:}
 If the player escapes, then there is no reward and the player goes back to
-the main game screen. The gameplay loop of traveling and encounter enemies continues until the player returns to the starting zone (the main hub), with the
+the main game screen. The gameplay loop of traveling and encounter enemies continues until the player returns to the starting zone (the central hub), with the
 return option or when the player is defeated. If the player returns to the starting zone, the player is allowed to spend the resources
 accumulated throughout the journey to construct buildings and upgrades that will enhance the experience of the next gameplay loop.
 \comment {Change to only comming back when you die}

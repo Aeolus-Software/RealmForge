@@ -55,6 +55,8 @@
 
     \glossaryDef {GDUnit4}{GDUnit4} {A Godot module that can be added to any base godot project. 
     The module allows for the creation of unit test cases.}
+    \glossaryDef {Inventory}{inventory} {The set of resources, items, and currency store within code and available to access for the player}
+
 
     \glossaryDef {GDLint} {GDLint} {A Godot module that can be added to any base godot project. 
     The module is a linting tool to help will proper coding styles and errors for the Godot language.}
