@@ -9,16 +9,11 @@ No enhanced audio peripheral is necessary. The game output will be displayed usi
 \noindent
 \newline
 The system will be built using the Godot game engine including using Godot's own coding language, GDScript. The \hyperlink{IDE}{IDE} will be up to
-each individual team member's preference. \hyperlink{GDUnit4}{GDUnit4} and \hyperlink{GDLint}{GDLint} and other external third-party modules will be used for CI/CD
+each individual team member's preference. \hyperlink{GDUnit4}{GDUnit4} and \hyperlink{GDLint}{GDLint} and other external third-party modules will be used for \hyperlink{CI/CD}{CI/CD}
 as a safeguard for good coding practices and coverage. The project will use Github's version control and cloud storage 
 for the source code and documents. The GDLint and GdUnit4 unit tests and linting will be implemented using using Github Actions available
-in the Github website; this is so that errors and bugs will be caught and reiterated early on. Latex will be used for writing
+in the Github website; this is so that errors and bugs will be caught and reiterated early on. \hyperlink{latex}{LaTex} will be used for writing
 important documents such Hazard Analysis, Development etc. Issues pertaining to the project will be raised on the Github website
 and written/handled with its own built-in issue tracker. Other important project management tasks will be written using Github Project's
 Kanban board for organization and easy tracking. Microsoft teams is the main technology platform that is used for communication such as
 in group chats and voice-calls.
-
-
-\noindent
-\newline
-\textbf{TODO:} Add glossaries for OS, CI/CD, IDE, and discuss with the team about issue tracker with trello or github.
