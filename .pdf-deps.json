@@ -107,6 +107,7 @@
   "docs/SRS/SRS.tex": [
     "docs/SRS/G4FunctionalRequirements.text",
     "docs/SRS/Glossary.text",
+    "docs/SRS/P5RequiredTechnologies.text",
     "docs/SRS/SRS.mtc",
     "docs/SRS/SRS.mtc0",
     "docs/SRS/SRS.mtc1",
@@ -117,8 +118,10 @@
     "docs/SRS/SRS.tex",
     "docs/SRS/SectionE2.text",
     "docs/SRS/SectionE3.text",
+    "docs/SRS/SectionG5.text",
     "docs/SRS/SectionP3.text",
     "docs/SRS/SectionP4.text",
+    "docs/SRS/images/G5UseCaseDiagram.png",
     "docs/SRS/images/RealmForgeSystemContextDiagram.png"
   ],
   "docs/UserGuide/UserGuide.tex": [
