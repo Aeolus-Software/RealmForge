@@ -14,6 +14,7 @@
 \usepackage{listings}
 \usepackage{underscore}
 \usepackage{enumitem}
+\usepackage{graphicx}
 \usepackage[bookmarks=true]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -35,10 +36,34 @@
 \def\datecreated{Oct 5, 2026}
 \date{}
 
+% Setting up graphics path
+\graphicspath{{./images/}}
+
+% --- REQUIREMENT COUNTERS ---
+\newcounter{ENV}
+\newcounter{SFR}
+\newcounter{SNFR}
+\renewcommand{\theENV}{ENV-\reqnumber{\value{ENV}}}
+\renewcommand{\theSFR}{SFR-\reqnumber{\value{SFR}}}
+\renewcommand{\theSNFR}{SNFR-\reqnumber{\value{SNFR}}}
+
+% Format numbers as 001, 002, 003, etc.
+\newcommand{\reqnumber}[1]{%
+	\ifnum#1<10 00%
+	\else\ifnum#1<100 0%
+	\fi\fi
+	\number#1%
+}
+
 % --- REQUIREMENT MACRO SETUP ---
 \newcommand{\requirement}[5]{%
 	\par\noindent
 	\begingroup
+	
+	% Increment the appropriate counter
+	\refstepcounter{#1}%
+	\edef\reqid{\csname the#1\endcsname}%
+	\label{\reqid}%
 	
 	% Adjustable formatting
 	\def\reqindent{2.3cm}
@@ -46,7 +71,7 @@
 	
 	% Requirement ID and description
 	\noindent
-	\makebox[0pt][l]{\textbf{#1:}}%
+	\makebox[0pt][l]{\textbf{\reqid:}}%
 	\hspace*{\reqindent}%
 	\parbox[t]{\dimexpr\linewidth-\reqindent\relax}{%
 		\parindent=0pt #2%
@@ -96,7 +121,8 @@
 \newcommand{\comment}[1]{\mynote[red]{Comment:}{#1}}
 %\newcommand{\comment}[1]{}
 \newcommand{\notEmpty}{\comment{This chapter should not be empty!}}
-
+%--------------------- Glossary ---------------
+\newcommand{\glossaryDef}[3]{\item \hypertarget{{#2}}{\textbf{#1} - {#3}}}
 \begin{document}
 	
 	\begin{center}
@@ -131,6 +157,10 @@
 			Andy Huynh & 2026-10-05    & First Draft & 1.0\\
 			\hline
 			Andreas Sideris & 2026-10-10    & P3 and P4 drafts & 1.0\\
+			\hline
+			Andreas Sideris & 2026-10-12    & E3 draft & 1.0\\
+			\hline
+			Andreas Sideris & 2026-10-13    & E2 draft & 1.0\\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -195,6 +225,8 @@
 	\comment{Overview of the functions (behavior) of the system. Principal 
 	properties only (details are in the System book).}
 	
+	\input{G4FunctionalRequirements.text}
+	
 	\nsection{G.5 High-level usage scenarios}
 	\comment{Fundamental usage paths through the system.}
 	
@@ -223,19 +255,18 @@
 	the application domain, including technical terms, words from ordinary 
 	language used in a special meaning, and acronyms.
 		This chapter should not be empty!}
+
+	\input{Glossary.text}
+	
+	\clearpage
 	
 	\nsection{E.2 Components}
-	\comment{List of elements of the environment that may affect or be affected 
-	by the system and project. Includes other systems to which the system must 
-	be interfaced.}
+	
+	\input{SectionE2.text}
 	
 	\nsection{E.3 Constraints}
-	\comment{Obligations and limits imposed on the project and system by the 
-	environment.}
-	%---------------------------------
-	\notEmpty{}
-	%---------------------------------
 	
+	\input{SectionE3.text}
 	
 	\nsection{E.4 Assumptions}
 	\comment{Properties of the environment that may be assumed, with the goal 
@@ -326,10 +357,65 @@
 	\nsection{P.6 Risks and mitigation analysis}
 	\comment{Potential obstacles to meeting the schedule of P.4, and measures 
 	for adapting the plan if they do arise.}
+
+	\input{SectionP6.text}
 	
 	\nsection{P.7 Requirements process and report}
 	\comment{Initially, description of what the requirements process will be; 
 	later, report on its steps.}
+	
+	\chapter*{Appendix}
+	\addcontentsline{toc}{chapter}{Appendix}
+	\mtcaddchapter
+	
+	\nsection{Appendix --- Generative AI Use Disclosure}
+	
+	\subsection*{AI Tools Used}
+	
+	\begin{itemize}
+		\item 
+	\end{itemize}
+	
+	\subsection*{How and Where Used}
+	
+	
+	
+	\subsection*{Verification of AI-Generated Content}
+	
+	
+	\newpage{}
+	
+	\nsection{Appendix --- Reflection}
+	
+	\begin{enumerate}
+		\item What went well while writing this deliverable? 
+		\item What pain points did you experience during this deliverable, and 
+		how did
+		you resolve them?
+		\item How many of your requirements were inspired by speaking to your
+		client(s) or their proxies (e.g. your peers, stakeholders, potential 
+		users)?
+		\item Which of the courses you have taken, or are currently taking, 
+		will help
+		your team to be successful with your capstone project.
+		\item What knowledge and skills will the team collectively need to 
+		acquire to
+		successfully complete this capstone project?  Examples of possible 
+		knowledge
+		to acquire include domain specific knowledge from the domain of your
+		application, or software engineering knowledge, mechatronics knowledge 
+		or
+		computer science knowledge.  Skills may be related to technology, or 
+		writing,
+		or presentation, or team management, etc.  You should look to identify 
+		at
+		least one item for each team member.
+		\item For each of the knowledge areas and skills identified in the 
+		previous
+		question, what are at least two approaches to acquiring the knowledge or
+		mastering the skill?  Of the identified approaches, which will each team
+		member pursue, and why did they make this choice?
+	\end{enumerate}
 	
 	
 	%===============================================================
