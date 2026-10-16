@@ -1,49 +1,94 @@
-\textbf{Physical Controls:}
+%\requirement{Tag/ID} <-- SFR, SNFR, ENV
+%{Description} <-- This game must have a exploding monkey
+%{Rationale} <-- Exploding monkeys are cool
+%{Fit Criterion} <-- The game contrains a monkey exploding the moment the player attacks it
+%{Traceability tags} <-- \ref{Unique ID} some other previous functional requirement
+%{Unique ID} <-- Use this as a references -e.g Do \ref{Unique ID} anywhere where you want to mention it.
+
+\subsection*{\textbf{Physical Controls:}} % **************** SUBTITLE FOR COMPONENT ****************
+\textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE NON-FUNCTIONAL ****************
+
+\requirement{SFR}
+{The controller button-bindings should have a keyboard and mouse equivalent.}
+{The user must have full access to all functionality of the game with either a controller or keyboard and mouse. There should not
+be any discrepancy or gap with using one over the other.}
+{The direction pad of the controller should be handled exactly like the keyboard and mouse direction keys, left, right, up, down.}
+{\ref{controller-constraint}}
+{controller-equivalence}
+
+\noindent %**************** SUBTITLE NON-FUNCTIONAL ****************
+\textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
+
+\requirement{SNFR}
+{The inputs for the used controller should have almost immediately response time for the game}
+{Any major input delays will make the make feel sluggest or slow to repond to any \hyperlink{player}{player} feedback.}
+{The game response time in handling the players input is less than a second.}
+{\ref{controller-constraint}}
+{controller-nolag}
+
+\subsection*{\textbf{Game Settings:}} % **************** SUBTITLE FOR COMPONENT ****************
+\textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE NON-FUNCTIONAL ****************
+
+\requirement{SFR}
+{The game shall have configurable options that increase or decrease the enemy and player starting health, amount of resources drop, and the cost of each
+purchaseable upgrade.}
+{These variables are key components in tackling how a users with varying gaming experience handle a change the game parameters.}
+{The game shall have a configuration option that changes the starting health of the player from 50 to 150.}
+{N/A}
+{game-variant-test}
+
+\noindent
+\textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
+
+\noindent
+\subsection*{\textbf{Combat System:}}
+\textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE NON-FUNCTIONAL ****************
 \requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
 {The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
 with a combination of button inputs.}
 {The controller shal }
 {}
+{controller-support4}
+
+\textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
+
 \requirement{SNFR}{The software should map all game features and navigation to accomadate all controllers.}
 {The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
 with a combination of button inputs.}
 {The controller shal }
 {}
+{controller-support5}
+
+\textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
+
 \noindent
-\textbf{Game Settings:}
+\subsection*{\textbf{Map System:}} % **************** SUBTITLE FOR COMPONENT ****************
+\textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE NON-FUNCTIONAL ****************
 \requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
 {The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
 with a combination of button inputs.}
 {The controller shal }
 {}
+{controller-support6}
+
+\textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
+
 \noindent
-\textbf{Combat System:}
+\subsection*{\textbf{Central Hub:}} % **************** SUBTITLE FOR COMPONENT ****************
+\textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE NON-FUNCTIONAL ****************
+
 \requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
 {The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
 with a combination of button inputs.}
 {The controller shal }
 {}
-\requirement{SNFR}{The software should map all game features and navigation to accomadate all controllers.}
-{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
-with a combination of button inputs.}
-{The controller shal }
-{}
-\noindent
-\textbf{Map System:}
-\requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
-{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
-with a combination of button inputs.}
-{The controller shal }
-{}
-\noindent
-\textbf{Central Hub:}
-\requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
-{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
-with a combination of button inputs.}
-{The controller shal }
-{}
+{controller-support7}
+
+\textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
+
 %\requirement{Tag/ID}
 %{Description}
 %{Rationale}
 %{Fit Criterion}
 %{Traceability tags}
+%{Unique ID} <-- Use this as a references -e.g Do \ref{Unique ID} anywhere where you want to mention it.

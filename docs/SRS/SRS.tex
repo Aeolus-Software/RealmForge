@@ -15,6 +15,7 @@
 \usepackage{underscore}
 \usepackage{enumitem}
 \usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage[bookmarks=true]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -56,14 +57,14 @@
 }
 
 % --- REQUIREMENT MACRO SETUP ---
-\newcommand{\requirement}[5]{%
+\newcommand{\requirement}[6]{%
 	\par\noindent
 	\begingroup
 	
 	% Increment the appropriate counter
-	\refstepcounter{#1}%
+	\refstepcounter{#1}\label{#6}%
 	\edef\reqid{\csname the#1\endcsname}%
-	\label{\reqid}%
+	
 	
 	% Adjustable formatting
 	\def\reqindent{2.3cm}
