@@ -1,0 +1,242 @@
+The User Scenarios included below are given identifying tags starting with 
+`US', meaning User Scenario.\newline
+
+\noindent \textbf{US-001}\newline
+
+\noindent \textbf{User Scenario Name:} System Feature Variation Configuration
+\medskip
+
+\noindent \textbf{Context:} In this scenario, a user of RealmForge (also 
+denoted `the system') intends to configure the system's feature variation 
+capabilities, in the context of a usability study (also called a `playtest'). 
+They will do so through the assistance of the RealmForge developers conducting 
+the study/test, if needed.
+\medskip
+
+\noindent \textbf{Primary Actor:} RealmForge User
+\medskip
+
+\noindent \textbf{Supporting Actor(s):} RealmForge Developer
+\medskip
+
+\noindent \textbf{Precondition:} 
+
+\begin{itemize}
+\item The RealmForge software is installed and compiled on the user's machine 
+used for testing
+\item The user has initially connected a keyboard and a mouse to their machine 
+to provide input to the system
+\item A RealmForge Developer is present (virtually or in-person) to facilitate 
+testing
+\end{itemize}
+
+\noindent \textbf{Minimal Postcondition:}
+
+\begin{itemize}
+\item The system returns to its main menu from the feature variation 
+configuration menu
+\item The system remains in a valid system state (does not crash, the program 
+does not close)
+\end{itemize}
+
+\noindent \textbf{Success Postcondition:}
+
+\begin{itemize}
+\item The system returns to its main menu from the feature variation 
+configuration menu
+\item The system remains in a valid system state (does not crash, the program 
+does not close)
+\item The system configures RealmForge's feature variations according to the 
+user's selections, and provides feedback to the user regarding the 
+configurations implemented
+\item The user is able to launch a new game session, implementing their 
+selected configurations
+\end{itemize}
+
+\noindent \textbf{Trigger:} User launches the RealmForge software, and prompts 
+the system to configure feature 
+variations from its main menu
+\medskip
+
+\noindent \textbf{Main Success Scenario:}
+
+\begin{enumerate}
+	\item System displays feature variation configuration menu
+	\item User opts to configure input method
+	\item System displays input device options (keyboard and mouse, controller)
+	\item User selects controller option and connects a controller to their 
+	machine
+	\item System recognizes input and begins to respond to controller input
+	\item System returns to feature variation configuration menu
+	\item User opts to configure gameplay features
+	\item System displays possible gameplay feature variations
+	\item User selects unique gameplay feature configuration, in accordance 
+	with playtest plan
+	\item System configures RealmForge game build with the user's selections
+	\item System returns to feature variation configuration menu
+	\item User opts to exit to main menu
+	\item User opts to start a game session
+	\item System launches a new game session that implements the user's 
+	configurations
+	\item System displays the initial game state's graphics to the user
+\end{enumerate}
+
+\noindent \textbf{Secondary Scenarios:}
+
+\begin{itemize}
+	\item Alternative Scenario:
+	\begin{itemize}
+		\item 2.1-6.1: User intends to test RealmForge gameplay using keyboard 
+		and mouse input, and does not opt to switch their input method using 
+		the system
+	\end{itemize}
+	\item Alternative Scenario:
+	\begin{itemize}
+		\item 9.2: User is unsure of which feature variation configuration to 
+		select, and consults the RealmForge developer; developer provides the 
+		next configuration to select as part of testing, User selects the 
+		configuration using the system
+	\end{itemize}
+	\item Exceptional Scenario:
+	\begin{itemize}
+		\item 5.3: System does not recognize input method selected by the user; 
+		RealmForge developer assists the user with troubleshooting the issue, 
+		user successfully connects the input device, and the system recognizes 
+		its input and begins to use the device as a main input
+	\end{itemize}
+\end{itemize}
+
+\bigskip
+
+
+
+\noindent \textbf{US-002}\newline
+
+\noindent \textbf{User Scenario Name:}
+
+\noindent \textbf{Context:}
+
+\noindent \textbf{Primary Actor:} 
+
+\noindent \textbf{Supporting Actor(s):} 
+
+\noindent \textbf{Precondition:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Minimal Postcondition:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Success Postcondition:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Trigger:}
+
+\noindent \textbf{Main Success Scenario:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Secondary Scenario:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\bigskip
+
+
+\noindent \textbf{US-003}\newline
+
+\noindent \textbf{User Scenario Name:}
+
+\noindent \textbf{Context:}
+
+\noindent \textbf{Primary Actor:} 
+
+\noindent \textbf{Supporting Actor(s):} 
+
+\noindent \textbf{Precondition:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Minimal Postcondition:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Success Postcondition:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Trigger:}
+
+\noindent \textbf{Main Success Scenario:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Secondary Scenario:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\bigskip
+
+\noindent \textbf{US-004}\newline
+
+\noindent \textbf{User Scenario Name:}
+
+\noindent \textbf{Context:}
+
+\noindent \textbf{Primary Actor:}
+
+\noindent \textbf{Supporting Actor(s):}
+
+\noindent \textbf{Precondition:} 
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\noindent \textbf{Minimal Postcondition:}
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\noindent \textbf{Success Postcondition:}
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\noindent \textbf{Trigger:} User 
+
+\noindent \textbf{Main Success Scenario:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Secondary Scenario:}
+
+\begin{itemize}
+\item 
+\end{itemize}
