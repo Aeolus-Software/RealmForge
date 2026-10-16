@@ -1,6 +1,3 @@
-The User Scenarios included below are given identifying tags starting with 
-`US', meaning User Scenario.\newline
-
 \noindent \textbf{US-001}\newline
 
 \noindent \textbf{User Scenario Name:} System Feature Variation Configuration
@@ -108,106 +105,17 @@ variations from its main menu
 
 \bigskip
 
-
-
 \noindent \textbf{US-002}\newline
 
-\noindent \textbf{User Scenario Name:}
+\noindent \textbf{User Scenario Name:} 
 
-\noindent \textbf{Context:}
-
-\noindent \textbf{Primary Actor:} 
-
-\noindent \textbf{Supporting Actor(s):} 
-
-\noindent \textbf{Precondition:}
-
-\begin{itemize}
-\item 
-\end{itemize}
-
-\noindent \textbf{Minimal Postcondition:}
-
-\begin{itemize}
-\item 
-\end{itemize}
-
-\noindent \textbf{Success Postcondition:}
-
-\begin{itemize}
-\item 
-\end{itemize}
-
-\noindent \textbf{Trigger:}
-
-\noindent \textbf{Main Success Scenario:}
-
-\begin{itemize}
-\item 
-\end{itemize}
-
-\noindent \textbf{Secondary Scenario:}
-
-\begin{itemize}
-\item 
-\end{itemize}
-
-\bigskip
-
-
-\noindent \textbf{US-003}\newline
-
-\noindent \textbf{User Scenario Name:}
-
-\noindent \textbf{Context:}
+\noindent \textbf{Context:} 
 
 \noindent \textbf{Primary Actor:} 
+\medskip
 
 \noindent \textbf{Supporting Actor(s):} 
-
-\noindent \textbf{Precondition:}
-
-\begin{itemize}
-\item 
-\end{itemize}
-
-\noindent \textbf{Minimal Postcondition:}
-
-\begin{itemize}
-\item 
-\end{itemize}
-
-\noindent \textbf{Success Postcondition:}
-
-\begin{itemize}
-\item 
-\end{itemize}
-
-\noindent \textbf{Trigger:}
-
-\noindent \textbf{Main Success Scenario:}
-
-\begin{itemize}
-\item 
-\end{itemize}
-
-\noindent \textbf{Secondary Scenario:}
-
-\begin{itemize}
-\item 
-\end{itemize}
-
-\bigskip
-
-\noindent \textbf{US-004}\newline
-
-\noindent \textbf{User Scenario Name:}
-
-\noindent \textbf{Context:}
-
-\noindent \textbf{Primary Actor:}
-
-\noindent \textbf{Supporting Actor(s):}
+\medskip
 
 \noindent \textbf{Precondition:} 
 
@@ -227,16 +135,144 @@ variations from its main menu
 	\item 
 \end{itemize}
 
-\noindent \textbf{Trigger:} User 
+\noindent \textbf{Trigger:} 
+\medskip
 
 \noindent \textbf{Main Success Scenario:}
+
+\begin{enumerate}
+	\item 
+\end{enumerate}
+
+\noindent \textbf{Secondary Scenarios:}
+
+\begin{itemize}
+	\item Alternative Scenario:
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\item Alternative Scenario:
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\item Exceptional Scenario:
+		\begin{itemize}
+			\item 
+		\end{itemize}
+\end{itemize}
+
+\bigskip
+
+\noindent \textbf{US-003}\newline
+
+\noindent \textbf{User Scenario Name:} 
+
+\noindent \textbf{Context:} 
+
+\noindent \textbf{Primary Actor:} 
+\medskip
+
+\noindent \textbf{Supporting Actor(s):} 
+\medskip
+
+\noindent \textbf{Precondition:} 
 
 \begin{itemize}
 \item 
 \end{itemize}
 
-\noindent \textbf{Secondary Scenario:}
+\noindent \textbf{Minimal Postcondition:}
 
 \begin{itemize}
 \item 
+\end{itemize}
+
+\noindent \textbf{Success Postcondition:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Trigger:} 
+\medskip
+
+\noindent \textbf{Main Success Scenario:}
+
+\begin{enumerate}
+\item 
+\end{enumerate}
+
+\noindent \textbf{Secondary Scenarios:}
+
+\begin{itemize}
+\item Alternative Scenario:
+\begin{itemize}
+\item 
+\end{itemize}
+\item Alternative Scenario:
+\begin{itemize}
+\item 
+\end{itemize}
+\item Exceptional Scenario:
+\begin{itemize}
+\item 
+\end{itemize}
+\end{itemize}
+
+\bigskip
+
+\noindent \textbf{US-004}\newline
+
+\noindent \textbf{User Scenario Name:} 
+
+\noindent \textbf{Context:} 
+
+\noindent \textbf{Primary Actor:} 
+\medskip
+
+\noindent \textbf{Supporting Actor(s):} 
+\medskip
+
+\noindent \textbf{Precondition:} 
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Minimal Postcondition:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Success Postcondition:}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\noindent \textbf{Trigger:} 
+\medskip
+
+\noindent \textbf{Main Success Scenario:}
+
+\begin{enumerate}
+\item 
+\end{enumerate}
+
+\noindent \textbf{Secondary Scenarios:}
+
+\begin{itemize}
+\item Alternative Scenario:
+\begin{itemize}
+\item 
+\end{itemize}
+\item Alternative Scenario:
+\begin{itemize}
+\item 
+\end{itemize}
+\item Exceptional Scenario:
+\begin{itemize}
+\item 
+\end{itemize}
 \end{itemize}
