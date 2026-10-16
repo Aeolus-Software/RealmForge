@@ -5,8 +5,12 @@
 %{Traceability tags} <-- \ref{Unique ID} some other previous functional requirement
 %{Unique ID} <-- Use this as a references -e.g Do \ref{Unique ID} anywhere where you want to mention it.
 
-\subsection*{\textbf{Physical Controls:}} % **************** SUBTITLE FOR COMPONENT ****************
-\textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE NON-FUNCTIONAL ****************
+% PHYSICALL CONTROLS
+%
+%
+%
+\subsection*{\textbf{Physical Controls:}}
+\textcolor{purple}{\textbf{Function Requirements:}}
 
 \requirement{SFR}
 {The controller button-bindings should have a keyboard and mouse equivalent.}
@@ -16,8 +20,8 @@ be any discrepancy or gap with using one over the other.}
 {\ref{controller-constraint}}
 {controller-equivalence}
 
-\noindent %**************** SUBTITLE NON-FUNCTIONAL ****************
-\textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
+\noindent
+\textcolor{teal}{\textbf{Non-Function Requirements:}} 
 
 \requirement{SNFR}
 {The inputs for the used controller should have almost immediately response time for the game}
@@ -26,63 +30,114 @@ be any discrepancy or gap with using one over the other.}
 {\ref{controller-constraint}}
 {controller-nolag}
 
-\subsection*{\textbf{Game Settings:}} % **************** SUBTITLE FOR COMPONENT ****************
-\textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE NON-FUNCTIONAL ****************
+% Game Settings
+%
+%
+%
+\subsection*{\textbf{Game Settings:}}
+\textcolor{purple}{\textbf{Function Requirements:}}
 
 \requirement{SFR}
 {The game shall have configurable options that increase or decrease the enemy and player starting health, amount of resources drop, and the cost of each
 purchaseable upgrade.}
 {These variables are key components in tackling how a users with varying gaming experience handle a change the game parameters.}
-{The game shall have a configuration option that changes the starting health of the player from 50 to 150.}
+{The game has a configuration option that changes the starting health of the player from 50 to 150.}
 {N/A}
 {game-variant-test}
 
 \noindent
 \textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
 
+\requirement{SNFR}
+{The shall have configuration options that drastically alter the experience such as difficulty, fun, fast-past.}
+{The game should be have adjustable variables that will help tune the game for testing in order to better experience overall.}
+{The game has a configuration option that changes the how fast the combat is between the player and enemy.}
+{\ref{controller-constraint}}
+{game-better-experience}
+
+
+% Combat System
+%
+%
+%
 \noindent
 \subsection*{\textbf{Combat System:}}
-\textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE NON-FUNCTIONAL ****************
-\requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
-{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
-with a combination of button inputs.}
-{The controller shal }
-{}
-{controller-support4}
+\textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE FUNCTIONAL ****************
 
+\requirement{SFR}
+{The game shall show the player and enemy and their respective health bars during the combat screen.}
+{Needed to indicate the player the urgency of the situation during combat.}
+{The game displays the in-game player sprite and enemy sprite and two green health bars right below respective sprites.}
+{N/A}
+{combat-display}
+
+\requirement{SFR}
+{The game shall show an indication of success if the enemy's health goes to zero or failure if the player's health goes to zero.}
+{This is needed in order to know when the combat has concluded.}
+{The game displays the in-game player sprite and enemy sprite and two green health bars right below respective sprites.}
+{N/A}
+{combat-ends}
+
+\requirement{SFR}
+{The game shall show an attack visual whenever the player presses an attack option. Similar, the game shall display a visual for the enemy's opposing attack.}
+{The combat needs to be telegraphed some way or manner.}
+{The game displays the in-game characters sword swinging up and down to indicate the attack.}
+{N/A}
+{combat-attack}
+
+\noindent
 \textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
 
-\requirement{SNFR}{The software should map all game features and navigation to accomadate all controllers.}
-{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
-with a combination of button inputs.}
-{The controller shal }
-{}
-{controller-support5}
+\requirement{SNFR}
+{Combat should be exciting and very engaging to the player.}
+{This is a key moment of the game. If the player is not satisfied or feel exhilerated, then the player will no long feel the urge to continue the game.}
+{The game has a very fun and addicting combat that keeps the player from turning if off.}
+{N/A}
+{controller-exciting}
 
-\textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
-
+% Map System
+%
+%
+%
 \noindent
 \subsection*{\textbf{Map System:}} % **************** SUBTITLE FOR COMPONENT ****************
 \textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE NON-FUNCTIONAL ****************
-\requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
-{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
-with a combination of button inputs.}
-{The controller shal }
+
+\requirement{SFR}{The game should show the name of the area.}
+{The player should know how far in the game he or she is in reaching the end.}
+{The game shows a label of the area the player character is currently in at the top right of the screen}
 {}
-{controller-support6}
+{map-area-name}
 
 \textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
 
+\requirement{SNFR}{The map screen should be visually appealing to the player, but also no hindering the player.}
+{The player should know the current and future locations without have to constantly check the area name.}
+{The game shows a label of the area name on the top right of the screen and gives visual indication whenever the area label is changed.}
+{N/A}
+{map-area-pleasing}
+
+% CENTRAL HUB
+%
+%
+%
 \noindent
 \subsection*{\textbf{Central Hub:}} % **************** SUBTITLE FOR COMPONENT ****************
 \textcolor{purple}{\textbf{Function Requirements:}} %**************** SUBTITLE NON-FUNCTIONAL ****************
 
-\requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
-{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
-with a combination of button inputs.}
-{The controller shal }
-{}
-{controller-support7}
+\requirement{SFR}{Permanent progression should be characterized by the player keeping some progression after they lose. 
+This could be a certain resource/currency, or things the player discovered in each attempt.}
+{The player should some feel some sense of improvement or accomplishment during the gameplayer, otherwise they would not feel the need to continue}
+{The game keeps the same amount of resources after the player has failed the attempt}
+{N/A}
+{permanent-progression}
+
+\requirement{SFR}{During gameplay, the player can gain resources sent from the central hub, changing the gameplay experience for each run. 
+This progression does not persist after the player loses.}
+{This is a vital feature the game uses to help improve the odds of the player going further during a game session}
+{The game transfer magic points to the player each combat instance.}
+{N/A}
+{upkeep-during-gameplay}
 
 \textcolor{teal}{\textbf{Non-Function Requirements:}}  %**************** SUBTITLE NON-FUNCTIONAL ****************
 
