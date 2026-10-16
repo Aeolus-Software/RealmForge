@@ -1,3 +1,5 @@
+The following assumptions describe the environment in which RealmForge is expected to operate. These include the user's device setup and external components that are outside the system's control.
+
 \subsection*{Display Device}
 
 It is assumed that players have access to a properly connected and functioning display device that is capable of displaying RealmForge's graphics.
