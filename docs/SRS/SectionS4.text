@@ -1,4 +1,4 @@
-\noindent \textbf{US-001}\newline
+\noindent \textbf{\hypertarget{US-001}{US-001}}\newline
 
 \noindent \textbf{User Scenario Name:} System Feature Variation Configuration
 \medskip
@@ -105,43 +105,94 @@ variations from its main menu
 
 \bigskip
 
-\noindent \textbf{US-002}\newline
 
-\noindent \textbf{User Scenario Name:} 
 
-\noindent \textbf{Context:} 
+\noindent \textbf{\hypertarget{US-002}{US-002}}\newline
 
-\noindent \textbf{Primary Actor:} 
+\noindent \textbf{User Scenario Name:} Full Gameplay Session
 \medskip
 
-\noindent \textbf{Supporting Actor(s):} 
+\noindent \textbf{Context:} In this scenario, a user of RealmForge intends to 
+play through the game. They begin a new game session in a new save file, travel 
+through the game world, complete enemy encounters, and reach the end of the 
+game (if successful).
+\medskip
+
+\noindent \textbf{Primary Actor:} RealmForge User
+\medskip
+
+\noindent \textbf{Supporting Actor(s):} N/A
 \medskip
 
 \noindent \textbf{Precondition:} 
 
 \begin{itemize}
-	\item 
+	\item The RealmForge software is installed and compiled on the user's 
+	machine
+	\item The user has successfully connected a valid input device to their 
+	machine to provide input to the system
+	\item The RealmForge software has been correctly configured with the 
+	appropriate feature variations for this gameplay session (or is configured 
+	in its final build, if this gameplay session occurs after the full release 
+	of the software)
 \end{itemize}
 
 \noindent \textbf{Minimal Postcondition:}
 
 \begin{itemize}
-	\item 
+	\item The system remains in a valid system state (does not crash, the 
+	program 
+	does not close)
+	\item The user's new save data is successfully stored without corruption
 \end{itemize}
 
 \noindent \textbf{Success Postcondition:}
 
 \begin{itemize}
-	\item 
+	\item The system remains in a valid system state (does not crash, the 
+	program 
+	does not close)
+	\item The user's new save data is successfully stored without corruption
+	\item The user is able to fully traverse through the game world, complete 
+	enemy encounters, and reach the end of the game (if they are successful), 
+	or return to the beginning (if they are unsuccessful)
 \end{itemize}
 
-\noindent \textbf{Trigger:} 
+\noindent \textbf{Trigger:} User launches the RealmForge software, and prompts 
+the system to begin a new game in a new save file (from the software's main 
+menu)
 \medskip
 
 \noindent \textbf{Main Success Scenario:}
 
 \begin{enumerate}
-	\item 
+	\item System prompts the user to enter a name for the save file
+	\item User enters a name for their save file
+	\item System initializes the game, and displays the initial state of the 
+	game world to the user
+	\item User decides which valid game world area they will progress to next, 
+	and selects this decision via the system
+	\item System displays the user's player character moving to the next game 
+	world area, and displays the game entering the enemy encounter associated 
+	with the area
+	\item User plays through the encounter (see \hyperlink{US-003}{US-003})
+	\item System displays game state to user during the progression of the 
+	encounter, and displays results; the user is successful
+	\item System displays rewards given to the user due to their success
+	\item System returns game state to the overall game world, and displays 
+	this to the user
+	\item User repeats steps 4-9 while progressing through the game (through 
+	the use of the system)
+	\item User opts to progress to the final game world area
+	\item User repeats steps 5-7 while playing through the final enemy 
+	encounter, and is successful
+	\item System displays to user that they are successful, and have completed 
+	the game
+	\item System returns to its main menu
+	\item System displays the following options to the user: Begin a new game 
+	using a new save file, or play the game again (continue, by returning to 
+	the Central Hub discussed in \hyperlink{US-004}{US-004}) in their original 
+	save file
 \end{enumerate}
 
 \noindent \textbf{Secondary Scenarios:}
@@ -149,21 +200,36 @@ variations from its main menu
 \begin{itemize}
 	\item Alternative Scenario:
 		\begin{itemize}
-			\item 
+			\item 6.1-15.1: User opts to save and quit the game during an 
+			encounter; System notifies user that they will lose their current 
+			encounter progress, and saves the game state at the point before 
+			the user entered the current encounter to the user's save file
 		\end{itemize}
 	\item Alternative Scenario:
 		\begin{itemize}
-			\item 
+			\item 10.2-15.2: User opts to save and quit the game from the 
+			overall game world; System saves the current game state to the 
+			user's save file, and returns to the main menu
+		\end{itemize}
+	\item Alternative Scenario:
+		\begin{itemize}
+			\item 6.3-15.3: User fails during an enemy encounter; System 
+			notifies the user that they have failed, returns the game state to 
+			the beginning of the game, and presents the Central Hub menu to the 
+			user (see \hyperlink{US-004}{US-004})
 		\end{itemize}
 	\item Exceptional Scenario:
 		\begin{itemize}
-			\item 
+			\item 4.4: User attempts to progress to new game world area that 
+			they have not unlocked (it is not available yet due to their 
+			current progress); System notifies the user that their selection is 
+			not yet available, and suggests alternatives
 		\end{itemize}
 \end{itemize}
 
 \bigskip
 
-\noindent \textbf{US-003}\newline
+\noindent \textbf{\hypertarget{US-003}{US-003}}\newline
 
 \noindent \textbf{User Scenario Name:} 
 
@@ -221,7 +287,7 @@ variations from its main menu
 
 \bigskip
 
-\noindent \textbf{US-004}\newline
+\noindent \textbf{\hypertarget{US-004}{US-004}}\newline
 
 \noindent \textbf{User Scenario Name:} 
 
