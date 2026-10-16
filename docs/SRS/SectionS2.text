@@ -1,0 +1,49 @@
+\textbf{Physical Controls:}
+\requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
+{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
+with a combination of button inputs.}
+{The controller shal }
+{}
+\requirement{SNFR}{The software should map all game features and navigation to accomadate all controllers.}
+{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
+with a combination of button inputs.}
+{The controller shal }
+{}
+\noindent
+\textbf{Game Settings:}
+\requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
+{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
+with a combination of button inputs.}
+{The controller shal }
+{}
+\noindent
+\textbf{Combat System:}
+\requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
+{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
+with a combination of button inputs.}
+{The controller shal }
+{}
+\requirement{SNFR}{The software should map all game features and navigation to accomadate all controllers.}
+{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
+with a combination of button inputs.}
+{The controller shal }
+{}
+\noindent
+\textbf{Map System:}
+\requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
+{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
+with a combination of button inputs.}
+{The controller shal }
+{}
+\noindent
+\textbf{Central Hub:}
+\requirement{SFR}{The software should map all game features and navigation to accomadate all controllers.}
+{The user must have full access to all functionality of game with either a button press or be able to navigate to a feature
+with a combination of button inputs.}
+{The controller shal }
+{}
+%\requirement{Tag/ID}
+%{Description}
+%{Rationale}
+%{Fit Criterion}
+%{Traceability tags}
