@@ -53,9 +53,13 @@
     intended to demonstrate the possibility of its implementation without being 
     a full prototype.}
 
+<<<<<<< HEAD
+    \glossaryDef {Sprite}{sprite}{An in-game 2-dimensional picture representing an object in the 2D-world.}
+=======
     \glossaryDef {GDUnit4}{GDUnit4} {A Godot module that can be added to any base godot project. 
     The module allows for the creation of unit test cases.}
     \glossaryDef {Inventory}{inventory} {The set of resources, items, and currency store within code and available to access for the player}
+>>>>>>> main
 
 
     \glossaryDef {GDLint} {GDLint} {A Godot module that can be added to any base godot project. 
