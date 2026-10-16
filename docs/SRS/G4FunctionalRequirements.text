@@ -17,10 +17,6 @@ Once in combat, a battle screen will appear as well as the player's in-game char
 deal with the encounter. For example, if the player chooses to attack the enemy, an attack action is displayed followed by the enemies opposing attack. 
 \newline
 \newline
-<<<<<<< HEAD
-\textbf{Reward:}
-If the player defeats the enemy, combat ends and the player will be rewarded with resources used for currency later on.
-=======
 \textbf{Returning to the Hub:}
 If the player escapes, then there is no reward and the player goes back to
 the main game screen. The gameplay loop of traveling and encounter enemies continues until the player returns to the starting zone (the central hub), with the
@@ -31,7 +27,6 @@ accumulated throughout the journey to construct buildings and upgrades that will
 \comment{Remove randomization}
 \comment{You know what your getting into, but not complete knowledge}
 \comment{Higher risk, higher reward}
->>>>>>> main
 \newline
 \newline
 \textbf{End of Run:}
