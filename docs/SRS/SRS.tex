@@ -173,10 +173,83 @@
 		\end{tabular}
 	\end{center}
 	
-	This document follows the requirements documentation structure presented in 
-	the 
+	\chapter*{Document Template and Conventions}
+	
+	\textbf{Document Template:}\newline
+	
+	\noindent This document follows the requirements documentation structure 
+	presented in the 
 	\href{https://link.springer.com/content/pdf/10.1007/978-3-031-06739-6.pdf}{Handbook
-	 of requirements and business analysis}, by Bertrand Meyer.
+	of requirements and business analysis}, by Bertrand Meyer. The document 
+	template has been modified with the following changes to 
+	better suit the project's needs:
+	
+	\begin{itemize}
+		\item A requirement and behavior artifact traceability table has been 
+		added to section P.7, to enable further traceability between essential 
+		requirements and behavior.
+	\end{itemize}
+	
+	\noindent \textbf{Requirement and Behavior Artifact Conventions:}\newline
+	
+	\noindent All formal requirements in this document will use the following 
+	conventions:
+	
+	\begin{itemize}
+		\item Functional Requirements are given the unique identifier 
+		``SFR-XXX'', meaning ``Software Functional Requirement'', with ``XXX'' 
+		being 
+		a unique numerical identifier.
+		\item Non-Functional Requirements are given the unique identifier 
+		``SNFR-XXX'', meaning ``Software Non-Functional Requirement'', with 
+		``XXX'' 
+		being a unique numerical identifier.
+		\item Environmental Requirements are given the unique identifier 
+		``ENV-XXX'', meaning ``Environmental Requirement'', with ``XXX'' being 
+		a 
+		unique numerical identifier.
+		\item Mandatory Requirements that must be satisfied at the conclusion 
+		of the project (except those that are denoted as ``stretch'' 
+		requirements 
+		to be satisfied in a future revision of the software) use the keyword 
+		``\textbf{shall}'' to express a requirement. For example: ``The system 
+		shall \_\_\_''. The majority of requirements presented in this document 
+		will follow this convention.
+		\item Non-Mandatory Requirements that express a recommendation for the 
+		implementation of the system use the keyword ``\textbf{should}'' to 
+		express these recommendations. For example: ``The system should 
+		\_\_\_''.
+	\end{itemize}
+	
+	\noindent Behavior Artifacts in this document will use the following 
+	conventions:
+	
+	\begin{itemize}
+		\item High-level Use Cases are given the unique identifier 
+		``UC-XXX'', meaning ``Use Case'', with ``XXX'' 
+		being a unique numerical identifier.
+		\item Detailed User Scenarios are given the unique identifier 
+		``US-XXX'', meaning ``User Scenario'', with 
+		``XXX'' 
+		being a unique numerical identifier.
+	\end{itemize}
+	
+	\noindent The following traceability relationships will be used between 
+	requirements and behavior artifacts:
+	
+	\begin{itemize}
+		\item A requirement can ``\textbf{satisfy}'' another requirement or be 
+		``\textbf{satisfied by}'' another requirement. This relationship 
+		describes when a requirement provides further detail and more criteria 
+		to \textbf{satisfy} another, such as a functional requirement providing 
+		more detail to satisfy a non-functional requirement.
+		\item A requirement can ``\textbf{refine}'' a use case or user 
+		scenario, and a use case or user scenario can be ``\textbf{refined 
+		by}'' a requirement. This relationship describes when a requirement 
+		expresses a mandatory need to implement the behavior described in a use 
+		case or user scenario in a specific way, by \textbf{refining} the 
+		behavior.
+	\end{itemize}
 	
 	%===============================================================
 	\dominitoc% Initialization
@@ -185,8 +258,8 @@
 	%===============================================================
 	
 	%===============================================================
-	\addcontentsline{toc}{chapter}{Goals book}
-	\chapter*{Goals}	
+	\chapter*{Goals}
+	\addcontentsline{toc}{chapter}{Goals book}	
 	\minitoc% Creating an actual minitoc
 	%===============================================================
 	
@@ -230,10 +303,8 @@
 	%---------------------------------
 	
 	\nsection{G.4 Functionality overview}
-	\comment{Overview of the functions (behavior) of the system. Principal 
-	properties only (details are in the System book).}
 	
-	\input{G4FunctionalRequirements.text}
+	\input{SectionG4.text}
 	
 	\nsection{G.5 High-level usage scenarios}
 
