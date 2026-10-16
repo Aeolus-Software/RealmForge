@@ -1,30 +1,29 @@
+\subsection*{Functional Overview}
 \noindent
 \textbf{Setting properties:}
-The system application starts up and the the \hyperlink{user}{user} is shown options that will allow the user to pick and change various settings 
-during the start of the application, so that the user can experiment with different variants of the game.
-\comment{Less detail on the button pressing}
+The system application starts up and the \hyperlink{user}{user} will be shown options that will allow the user to pick and change various settings 
+during the start of the game. This will allow the user to experiment with different variants of the game which in turn alters the experience of the user with game.
 \newline
 \newline
 \textbf{Traversal:}
-After the \hyperlink{player}{player}
-has changed some properties or just simply pressed the play option menu button, the game begins and the system displays the \hyperlink{HUD}{HUD} as well other \hyperlink{UI}{UI}
-components such as the main game screen and travel options. The player can navigate to another area by pressing the up, down, left, or right menu option
-buttons go to another area indicated by the change in the background scenery.
-
-\comment{Branching patchs, endpoints, you need to win}
+The system will display the \hyperlink{HUD}{HUD} as well other \hyperlink{UI}{UI}
+components such as the main game screen and travel menu. This will allow the player to navigate to different areas that contain various rewards and opponents.
+The player will be shown the possible risks and rewards before deciding to enter a certain area.
 \newline
 \newline
 \textbf{Combat:}
-The player enters combat randomly when traversing through areas.
-Once in combat, the battle screen is shown as well as the enemy the player has to defeat. The player is shown options to attack or escape during the encounter.
-If the player chooses to attack the enemy, an attack action is displayed followed by the enemies opposing attack. If the player defeats
-the enemy, the player is rewarded with resources at the end.
-\comment{You win or die}
+The player will enter combat with an enemy when entering a new zone or area. The system will transition into a combat phase to which the player faces the adversary.
+Once in combat, a battle screen will appear as well as the player's in-game character and enemy \hyperlink{sprite}{sprite}. The player will be shown various options to
+deal with the encounter. For example, if the player chooses to attack the enemy, an attack action is displayed followed by the enemies opposing attack. 
 \newline
 \newline
+<<<<<<< HEAD
+\textbf{Reward:}
+If the player defeats the enemy, combat ends and the player will be rewarded with resources used for currency later on.
+=======
 \textbf{Returning to the Hub:}
 If the player escapes, then there is no reward and the player goes back to
-the main game screen. The gameplay loop of traveling and encounter enemies continues until the player returns to the starting zone (the main hub), with the
+the main game screen. The gameplay loop of traveling and encounter enemies continues until the player returns to the starting zone (the central hub), with the
 return option or when the player is defeated. If the player returns to the starting zone, the player is allowed to spend the resources
 accumulated throughout the journey to construct buildings and upgrades that will enhance the experience of the next gameplay loop.
 \comment {Change to only comming back when you die}
@@ -32,13 +31,23 @@ accumulated throughout the journey to construct buildings and upgrades that will
 \comment{Remove randomization}
 \comment{You know what your getting into, but not complete knowledge}
 \comment{Higher risk, higher reward}
+>>>>>>> main
 \newline
 \newline
-\textbf{End of game:}
-Once the player finishes spending resources, the player may return to the main gameplay loop of traveling and fighting enemies to gain resources.
-If the player is defeated, the game ends and player is returned to the start of the game where the player chooses
-options for changing parameters.  
+\textbf{End of Run:}
+If the player character's health points reaches zero during combat, the player will die and be returned to the main hub/starting area. The player will be able
+to spend resources and start the main gameplay loop again via traversal.
+\newline
+\newline
+\textbf{Spending Resources:}
+When the player is in the main hub, the player shall be allowed to spend the resources accumulated throughout the previous journies to construct buildings and upgrades 
+that will aid the player for the next gameplay run.
+\subsection*{Non-Functional Overview}
 
-% \huge{Non-Functional Requirements}
-% \noindent
-% \newline
+\textbf{Ease of use:}
+The system will display hints and instructions that will allow the player to navigate and play the game with little or no external help.
+\newline
+\newline
+\textbf{Dynamic difficulty and experience:}
+Changing the initial properties of the game should let the player handle how difficult the game is based on formal experience. Continuously altering properties
+should keep the gameplay from being stale and repeatitive.   
