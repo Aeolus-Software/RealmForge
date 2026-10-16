@@ -231,58 +231,94 @@ menu)
 
 \noindent \textbf{\hypertarget{US-003}{US-003}}\newline
 
-\noindent \textbf{User Scenario Name:} 
-
-\noindent \textbf{Context:} 
-
-\noindent \textbf{Primary Actor:} 
+\noindent \textbf{User Scenario Name:} Enemy Encounter Game Event
 \medskip
 
-\noindent \textbf{Supporting Actor(s):} 
+\noindent \textbf{Context:} In this scenario, a user of RealmForge enters an 
+enemy encounter while playing through the game, and they intend to select 
+various game actions to progress through the encounter and defeat the included 
+enemies.
+\medskip
+
+\noindent \textbf{Primary Actor:} RealmForge User
+\medskip
+
+\noindent \textbf{Supporting Actor(s):} N/A
 \medskip
 
 \noindent \textbf{Precondition:} 
 
 \begin{itemize}
-\item 
+	\item The RealmForge software is installed and compiled on the user's 
+	machine
+	\item The user has successfully connected a valid input device to their 
+	machine to provide input to the system
+	\item The RealmForge software has been correctly configured with the 
+	appropriate feature variations for this gameplay session (or is configured 
+	in its final build, if this gameplay session occurs after the full release 
+	of the software)
+	\item The user has started a playthrough of the RealmForge game in a save 
+	file, and has reached the point of an enemy encounter
 \end{itemize}
 
 \noindent \textbf{Minimal Postcondition:}
 
 \begin{itemize}
-\item 
+	\item The system remains in a valid system state (does not crash, the 
+	program 
+	does not close)
+	\item The system exits the enemy encounter game event
 \end{itemize}
 
 \noindent \textbf{Success Postcondition:}
 
 \begin{itemize}
-\item 
+	\item The system remains in a valid system state (does not crash, the 
+	program 
+	does not close)
+	\item The system exits the enemy encounter game event
+	\item The user is able to select actions available to them during the 
+	encounter, battle enemies using these actions, and complete the encounter 
+	and receive rewards if they are successful
+	\item If the user is not successful, they are returned to the beginning of 
+	the game
 \end{itemize}
 
-\noindent \textbf{Trigger:} 
+\noindent \textbf{Trigger:} User opts to progress to a new game world area 
+while playing RealmForge, and enters the enemy encounter associated with the 
+area
 \medskip
 
 \noindent \textbf{Main Success Scenario:}
 
 \begin{enumerate}
-\item 
+	\item System displays the initial enemy encounter game state to the user, 
+	including the enemies they must face (in this scenario one), and their 
+	player character
+	\item User selects an action to take to attack an enemy
+	\item System updates the game state and the enemy's attributes following 
+	the attack, and displays the outcome to the user
+	\item System updates the game state with the enemy attacking the user's 
+	player character, and displays the outcome to the user
+	\item User and System repeat steps 3-4 as the encounter progresses
+	\item System updates the game state and the enemy's attributes following an 
+	attack selected by the user; the enemy has been defeated
+	\item System displays that the enemy has been defeated to the user, and 
+	exits the encounter since the user has defeated all enemies
+	\item System updates the game state with the rewards given to the user for 
+	their success, and displays these rewards to the user
 \end{enumerate}
 
 \noindent \textbf{Secondary Scenarios:}
 
 \begin{itemize}
 \item Alternative Scenario:
-\begin{itemize}
-\item 
-\end{itemize}
-\item Alternative Scenario:
-\begin{itemize}
-\item 
-\end{itemize}
-\item Exceptional Scenario:
-\begin{itemize}
-\item 
-\end{itemize}
+	\begin{itemize}
+		\item 6.1-8.1: User is defeated by an enemy attack; System 
+		notifies the user that they have failed, returns the game state to 
+		the beginning of the game, and presents the Central Hub menu to the 
+		user (see \hyperlink{US-004}{US-004})
+	\end{itemize}
 \end{itemize}
 
 \bigskip
