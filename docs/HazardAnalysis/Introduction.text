@@ -1,0 +1,13 @@
+\noindent
+This document is a hazard analysis of the RealmForge system, which is a roguelite video game. A roguelite game is defined by different "runs" of the game being varied from each other in some way, and being mostly self-contained with a small amount of certain progression carrying over, with the goal that each run feels unique. RealmForge intends to provide an engaging game experience with lots of variability while collecting data from users about the effect of this variability to further enhance the game experience. 
+\newline
+\newline
+Using Nancy Leveson's work (referenced in lecture), a hazard is defined as a property/condition in the system that, when combined with an environment condition, has potential to cause harm or damage. For RealmForge's purposes, \textbf{harm} can be described as:
+
+\begin{itemize}
+	\item Player dissatisfaction
+
+	\item Performance issues
+
+	\item Poor usability testing data
+\end{itemize}
