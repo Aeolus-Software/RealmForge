@@ -295,14 +295,15 @@ area
 	\item System displays the initial enemy encounter game state to the user, 
 	including the enemies they must face (in this scenario one), and their 
 	player character
-	\item User selects an action to take to attack an enemy
-	\item System updates the game state and the enemy's attributes following 
-	the attack, and displays the outcome to the user
+	\item User selects a valid action to take to progress through the encounter
+	\item System updates the game state, the enemy's attributes, and the player 
+	character's attributes following 
+	the action, and displays the outcome to the user
 	\item System updates the game state with the enemy attacking the user's 
 	player character, and displays the outcome to the user
-	\item User and System repeat steps 3-4 as the encounter progresses
+	\item User and System repeat steps 2-4 as the encounter progresses
 	\item System updates the game state and the enemy's attributes following an 
-	attack selected by the user; the enemy has been defeated
+	attack action selected by the user; the enemy has been defeated
 	\item System displays that the enemy has been defeated to the user, and 
 	exits the encounter since the user has defeated all enemies
 	\item System updates the game state with the rewards given to the user for 
