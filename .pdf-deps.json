@@ -106,6 +106,7 @@
   ],
   "docs/SRS/SRS.tex": [
     "docs/SRS/Glossary.text",
+    "docs/SRS/S1Components.text",
     "docs/SRS/SRS.mtc",
     "docs/SRS/SRS.mtc0",
     "docs/SRS/SRS.mtc1",
