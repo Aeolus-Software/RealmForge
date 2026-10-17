@@ -1,21 +1,26 @@
 The following assumptions describe the environment in which RealmForge is expected to operate. These include the user's device setup and external components that are outside the system's control.
 
-\subsection*{Display Device}
+\noindent
+\textbf{Display Device}
 
 It is assumed that players have access to a properly connected and functioning display device that is capable of displaying RealmForge's graphics.
 
-\subsection*{Input Devices}
+\noindent
+\textbf{Input Devices}
 
 It is assumed that players have access to properly connected and functioning input devices compatible with their system, such as a keyboard and mouse or a supported controller, to interact with the game.
 
-\subsection*{Operating System and Driver Support}
+\noindent
+\textbf{Operating System and Driver Support}
 
 It is assumed that the user's operating system has the necessary drivers installed and configured to support the input and display devices used by RealmForge.
 
-\subsection*{Application Permissions}
+\noindent
+\textbf{Application Permissions}
 
-It is assumed that users have permission to install and run RealmForge on their devices, as well as access any local files needed to save game progress or change game settings.
+It is assumed that users have permission to install and run RealmForge on their devices, as well as the necessary permissions to access local files used to save game progress.
 
-\subsection*{Available System Resources}
+\noindent
+\textbf{Available System Resources}
 
 It is assumed that the user's device has enough available memory and processing power to run RealmForge without significant interference from other applications running at the same time.
