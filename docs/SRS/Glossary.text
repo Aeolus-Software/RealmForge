@@ -11,8 +11,70 @@
 
     \glossaryDef {Heads-Up-Display (HUD)}{HUD}{The set of interface elements displayed ontop of the actually gameplay that contains
     vital information helpful to the player or user.}
+    
+    \glossaryDef {Central Processing Unit (CPU)}{CPU}{The central processor for 
+    a computer.}
+    
+    \glossaryDef {Streaming Single Instruction, Multiple Data Extentions 4 
+    (SSE4.2)}{SSE4}{A processor instruction set used by most modern processors.}
+    
+    \glossaryDef {Advanced Micro Devices (AMD)}{AMD}{An American semiconductor 
+    company that produces processors.}
+    
+    \glossaryDef {Graphics Processing Unit (GPU)}{GPU}{A computer's processor 
+    for displayed graphics.}
+    
+    \glossaryDef {Open Graphics Library (OpenGL)}{OpenGL}{An application 
+    programming interface used to render computer graphics.}
+    
+    \glossaryDef {NVIDIA Corporation}{NVIDIA}{An American technology company 
+    that produces graphics processors.}
+    
+    \glossaryDef {Graphics Core Next (GCN)}{GCN}{A series of graphics processor 
+    architectures that is used in AMD graphics processors.}
+    
+    \glossaryDef {Random Access Memory (RAM)}{RAM}{Short-term memory used by a 
+    computer's processor.}
+    
+    \glossaryDef {Frames per Second (FPS)}{FPS}{The number of graphical frames 
+    displayed by a computer program per second.}
+    
+    \glossaryDef {Personal Computer (PC)}{PC}{A computer owned by individuals, 
+    for personal use.}
+    
+    \glossaryDef {Verification and Validation (VnV)}{VnV}{The process of 
+    ensuring that a design satisfies its requirements, and its requirements are 
+    aligned with the design's purpose (generally).}
+    
+    \glossaryDef {Feature-Oriented Domain Analysis (FODA)}{FODA}{A domain 
+    analysis method, focusing on features of a design and their variations.}
+    
+    \glossaryDef {Proof of Concept (POC)}{POC}{An initial version of a design, 
+    intended to demonstrate the possibility of its implementation without being 
+    a full prototype.}
+
+<<<<<<< HEAD
+    \glossaryDef {Sprite}{sprite}{An in-game 2-dimensional picture representing an object in the 2D-world.}
+=======
+    \glossaryDef {GDUnit4}{GDUnit4} {A Godot module that can be added to any base godot project. 
+    The module allows for the creation of unit test cases.}
+    \glossaryDef {Inventory}{inventory} {The set of resources, items, and currency store within code and available to access for the player}
+>>>>>>> main
 
 
+    \glossaryDef {GDLint} {GDLint} {A Godot module that can be added to any base godot project. 
+    The module is a linting tool to help will proper coding styles and errors for the Godot language.}
+    
+    \glossaryDef{Integrated Development Environment}{IDE} {A set of software applications and tools within a programmer's arsenal
+    to help develop software code efficiently.}
+
+    \glossaryDef{Operation System}{OS}{A collection of software that manages a computer's hardware and software applications by
+    handling allocation of resources.}
+
+    \glossaryDef{LaTeX} {latex}{LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation.}
+    
+    \glossaryDef{Continuous Integration / Continuous Development}{CI/CD}{An iterative approach to software development  where
+    updates are pushed in small increments and re-evaluated for further development}
     % EXAMPLE
     % \glossaryDef{NAME_OF_WHAT_IS_IN_BOLD}{ACROYNYM_ID <-- this you use in hyperlink}{Description of glossary term}
     % When you want to point to glossary term
