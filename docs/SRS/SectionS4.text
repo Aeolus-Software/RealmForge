@@ -1,0 +1,424 @@
+\noindent \textbf{\hypertarget{US-001}{US-001}}\newline
+
+\noindent \textbf{User Scenario Name:} System Feature Variation Configuration
+\medskip
+
+\noindent \textbf{Context:} In this scenario, a user of RealmForge (also 
+denoted `the system') intends to configure the system's feature variation 
+capabilities, in the context of a usability study (also called a `playtest'). 
+They will do so through the assistance of the RealmForge developers conducting 
+the study/test, if needed.
+\medskip
+
+\noindent \textbf{Primary Actor:} RealmForge User
+\medskip
+
+\noindent \textbf{Supporting Actor(s):} RealmForge Developer
+\medskip
+
+\noindent \textbf{Precondition:} 
+
+\begin{itemize}
+\item The RealmForge software is installed and compiled on the user's machine 
+used for testing
+\item The user has initially connected a keyboard and a mouse to their machine 
+to provide input to the system
+\item A RealmForge Developer is present (virtually or in-person) to facilitate 
+testing
+\end{itemize}
+
+\noindent \textbf{Minimal Postcondition:}
+
+\begin{itemize}
+\item The system returns to its main menu from the feature variation 
+configuration menu
+\item The system remains in a valid system state (does not crash, the program 
+does not close)
+\end{itemize}
+
+\noindent \textbf{Success Postcondition:}
+
+\begin{itemize}
+\item The system returns to its main menu from the feature variation 
+configuration menu
+\item The system remains in a valid system state (does not crash, the program 
+does not close)
+\item The system configures RealmForge's feature variations according to the 
+user's selections, and provides feedback to the user regarding the 
+configurations implemented
+\item The user is able to launch a new game session, implementing their 
+selected configurations
+\end{itemize}
+
+\noindent \textbf{Trigger:} User launches the RealmForge software, and prompts 
+the system to configure feature 
+variations from its main menu
+\medskip
+
+\noindent \textbf{Main Success Scenario:}
+
+\begin{enumerate}
+	\item System displays feature variation configuration menu
+	\item User opts to configure input method
+	\item System displays input device options (keyboard and mouse, controller)
+	\item User selects controller option and connects a controller to their 
+	machine
+	\item System recognizes input and begins to respond to controller input
+	\item System returns to feature variation configuration menu
+	\item User opts to configure gameplay features
+	\item System displays possible gameplay feature variations
+	\item User selects unique gameplay feature configuration, in accordance 
+	with playtest plan
+	\item System configures RealmForge game build with the user's selections
+	\item System returns to feature variation configuration menu
+	\item User opts to exit to main menu
+	\item User opts to start a game session
+	\item System launches a new game session that implements the user's 
+	configurations
+	\item System displays the initial game state's graphics to the user
+\end{enumerate}
+
+\noindent \textbf{Secondary Scenarios:}
+
+\begin{itemize}
+	\item Alternative Scenario:
+	\begin{itemize}
+		\item 2.1-6.1: User intends to test RealmForge gameplay using keyboard 
+		and mouse input, and does not opt to switch their input method using 
+		the system
+	\end{itemize}
+	\item Alternative Scenario:
+	\begin{itemize}
+		\item 9.2: User is unsure of which feature variation configuration to 
+		select, and consults the RealmForge developer; developer provides the 
+		next configuration to select as part of testing, User selects the 
+		configuration using the system
+	\end{itemize}
+	\item Exceptional Scenario:
+	\begin{itemize}
+		\item 5.3: System does not recognize input method selected by the user; 
+		RealmForge developer assists the user with troubleshooting the issue, 
+		user successfully connects the input device, and the system recognizes 
+		its input and begins to use the device as a main input
+	\end{itemize}
+\end{itemize}
+
+\bigskip
+
+
+
+\noindent \textbf{\hypertarget{US-002}{US-002}}\newline
+
+\noindent \textbf{User Scenario Name:} Full Gameplay Session
+\medskip
+
+\noindent \textbf{Context:} In this scenario, a user of RealmForge intends to 
+play through the game. They begin a new game session in a new save file, travel 
+through the game world, complete enemy encounters, and reach the end of the 
+game (if successful).
+\medskip
+
+\noindent \textbf{Primary Actor:} RealmForge User
+\medskip
+
+\noindent \textbf{Supporting Actor(s):} N/A
+\medskip
+
+\noindent \textbf{Precondition:} 
+
+\begin{itemize}
+	\item The RealmForge software is installed and compiled on the user's 
+	machine
+	\item The user has successfully connected a valid input device to their 
+	machine to provide input to the system
+	\item The RealmForge software has been correctly configured with the 
+	appropriate feature variations for this gameplay session (or is configured 
+	in its final build, if this gameplay session occurs after the full release 
+	of the software)
+\end{itemize}
+
+\noindent \textbf{Minimal Postcondition:}
+
+\begin{itemize}
+	\item The system remains in a valid system state (does not crash, the 
+	program 
+	does not close)
+	\item The user's new save data is successfully stored without corruption
+\end{itemize}
+
+\noindent \textbf{Success Postcondition:}
+
+\begin{itemize}
+	\item The system remains in a valid system state (does not crash, the 
+	program 
+	does not close)
+	\item The user's new save data is successfully stored without corruption
+	\item The user is able to fully traverse through the game world, complete 
+	enemy encounters, and reach the end of the game (if they are successful), 
+	or return to the beginning (if they are unsuccessful)
+\end{itemize}
+
+\noindent \textbf{Trigger:} User launches the RealmForge software, and prompts 
+the system to begin a new game in a new save file (from the software's main 
+menu)
+\medskip
+
+\noindent \textbf{Main Success Scenario:}
+
+\begin{enumerate}
+	\item System prompts the user to enter a name for the save file
+	\item User enters a name for their save file
+	\item System initializes the game, and displays the initial state of the 
+	game world to the user
+	\item User decides which valid game world area they will progress to next, 
+	and selects this decision via the system
+	\item System displays the user's player character moving to the next game 
+	world area, and displays the game entering the enemy encounter associated 
+	with the area
+	\item User plays through the encounter (see \hyperlink{US-003}{US-003})
+	\item System displays game state to user during the progression of the 
+	encounter, and displays results; the user is successful
+	\item System displays rewards given to the user due to their success
+	\item System returns game state to the overall game world, and displays 
+	this to the user
+	\item User repeats steps 4-9 while progressing through the game (through 
+	the use of the system)
+	\item User opts to progress to the final game world area
+	\item User repeats steps 5-7 while playing through the final enemy 
+	encounter, and is successful
+	\item System displays to user that they are successful, and have completed 
+	the game
+	\item System returns to its main menu
+	\item System displays the following options to the user: Begin a new game 
+	using a new save file, or play the game again (continue, by returning to 
+	the Central Hub discussed in \hyperlink{US-004}{US-004}) in their original 
+	save file
+\end{enumerate}
+
+\noindent \textbf{Secondary Scenarios:}
+
+\begin{itemize}
+	\item Alternative Scenario:
+		\begin{itemize}
+			\item 6.1-15.1: User opts to save and quit the game during an 
+			encounter; System notifies user that they will lose their current 
+			encounter progress, and saves the game state at the point before 
+			the user entered the current encounter to the user's save file
+		\end{itemize}
+	\item Alternative Scenario:
+		\begin{itemize}
+			\item 10.2-15.2: User opts to save and quit the game from the 
+			overall game world; System saves the current game state to the 
+			user's save file, and returns to the main menu
+		\end{itemize}
+	\item Alternative Scenario:
+		\begin{itemize}
+			\item 6.3-15.3: User fails during an enemy encounter; System 
+			notifies the user that they have failed, returns the game state to 
+			the beginning of the game, and presents the Central Hub menu to the 
+			user (see \hyperlink{US-004}{US-004})
+		\end{itemize}
+	\item Exceptional Scenario:
+		\begin{itemize}
+			\item 4.4: User attempts to progress to new game world area that 
+			they have not unlocked (it is not available yet due to their 
+			current progress); System notifies the user that their selection is 
+			not yet available, and suggests alternatives
+		\end{itemize}
+\end{itemize}
+
+\bigskip
+
+\noindent \textbf{\hypertarget{US-003}{US-003}}\newline
+
+\noindent \textbf{User Scenario Name:} Enemy Encounter Game Event
+\medskip
+
+\noindent \textbf{Context:} In this scenario, a user of RealmForge enters an 
+enemy encounter while playing through the game, and they intend to select 
+various game actions to progress through the encounter and defeat the included 
+enemies.
+\medskip
+
+\noindent \textbf{Primary Actor:} RealmForge User
+\medskip
+
+\noindent \textbf{Supporting Actor(s):} N/A
+\medskip
+
+\noindent \textbf{Precondition:} 
+
+\begin{itemize}
+	\item The RealmForge software is installed and compiled on the user's 
+	machine
+	\item The user has successfully connected a valid input device to their 
+	machine to provide input to the system
+	\item The RealmForge software has been correctly configured with the 
+	appropriate feature variations for this gameplay session (or is configured 
+	in its final build, if this gameplay session occurs after the full release 
+	of the software)
+	\item The user has started a playthrough of the RealmForge game in a save 
+	file, and has reached the point of an enemy encounter
+\end{itemize}
+
+\noindent \textbf{Minimal Postcondition:}
+
+\begin{itemize}
+	\item The system remains in a valid system state (does not crash, the 
+	program 
+	does not close)
+	\item The system exits the enemy encounter game event
+\end{itemize}
+
+\noindent \textbf{Success Postcondition:}
+
+\begin{itemize}
+	\item The system remains in a valid system state (does not crash, the 
+	program 
+	does not close)
+	\item The system exits the enemy encounter game event
+	\item The user is able to select actions available to them during the 
+	encounter, battle enemies using these actions, and complete the encounter 
+	and receive rewards if they are successful
+	\item If the user is not successful, they are returned to the beginning of 
+	the game
+\end{itemize}
+
+\noindent \textbf{Trigger:} User opts to progress to a new game world area 
+while playing RealmForge, and enters the enemy encounter associated with the 
+area
+\medskip
+
+\noindent \textbf{Main Success Scenario:}
+
+\begin{enumerate}
+	\item System displays the initial enemy encounter game state to the user, 
+	including the enemies they must face (in this scenario one), and their 
+	player character
+	\item User selects a valid action to take to progress through the encounter
+	\item System updates the game state, the enemy's attributes, and the player 
+	character's attributes following 
+	the action, and displays the outcome to the user
+	\item System updates the game state with the enemy attacking the user's 
+	player character, and displays the outcome to the user
+	\item User and System repeat steps 2-4 as the encounter progresses
+	\item System updates the game state and the enemy's attributes following an 
+	attack action selected by the user; the enemy has been defeated
+	\item System displays that the enemy has been defeated to the user, and 
+	exits the encounter since the user has defeated all enemies
+	\item System updates the game state with the rewards given to the user for 
+	their success, and displays these rewards to the user
+\end{enumerate}
+
+\noindent \textbf{Secondary Scenarios:}
+
+\begin{itemize}
+\item Alternative Scenario:
+	\begin{itemize}
+		\item 6.1-8.1: User is defeated by an enemy attack; System 
+		notifies the user that they have failed, returns the game state to 
+		the beginning of the game, and presents the Central Hub menu to the 
+		user (see \hyperlink{US-004}{US-004})
+	\end{itemize}
+\end{itemize}
+
+\bigskip
+
+\noindent \textbf{\hypertarget{US-004}{US-004}}\newline
+
+\noindent \textbf{User Scenario Name:} Post Gameplay Run Events
+\medskip
+
+\noindent \textbf{Context:} In this scenario, a RealmForge user has returned to 
+the beginning of the game, either through being defeated at some stage, or 
+completing the game and selecting to play the game again in the same save file. 
+At this point, they intend to upgrade their in-game abilities through upgrades 
+of the game's Central Hub, and begin a new game ``run''.
+\medskip
+
+\noindent \textbf{Primary Actor:} RealmForge User
+\medskip
+
+\noindent \textbf{Supporting Actor(s):} N/A
+\medskip
+
+\noindent \textbf{Precondition:} 
+
+\begin{itemize}
+	\item The RealmForge software is installed and compiled on the user's 
+	machine
+	\item The user has successfully connected a valid input device to their 
+	machine to provide input to the system
+	\item The RealmForge software has been correctly configured with the 
+	appropriate feature variations for this gameplay session (or is configured 
+	in its final build, if this gameplay session occurs after the full release 
+	of the software)
+	\item The user has started a playthrough of the RealmForge game in a save 
+	file, and has either been defeated and failed a game run, or completed the 
+	game and selected to play again in the same save file
+\end{itemize}
+
+\noindent \textbf{Minimal Postcondition:}
+
+\begin{itemize}
+	\item The system remains in a valid system state (does not crash, the 
+	program 
+	does not close)
+\end{itemize}
+
+\noindent \textbf{Success Postcondition:}
+
+\begin{itemize}
+	\item The system remains in a valid system state (does not crash, the 
+	program does not close)
+	\item The user is able to upgrade the Central Hub and begin a new game run, 
+	or quit the game, depending on their selections
+\end{itemize}
+
+\noindent \textbf{Trigger:} User opts to continue playing in their current save 
+file
+\medskip
+
+\noindent \textbf{Main Success Scenario:}
+
+\begin{enumerate}
+	\item System returns the game state to the beginning of the overall game 
+	world, and initializes the Central Hub menu
+	\item System displays the Central Hub menu options to the user
+	\item User selects to upgrade a Central Hub attribute using in-game 
+	currency rewarded from previous enemy encounters
+	\item System displays confirmation message of Central Hub upgrade purchase
+	\item User confirms upgrade purchase
+	\item User repeats steps 3-5 via the system until they have purchased each 
+	upgrade they require, or do not have enough currency to complete their 
+	purchases
+	\item User selects to begin a new game run and leave the Central Hub menu
+	\item System initializes the game world, and displays the initial game 
+	state to the user (see \hyperlink{US-002}{US-002} from step 3 onwards)
+\end{enumerate}
+
+\noindent \textbf{Secondary Scenarios:}
+
+\begin{itemize}
+\item Alternative Scenario:
+	\begin{itemize}
+		\item 1.1-8.1: User opts to quit to the main game menu; System exits 
+		Central Hub menu and saves game state to save file, and returns to main 
+		menu
+	\end{itemize}
+\item Alternative Scenario:
+	\begin{itemize}
+		\item 1.2-8.2: User opts to quit to the main game menu (following the 
+		alternative scenario above), and selects to reconfigure system feature 
+		variations (in a testing context); System opens and displays feature 
+		variation configuration menu and displays it to the user (see 
+		\hyperlink{US-001}{US-001})
+	\end{itemize}
+\item Exceptional Scenario:
+	\begin{itemize}
+		\item 3.3: User opts to purchase Central Hub attribute upgrade that 
+		they cannot currently afford; System displays a message to the user 
+		notifying them that they do not have enough currency to purchase the 
+		upgrade, and returns to the main upgrade menu
+	\end{itemize}
+\end{itemize}
