@@ -15,6 +15,7 @@
 \usepackage{underscore}
 \usepackage{enumitem}
 \usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage[bookmarks=true]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -48,7 +49,7 @@
 \renewcommand{\theSNFR}{SNFR-\reqnumber{\value{SNFR}}}
 
 % Format numbers as 001, 002, 003, etc.
-\newcommand{\reqnumber}[1]{%
+\newcommand{\reqnumber}[1]{%i
 	\ifnum#1<10 00%
 	\else\ifnum#1<100 0%
 	\fi\fi
@@ -56,14 +57,14 @@
 }
 
 % --- REQUIREMENT MACRO SETUP ---
-\newcommand{\requirement}[5]{%
+\newcommand{\requirement}[6]{%
 	\par\noindent
 	\begingroup
 	
 	% Increment the appropriate counter
-	\refstepcounter{#1}%
+	\refstepcounter{#1}\label{#6}%
 	\edef\reqid{\csname the#1\endcsname}%
-	\label{\reqid}%
+	
 	
 	% Adjustable formatting
 	\def\reqindent{2.3cm}
@@ -383,12 +384,13 @@
 	%---------------------------------
 	
 	\nsection{S.2 Functionality}
-	\comment{One section, S.2.n, for each of the components identified in S.2, 
-	describing the corresponding behaviors (functional and non-functional 
-	properties).}
+	% \comment{One section, S.2.n, for each of the components identified in S.2, 
+	% describing the corresponding behaviors (functional and non-functional 
+	% properties).}
+	% %---------------------------------
+	% \notEmpty{}
 	%---------------------------------
-	\notEmpty{}
-	%---------------------------------
+	\input{SectionS2.text}
 
 	\nsection{S.3 Interfaces}
 	\comment{How the system makes the functionality of S.2 available to the 
