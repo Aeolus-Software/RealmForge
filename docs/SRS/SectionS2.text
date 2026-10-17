@@ -15,7 +15,6 @@
 {The controller button-bindings shall have a keyboard and mouse equivalent.}
 {The user must have full access to all functionality of the game with either a controller or keyboard and mouse. There should not
 be any discrepancy or gap with using one over the other.}
-% {The direction pad of the controller should be handled exactly like the keyboard and mouse direction keys, left, right, up, down.}
 {The directional inputs of the d-pad from the controller has the same input mappings as the left, right, up, down on the keyboard. The A, B, X, Y, L and R buttons on 
 XBOX controllers also have a keyboard equivalent functionality mapped into certain keys.}
 {\ref{controller-constraint}, \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}}
@@ -31,16 +30,16 @@ XBOX controllers also have a keyboard equivalent functionality mapped into certa
 \requirement{SFR}
 {The game shall have a configuration that changes the player starting health.}
 {This a difficulty setting to test how far a user can last on average before failing and restarting a run. For example, a user with minimum gaming experience
-will typicall have a better time with the game if the user can last a little longer. Dialing the health will also limit how far a player goes on their initial runs, thus
+will typically have a better time with the game if the user can last a little longer. Dialing the health will also limit how far a player goes on their initial runs, thus
 preventing them from seeing too much of the game early on. Having this configuration will help to see the balance between player overall experience versus
 the pace at which the content of the game is consumed at.}
-{The user can change the starting health from a minmum of 50 to 150.}
+{The user can change the starting health from a minimum of 50 to 150.}
 {\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}}
 {game-variant-health}
 
 \requirement{SFR}
 {The game shall have a configuration that changes the average amount of resources gained after an encounter.}
-{This is a pacing mechanic for the game. The user should not be able to purchase all the the upgrades from the central hub with only a short few runs, otherwise
+{This is a pacing mechanic for the game. The user should not be able to purchase all the upgrades from the central hub with only a short few runs, otherwise,
 the initial difficulty of the game gets trivialized from the added upgrades, not from the player's own skill. Having this configuration will also help distinguish
 how a long the average player feels about the overall pace of game; different users have varying tolerances between the feeling of progression and grinding over and
 over again.}
@@ -50,11 +49,11 @@ over again.}
 
 \requirement{SFR}
 {The game shall have a configuration that changes the cost of each purchasable upgrade.}
-{Changing the purchase cost is slightly different from \ref{game-variant-droprate}, because it changes how players percieves the purchase progression. 
-A player will gauge how far he or she has to go before the being being able to purchase a new upgrade. If the cost is too high, than this discourages the player
-from ever buying it. If the cost is too low then this runs the risk of completing all purchase too fast; there needs to be a balance for the cost.}
-{The user can change the additional cost of each purchaseable upgrade from zero to 50.}
-{\hyperlink{UC-004}{UC-004}, \hyperlink{US-004}{US-004}}
+{Changing the purchase cost is slightly different from \ref{game-variant-droprate}, because it changes how players perceive the purchase progression. 
+A player will gauge how far he or she has to go before the being able to purchase a new upgrade. If the cost is too high, then this discourages the player
+from ever buying it. If the cost is too low, then this runs the risk of completing all purchase too fast; there needs to be a balance for the cost.}
+{The user can change the additional cost of each purchasable  upgrade from zero to 50.}
+{\ref{game-variant-droprate}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-004}{US-004}}
 {game-variant-cost}
 
 % Combat System
@@ -95,7 +94,7 @@ from ever buying it. If the cost is too low then this runs the risk of completin
 \textcolor{purple}{\textbf{Functional Requirements:}}
 \requirement{SFR}{The game should show the name of the area.}
 {The player should know how far in the game he or she is in reaching the end.}
-{The game shows a label of the area the player character is currently in at the top right of the screen}
+{The game shows a label of the area the player character is currently at the top right of the screen}
 {\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
 {map-area-name}
 
@@ -126,7 +125,7 @@ This progression does not persist after the player loses.}
 \textbf{Look and Feel:}
 \requirement{SNFR}
 {Combat should be exciting and very engaging to the player.}
-{This is a key moment of the game. If the player is not satisfied or feel exhilerated, then the player will no long feel the urge to continue the game.}
+{This is a key moment of the game. If the player is not satisfied or feel exhilarated, then the player will no long feel the urge to continue the game.}
 {The game has a very fun and addicting combat that keeps the player from turning if off.}
 {\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}}
 {controller-exciting}
@@ -148,7 +147,7 @@ This progression does not persist after the player loses.}
 \textbf{Performance:}
 \requirement{SNFR}
 {The inputs for the used controller should have immediate feedback response for the game.}
-{Any major input delays will make the make feel sluggest or slow to repond to any player feedback.}
+{Any major input delays will make the game feel slow to repond to any player feedback.}
 {The game response time in handling the players input is less than a second.}
 {\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002}, \ref{controller-constraint}}
 {controller-nolag}
