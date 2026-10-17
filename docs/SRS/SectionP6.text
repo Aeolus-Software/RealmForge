@@ -1,3 +1,13 @@
 \begin{itemize}
-    \item 
+    \item High amount of features in scope
+    \item Avoid added unnecessary features -- scope creep
+    \item Learning curve, etc... alot of what we said in the POC plan doc
+    \item Added pre-emptive soft deadlines to help gauge our progress to see how close we are if we need to lower scope
+    \item If a feature planned for during the P4 schedule such some parts of the POC is not met. Get an alternative via
+    pensil and paper drawings for visuall indication during planned presentation and put the feature into technical debt.
+    \item If a feature is not buildable in the allocated time or too complicated to implement, then we will seek alternatives via
+    godot modules that implement them for us e.g, inventory module, combat module that have some godot third-party systems that
+    can be purchased or credited for use.
+    \item This include visual and audio assets as well.
+
 \end{itemize}
