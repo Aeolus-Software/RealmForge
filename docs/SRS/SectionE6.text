@@ -1,0 +1,21 @@
+The following properties of the environment must be preserved during RealmForge’s operation, including local files, operating system settings, input devices, user privacy, and audio and display settings outside of gameplay.
+
+\subsection*{Files & Storage}
+
+RealmForge must not modify or delete any existing files unrelated to its own installation and game data. Similarly, uninstalling the game should not remove any local files unrelated to RealmForge.
+
+\subsection*{Operating System Settings}
+
+The overall operating system configuration must remain unchanged by RealmForge. System settings and security configurations must not be permanently modified during gameplay.
+
+\subsection*{Input Device Functionality}
+
+Input device functionality must remain unchanged outside of RealmForge gameplay. Keyboard and mouse functionality must remain available to the user, and any game-specific changes affecting these devices must be restored once the game exits.
+
+\subsection*{User Data & Privacy}
+
+User progress in RealmForge must be preserved between game sessions and should not be lost during game updates. Private user data must not be accessed or collected beyond what is required for gameplay and disclosed to the user.
+
+\subsection*{Audio & Display Settings}
+
+Overall audio and display configurations must remain unchanged outside of the game. Any changes made to the system’s display or audio settings during gameplay must be restored once the game session ends. RealmForge must not modify the audio settings of other applications running in parallel. 
