@@ -158,8 +158,37 @@ initial starting health while the game states the current health is zero.}
 \noindent
 \subsection*{\textbf{Map System:}}
 \textcolor{purple}{\textbf{Functional Requirements:}}
-\requirement{SFR}{The game should show the name of the area.}
-{The player should know how far in the game he or she is in reaching the end.}
+
+\requirement{SFR}
+{The game shall tell when the player is currently in the main game world.}
+{The player needs to know which situation or state the game is in whether it is combat or just exploring}
+{The game displays a map screen along with multiple locations with path linking towards each location.}
+{\ref{combact-visual}, \ref{combat-ends}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
+{map-overworld}
+
+\requirement{SFR}
+{The game shall give atleast one or more travel options}
+{The player needs to have the freedom to choose where to go next in order to give the game variety and not feel like it is on a linear path.}
+{The game displays UI elements titled 'Bahamas', 'Volcano', and 'Island' that are interactable with. }
+{\ref{combact-visuals}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
+{map-options}
+
+\requirement{SFR}
+{The the game shall show a prompt to the player for confirmation of travel.}
+{This give the player reaffirmed knowledge and an update on the travel location.}
+{The game displays a prompt right after the player has choosen a travel destination. The prompt displays "Are you sure" with two options 'yes' or 'no'. }
+{\ref{map-options}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
+{map-confirm}
+
+\requirement{SFR}
+{The game shall indicate to the player where the player is traveling to.}
+{This is mandatory so that the player is not confused on whether he or she traveled or not.}
+{The game displays an image of the player character moving towards a travel marker beside the next location.}
+{\ref{map-options}, \ref{map-confirm}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
+{map-traveling}
+
+\requirement{SFR}{The game shall show the name of the area.}
+{The player should know how far in the game he or she has reached toward the end.}
 {The game shows a label of the area the player character is currently at the top right of the screen}
 {\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
 {map-area-name}
