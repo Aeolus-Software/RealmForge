@@ -110,7 +110,7 @@ initial starting health while the game states the current health is zero.}
 
 \requirement{SFR}
 {The game shall display a visual for both the player and enemies' combat representation.}
-{This is needed to alert the user for when a combat encounter has occured and give a sense of the borders and position.}
+{This is needed to alert the user for when a combat encounter has occurred and give a sense of the borders and position.}
 {The game displays an image for the player's character on the bottom-left side and the enemies' images in the top-right.}
 {Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-003}{US-003}}
 {combact-visual}
@@ -173,7 +173,7 @@ initial starting health while the game states the current health is zero.}
 {map-overworld}
 
 \requirement{SFR}
-{The game shall give atleast one or more travel options.}
+{The game shall give at least one or more travel options.}
 {The player needs to have the freedom to choose where to go next in order to give the game variety and not feel like it is on a linear path.}
 {The game displays UI elements titled 'Bahamas', 'Volcano', and 'Island' that are interactable with. }
 {Refines \ref{combact-visual}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-002}{US-002}}
@@ -182,7 +182,7 @@ initial starting health while the game states the current health is zero.}
 \requirement{SFR}
 {The the game shall show a prompt to the player for confirmation of travel.}
 {This give the player reaffirmed knowledge and an update on the travel location.}
-{The game displays a prompt right after the player has choosen a travel destination. The prompt displays "Are you sure" with two options 'yes' or 'no'. }
+{The game displays a prompt right after the player has chosen a travel destination. The prompt displays "Are you sure" with two options 'yes' or 'no'. }
 {Refines \ref{map-options}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-002}{US-002}}
 {map-confirm}
 
@@ -224,7 +224,7 @@ This progression will not persist after the player loses and starts a new game.}
 \requirement{SFR}
 {The game shall give at least one or more options for the player to purchase items.}
 {The is mandatory since there is otherwise no way for the player to become stronger or get any help in the game.}
-{The game displays images of the items/buidings/weapons purchasable as well as a 'buy' option underneath.}
+{The game displays images of the items/buildings/weapons purchasable as well as a 'buy' option underneath.}
 {Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-004}{UC-004}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-004}{US-004}}
 {hub-options}
 
@@ -242,10 +242,11 @@ This progression will not persist after the player loses and starts a new game.}
 {Refines \ref{hub-cost}, Refines \ref{hub-options}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-004}{UC-004}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-004}{US-004}}
 {hub-effect}
 
+\noindent
 \textbf{Undesired Event Handling:}
 \requirement{SFR}
 {The game shall reject the player in some way from purchasing the item if the player does not have the needed currency or materials required for purchased.}
-{Stops the player from being able to buy equipment for free or under the value perscribed.}
+{Stops the player from being able to buy equipment for free or under the value prescribed.}
 {The game display a text box saying "Sorry, not enough rupees" after the player attempts to buy the item.}
 {Refines \ref{hub-cost}, Refines \ref{hub-options}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-004}{UC-004}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-004}{US-004}}
 {hub-reject}
@@ -256,15 +257,15 @@ This progression will not persist after the player loses and starts a new game.}
 
 \requirement{SNFR}
 {The game should give a variety of purchase options that differ in the ways to improve the next game session.}
-{This gives the player the ability to try and test out all the different purchasables in the central hub in order to weigh in their worth; it compels the user to experiment.}
+{This gives the player the ability to try and test out all the different purchasable upgrades in the central hub in order to weigh in their worth; it compels the user to experiment.}
 {The game provides an upgrade to increase the amount of attacks a player can deal, being able to travel faster, being able to collect more resource after combat, or where a tie.}
 {\ref{hub-options}}
 {hub-variety}
 
 \requirement{SNFR}
 {The player should encounter different kinds of enemies varying in different such as attack types, health, armor, etc.}
-{The player doesn't want to feel bored fighting the same enemy over again. This feels repetives and discourages the player to continue the game.}
-{The player can encounter an ememy that can attack physically as well as an enemy that poisons the player (slowly decrease health over time). The player can encounter
+{The player doesn't want to feel bored fighting the same enemy over again. This feels repetitive and discourages the player to continue the game.}
+{The player can encounter an enemy that can attack physically as well as an enemy that poisons the player (slowly decrease health over time). The player can encounter
 an enemy that has increased armor (damage done to it is less than normal), and an enemy with more health (health bar is longer).}
 {\ref{combat-attack}}
 {combat-variety}
@@ -285,7 +286,7 @@ an enemy that has increased armor (damage done to it is less than normal), and a
 
 \requirement{SNFR}
 {The player should offensive, and defensive options when facing an encounter.}
-{This keeps the player engaged because the player is not repeating the same option again constant (attack--> attack, attack--> attack --> ...)}
+{This keeps the player engaged because the player is not repeating the same option again constant (attack, attack, attack, attack, ...)}
 {The game gives the player the options to charge an attack (double damage next turn attack), attack normally, or defend with a shield.}
 {Refines \ref{combat-attack}}
 {combact-attack-variety}
@@ -301,7 +302,7 @@ an enemy that has increased armor (damage done to it is less than normal), and a
 \textbf{Performance Requirements:}
 \requirement{SNFR}
 {The inputs for the used controller should have immediate feedback response for the game.}
-{Any major input delays will make the game feel slow to repond to any player feedback.}
+{Any major input delays will make the game feel slow to respond to any player feedback.}
 {The game response time in handling the players input is less than a second.}
 {Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{UC-002}{UC-002}}
 {controller-nolag}
