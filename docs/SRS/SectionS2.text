@@ -13,8 +13,7 @@
 \textcolor{purple}{\textbf{Functional Requirements:}}
 \requirement{SFR}
 {The controller button-bindings shall have a keyboard and mouse equivalent.}
-{The user must have full access to all functionality of the game with either a controller or keyboard and mouse. There should not
-be any discrepancy or gap with using one over the other.}
+{The user must have full access to all functionality of the game with either a controller or keyboard and mouse. This helps if the user is not experienced or comfortable with a controller option.}
 {The directional inputs of the d-pad from the controller has the same input mappings as the left, right, up, down on the keyboard. The A, B, X, Y, L and R buttons on 
 XBOX controllers also have a keyboard equivalent functionality mapped into certain keys.}
 {\ref{controller-constraint}, \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}}
@@ -167,10 +166,10 @@ initial starting health while the game states the current health is zero.}
 {map-overworld}
 
 \requirement{SFR}
-{The game shall give atleast one or more travel options}
+{The game shall give atleast one or more travel options.}
 {The player needs to have the freedom to choose where to go next in order to give the game variety and not feel like it is on a linear path.}
 {The game displays UI elements titled 'Bahamas', 'Volcano', and 'Island' that are interactable with. }
-{\ref{combact-visuals}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
+{\ref{combact-visual}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
 {map-options}
 
 \requirement{SFR}
@@ -201,19 +200,47 @@ initial starting health while the game states the current health is zero.}
 \subsection*{\textbf{Central Hub:}}
 \textcolor{purple}{\textbf{Functional Requirements:}}
 
-\requirement{SFR}{Permanent progression should be characterized by the player keeping some progression after they lose. 
-This could be a certain resource/currency, or things the player discovered in each attempt.}
-{The player should some feel some sense of improvement or accomplishment during the gameplayer, otherwise they would not feel the need to continue}
-{The game keeps the same amount of resources after the player has failed the attempt}
+\requirement{SFR}{Permanent progression shall be characterized by the player keeping some progression after they lose; 
+either currency, or materials the player discovered in each attempt through combat or both.}
+{The player should some feel some sense of improvement or accomplishment during the gameplayer, otherwise they would not feel the need to continue.}
+{The game keeps track of the copper collected after the player has failed a run.}
 {\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}}
-{permanent-progression}
+{hub-progression}
 
-\requirement{SFR}{During gameplay, the player can gain resources sent from the central hub, changing the gameplay experience for each run. 
-This progression does not persist after the player loses.}
+\requirement{SFR}{During gameplay, the player shall gain resources sent from the central hub, changing the gameplay experience for each run. 
+This progression will not persist after the player loses and starts a new game.}
 {This is a vital feature the game uses to help improve the odds of the player going further during a game session}
 {The game transfer magic points to the player each combat instance.}
 {\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}}
-{upkeep-during-gameplay}
+{hub-upkeep}
+
+\requirement{SFR}
+{The game shall give at least one or more options for the player to purchase items.}
+{The is mandatory since there is otherwise no way for the player to become stronger or get any help in the game.}
+{The game displays images of the items/buidings/weapons purchasable as well as a 'buy' option underneath.}
+{\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
+{hub-options}
+
+\requirement{SFR}
+{The game shall display the resource cost for each item to be purchased}
+{This is needed, otherwise the player will have no idea how to allocate the resources gather during each run.}
+{The central hub shows a value for the amount of the in-game currency needed next to the item's image}
+{\ref{hub-options}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
+{hub-cost}
+
+\requirement{SFR}
+{The game shall describe the effect of the item in some way to the player.}
+{The player needs to know the effect before purchasing in order to make an educated guess on which item/building/weapon to prioritize purchasing first.}
+{The game displays text for a detailed description for the use case of the purchasable.}
+{\ref{hub-cost}, \ref{hub-options}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
+{hub-effect}
+
+\requirement{SFR}
+{The game shall reject the player in some way from purchasing the item if the player does not have the needed currency or materials required for purchased.}
+{Stops the player from being able to buy equipment for free or under the value perscribed.}
+{The game display a text box saying "Sorry, not enough rupees" after the player attempts to buy the item.}
+{\ref{hub-cost}, \ref{hub-options}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
+{hub-reject}
 
 
 \subsection*{\textcolor{teal}{Non-Functional Requirements:}}
@@ -247,6 +274,48 @@ This progression does not persist after the player loses.}
 {\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002}, \ref{controller-constraint}}
 {controller-nolag}
 
+\requirement{SNFR}
+{There should not be any gameplay discrepancy or gap with using a controller over a keyboard and mouse or vice versa.}
+{The player needs to be able to perform, control, and react to the game's stimulation equally regardless of what is being held, otherwise there will an in-balance over playing with one over the other
+and scues testing.}
+{}
+{}
+{}
+
+\requirement{SNFR}
+{}
+{}
+{}
+{}
+{}
+
+\requirement{SNFR}
+{}
+{}
+{}
+{}
+{}
+
+\requirement{SNFR}
+{}
+{}
+{}
+{}
+{}
+
+\requirement{SNFR}
+{}
+{}
+{}
+{}
+{}
+
+\requirement{SNFR}
+{}
+{}
+{}
+{}
+{}
 % \textbf{Usability:}
 % \textbf{Operational:}
 % \textbf{Maintainability:}
