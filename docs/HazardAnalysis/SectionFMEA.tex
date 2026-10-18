@@ -76,21 +76,30 @@
 	\hline
 	
 	Combat System &
-	Failure mode 1 &
-	effect 1 &
-	cause 1 &
-	action1 &
-	req1 &
-	ref 1 \\
+	The system displays flashing or intense graphics &
+	Users with photosensitive epilepsy can potentially suffer an epileptic 
+	seizure &
+	The system displays excessive flashing graphics without warning users with 
+	photosensitive epilepsy &
+	Include a detailed flashing lights or epilepsy warning when the system 
+	launches, and ensure the game does not display excessive flashing graphics &
+	CREATE NEW REQS FOR THIS &
+	H3-A \\
 	\hline
 	
 	Progression and Rewards &
-	Failure mode 1 &
-	effect 1 &
-	cause 1 &
-	action1 &
-	req1 &
-	ref 1 \\
+	Rewards provided to the user for succeeding in an enemy encounter are lost 
+	when exiting the encounter to the game world &
+	Gameplay progression is interrupted by earned rewards not being given to 
+	the user, preventing them from using rewards to improve their in-game 
+	capabilities; this can cause the user to become frustrated &
+	Variables storing enemy encounter rewards are erroneously overwritten by 
+	another value during transitions between game scenes &
+	Retain and update enemy encounter reward variables (during encounters) in 
+	an additional memory location separate from the combat system, to ensure a 
+	backup value is available &
+	CREATE NEW REQS FOR THIS &
+	H4-A \\
 	\hline
 	
 	Central Hub &
@@ -98,8 +107,8 @@
 	effect 1 &
 	cause 1 &
 	action1 &
-	req1 &
-	ref 1 \\
+	CREATE NEW REQS FOR THIS &
+	H5-A \\
 	\hline
 	
 	Progress Management &
@@ -107,8 +116,8 @@
 	effect 1 &
 	cause 1 &
 	action1 &
-	req1 &
-	ref 1 \\
+	CREATE NEW REQS FOR THIS &
+	H6-A \\
 	\hline
 	
 	User Interface &
@@ -116,8 +125,8 @@
 	effect 1 &
 	cause 1 &
 	action1 &
-	req1 &
-	ref 1 \\
+	CREATE NEW REQS FOR THIS &
+	H7-A \\
 	\hline
 	
 \end{longtable}
