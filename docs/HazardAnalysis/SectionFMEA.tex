@@ -1,0 +1,123 @@
+\small
+\renewcommand{\arraystretch}{1.3}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.13\linewidth}|>{\raggedright\arraybackslash}p{0.14\linewidth}|>{\raggedright\arraybackslash}p{0.14\linewidth}|>{\raggedright\arraybackslash}p{0.14\linewidth}|>{\raggedright\arraybackslash}p{0.18\linewidth}|>{\raggedright\arraybackslash}p{0.08\linewidth}|>{\raggedright\arraybackslash}p{0.07\linewidth}|}
+	
+	\caption{Failure Mode and Effect Analysis (FMEA)}
+	\label{tab:fmea}\\
+	\hline
+	
+	\textbf{Component} &
+	\textbf{Failure Modes} &
+	\textbf{Effects of Failure} &
+	\textbf{Causes of Failure} &
+	\textbf{Recommended Action} &
+	\textbf{Safety Requirements} &
+	\textbf{Ref.} \\
+	\hline
+	\endfirsthead
+	
+	\multicolumn{7}{c}{Table \thetable\ -- Continued}\\
+	\hline
+	
+	\textbf{Component} &
+	\textbf{Failure Modes} &
+	\textbf{Effects of Failure} &
+	\textbf{Causes of Failure} &
+	\textbf{Recommended Action} &
+	\textbf{Safety Requirements} &
+	\textbf{Ref.} \\
+	\hline
+	\endhead
+	
+	\hline
+	\multicolumn{7}{r}{Continued on next page}\\
+	\endfoot
+	
+	\hline
+	\endlastfoot
+	
+	Property Configuration &
+	The system is unable to recognize the user's connected input device (such 
+	as a controller), when selected in the feature variation menu &
+	Users waste their time and can become confused/frustrated when attempting 
+	to troubleshoot input device connection &
+	A. System does not provide sufficient guidance to the user to connect their 
+	input device
+	
+	B. System does not correctly monitor device interfaces to receive input 
+	(Bluetooth, USB) &
+	A. Provide detailed guidance to the user on how to connect each input 
+	device; prompt the user to select the device they wish to connect 
+	(PlayStation DualSense controller, Xbox Series X controller, etc.) and 
+	provide guidance specific to that device
+	
+	B. Monitor both USB and Bluetooth interfaces for connection to each type of 
+	supported input device when the user opts to connect a new device &
+	CREATE NEW REQS FOR THIS &
+	H1-A \\
+	\hline
+	
+	World Navigation &
+	User is unable to understand where their player character can move next in 
+	the overall game world &
+	User can become confused/frustrated, and waste gameplay time staying in the 
+	main game world instead of progressing forwards &
+	System does not provide adequate feedback to the user regarding where the 
+	player character can move next; valid locations are indistinguishable from 
+	invalid locations, or a possible path to take to reach the end of the game 
+	is unclear &
+	Highlight valid locations that the player character can move to in the game 
+	world, and indicate invalid locations. Provide further guidance to the user 
+	regarding a possible path forward if an extended period of time is spent 
+	attempting to reach invalid locations &
+	CREATE NEW REQS FOR THIS &
+	H2-A \\
+	\hline
+	
+	Combat System &
+	Failure mode 1 &
+	effect 1 &
+	cause 1 &
+	action1 &
+	req1 &
+	ref 1 \\
+	\hline
+	
+	Progression and Rewards &
+	Failure mode 1 &
+	effect 1 &
+	cause 1 &
+	action1 &
+	req1 &
+	ref 1 \\
+	\hline
+	
+	Central Hub &
+	Failure mode 1 &
+	effect 1 &
+	cause 1 &
+	action1 &
+	req1 &
+	ref 1 \\
+	\hline
+	
+	Progress Management &
+	Failure mode 1 &
+	effect 1 &
+	cause 1 &
+	action1 &
+	req1 &
+	ref 1 \\
+	\hline
+	
+	User Interface &
+	Failure mode 1 &
+	effect 1 &
+	cause 1 &
+	action1 &
+	req1 &
+	ref 1 \\
+	\hline
+	
+\end{longtable}
