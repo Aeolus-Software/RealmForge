@@ -110,25 +110,46 @@ initial starting health while the game states the current health is zero.}
 \textcolor{purple}{\textbf{Functional Requirements:}}
 
 \requirement{SFR}
-{The game shall display the player and enemy and their respective health bars during the combat screen.}
-{Needed to indicate the player the urgency of the situation during combat.}
-{The game displays the in-game player sprite and enemy sprite and two green health bars right below respective sprites.}
+{The game shall display a visual for both the player and enemies' combat representation.}
+{This is needed to alert the user for when a combat encounter has occured and give a sense of the borders and position.}
+{The game displays an image for the player's character on the bottom-left side and the enemies' images in the top-right.}
 {\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
-{combat-display}
+{combact-visual}
+
+\requirement{SFR}
+{The game shall display the player and the enemy/enemies’ respective health points during the combat screen.}
+{This is needed to indicate the player the urgency of the situation during combat; whether the player losing or winning.}
+{The game displays the in-game player and enemy/enemies’ as two green health bars under their images (see \ref{combact-visual}).}
+{\ref{combact-visual}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
+{combat-health}
 
 \requirement{SFR}
 {The game shall display an indication of success if the enemy's health goes to zero or failure if the player's health goes to zero.}
 {This is needed in order to know when the combat has concluded.}
 {The game displays the in-game player sprite and enemy sprite and two green health bars right below respective sprites.}
-{\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
+{\ref{combat-health}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
 {combat-ends}
 
 \requirement{SFR}
 {The game shall display an attack visual whenever the player presses an attack option. Similar, the game shall display a visual for the enemy's opposing attack.}
-{The combat needs to be telegraphed some way or manner.}
+{The combat needs to be telegraphed in some way or manner.}
 {The game displays the in-game characters sword swinging up and down to indicate the attack.}
-{\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
+{\ref{combact-visual}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
 {combat-attack}
+
+\requirement{SFR}
+{The game shall indicate when the player or enemies' health are changed (decreased or increased).}
+{The player must be know whether an attack done by the player or enemy has been effective or not, otherwise, there is no sense of progress of combat. }
+{When the player attacks an enemy, the enemy's health bar shortens}
+{\ref{combat-health}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
+{combat-healthchange}
+
+\requirement{SFR}
+{The game shall display at least one or more combat options for the player.}
+{This is mandatory for progression during combat, otherwise, the player will be just stuck looking the enemy and not begin able to anything.}
+{The game displays UI elements labeled 'attack' and 'defend' during combat.}
+{\ref{combat-attack}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
+{combat-option}
 
 % Map System
 %
