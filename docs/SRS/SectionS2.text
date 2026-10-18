@@ -45,7 +45,7 @@ XBOX controllers also have a keyboard equivalent functionality mapped into certa
 {If a controller and keyboard is connected, then this prevents the user from accidently pressing inputs that were not intended.}
 {During the launch of the software, if a controller is connected the game will not accept any action from it unless switched to.}
 {Refines \ref{controller-default}, Refines \ref{controller-switching}, Satisfies \hyperlink{UC-001}{UC-001}, Satisfies \hyperlink{US-001}{US-001}}
-{controller,onlyone}
+{controller-onlyone}
 
 % Game Settings
 %
@@ -150,6 +150,13 @@ initial starting health while the game states the current health is zero.}
 {Refines \ref{combat-attack}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-003}{US-003}}
 {combat-option}
 
+\requirement{SFR}
+{The player shall have the possibility to encounter more than one enemy at a time.}
+{This improves combat experience, because the player has to now proritize and deal with a certain enemy first over the other thus giving the player more decisions to make.}
+{The game displays two skeleton enemies.}
+{Refines \ref{combact-visual}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-003}{US-003}}
+{combat-numbers}
+
 % Map System
 %
 %
@@ -235,6 +242,7 @@ This progression will not persist after the player loses and starts a new game.}
 {Refines \ref{hub-cost}, Refines \ref{hub-options}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-004}{UC-004}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-004}{US-004}}
 {hub-effect}
 
+\textbf{Undesired Event Handling:}
 \requirement{SFR}
 {The game shall reject the player in some way from purchasing the item if the player does not have the needed currency or materials required for purchased.}
 {Stops the player from being able to buy equipment for free or under the value perscribed.}
@@ -244,47 +252,11 @@ This progression will not persist after the player loses and starts a new game.}
 
 
 \subsection*{\textcolor{teal}{Non-Functional Requirements:}}
-\textbf{Look and Feel:}
-\requirement{SNFR}
-% {Combat should be exciting and very engaging to the player.}
-% {This is a key moment of the game. If the player is not satisfied or feel exhilarated, then the player will no long feel the urge to continue the game.}
-% {The game has a very fun and addicting combat that keeps the player from turning if off.}
-% {Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}}
-% {controller-exciting}
-
-% \requirement{SNFR}{The map screen should be visually appealing to the player, but also no hindering the player.}
-% {The player shall know the current and future locations without have to constantly check the area name.}
-% {The game shows a label of the area name on the top right of the screen and gives visual indication whenever the area label is changed.}
-% {Refines \hyperlink{UC-002}{UC-002}}
-% {map-area-pleasing}
+\textbf{Look and Feel Requirements:}
 
 \requirement{SNFR}
-{The game should have configuration options that drastically alter the experience such as difficulty, fun, fast-past.}
-{The game should be have adjustable variables that will help tune the game for testing in order to better experience overall.}
-{The game has a configuration option that changes the how fast the combat is between the player and enemy.}
-{Refines \hyperlink{UC-001}{UC-001}, Refines \ref{controller-constraint}}
-{game-better-experience}
-
-\noindent
-\textbf{Performance:}
-\requirement{SNFR}
-{The inputs for the used controller should have immediate feedback response for the game.}
-{Any major input delays will make the game feel slow to repond to any player feedback.}
-{The game response time in handling the players input is less than a second.}
-{Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{UC-002}{UC-002}, \ref{controller-constraint}}
-{controller-nolag}
-
-% \requirement{SNFR}
-% {There should not be any gameplay discrepancy or gap with using a controller over a keyboard and mouse or vice versa.}
-% {The player needs to be able to perform, control, and react to the game's stimulation equally regardless of what is being held, otherwise there will an in-balance over playing with one over the other
-% and skew testing results.}
-% {Aiming on the controller autolocks onto the target enemy whereas the mouse needs to be manually aim. This is to accomadate mouse generally being more precise to aim versus a regular analog stick on a controller.}
-% {\ref{controller-equivalence}}
-% {controller-balance}
-
-\requirement{SNFR}
-{The games should give a variety of options that differ the ways to improve the next game session.}
-{This gives the player the need to try and test out all the different purchasables in the central hub in order to weigh in their worth; it compels the user to experiment.}
+{The game should give a variety of purchase options that differ in the ways to improve the next game session.}
+{This gives the player the ability to try and test out all the different purchasables in the central hub in order to weigh in their worth; it compels the user to experiment.}
 {The game provides an upgrade to increase the amount of attacks a player can deal, being able to travel faster, being able to collect more resource after combat, or where a tie.}
 {\ref{hub-options}}
 {hub-variety}
@@ -298,28 +270,96 @@ an enemy that has increased armor (damage done to it is less than normal), and a
 {combat-variety}
 
 \requirement{SNFR}
-{The game should showcase a variety of different travel destinations to the player ranging from a number of enviromental}
-{}
-{}
-{}
-{}
+{The game should have configuration options that drastically alter the experience such as difficulty and paced of the game.}
+{The game should be have adjustable variables that will help tune the game for testing in order to better experience overall.}
+{The game has a configuration option that changes the how fast the combat is between the player and enemy.}
+{Refines \ref{game-variant-health}, Refines \ref{game-variant-cost}, Refines \hyperlink{UC-001}{UC-001}}
+{game-better-experience}
 
 \requirement{SNFR}
-{}
-{}
-{}
-{}
-{}
+{The game should showcase a variety of different travel destinations that are visually different.}
+{This helps gives the player external knowledge and hints of the risks the player faces when heading to a certain location.}
+{The game displays images for locations showing a nice island, a volcano, a desert and grassy area.}
+{Refines \ref{map-options}, Refines \hyperlink{UC-002}{UC-002}}
+{map-info}
 
 \requirement{SNFR}
+{The player should offensive, and defensive options when facing an encounter.}
+{This keeps the player engaged because the player is not repeating the same option again constant (attack--> attack, attack--> attack --> ...)}
+{The game gives the player the options to charge an attack (double damage next turn attack), attack normally, or defend with a shield.}
+{Refines \ref{combat-attack}}
+{combact-attack-variety}
+
+\requirement{SNFR}
+{The game should telegraph the type of enemy encounter.}
+{The player needs to know the enemy type in order to handle them differently, so they won't fail.}
+{The game displays an enemy with a sword and another enemy with a shield; whenever the player attacks the shielded enemy, it takes less damage than the sword enemy.}
+{Refines \ref{combat-variety}}
 {}
-{}
-{}
-{}
-{}
+
+\noindent
+\textbf{Performance Requirements:}
+\requirement{SNFR}
+{The inputs for the used controller should have immediate feedback response for the game.}
+{Any major input delays will make the game feel slow to repond to any player feedback.}
+{The game response time in handling the players input is less than a second.}
+{Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{UC-002}{UC-002}}
+{controller-nolag}
+
+\noindent
+\textbf{Normal Operation Requirements:}
+
+\requirement{SNFR}
+{The game should give a description to all the game selection properties.}
+{This helps the player in deciding which options he or she wants to tackle.}
+{The game displays a tool-tip text when the user select the configuration for change.}
+{Refines \ref{game-variant-health}, Refines \ref{game-variant-droprate}, Refines \ref{game-variant-cost}}
+{game-variant-description}
+
+
+\requirement{SNFR}
+{The game should have valid transitions that help the indication of game state change.}
+{Have no sign transition disorients the player and gives confusion over whether he or she is in combat or traveling.}
+{The games fades in and out (turn complete black and reappear) whenever the player enter combat.}
+{Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-002}{US-002}}
+{game-transition}
+
+\noindent
+\textbf{Likely to change or Out of current scope Requirements:}
+\requirement{SNFR}
+{The game should provide audio cues for when the player does an action.}
+{This helps gives the player feedback that is not visual.}
+{The games provides a sound effect whenever the player confirms a prompt.}
+{Refines \hyperlink{UC-002}{UC-001}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-001}{US-001}, Refines \hyperlink{US-002}{US-002}}
+{game-audio}
+
 % \textbf{Usability:}
 % \textbf{Operational:}
 % \textbf{Maintainability:}
+
+
+% \requirement{SNFR}
+% {There should not be any gameplay discrepancy or gap with using a controller over a keyboard and mouse or vice versa.}
+% {The player needs to be able to perform, control, and react to the game's stimulation equally regardless of what is being held, otherwise there will an in-balance over playing with one over the other
+% and skew testing results.}
+% {Aiming on the controller autolocks onto the target enemy whereas the mouse needs to be manually aim. This is to accomadate mouse generally being more precise to aim versus a regular analog stick on a controller.}
+% {\ref{controller-equivalence}}
+% {controller-balance}
+
+% \requirement{SNFR}
+% {Combat should be exciting and very engaging to the player.}
+% {This is a key moment of the game. If the player is not satisfied or feel exhilarated, then the player will no long feel the urge to continue the game.}
+% {The game has a very fun and addicting combat that keeps the player from turning if off.}
+% {Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}}
+% {controller-exciting}
+
+% \requirement{SNFR}{The map screen should be visually appealing to the player, but also no hindering the player.}
+% {The player shall know the current and future locations without have to constantly check the area name.}
+% {The game shows a label of the area name on the top right of the screen and gives visual indication whenever the area label is changed.}
+% {Refines \hyperlink{UC-002}{UC-002}}
+% {map-area-pleasing}
+
+
 
 %\requirement{Tag/ID}
 %{Description}
