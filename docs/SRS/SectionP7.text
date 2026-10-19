@@ -1,14 +1,129 @@
 The following section describes the process of gathering, documenting, reviewing, and updating requirements throughout the project.
-
+\\
 \noindent
 \textbf{Requirements Gathering}
+\\
 The team identifies RealmForge's overall requirements through meetings and discussions about the game's functionality, expected behaviour, and overall project goals. Feedback from the project supervisor and course instructor is also considered when identifying the system's requirements to ensure they are consistent with the overall project goals. Future discussions and feedback will also be considered when updating requirements throughout development.
-
+\\
 \noindent
 \textbf{Requirements Review}
+\\
 Each subsection throughout the documentation is assigned to a team member. These sections are additionally assigned reviewers, allowing other team members to review the documented requirements. This provides a secondary check to ensure requirements align with the project's goals, stay consistent across the document, and cover all critical requirements for RealmForge. Feedback from these reviews will be considered before finalizing each section. GitHub issues are created to track reviews and feedback, ensure reviewers are assigned, and communicate any necessary changes to the team.
-
+\\
 \noindent
 \textbf{Requirements Changes}
+\\
 As the project develops, requirements may change based on further team discussions, feedback, changes in functionality, or technical limitations. Proposed changes will be discussed among team members and reflected in the SRS to ensure the document remains consistent throughout the project. 
+\\
 
+  
+\small
+\setlength{\arrayrulewidth}{0.5pt}
+
+\begin{longtable}{|p{2.1cm}|p{4.3cm}|p{6.0cm}|}
+
+\caption{RealmForge Requirements Traceability Table}
+\label{tab:requirements-traceability} \\
+
+\hline
+\textbf{Requirement ID} &
+\textbf{Use Cases / User Scenarios} &
+\textbf{Related Requirements} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Requirement ID} &
+\textbf{Use Cases / Scenarios} &
+\textbf{Related Requirements} \\
+\hline
+\endhead
+
+SFR-001 & UC-001, US-001 & Satisfies ENV-002 \\
+\hline
+SFR-002 & UC-001, US-001 & Refines SFR-001 \\
+\hline
+SFR-003 & UC-001, US-001 & Refines ENV-002, SFR-001 \\
+\hline
+SFR-004 & UC-001, US-001 & Refines ENV-002, SFR-001; SFR-003 \\
+\hline
+SFR-005 & UC-001, US-001 & Refines SFR-003, SFR-004 \\
+\hline
+SFR-006 & UC-001, UC-002, UC-003 &  \\
+\hline
+SFR-007 & UC-001, UC-002, UC-003 &  \\
+\hline
+SFR-008 & UC-004, US-004 & Refines SFR-007 \\
+\hline
+SFR-009 & UC-002, US-001, US-002 & Refines SFR-006, SFR-007, SFR-008 \\
+\hline
+SFR-010 & UC-002, US-001, US-002 & Refines SFR-009 \\
+\hline
+SFR-011 & UC-002, UC-003, US-002, US-003 &  \\
+\hline
+SFR-012 & UC-002, UC-003, US-002, US-003 & Refines SFR-011 \\
+\hline
+SFR-013 & UC-002, UC-003, US-002, US-003 & Refines SFR-012 \\
+\hline
+SFR-014 & UC-002, UC-003, US-002, US-003 & Refines SFR-011 \\
+\hline
+SFR-015 & UC-002, UC-003, US-002, US-003 & Refines SFR-012 \\
+\hline
+SFR-016 & UC-002, UC-003, US-002, US-003 & Refines SFR-014 \\
+\hline
+SFR-017 & UC-002, UC-003, US-002, US-003 & Refines SFR-011 \\
+\hline
+SFR-018 & UC-002, US-002 & Refines SFR-011, SFR-013 \\
+\hline
+SFR-019 & UC-002, US-002 & Refines SFR-011 \\
+\hline
+SFR-020 & UC-002, US-002 & Refines SFR-019 \\
+\hline
+SFR-021 & UC-002, US-002 & Refines SFR-019, SFR-020 \\
+\hline
+SFR-022 & UC-002, US-002 &  \\
+\hline
+SFR-023 & UC-002, UC-004 &  \\
+\hline
+SFR-024 & UC-002, UC-004 &  \\
+\hline
+SFR-025 & UC-002, UC-004, US-002, US-004 &  \\
+\hline
+SFR-026 & UC-002, UC-004, US-002, US-004 & Refines SFR-025 \\
+\hline
+SFR-027 & UC-002, UC-004, US-002, US-004 & Refines SFR-025, SFR-026 \\
+\hline
+SFR-028 & UC-002, UC-004, US-002, US-004 & Refines SFR-025, SFR-026 \\
+\hline
+
+SNFR-001 &  & SFR-025 \\
+\hline
+SNFR-002 &  & SFR-014 \\
+\hline
+SNFR-003 & UC-001 & Refines SFR-006, SFR-008 \\
+\hline
+SNFR-004 & UC-002 & Refines SFR-019 \\
+\hline
+SNFR-005 &  & Refines SFR-014 \\
+\hline
+SNFR-006 &  & Refines SNFR-002 \\
+\hline
+SNFR-007 & UC-001, UC-002 &  \\
+\hline
+SNFR-008 &  & Refines SFR-006, SFR-007, SFR-008 \\
+\hline
+SNFR-009 & UC-002, US-002 &  \\
+\hline
+SNFR-010 & UC-001, UC-002, US-001, US-002 &  \\
+\hline
+
+ENV-001 &  &  \\
+\hline
+ENV-002 &  & Satisfied by SFR-001; Refined by SFR-003, SFR-004 \\
+\hline
+ENV-003 &  &  \\
+\hline
+
+\end{longtable}
+
+\normalsize
