@@ -1,70 +1,71 @@
-\requirement{SSR-001}
+\requirement{SSR}
 {Save data shall be associated with specific game profiles saved on the device.}
 {Being able to have multiple game profiles improves usability of the system}
 {At least 3 game profiles can be stored on one at device simultaneously, and saving/loading data to/from one profile never affects other saved profiles}
 {Traceability tags}
 
-\requirement{SSR-002}
+\requirement{SSR}
 {The system shall ensure all play tester information and evaluation metrics are securely stored and restricted from unauthorized access.}
 {Play testers should feel comfortable to test the game without fear of having their information exposed to third parties.}
 {Tester information never reaches any party outside of the team and unnecessary information is not collected}
 {Traceability tags}
 
-\requirement{SSR-003}
+\requirement{SSR}
 {Save files and player data shall be validated upon launch, detecting and rejecting malformed data.}
 {Losing data or having files be corrupted during launch will result in player frustration.}
-{System detects corrupted data >99% of the time and never loads corrupted data when detected}
+{System detects corrupted data >99\% of the time and never loads corrupted data 
+when detected}
 {Traceability tags}
 
-\requirement{SSR-004}
+\requirement{SSR}
 {Unsaved progress or session data shall be stored locally on the user's device if an unexpected exception or failure occurs.}
 {Losing progress in-game after unexpected exceptions occur will result in immense frustration in users.}
 {Unexpected failures never cause the user to lose progress that will take longer than 5 minutes to recover}
 {Traceability tags}
 
-\requirement{SSR-005}
+\requirement{SSR}
 {The application shall handle unexpected runtime exceptions gracefully to prevent permanent data corruption to local save files or destabilization of the host operating system.}
 {Failure of the system resulting in destabilization outside of the game environment is potentially dangerous to host system.}
 {Unexpected failures of the system never cause damage or destabilization of the host environment}
 {Traceability tags}
 
-\requirement{SSR-006}
+\requirement{SSR}
 {The application shall display a warning about flashing lights and not have excessive flashing lights during gameplay.}
 {Excessive flashing lights without a warning previously displayed is dangerous for users with epilepsy.}
 {Flashing lights warning always displays on start-up}
 {Traceability tags}
 
-\requirement{SSR-007}
+\requirement{SSR}
 {The system shall store backups of combat reward data and verify user receives these rewards.}
 {Not gaining rewards when the user should will negatively impact user experience greatly.}
 {Users always receive combat rewards when they should}
 {Traceability tags}
 
-\requirement{SSR-008}
+\requirement{SSR}
 {The system shall clearly distinguish between actions which are available and unavailable to the user during map navigation, combat, and central hub modification.}
 {Player can become frustrated while trying to make relevant decisions if their options are not clearly laid out.}
-{Users are aware of all options available to them in 95% of scenarios}
+{Users are aware of all options available to them in 95\% of scenarios}
 {Traceability tags}
 
-\requirement{SSR-009}
+\requirement{SSR}
 {The system shall avoid using certain colours to convey important information.}
 {The system must be accommodating to users with colour blindness.}
 {Colour blind users do not miss out on any information non-colour blind users can see}
 {Traceability tags}
 
-\requirement{SSR-010}
+\requirement{SSR}
 {The system shall provide guidance how to connect input devices.}
 {Difficulty in connecting input devices can waste user's time and frustrate them during the process.}
-{Connecting a new input device takes <2 minutes at least 95% of the time}
+{Connecting a new input device takes <2 minutes at least 95\% of the time}
 {Traceability tags}
 
-\requirement{SSR-011}
+\requirement{SSR}
 {The system shall detect when new input devices are connected.}
 {Makes the process of connecting an input device quick and simple for the user.}
 {System always detects when a new input device is connected and notifies the user}
 {Traceability tags}
 
-\requirement{SSR-012}
+\requirement{SSR}
 {The system shall reconfirm it is in the proper game state after major game state transitions occur}
 {The user getting locked out of progressing through game states will prevent playing the game}
 {Users never get stuck in certain game states with no way of progressing without restarting the system}
