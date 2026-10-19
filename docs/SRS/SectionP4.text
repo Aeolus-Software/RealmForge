@@ -38,8 +38,19 @@ Detailed Schedule:
 			\item Verify associated requirements (outlined below)
 			\item Deploy \hyperlink{POC}{PoC}
 		\end{itemize}
-		\item \textbf{High Priority Requirements:} NEED TO ADD
-		\item \textbf{Requirement Sets Implemented:} NEED TO ADD
+		\item \textbf{High Priority Requirements:} 
+		\begin{itemize}
+			\item SFR-006
+			\item SFR-011 - 013
+			\item SFR-015 - 016
+		\end{itemize}
+		\item \textbf{Requirements Implemented:} 
+		\begin{itemize}
+			\item SFR-003
+			\item SFR-006
+			\item SFR-009 - 013
+			\item SFR-015 - 016
+		\end{itemize}
 	\end{itemize}
 	\item M7 Revision 0 Demo
 	\begin{itemize}
@@ -56,27 +67,29 @@ Detailed Schedule:
 			\item Verify associated requirements (outlined below)
 			\item Deploy Revision 0
 		\end{itemize}
-		\item \textbf{High Priority Requirements:} NEED TO ADD
-		\item \textbf{Requirement Sets Implemented:} NEED TO ADD
-	\end{itemize}
-	\item M9 Final Demonstration Revision 1, EXPO Demonstration
-	\begin{itemize}
-		\item \textbf{Deadline:} March 15, 2027
-		\item \textbf{Software Deliverables:} RealmForge Revision 1 Build
+		\item \textbf{High Priority Requirements:}
 		\begin{itemize}
-			\item \textbf{Associated Software Tasks:} 
-			\item Review Revision 1 design documentation (in progress) and 
-			requirements
-			\item Develop Revision 1 features
-			\item Review implemented Revision 1 features on a recurring basis 
-			during 
-			development
-			\item Test Revision 1 features
-			\item Verify associated requirements (outlined below)
-			\item Deploy Revision 1
+			\item SFR-004
+			\item SFR-007 - 008
+			\item SFR-014
+			\item SFR-017
+			\item SFR-018 - 019
+			\item SFR-021 - 022
+			\item SFR-023 - 027
+			\item SNFR-002 - 005
+			\item SNFR-007
+			\item SNFR-009
 		\end{itemize}
-		\item \textbf{High Priority Requirements:} NEED TO ADD
-		\item \textbf{Requirement Sets Implemented:} NEED TO ADD
+		\item \textbf{Requirements Implemented:} 
+		\begin{itemize}
+			\item Requirements implemented by the PoC
+			\item SFR-001 - 002
+			\item SFR-004 - 005
+			\item SFR-007 - 008
+			\item SFR-014
+			\item SFR-017 - 028
+			\item SNFR-001 - 009
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 

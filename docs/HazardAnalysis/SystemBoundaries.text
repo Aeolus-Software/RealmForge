@@ -1,0 +1,78 @@
+The following section identifies the system boundaries of RealmForge and the 
+game’s major components. These components help identify and evaluate potential 
+hazards that could affect gameplay, player progress, and the overall 
+functionality of the game.
+\medskip
+
+\noindent \textbf{\large System Boundaries}
+\medskip
+
+\noindent RealmForge is a locally running game that allows players to configure 
+game properties, explore different areas, participate in combat encounters, and 
+purchase upgrades using resources earned throughout gameplay. The system is 
+responsible for processing player inputs, displaying gameplay information, 
+updating the game based on player actions, and saving player progress 
+locally.\newline
+
+\noindent External components include the user’s operating system, input 
+devices such as a keyboard, mouse, or supported controller, and output devices 
+such as a monitor and speakers or headphones.
+\medskip
+
+\noindent \textbf{\large System Components}
+\medskip
+
+\noindent \textbf{Property Configuration}
+\smallskip
+
+\noindent Property configuration allows for the selection and application of 
+game property variations prior to starting a game session. These selections 
+vary based on player preference and influence the overall gameplay experience.
+\smallskip
+
+\noindent \textbf{World Navigation}
+\smallskip
+
+\noindent This component handles player movement as they navigate the game 
+world, allowing players to explore different locations as they progress through 
+the game.\smallskip
+
+\noindent \textbf{Combat System}
+\smallskip
+
+\noindent The combat system is responsible for handling combat encounters 
+between the player and opponents within the game. This includes player attack 
+actions, interactions, and the outcomes of combat encounters.
+\smallskip
+
+\noindent \textbf{Progression and Rewards}
+\smallskip
+
+\noindent This component is responsible for tracking resources earned 
+throughout gameplay, as well as player progression and rewards received from 
+completing encounters.
+\smallskip
+
+\noindent \textbf{Central Hub}
+\smallskip
+
+\noindent The central hub allows players to purchase items and upgrades using 
+resources earned throughout gameplay. Players return to the hub when starting 
+a new game run, allowing them to prepare for their next session.
+\smallskip
+
+\noindent \textbf{Progress Management}
+\smallskip
+
+\noindent The progress management system is responsible for saving player 
+progress locally to ensure that player progress is preserved for future 
+sessions.
+\smallskip
+
+\noindent \textbf{User Interface}
+\smallskip
+
+\noindent The user interface component is responsible for displaying gameplay 
+information and allowing player interactions. This includes interactions with 
+menus, combat options, world navigation, the central hub, and other game 
+features.
