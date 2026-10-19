@@ -65,6 +65,7 @@ preventing them from seeing too much of the game early on. Having this configura
 the pace at which the content of the game is consumed at.}
 {The user can change the starting health from a minimum of 50 to 150.}
 {Refines \hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003},
 Satisfied by \ref{game-variant-lock}, \ref{game-better-experience}, \ref{game-variant-description}}
 {game-variant-health}
 
@@ -76,6 +77,7 @@ how a long the average player feels about the overall pace of game; different us
 over again.}
 {The user can change the average of resources dropped between 10 to 20 between enemy encounters.}
 {Refines \hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003},
 Satisfied by \ref{game-variant-cost}, \ref{game-variant-lock}, \ref{game-variant-description}}
 {game-variant-droprate}
 
@@ -103,7 +105,7 @@ Satisfied by \ref{game-variant-confirm}}
 {The game shall give a prompt for confirmation once the user has finished the setting up the game's configurations.}
 {The game's configurations cannot be changed (see \ref{game-variant-lock}). This gives the user a contractual  obligation to finish the game whilst under the rules laid out. }
 {When a user exits from the configurations menu, the game will display a prompt showing the question "Is the configuration complete" followed by 'yes' or 'no' text buttons.}
-{Satisfies \ref{game-variant-lock}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002}}
+{Satisfies \ref{game-variant-lock}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002}}
 {game-variant-confirm}
 
 
@@ -178,14 +180,14 @@ Satisfied by \ref{combat-option}, \ref{combat-variety}, \ref{combact-attack-vari
 {The game shall display a screen with UI component options to start game, go to configure options, and exit game.}
 {This is mandatory because this is the root of game. These are the actions the user faces first before everything else.}
 {The game displays 3 text-buttons with text saying 'start game, 'settings', and 'exit'.}
-{Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}}
+{Refines \hyperlink{UC-001}{UC-001}, \hyperlink{UC-005}{UC-005}, \hyperlink{US-001}{US-001}, \hyperlink{US-004}{US-004}}
 {ui-start}
 
 \requirement{SFR}
 {The game shall display a screen with options to restart the game, or continue a game session.}
 {This is a start and end loop for the rogue-like experience. The game cannot proceed properly without this key user decision message.}
 {The game displays 3 text-buttons with text saying 'restart game, and 'continue game'.}
-{Satisfies \ref{combat-ends}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}}
+{Satisfies \ref{combat-ends}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{UC-005}{UC-005}, \hyperlink{US-001}{US-001}, \hyperlink{US-004}{US-004}}
 {ui-end}
 
 % Map System
@@ -245,14 +247,14 @@ Satisfied by \ref{map-info}}
 either currency, or materials the player discovered in each attempt through combat or both.}
 {The player should some feel some sense of improvement or accomplishment during the gameplayer, otherwise they would not feel the need to continue.}
 {The game keeps track of the \hyperlink{copper}{copper} collected after the player has failed a run.}
-{Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}}
+{Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
 {hub-progression}
 
 \requirement{SFR}{During gameplay, the player shall gain resources sent from the central hub, changing the gameplay experience for each run. 
 This progression will not persist after the player loses and starts a new game.}
 {This is a vital feature the game uses to help improve the odds of the player going further during a game session}
 {The game transfer magic points to the player each combat instance.}
-{Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}}
+{Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
 {hub-upkeep}
 
 \requirement{SFR}
@@ -310,14 +312,14 @@ an enemy that has increased armor (damage done to it is less than normal), and a
 {The game shall have configuration options that drastically alter the experience such as difficulty and paced of the game.}
 {The game shall be have adjustable variables that will help tune the game for testing in order to better experience overall.}
 {The game has a configuration option that changes the how fast the combat is between the player and enemy.}
-{Satisfies \ref{game-variant-health}, \ref{game-variant-cost}, Refines \hyperlink{UC-001}{UC-001}}
+{Satisfies \ref{game-variant-health}, \ref{game-variant-cost}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}}
 {game-better-experience}
 
 \requirement{SNFR}
 {The game shall showcase a variety of different travel destinations that are visually different.}
 {This helps gives the player external knowledge and hints of the risks the player faces when heading to a certain location.}
 {The game displays images for locations showing a nice island, a volcano, a desert and grassy area.}
-{Satisfies \ref{map-options}, Refines \hyperlink{UC-002}{UC-002}}
+{Satisfies \ref{map-options}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
 {map-info}
 
 \requirement{SNFR}

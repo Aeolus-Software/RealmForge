@@ -33,7 +33,7 @@ these varying input methods.}
 from the following input methods: USB Keyboard and Mouse, Xbox Series X/S, Xbox 
 One, or Xbox 360 controllers, and PlayStation DualSense or DualShock 4 
 controllers.}
-{N/A}
+{Satisfied by \ref{controller-equivalence}, \ref{controller-default}}
 {controller-constraint}
 \requirement{ENV}
 {The system shall provide at least one explicit feature variation capability, 
