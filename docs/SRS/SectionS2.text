@@ -22,15 +22,15 @@ Satisfied by \ref{controller-marking}, \ref{controller-default}, \ref{controller
 
 \requirement{SFR}
 {The game shall explain what each button on the connected controller can do for the user. The same goes for the keyboard and mouse (see \ref{controller-equivalence}).}
-{Identifying the actions of what each button will do will prevent the player from feeling lost or accidentally doing an action that was not intended.}
-{The game displays a diagram of a controller that marks all the actions with correlated button.}
+{Identifying the actions of what each button will do will prevent the player from feeling lost or perform an action that was not intended.}
+{The game displays a diagram of a controller that marks all the actions with the correlated button.}
 {Satisfies \ref{controller-equivalence}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001},}
 {controller-marking}
 
 \requirement{SFR}
 {The game shall default to the keyboard and mouse as the main source of input handling.}
-{A keyboard and mouse is much more likely to be connected successfully since the software will be design to run on a computer.}
-{During the launch of the software, the software will accept keyboard key inputs and the user will have to manual switch to the controller.}
+{A keyboard and mouse are more likely to be connected since the software will be designed to run on a computer.}
+{During the launch of the software, the software will accept keyboard key inputs, and the user will have to manually switch to the controller.}
 {Satisfies \ref{controller-constraint}, \ref{controller-equivalence}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}
 Satisfied by \ref{controller-onlyone},}
 {controller-default}
