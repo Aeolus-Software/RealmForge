@@ -3,6 +3,9 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{array}
 
 \hypersetup{
     colorlinks=true,       % false: boxed links; true: colored links
@@ -21,6 +24,65 @@
 \input{../Comments.text}
 \input{../Common.text}
 
+% --- REQUIREMENT COUNTERS ---
+\newcounter{ENV}
+\newcounter{SFR}
+\newcounter{SNFR}
+\newcounter{SSR}
+\renewcommand{\theENV}{ENV-\reqnumber{\value{ENV}}}
+\renewcommand{\theSFR}{SFR-\reqnumber{\value{SFR}}}
+\renewcommand{\theSNFR}{SNFR-\reqnumber{\value{SNFR}}}
+\renewcommand{\theSSR}{SSR-\reqnumber{\value{SSR}}}
+
+% Format numbers as 001, 002, 003, etc.
+\newcommand{\reqnumber}[1]{%
+	\ifnum#1<10 00%
+	\else\ifnum#1<100 0%
+	\fi\fi
+	\number#1%
+}
+
+% --- REQUIREMENT MACRO SETUP ---
+\newcommand{\requirement}[5]{%
+	\par\noindent
+	\begingroup
+	
+	% Increment the appropriate counter
+	\refstepcounter{#1}%
+	\edef\reqid{\csname the#1\endcsname}%
+	\label{\reqid}%
+	
+	% Adjustable formatting
+	\def\reqindent{2.3cm}
+	\setlength{\parindent}{0pt}
+	
+	% Requirement ID and description
+	\noindent
+	\makebox[0pt][l]{\textbf{\reqid:}}%
+	\hspace*{\reqindent}%
+	\parbox[t]{\dimexpr\linewidth-\reqindent\relax}{%
+		\parindent=0pt #2%
+	}%
+	\par\vspace{8pt}
+	
+	% Indented fields
+	\leftskip=\reqindent
+	\noindent\textbf{Rationale:} #3\par\vspace{5pt}
+	\noindent\textbf{Fit Criterion:} #4\par\vspace{5pt}
+	\noindent\textbf{Traceability:} #5\par
+	
+	\endgroup
+	\vspace{0.8em}
+}
+
+% --- HOW TO USE IT ---
+
+%\requirement{Tag/ID}
+%{Description}
+%{Rationale}
+%{Fit Criterion}
+%{Traceability tags}
+
 \begin{document}
 
 \maketitle
@@ -36,7 +98,10 @@
 \toprule
 \textbf{Date} & \textbf{Developer(s)} & \textbf{Change}\\
 \midrule
-2026-10-17 & Humna Saeed & Section 3: System Boundaries \& Components Draft \\
+October 17, 2026 & Humna Saeed & Section 3: System Boundaries \& Components Draft \\
+October 17, 2026 & Andreas Sideris & AI Disclosure Updated\\
+October 18, 2026 & Andreas Sideris & FMEA Table Completed\\
+October 18, 2026 & Andreas Sideris & Reflection Added\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -45,11 +110,11 @@
 
 \tableofcontents
 
+\listoftables
+
 ~\newpage
 
 \pagenumbering{arabic}
-
-\wss{You are free to modify this template.}
 
 \section{Introduction}
 
@@ -77,16 +142,15 @@ minimize the number of assumptions that remove potential hazards.  For instance,
 you could assume a part will never fail, but it is generally better to include
 this potential failure mode.}
 
+\newpage
+
+\begin{landscape}
+
 \section{Failure Mode and Effect Analysis}
 
-\wss{Include your FMEA table here. This is the most important part of this document.}
-\wss{The safety requirements in the table do not have to have the prefix SR.
-The most important thing is to show traceability to your SRS. You might trace to
-requirements you have already written, or you might need to add new
-requirements.}
-\wss{If no safety requirement can be devised, other mitigation strategies can be
-entered in the table, including strategies involving providing additional
-documentation, and/or test cases.}
+\input{SectionFMEA.text}
+
+\end{landscape}
 
 \section{Safety and Security Requirements}
 
@@ -102,44 +166,40 @@ Which requirements will be implemented in the future?}
 
 \section{Appendix --- Generative AI Use Disclosure}
 
-\wss{ChatGPT (version 5) was used to brainstorm ideas for the template for this disclose section.}
+\subsection*{AI Tools Used}
 
-\subsection{AI Tools Used}
+\begin{itemize}
+	\item OpenAI GPT-6
+	\item Google Search AI Overview (Google Gemini)
+\end{itemize}
 
-\wss{Give the name of the AI tool(s) used and the version.}
+\subsection*{How and Where Used}
 
-\subsection{How and Where Used}
+AI tools were used for assistance with LaTeX syntax and commands, during 
+the development of the FMEA table section, and when developing 
+LaTeX formatting for the document as a whole. Specifically, AI tools were 
+used for assistance in creating the LaTeX table used for the FMEA summary and 
+creating the list of tables, as well as resolving various minor formatting 
+bugs. AI tools were also used to create the LaTeX custom requirement format 
+macro used in the document, that was also used in the SRS. In this section 
+(FMEA), 
+AI tools were not used to generate any text or wholly generate any of the 
+ideas or conclusions presented.
 
-\wss{Explain what the tool(s) were used for.  Examples include: brainstorming,
-explaining a technical concept, reviewing the document, generating or modifying
-text, generating or modifying diagrams, identifying errors or omissions or
-inconsistencies.}
+\subsection*{Verification of AI-Generated Content}
 
-\wss{For each of the uses, identify which parts of the document were affected.}
+Any LaTeX syntax or code provided by AI tools was verified by testing 
+compilation in LaTeX documents, and ensuring the resulting output was 
+correctly formatted and matched the needs of the document. No ideas or text 
+were newly generated by AI tools and presented in the document.
 
-\wss{You do not need to report every interaction, but you should disclose the 
-uses that materially contributed to your work}
 
-\subsection{Verification of AI-Generated Content}
-
-\wss{\begin{itemize}
-    \item Describe how the team checked AI-generated or AI-assisted material
-    before including it in the document.
-    \item In particular, verify factual claims, technical assertions,
-    requirements, calculations, references, and other information for which an
-    AI system may produce incorrect or fabricated results.
-    \item \textbf{The team is responsible for the accuracy, completeness,
-consistency, and appropriateness of the submitted document, regardless of
-whether material was generated by a human or an AI system.}
-\end{itemize}}
 
 \newpage{}
 
 \section{Appendix --- Reflection}
 
-\wss{Not required for CAS 741}
-
-\input{../Reflection.text}
+\textbf{Reflection Questions Answered:}
 
 \begin{enumerate}
     \item What went well while writing this deliverable? 
@@ -152,6 +212,81 @@ whether material was generated by a human or an AI system.}
     \item Other than the risk of physical harm (some projects may not have any
     appreciable risks of this form), list at least 2 other types of risk in
     software products. Why are they important to consider?
+\end{enumerate}
+
+\textbf{Andreas:}
+
+\begin{enumerate}
+	\item When writing this deliverable, our team worked well to synchronize 
+	our decisions between sections. While I primarily focused on the FMEA 
+	table, I was able to discuss decisions my teammates had made on other vital 
+	sections (such as System Boundaries and Components) with them, clarify 
+	uncertainties, and use the output of our discussions to guide my work.
+	\item One pain point I experienced during this deliverable was finding 
+	suitable failure modes and hazards for our software, since it is intended 
+	to be a video game (it does not have many obvious physical safety risks). 
+	This was resolved by considering other ways failure of the system could 
+	result in harm, such as it being inaccessible to users with photosensitive 
+	epilepsy, or colourblind users. It was also found that other failures of 
+	the system could result in harm (in the expanded sense used in this 
+	project), by frustrating users and degrading the user experience overall.
+	\item Some risks had been considered before, such as failures of the system 
+	resulting in corrupted user save data, or unexpected behavior (that could 
+	frustrate the user), but specific risks concerning colourblind users and 
+	users with photosensitive epilepsy were newly found and formalized. These 
+	risks were found by considering the ways in which failures of the system 
+	could cause harm to specific user groups, if they were not accounted for in 
+	the design (as these risks could be missed without careful consideration). 
+	This led to finding a physical safety hazard (the potential for epileptic 
+	seizures in those with photosensitive epilepsy), as well as a potential 
+	risk of preventing colourblind users from playing the game as others can.
+	\item One risk can involve the risk of preventing certain users from being 
+	able to use a software product (as discussed above, in regards to 
+	accessibility). This risk is important to consider because it can result in 
+	real harm; users with specific conditions can feel alienated when they 
+	aren't able to use or enjoy software products that others do. Another risk 
+	involves the risk of users becoming confused or frustrated when using the 
+	software product (as discussed in the FMEA analysis, when users' saved 
+	progress is lost, or the user interface is difficult to understand). This 
+	must be considered, as if most users become frustrated when using a 
+	software product, it will fail commercially/publicly in favour of other 
+	products that are designed with the user in mind.
+\end{enumerate}
+
+\textbf{Humna:}
+
+\begin{enumerate}
+	\item 
+	\item 
+	\item 
+	\item 
+\end{enumerate}
+
+\textbf{Christopher:}
+
+\begin{enumerate}
+	\item 
+	\item 
+	\item 
+	\item 
+\end{enumerate}
+
+\textbf{Andy:}
+
+\begin{enumerate}
+	\item 
+	\item 
+	\item 
+	\item 
+\end{enumerate}
+
+\textbf{Owen:}
+
+\begin{enumerate}
+	\item 
+	\item 
+	\item 
+	\item 
 \end{enumerate}
 
 \end{document}

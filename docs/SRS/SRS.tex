@@ -165,11 +165,15 @@
 			\hline
 			Andreas Sideris & 2026-10-13    & E2 draft & 1.0\\
 			\hline
+      Owen Johnson & 2026-10-14    & S1 Draft & 1.0\\
+      \hline
 			Andreas Sideris & 2026-10-15    & AI disclosure and Reflection 
 			updated & 1.0\\
 			\hline
 			Owen Johnson & 2026-10-15    & Reflection updated & 1.0\\
 			\hline
+			Andreas Sideris & 2026-10-16    & S4 draft & 1.0\\
+      \hline
 			Humna Saeed & 2026-10-16    & E4, E5, and E6 Draft & 1.0\\
 			\hline
 		\end{tabular}
@@ -271,38 +275,16 @@
 	stakeholders.}
 	
 	\nsection{G.1 Context and overall objective}
-	\comment{High-level view of the project: organizational context and reason 
-	for building a system.} 
-	%---------------------------------
-	\notEmpty{}
-	%---------------------------------
 	
-	\begin{goal}\label{goal:first}
-		This is a goal example. If you need explicit (and automatic) numbering, 
-		you can use the definitions in the \texttt{.tex} template.
-		Is is refined by \ref{req:memo}
-	\end{goal}
-	
-	\begin{req}\label{req:cross}
-		This is a requirement example. It illustrates how numbering is 
-		continuous and cross-types (if this is what you need).
-	\end{req}
+	\input{SectionG1.txt}
 	
 	\nsection{G.2 Current situation}
-	\comment{Current state of processes to be addressed by the project and the 
-	resulting system.}
 	
-	\begin{req}\label{req:memo}
-		This is a requirement example. 
-		It refines \ref{goal:first}
-	\end{req}
+	\input{SectionG2.txt}
 	
 	\nsection{G.3 Expected benefits}
-	\comment{New processes, or improvement to existing processes, made possible 
-	by the projectâ€™s results.}
-	%---------------------------------
-	\notEmpty{}
-	%---------------------------------
+	
+	\input{SectionG3.txt}
 	
 	\nsection{G.4 Functionality overview}
 	
@@ -377,7 +359,7 @@
 	\comment{Overall structure expressed by the list of major software and, if 
 	applicable, hardware parts.}
 	%---------------------------------
-	\notEmpty{}
+	\input{S1Components.text}
 	%---------------------------------
 	
 	\nsection{S.2 Functionality}
@@ -394,8 +376,8 @@
 	(APIs).}
 	
 	\nsection{S.4 Detailed usage scenarios}
-	\comment{Examples of interaction between the environment (or human users) 
-	and the system: use cases, user stories.}
+	
+	\input{SectionS4.text}
 	
 	\nsection{S.5 Prioritization}
 	\comment{Classification of the behaviors, interfaces and scenarios (S.2, 
@@ -697,16 +679,7 @@
 		\item 
 	\end{enumerate}
 	
-	\textbf{Andy:}
-	
-	\begin{enumerate}
-		\item
-		\item 
-		\item 
-		\item 
-		\item 
-		\item 
-	\end{enumerate}
+	\input{AndysReflection.text}
 	
 	
 	%===============================================================
