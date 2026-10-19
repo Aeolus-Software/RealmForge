@@ -54,7 +54,7 @@
 	
 	B. Monitor both USB and Bluetooth interfaces for connection to each type of 
 	supported input device when the user opts to connect a new device &
-	N/A &
+	SSR-010 SSR-011 &
 	H1-A \\
 	\hline
 	
@@ -71,7 +71,7 @@
 	world, and indicate invalid locations. Provide further guidance to the user 
 	regarding a possible path forward if an extended period of time is spent 
 	attempting to reach invalid locations &
-	N/A &
+	SSR-008 &
 	H2-A \\
 	\hline
 	
@@ -114,7 +114,7 @@
 	Central Hub menu, reaching a game world area to an enemy encounter) for 
 	correctness. Game state transitions can be verified against a state machine 
 	for clarity &
-	SSR-007 &
+	SSR-012 &
 	H5-A \\
 	\hline
 	
@@ -126,7 +126,7 @@
 	System does not store any backup user save data &
 	Regularly store user save data in multiple locations; revert to an intact 
 	recent saved state on system failure &
-	SSR-004 SSR-005 SSR-007 &
+	SSR-004 SSR-005 &
 	H6-A \\
 	\hline
 	
@@ -154,7 +154,7 @@
 	Avoid relying only on certain colours to convey interface and game 
 	information (red and green), and provide appropriate colourblind-accessible 
 	graphics filter settings to the user &
-	N/A &
+	SSR-009 &
 	H7-A \\
 	\hline
 	
