@@ -1,0 +1,6 @@
+\noindent
+\begin{itemize}
+	\item Force closure of the system - The system will not account for the system being force closed by the user. If this occurs, any unsaved data will be lost.
+	\item Quality of physical input devices - The system will not account for flaws in the input device (e.g. joystick drift, input delay) other than disconnection.
+	\item Quality of display device - The system does not ensure the reliability or connectivity of the display device used.
+\end{itemize}
