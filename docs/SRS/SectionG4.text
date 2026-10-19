@@ -1,0 +1,40 @@
+\subsection*{Functional Overview}
+\noindent
+\textbf{Setting properties:}
+The system application starts up and the \hyperlink{user}{user} will be shown options that will allow the user to pick and change various settings 
+during the start of the game. This will allow the user to experiment with different variants of the game which in turn alters the experience of the user with game.
+\newline
+\newline
+\textbf{Traversal:}
+The system will display the \hyperlink{HUD}{HUD} as well other \hyperlink{UI}{UI}
+components such as the main game screen and travel menu. This will allow the player to navigate to different areas that contain various rewards and opponents.
+The player will be shown the possible risks and rewards before deciding to enter a certain area.
+\newline
+\newline
+\textbf{Combat:}
+The player will enter combat with an enemy when entering a new zone or area. The system will transition into a combat phase to which the player faces the adversary.
+Once in combat, a battle screen will appear as well as the player's in-game character and enemy \hyperlink{sprite}{sprite}. The player will be shown various options to
+deal with the encounter. For example, if the player chooses to attack the enemy, an attack action is displayed followed by the enemies opposing attack. 
+\newline
+\newline
+\textbf{Reward:}
+If the player defeats the enemy, combat ends and the player will be rewarded with resources used for currency later on.
+\newline
+\newline
+\textbf{End of Run:}
+If the player character's health points reaches zero during combat, the player will die and be returned to the main hub/starting area. The player will be able
+to spend resources and start the main gameplay loop again via traversal.
+\newline
+\newline
+\textbf{Spending Resources:}
+When the player is in the main hub, the player shall be allowed to spend the resources accumulated throughout the previous journies to construct buildings and upgrades 
+that will aid the player for the next gameplay run.
+\subsection*{Non-Functional Overview}
+
+\textbf{Ease of use:}
+The system will display hints and instructions that will allow the player to navigate and play the game with little or no external help.
+\newline
+\newline
+\textbf{Dynamic difficulty and experience:}
+Changing the initial properties of the game should let the player handle how difficult the game is based on formal experience. Continuously altering properties
+should keep the gameplay from being stale and repeatitive.   

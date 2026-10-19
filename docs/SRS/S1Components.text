@@ -1,0 +1,16 @@
+The system can be broken down into the following core components:
+
+\begin{itemize}
+	\item \textbf{Physical Controls}: This component handles input from the \hyperlink{player}{player}. This can be achieved through a computer keyboard or a standard game controller. The input enabled by this component allows players to interact with other components of the system and is typically constrained/enforced through the \hyperlink{UI}{UI}.
+
+	\item \textbf{User Interface (\hyperlink{UI}{UI})}: This component allows the player to interact with the game (using their preferred interaction method). This is shown through various menus, buttons and other visual prompts and ensures the game is intuitive to navigate while constraining the player to certain intended methods of interaction.
+
+	\item \textbf{Game Settings}: This component contains various selections that allow the player to change aspects of the game. This allows the player to customize how they interact with the game in ways such as gameplay, audio, and visual changes. These changes will persist as stored variables to signify current settings within the rest of the system. 
+
+	\item \textbf{Combat System}: This component contains an integral piece of the system, as selected using the map system. This is the main way the player will interact with the game. Combat encounters will be part of a game scene, which when started is initialized using player and enemy properties, possible actions, current game state and the condition(s) needed to win. 
+
+	\item \textbf{Map System}: This component contains the main means of traversal for the player, creating a linear progression (with some branching and converging) through the various game scenes (encounters). This component gives the player a sense of progression and a goal to work towards. 
+
+	\item \textbf{Central Hub}: This component contains the main source of long-term progression data in a game world 'hub area'. Various relevant game statistics and data related to the central hub can be tracked in the game's save file and updated upon return to the hub.
+
+\end{itemize}
