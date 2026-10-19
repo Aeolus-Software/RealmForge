@@ -16,35 +16,35 @@
 {The user must have full access to all functionality of the game with either a controller or keyboard and mouse. This helps if the user is not experienced or comfortable with a controller option.}
 {The directional inputs of the d-pad from the controller has the same input mappings as the left, right, up, down on the keyboard. The A, B, X, Y, L and R buttons on 
 XBOX controllers also have a keyboard equivalent functionality mapped into certain keys.}
-{Satisfies \ref{controller-constraint}, Satisfies \hyperlink{UC-001}{UC-001}, Satisfies \hyperlink{US-001}{US-001}}
+{Refines \ref{controller-constraint}, Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{US-001}{US-001}}
 {controller-equivalence}
 
 \requirement{SFR}
 {The game shall explain what each button on the connected controller can do for the user. The same goes for the keyboard and mouse (see \ref{controller-equivalence}).}
 {Identifying the actions of what each button will do will prevent the player from feeling lost or accidentally doing an action that was not intended.}
 {The game displays a diagram of a controller that marks all the actions with correlated button.}
-{Refines \ref{controller-equivalence}, Satisfies \hyperlink{UC-001}{UC-001}, Satisfies \hyperlink{US-001}{US-001}}
+{Satisfies \ref{controller-equivalence}, Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{US-001}{US-001}}
 {controller-marking}
 
 \requirement{SFR}
 {The game shall default to the keyboard and mouse as the main source of input handling.}
 {A keyboard and mouse is much more likely to be connected successfully since the software will be design to run on a computer.}
 {During the launch of the software, the software will accept keyboard key inputs and the user will have to manual switch to the controller.}
-{Refines \ref{controller-constraint}, Refines \ref{controller-equivalence}, Satisfies \hyperlink{UC-001}{UC-001}, Satisfies \hyperlink{US-001}{US-001}}
+{Satisfies \ref{controller-constraint}, Satisfies \ref{controller-equivalence}, Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{US-001}{US-001}}
 {controller-default}
 
 \requirement{SFR}
 {The game shall give the option for the user to switch between using a controller or keyboard and mouse as inputs.}
 {This gives the player and the game knowledge of how the inputs are being handled whether via keys or controller buttons.}
 {During the start screen, there is an option to change from the default keyboard and mouse or connected controller.}
-{Refines \ref{controller-constraint}, Refines \ref{controller-equivalence}, \ref{controller-default}, Satisfies \hyperlink{UC-001}{UC-001}, Satisfies \hyperlink{US-001}{US-001}}
+{Satisfies \ref{controller-constraint}, Satisfies \ref{controller-equivalence}, \ref{controller-default}, Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{US-001}{US-001}}
 {controller-switching}
 
 \requirement{SFR}
 {The game shall only handle either a keyboard and mouse or controller inputs at a single instance, not both at same time.}
 {If a controller and keyboard is connected, then this prevents the user from accidently pressing inputs that were not intended.}
 {During the launch of the software, if a controller is connected the game will not accept any action from it unless switched to.}
-{Refines \ref{controller-default}, Refines \ref{controller-switching}, Satisfies \hyperlink{UC-001}{UC-001}, Satisfies \hyperlink{US-001}{US-001}}
+{Satisfies \ref{controller-default}, Satisfies \ref{controller-switching}, Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{US-001}{US-001}}
 {controller-onlyone}
 
 % Game Settings
@@ -61,7 +61,7 @@ will typically have a better time with the game if the user can last a little lo
 preventing them from seeing too much of the game early on. Having this configuration will help to see the balance between player overall experience versus
 the pace at which the content of the game is consumed at.}
 {The user can change the starting health from a minimum of 50 to 150.}
-{Satisfies \hyperlink{UC-001}{UC-001}, Refines \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}}
+{Refines \hyperlink{UC-001}{UC-001}, Satisfies \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}}
 {game-variant-health}
 
 \requirement{SFR}
@@ -71,7 +71,7 @@ the initial difficulty of the game gets trivialized from the added upgrades, not
 how a long the average player feels about the overall pace of game; different users have varying tolerances between the feeling of progression and grinding over and
 over again.}
 {The user can change the average of resources dropped between 10 to 20 between enemy encounters.}
-{Satisfies \hyperlink{UC-001}{UC-001}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}}
+{Refines \hyperlink{UC-001}{UC-001}, Satisfies \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}}
 {game-variant-droprate}
 
 \requirement{SFR}
@@ -80,7 +80,7 @@ over again.}
 A player will gauge how far he or she has to go before the being able to purchase a new upgrade. If the cost is too high, then this discourages the player
 from ever buying it. If the cost is too low, then this runs the risk of completing all purchase too fast; there needs to be a balance for the cost.}
 {The user can change the additional cost of each purchasable  upgrade from zero to 50.}
-{Refines \ref{game-variant-droprate}, Satisfies \hyperlink{UC-004}{UC-004}, Satisfies \hyperlink{US-004}{US-004}}
+{Satisfies \ref{game-variant-droprate}, Refines \hyperlink{UC-004}{UC-004}, Refines \hyperlink{US-004}{US-004}}
 {game-variant-cost}
 
 \requirement{SFR}
@@ -89,14 +89,14 @@ from ever buying it. If the cost is too low, then this runs the risk of completi
 and thus ruins the idea of difficult and a stable game experience. This is also to prevent bugs due to changing variables. For example, changing the
 initial starting health while the game states the current health is zero.}
 {The game will not including an option to allow the user to stop the game and immediately change a setting such as initial starting health.}
-{Refines \ref{game-variant-cost}, Refines \ref{game-variant-droprate}, Refines\ref{game-variant-health}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-001}{US-001}, Satisfies \hyperlink{US-002}{US-002}}
+{Satisfies \ref{game-variant-cost}, Satisfies \ref{game-variant-droprate}, Satisfies\ref{game-variant-health}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-001}{US-001}, Refines \hyperlink{US-002}{US-002}}
 {game-variant-lock}
 
 \requirement{SFR}
 {The game shall give a prompt for confirmation once the user has finished the setting up the game's configurations.}
 {The game's configurations cannot be changed (see \ref{game-variant-lock}). This gives the user a contractual  obligation to finish the game whilst under the rules laid out. }
 {When a user exits from the configurations menu, the game will display a prompt showing the question "Is the configuration complete" followed by 'yes' or 'no' text buttons.}
-{Refines \ref{game-variant-lock}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-001}{US-001}, Satisfies \hyperlink{US-002}{US-002}}
+{Satisfies \ref{game-variant-lock}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-001}{US-001}, Refines \hyperlink{US-002}{US-002}}
 {game-variant-confirm}
 
 
@@ -112,50 +112,70 @@ initial starting health while the game states the current health is zero.}
 {The game shall display a visual for both the player and enemies' combat representation.}
 {This is needed to alert the user for when a combat encounter has occurred and give a sense of the borders and position.}
 {The game displays an image for the player's character on the bottom-left side and the enemies' images in the top-right.}
-{Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-003}{US-003}}
+{Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-003}{US-003}}
 {combact-visual}
 
 \requirement{SFR}
 {The game shall display the player and the enemy/enemies’ respective health points during the combat screen.}
 {This is needed to indicate the player the urgency of the situation during combat; whether the player losing or winning.}
 {The game displays the in-game player and enemy/enemies’ as two green health bars under their images (see \ref{combact-visual}).}
-{Refines \ref{combact-visual}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-003}{US-003}}
+{Satisfies \ref{combact-visual}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-003}{US-003}}
 {combat-health}
 
 \requirement{SFR}
 {The game shall display an indication of success if the enemy's health goes to zero or failure if the player's health goes to zero.}
 {This is needed in order to know when the combat has concluded.}
 {The game displays the in-game player sprite and enemy sprite and two green health bars right below respective sprites.}
-{Refines \ref{combat-health}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-003}{US-003}}
+{Satisfies \ref{combat-health}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-003}{US-003}}
 {combat-ends}
 
 \requirement{SFR}
 {The game shall display an attack visual whenever the player presses an attack option. Similar, the game shall display a visual for the enemy's opposing attack.}
 {The combat needs to be telegraphed in some way or manner.}
 {The game displays the in-game characters sword swinging up and down to indicate the attack.}
-{Refines \ref{combact-visual}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-003}{US-003}}
+{Satisfies \ref{combact-visual}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-003}{US-003}}
 {combat-attack}
 
 \requirement{SFR}
 {The game shall indicate when the player or enemies' health are changed (decreased or increased).}
 {The player must be know whether an attack done by the player or enemy has been effective or not, otherwise, there is no sense of progress of combat. }
 {When the player attacks an enemy, the enemy's health bar shortens}
-{Refines \ref{combat-health}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-003}{US-003}}
+{Satisfies \ref{combat-health}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-003}{US-003}}
 {combat-healthchange}
 
 \requirement{SFR}
 {The game shall display at least one or more combat options for the player.}
 {This is mandatory for progression during combat, otherwise, the player will be just stuck looking the enemy and not begin able to anything.}
 {The game displays UI elements labeled 'attack' and 'defend' during combat.}
-{Refines \ref{combat-attack}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-003}{US-003}}
+{Satisfies \ref{combat-attack}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-003}{US-003}}
 {combat-option}
 
 \requirement{SFR}
 {The player shall have the possibility to encounter more than one enemy at a time.}
 {This improves combat experience, because the player has to now proritize and deal with a certain enemy first over the other thus giving the player more decisions to make.}
 {The game displays two skeleton enemies.}
-{Refines \ref{combact-visual}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-003}{US-003}}
+{Satisfies \ref{combact-visual}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-003}{US-003}}
 {combat-numbers}
+
+% UI System
+%
+%
+%
+\subsection*{\textbf{User Interface System:}}
+\textcolor{purple}{\textbf{Functional Requirements:}}
+\requirement{SFR}
+{The game shall display a screen with UI component options to start game, go to configure options, and exit game.}
+{This is mandatory because this is the root of game. These are the actions the user faces first before everything else.}
+{The game displays 3 text-buttons with text saying 'start game, 'settings', and 'exit'.}
+{Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{US-001}{US-001}}
+{ui-start}
+
+\requirement{SFR}
+{The game shall display a screen with options to restart the game, or continue a game session.}
+{This is a start and end loop for the rogue-like experience. The game cannot proceed properly without this key user decision message.}
+{The game displays 3 text-buttons with text saying 'restart game, and 'continue game'.}
+{Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{US-001}{US-001}}
+{ui-end}
 
 % Map System
 %
@@ -169,34 +189,34 @@ initial starting health while the game states the current health is zero.}
 {The game shall tell when the player is currently in the main game world.}
 {The player needs to know which situation or state the game is in whether it is combat or just exploring}
 {The game displays a map screen along with multiple locations with path linking towards each location.}
-{Refines \ref{combact-visual}, Refines \ref{combat-ends}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-002}{US-002}}
+{Satisfies \ref{combact-visual}, Satisfies \ref{combat-ends}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-002}{US-002}}
 {map-overworld}
 
 \requirement{SFR}
 {The game shall give at least one or more travel options.}
 {The player needs to have the freedom to choose where to go next in order to give the game variety and not feel like it is on a linear path.}
 {The game displays UI elements titled 'Bahamas', 'Volcano', and 'Island' that are interactable with. }
-{Refines \ref{combact-visual}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-002}{US-002}}
+{Satisfies \ref{combact-visual}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-002}{US-002}}
 {map-options}
 
 \requirement{SFR}
 {The the game shall show a prompt to the player for confirmation of travel.}
 {This give the player reaffirmed knowledge and an update on the travel location.}
 {The game displays a prompt right after the player has chosen a travel destination. The prompt displays "Are you sure" with two options 'yes' or 'no'. }
-{Refines \ref{map-options}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-002}{US-002}}
+{Satisfies \ref{map-options}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-002}{US-002}}
 {map-confirm}
 
 \requirement{SFR}
 {The game shall indicate to the player where the player is traveling to.}
 {This is mandatory so that the player is not confused on whether he or she traveled or not.}
 {The game displays an image of the player character moving towards a travel marker beside the next location.}
-{Refines \ref{map-options}, Refines \ref{map-confirm}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-002}{US-002}}
+{Satisfies \ref{map-options}, Satisfies \ref{map-confirm}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-002}{US-002}}
 {map-traveling}
 
 \requirement{SFR}{The game shall show the name of the area.}
 {The player should know how far in the game he or she has reached toward the end.}
 {The game shows a label of the area the player character is currently at the top right of the screen}
-{Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-002}{US-002}}
+{Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-002}{US-002}}
 {map-area-name}
 
 % CENTRAL HUB
@@ -211,35 +231,35 @@ initial starting health while the game states the current health is zero.}
 either currency, or materials the player discovered in each attempt through combat or both.}
 {The player should some feel some sense of improvement or accomplishment during the gameplayer, otherwise they would not feel the need to continue.}
 {The game keeps track of the copper collected after the player has failed a run.}
-{Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-004}{UC-004}}
+{Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-004}{UC-004}}
 {hub-progression}
 
 \requirement{SFR}{During gameplay, the player shall gain resources sent from the central hub, changing the gameplay experience for each run. 
 This progression will not persist after the player loses and starts a new game.}
 {This is a vital feature the game uses to help improve the odds of the player going further during a game session}
 {The game transfer magic points to the player each combat instance.}
-{Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-004}{UC-004}}
+{Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-004}{UC-004}}
 {hub-upkeep}
 
 \requirement{SFR}
 {The game shall give at least one or more options for the player to purchase items.}
 {The is mandatory since there is otherwise no way for the player to become stronger or get any help in the game.}
 {The game displays images of the items/buildings/weapons purchasable as well as a 'buy' option underneath.}
-{Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-004}{UC-004}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-004}{US-004}}
+{Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-004}{UC-004}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-004}{US-004}}
 {hub-options}
 
 \requirement{SFR}
 {The game shall display the resource cost for each item to be purchased}
 {This is needed, otherwise the player will have no idea how to allocate the resources gather during each run.}
 {The central hub shows a value for the amount of the in-game currency needed next to the item's image}
-{Refines \ref{hub-options}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-004}{UC-004}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-004}{US-004}}
+{Satisfies \ref{hub-options}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-004}{UC-004}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-004}{US-004}}
 {hub-cost}
 
 \requirement{SFR}
 {The game shall describe the effect of the item in some way to the player.}
 {The player needs to know the effect before purchasing in order to make an educated guess on which item/building/weapon to prioritize purchasing first.}
 {The game displays text for a detailed description for the use case of the purchasable.}
-{Refines \ref{hub-cost}, Refines \ref{hub-options}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-004}{UC-004}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-004}{US-004}}
+{Satisfies \ref{hub-cost}, Satisfies \ref{hub-options}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-004}{UC-004}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-004}{US-004}}
 {hub-effect}
 
 \noindent
@@ -248,7 +268,7 @@ This progression will not persist after the player loses and starts a new game.}
 {The game shall reject the player in some way from purchasing the item if the player does not have the needed currency or materials required for purchased.}
 {Stops the player from being able to buy equipment for free or under the value prescribed.}
 {The game display a text box saying "Sorry, not enough rupees" after the player attempts to buy the item.}
-{Refines \ref{hub-cost}, Refines \ref{hub-options}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-004}{UC-004}, Satisfies \hyperlink{US-002}{US-002}, Satisfies \hyperlink{US-004}{US-004}}
+{Satisfies \ref{hub-cost}, Satisfies \ref{hub-options}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-004}{UC-004}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-004}{US-004}}
 {hub-reject}
 
 
@@ -256,14 +276,14 @@ This progression will not persist after the player loses and starts a new game.}
 \textbf{Look and Feel Requirements:}
 
 \requirement{SNFR}
-{The game should give a variety of purchase options that differ in the ways to improve the next game session.}
+{The game shall give a variety of purchase options that differ in the ways to improve the next game session.}
 {This gives the player the ability to try and test out all the different purchasable upgrades in the central hub in order to weigh in their worth; it compels the user to experiment.}
 {The game provides an upgrade to increase the amount of attacks a player can deal, being able to travel faster, being able to collect more resource after combat, or where a tie.}
 {\ref{hub-options}}
 {hub-variety}
 
 \requirement{SNFR}
-{The player should encounter different kinds of enemies varying in different such as attack types, health, armor, etc.}
+{The player shall encounter different kinds of enemies varying in different such as attack types, health, armor, etc.}
 {The player doesn't want to feel bored fighting the same enemy over again. This feels repetitive and discourages the player to continue the game.}
 {The player can encounter an enemy that can attack physically as well as an enemy that poisons the player (slowly decrease health over time). The player can encounter
 an enemy that has increased armor (damage done to it is less than normal), and an enemy with more health (health bar is longer).}
@@ -271,67 +291,67 @@ an enemy that has increased armor (damage done to it is less than normal), and a
 {combat-variety}
 
 \requirement{SNFR}
-{The game should have configuration options that drastically alter the experience such as difficulty and paced of the game.}
-{The game should be have adjustable variables that will help tune the game for testing in order to better experience overall.}
+{The game shall have configuration options that drastically alter the experience such as difficulty and paced of the game.}
+{The game shall be have adjustable variables that will help tune the game for testing in order to better experience overall.}
 {The game has a configuration option that changes the how fast the combat is between the player and enemy.}
-{Refines \ref{game-variant-health}, Refines \ref{game-variant-cost}, Refines \hyperlink{UC-001}{UC-001}}
+{Satisfies \ref{game-variant-health}, Satisfies \ref{game-variant-cost}, Satisfies \hyperlink{UC-001}{UC-001}}
 {game-better-experience}
 
 \requirement{SNFR}
-{The game should showcase a variety of different travel destinations that are visually different.}
+{The game shall showcase a variety of different travel destinations that are visually different.}
 {This helps gives the player external knowledge and hints of the risks the player faces when heading to a certain location.}
 {The game displays images for locations showing a nice island, a volcano, a desert and grassy area.}
-{Refines \ref{map-options}, Refines \hyperlink{UC-002}{UC-002}}
+{Satisfies \ref{map-options}, Satisfies \hyperlink{UC-002}{UC-002}}
 {map-info}
 
 \requirement{SNFR}
-{The player should offensive, and defensive options when facing an encounter.}
+{The player shall offensive, and defensive options when facing an encounter.}
 {This keeps the player engaged because the player is not repeating the same option again constant (attack, attack, attack, attack, ...)}
 {The game gives the player the options to charge an attack (double damage next turn attack), attack normally, or defend with a shield.}
-{Refines \ref{combat-attack}}
+{Satisfies \ref{combat-attack}}
 {combact-attack-variety}
 
 \requirement{SNFR}
-{The game should telegraph the type of enemy encounter.}
+{The game shall telegraph the type of enemy encounter.}
 {The player needs to know the enemy type in order to handle them differently, so they won't fail.}
 {The game displays an enemy with a sword and another enemy with a shield; whenever the player attacks the shielded enemy, it takes less damage than the sword enemy.}
-{Refines \ref{combat-variety}}
-{}
+{Satisfies \ref{combat-variety}}
+{combat-telegraph}
 
 \noindent
 \textbf{Performance Requirements:}
 \requirement{SNFR}
-{The inputs for the used controller should have immediate feedback response for the game.}
+{The inputs for the used controller shall have immediate feedback response for the game.}
 {Any major input delays will make the game feel slow to respond to any player feedback.}
 {The game response time in handling the players input is less than a second.}
-{Refines \hyperlink{UC-001}{UC-001}, Refines \hyperlink{UC-002}{UC-002}}
+{Satisfies \hyperlink{UC-001}{UC-001}, Satisfies \hyperlink{UC-002}{UC-002}}
 {controller-nolag}
 
 \noindent
 \textbf{Normal Operation Requirements:}
 
 \requirement{SNFR}
-{The game should give a description to all the game selection properties.}
+{The game shall give a description to all the game selection properties.}
 {This helps the player in deciding which options he or she wants to tackle.}
 {The game displays a tool-tip text when the user select the configuration for change.}
-{Refines \ref{game-variant-health}, Refines \ref{game-variant-droprate}, Refines \ref{game-variant-cost}}
+{Satisfies \ref{game-variant-health}, Satisfies \ref{game-variant-droprate}, Satisfies \ref{game-variant-cost}}
 {game-variant-description}
 
 
 \requirement{SNFR}
-{The game should have valid transitions that help the indication of game state change.}
+{The game shall have valid transitions that help the indication of game state change.}
 {Have no sign transition disorients the player and gives confusion over whether he or she is in combat or traveling.}
 {The games fades in and out (turn complete black and reappear) whenever the player enter combat.}
-{Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-002}{US-002}}
+{Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-002}{US-002}}
 {game-transition}
 
 \noindent
 \textbf{Likely to change or Out of current scope Requirements:}
 \requirement{SNFR}
-{The game should provide audio cues for when the player does an action.}
+{The game shall provide audio cues for when the player does an action.}
 {This helps gives the player feedback that is not visual.}
 {The games provides a sound effect whenever the player confirms a prompt.}
-{Refines \hyperlink{UC-002}{UC-001}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{US-001}{US-001}, Refines \hyperlink{US-002}{US-002}}
+{Satisfies \hyperlink{UC-002}{UC-001}, Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{US-001}{US-001}, Satisfies \hyperlink{US-002}{US-002}}
 {game-audio}
 
 % \textbf{Usability:}
@@ -351,13 +371,13 @@ an enemy that has increased armor (damage done to it is less than normal), and a
 % {Combat should be exciting and very engaging to the player.}
 % {This is a key moment of the game. If the player is not satisfied or feel exhilarated, then the player will no long feel the urge to continue the game.}
 % {The game has a very fun and addicting combat that keeps the player from turning if off.}
-% {Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}}
+% {Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}}
 % {controller-exciting}
 
 % \requirement{SNFR}{The map screen should be visually appealing to the player, but also no hindering the player.}
 % {The player shall know the current and future locations without have to constantly check the area name.}
 % {The game shows a label of the area name on the top right of the screen and gives visual indication whenever the area label is changed.}
-% {Refines \hyperlink{UC-002}{UC-002}}
+% {Satisfies \hyperlink{UC-002}{UC-002}}
 % {map-area-pleasing}
 
 
