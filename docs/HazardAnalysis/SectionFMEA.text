@@ -54,7 +54,7 @@
 	
 	B. Monitor both USB and Bluetooth interfaces for connection to each type of 
 	supported input device when the user opts to connect a new device &
-	CREATE NEW REQS FOR THIS &
+	N/A &
 	H1-A \\
 	\hline
 	
@@ -71,7 +71,7 @@
 	world, and indicate invalid locations. Provide further guidance to the user 
 	regarding a possible path forward if an extended period of time is spent 
 	attempting to reach invalid locations &
-	CREATE NEW REQS FOR THIS &
+	N/A &
 	H2-A \\
 	\hline
 	
@@ -154,7 +154,7 @@
 	Avoid relying only on certain colours to convey interface and game 
 	information (red and green), and provide appropriate colourblind-accessible 
 	graphics filter settings to the user &
-	CREATE NEW REQS FOR THIS &
+	N/A &
 	H7-A \\
 	\hline
 	
