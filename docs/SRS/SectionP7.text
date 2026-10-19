@@ -1,0 +1,14 @@
+The following section describes the process of gathering, documenting, reviewing, and updating requirements throughout the project.
+
+\noindent
+\textbf{Requirements Gathering}
+The team identifies RealmForge's overall requirements through meetings and discussions about the game's functionality, expected behaviour, and overall project goals. Feedback from the project supervisor and course instructor is also considered when identifying the system's requirements to ensure they are consistent with the overall project goals. Future discussions and feedback will also be considered when updating requirements throughout development.
+
+\noindent
+\textbf{Requirements Review}
+Each subsection throughout the documentation is assigned to a team member. These sections are additionally assigned reviewers, allowing other team members to review the documented requirements. This provides a secondary check to ensure requirements align with the project's goals, stay consistent across the document, and cover all critical requirements for RealmForge. Feedback from these reviews will be considered before finalizing each section. GitHub issues are created to track reviews and feedback, ensure reviewers are assigned, and communicate any necessary changes to the team.
+
+\noindent
+\textbf{Requirements Changes}
+As the project develops, requirements may change based on further team discussions, feedback, changes in functionality, or technical limitations. Proposed changes will be discussed among team members and reflected in the SRS to ensure the document remains consistent throughout the project. 
+
