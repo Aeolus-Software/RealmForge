@@ -32,8 +32,8 @@ Project responsibilities are structured across the team, ensuring that every mem
 \item \textbf{Meeting Role (Quality/Scope Assessor):} Assesses the scope of each decision made and ensures that team stays within the desired workload.
 \item \textbf{Technical Role (Front-end Lead):} Leads development of the front-end of the program.
 \item \textbf{Research Role (Statistical Data Analyst):} Analyzes quantitative data to drive further decisions.
-\item \textbf{Personal Background and Role Fit:} Is a full time McMaster student in Software Engineering able to dedicate 10+ hours/week to the project. 
-% TODO: Humna to fill in background, skills, and role fit.
+\item \textbf{Personal Background and Role Fit:} Is a full time McMaster student in Software Engineering able to dedicate 10+ hours/week to the project. Has previous software development
+experience through internships and academic projects, including working with Java, Python, JavaScript, and user interfaces. This experience will be useful for front-end development and analyzing data during usability testing.
 \end{itemize}
 
 \subsection{Owen}
