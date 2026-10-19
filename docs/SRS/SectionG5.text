@@ -6,8 +6,8 @@
     \item User decides which features of the game to be changed.
     \item User finishes setting up by beginning the game.
 \end{enumerate}
-\textbf{Traceability: Satisfies \ref{controller-equivalence}, Satisfies \ref{controller-marking}, Satisfies \ref{controller-default}, Satisfies \ref{controller-switching}, Satisfies \ref{controller-onlyone},
-Satisfies \ref{ui-start}, Satisfies \ref{ui-end}}
+\textbf{Traceability: Refined by \ref{controller-equivalence}, Refined by \ref{controller-marking}, Refined by \ref{controller-default}, Refined by \ref{controller-switching}, Refined by \ref{controller-onlyone},
+Refined by \ref{ui-start}, Refined by \ref{ui-end}}
 \newline
 \noindent
 \textbf{Use Case 002 (\hypertarget{UC-002}{UC-002}): Playing a full session}
@@ -21,6 +21,9 @@ Satisfies \ref{ui-start}, Satisfies \ref{ui-end}}
     \item User continues traveling the game world (repeats step 2 through 6).
     \item User completes the win condition for the game session (see \hyperlink{UC-005}{UC-005}).
 \end{enumerate}
+\textbf{Traceability: Refined by \ref{game-variant-health}, Refined by \ref{game-variant-droprate}, Refined by \ref{gam},}
+\newline
+\noindent
 \textbf{Use Case 003 (\hypertarget{UC-003}{UC-003}): Battling enemies}
 \begin{enumerate}
     \item User enters an encounter with the enemie/enemies.
@@ -29,6 +32,9 @@ Satisfies \ref{ui-start}, Satisfies \ref{ui-end}}
     \item User collects rewards for successfully completing the encounter. 
     \item User returns to game's world map.
 \end{enumerate}
+\textbf{Traceability: Refined by \ref{game-variant-health}, Refined by \ref{game-variant-droprate}, Refined by \ref{gam},}
+\newline
+\noindent
 \textbf{Use Case 004 (\hypertarget{UC-004}{UC-004}): Upgrading and purchasing items}
 \begin{enumerate}
     \item User enters town/city/central hub.
@@ -37,6 +43,9 @@ Satisfies \ref{ui-start}, Satisfies \ref{ui-end}}
     \item User repeats steps 2 and 3 until the user is satisfied or resources are spent.
     \item User leaves the town/city/central hub to continue the game session.
 \end{enumerate}
+\textbf{Traceability: Refined by \ref{game-variant-health}, Refined by \ref{game-variant-droprate}, Refined by \ref{gam},}
+\newline
+\noindent
 \textbf{Use Case 005 (\hypertarget{UC-005}{UC-005}): Continuing or start a new game}
 \begin{enumerate}
     \item User completes a game session or fails in between (see \hyperlink{UC-002}{UC-002}).
@@ -44,6 +53,9 @@ Satisfies \ref{ui-start}, Satisfies \ref{ui-end}}
     \item User selects to change features (see \hyperlink{UC-001}{UC-001}) or proceeds with the same configurations.
     \item User begins a new game.
 \end{enumerate}
+\textbf{Traceability: Refined by \ref{game-variant-health}, Refined by \ref{game-variant-droprate}, Refined by \ref{gam},}
+\newline
+\noindent
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{G5UseCaseDiagram.png}
