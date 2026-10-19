@@ -1,0 +1,20 @@
+RealmForge interacts with the user through its graphical user interface and receives inputs through supported input devices. The following interfaces allow access to the game's functionality.
+
+\noindent
+\textbf{User Interface}
+
+RealmForge provides a graphical user interface which allows players to navigate the game and interact with its features. The primary interfaces include the main menu, configuration options, map navigation, combat screen, and central hub. Players can use these interfaces to configure the settings to their preferences, travel through the map, engage in combat, and purchase upgrades.
+
+The interface also displays information such as the outcome of combat encounters, available resources, and confirmation messages based on the player's actions.
+
+\noindent
+\textbf{Input Interface}
+
+RealmForge accepts input through a keyboard and mouse or a supported game controller. These devices allow players to interact with the user interface, navigate menus, select options, and perform combat actions during gameplay. 
+
+\noindent
+\textbf{Output Interface}
+
+RealmForge uses the user's connected display device to present graphical output during gameplay. This includes menus, overall game visuals, combat scenarios, and information about the current game state.
+
+The game also produces audio through the user's selected audio device, such as speakers or headphones, during gameplay.
