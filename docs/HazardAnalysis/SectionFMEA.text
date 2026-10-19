@@ -8,7 +8,7 @@
 	\hline
 	
 	\textbf{Component} &
-	\textbf{Failure Modes} &
+	\textbf{Failure Mode} &
 	\textbf{Effects of Failure} &
 	\textbf{Causes of Failure} &
 	\textbf{Recommended Action} &
@@ -21,7 +21,7 @@
 	\hline
 	
 	\textbf{Component} &
-	\textbf{Failure Modes} &
+	\textbf{Failure Mode} &
 	\textbf{Effects of Failure} &
 	\textbf{Causes of Failure} &
 	\textbf{Recommended Action} &
@@ -38,7 +38,7 @@
 	\endlastfoot
 	
 	Property Configuration &
-	The system is unable to recognize the user's connected input device (such 
+	System is unable to recognize the user's connected input device (such 
 	as a controller), when selected in the feature variation menu &
 	Users waste their time and can become confused/frustrated when attempting 
 	to troubleshoot input device connection &
@@ -76,7 +76,7 @@
 	\hline
 	
 	Combat System &
-	The system displays flashing or intense graphics &
+	System displays flashing or intense graphics &
 	Users with photosensitive epilepsy can potentially suffer an epileptic 
 	seizure &
 	The system displays excessive flashing graphics without warning users with 
@@ -103,28 +103,57 @@
 	\hline
 	
 	Central Hub &
-	Failure mode 1 &
-	effect 1 &
-	cause 1 &
-	action1 &
-	CREATE NEW REQS FOR THIS &
+	System does not return game state and display to the Central Hub menu 
+	following a failed game run (user is defeated)  &
+	User is unable to continue the correct flow of gameplay (returning to the 
+	Central Hub menu, starting again), and may need to restart the software to 
+	resolve the issue, causing frustration &
+	Software errors/faults prevent the system from correctly transitioning 
+	between game scenes (end of game run/user is defeated to Central Hub menu) &
+	Extensively test and verify major game state transitions (user defeat to 
+	Central Hub menu, reaching a game world area to an enemy encounter) for 
+	correctness. Game state transitions can be verified against a state machine 
+	for clarity &
+	N/A &
 	H5-A \\
 	\hline
 	
 	Progress Management &
-	Failure mode 1 &
-	effect 1 &
-	cause 1 &
-	action1 &
+	System application unexpectedly crashes or closes completely due to an 
+	error &
+	Most recent user save data is corrupted and unrecoverable; the user can be 
+	frustrated due to lost progress &
+	System does not store any backup user save data &
+	Regularly store user save data in multiple locations; revert to an intact 
+	recent saved state on system failure &
 	CREATE NEW REQS FOR THIS &
 	H6-A \\
 	\hline
 	
+	Progress Management &
+	System attempts to initialize the game using corrupted save data &
+	The system is unable to correctly initialize the game and enable gameplay; 
+	the user can be confused on how to proceed using their original saved game 
+	data, and can become frustrated &
+	System does not take steps to validate user save data &
+	Validate user save data against previous snapshots; if save data is 
+	corrupted, revert to an intact recent saved state &
+	CREATE NEW REQS FOR THIS &
+	H6-B \\
+	\hline
+	
 	User Interface &
-	Failure mode 1 &
-	effect 1 &
-	cause 1 &
-	action1 &
+	System displays game and interface graphics that are difficult for 
+	colourblind users to interpret &
+	Colourblind users are unable to progress efficiently in the game, causing 
+	frustration; the game is not accessible to as many users as possible &
+	Displayed symbols in game and interface graphics are difficult to 
+	distinguish for colourblind users (colours such as red and green are used 
+	as a primary method of differentiation), or colourblind-accessible graphics 
+	filters are not provided &
+	Avoid relying only on certain colours to convey interface and game 
+	information (red and green), and provide appropriate colourblind-accessible 
+	graphics filter settings to the user &
 	CREATE NEW REQS FOR THIS &
 	H7-A \\
 	\hline
