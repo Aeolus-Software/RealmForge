@@ -16,18 +16,17 @@ Each subsection throughout the documentation is assigned to a team member. These
 As the project develops, requirements may change based on further team discussions, feedback, changes in functionality, or technical limitations. Proposed changes will be discussed among team members and reflected in the SRS to ensure the document remains consistent throughout the project. 
 \\
 
-  
-\small
+ \small
 \setlength{\arrayrulewidth}{0.5pt}
 
 \begin{longtable}{|p{2.1cm}|p{4.3cm}|p{6.0cm}|}
 
-\caption{RealmForge Requirements Traceability Table}
+\caption{RealmForge Requirements Traceability Summary}
 \label{tab:requirements-traceability} \\
 
 \hline
 \textbf{Requirement ID} &
-\textbf{Use Cases / User Scenarios} &
+\textbf{Use Cases / Scenarios} &
 \textbf{Related Requirements} \\
 \hline
 \endfirsthead
@@ -39,89 +38,229 @@ As the project develops, requirements may change based on further team discussio
 \hline
 \endhead
 
-SFR-001 & UC-001, US-001 & Satisfies ENV-002 \\
-\hline
-SFR-002 & UC-001, US-001 & Refines SFR-001 \\
-\hline
-SFR-003 & UC-001, US-001 & Refines ENV-002, SFR-001 \\
-\hline
-SFR-004 & UC-001, US-001 & Refines ENV-002, SFR-001; SFR-003 \\
-\hline
-SFR-005 & UC-001, US-001 & Refines SFR-003, SFR-004 \\
-\hline
-SFR-006 & UC-001, UC-002, UC-003 &  \\
-\hline
-SFR-007 & UC-001, UC-002, UC-003 &  \\
-\hline
-SFR-008 & UC-004, US-004 & Refines SFR-007 \\
-\hline
-SFR-009 & UC-002, US-001, US-002 & Refines SFR-006, SFR-007, SFR-008 \\
-\hline
-SFR-010 & UC-002, US-001, US-002 & Refines SFR-009 \\
-\hline
-SFR-011 & UC-002, UC-003, US-002, US-003 &  \\
-\hline
-SFR-012 & UC-002, UC-003, US-002, US-003 & Refines SFR-011 \\
-\hline
-SFR-013 & UC-002, UC-003, US-002, US-003 & Refines SFR-012 \\
-\hline
-SFR-014 & UC-002, UC-003, US-002, US-003 & Refines SFR-011 \\
-\hline
-SFR-015 & UC-002, UC-003, US-002, US-003 & Refines SFR-012 \\
-\hline
-SFR-016 & UC-002, UC-003, US-002, US-003 & Refines SFR-014 \\
-\hline
-SFR-017 & UC-002, UC-003, US-002, US-003 & Refines SFR-011 \\
-\hline
-SFR-018 & UC-002, US-002 & Refines SFR-011, SFR-013 \\
-\hline
-SFR-019 & UC-002, US-002 & Refines SFR-011 \\
-\hline
-SFR-020 & UC-002, US-002 & Refines SFR-019 \\
-\hline
-SFR-021 & UC-002, US-002 & Refines SFR-019, SFR-020 \\
-\hline
-SFR-022 & UC-002, US-002 &  \\
-\hline
-SFR-023 & UC-002, UC-004 &  \\
-\hline
-SFR-024 & UC-002, UC-004 &  \\
-\hline
-SFR-025 & UC-002, UC-004, US-002, US-004 &  \\
-\hline
-SFR-026 & UC-002, UC-004, US-002, US-004 & Refines SFR-025 \\
-\hline
-SFR-027 & UC-002, UC-004, US-002, US-004 & Refines SFR-025, SFR-026 \\
-\hline
-SFR-028 & UC-002, UC-004, US-002, US-004 & Refines SFR-025, SFR-026 \\
+\ref{controller-equivalence} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Satisfies \ref{controller-constraint} \\
 \hline
 
-SNFR-001 &  & SFR-025 \\
-\hline
-SNFR-002 &  & SFR-014 \\
-\hline
-SNFR-003 & UC-001 & Refines SFR-006, SFR-008 \\
-\hline
-SNFR-004 & UC-002 & Refines SFR-019 \\
-\hline
-SNFR-005 &  & Refines SFR-014 \\
-\hline
-SNFR-006 &  & Refines SNFR-002 \\
-\hline
-SNFR-007 & UC-001, UC-002 &  \\
-\hline
-SNFR-008 &  & Refines SFR-006, SFR-007, SFR-008 \\
-\hline
-SNFR-009 & UC-002, US-002 &  \\
-\hline
-SNFR-010 & UC-001, UC-002, US-001, US-002 &  \\
+\ref{controller-marking} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Refines \ref{controller-equivalence} \\
 \hline
 
-ENV-001 &  &  \\
+\ref{controller-default} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Refines \ref{controller-constraint}, \ref{controller-equivalence} \\
 \hline
-ENV-002 &  & Satisfied by SFR-001; Refined by SFR-003, SFR-004 \\
+
+\ref{controller-switching} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Refines \ref{controller-constraint}, \ref{controller-equivalence};
+\ref{controller-default} \\
 \hline
-ENV-003 &  &  \\
+
+\ref{controller-onlyone} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Refines \ref{controller-default}, \ref{controller-switching} \\
+\hline
+
+\ref{game-variant-health} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002},
+\hyperlink{UC-003}{UC-003} &
+\\
+\hline
+
+\ref{game-variant-droprate} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002},
+\hyperlink{UC-003}{UC-003} &
+\\
+\hline
+
+\ref{game-variant-cost} &
+\hyperlink{UC-004}{UC-004}, \hyperlink{US-004}{US-004} &
+Refines \ref{game-variant-droprate} \\
+\hline
+
+\ref{game-variant-lock} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-001}{US-001},
+\hyperlink{US-002}{US-002} &
+Refines \ref{game-variant-health}, \ref{game-variant-droprate},
+\ref{game-variant-cost} \\
+\hline
+
+\ref{game-variant-confirm} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-001}{US-001},
+\hyperlink{US-002}{US-002} &
+Refines \ref{game-variant-lock} \\
+\hline
+
+\ref{combact-visual} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+\\
+\hline
+
+\ref{combat-health} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Refines \ref{combact-visual} \\
+\hline
+
+\ref{combat-ends} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Refines \ref{combat-health} \\
+\hline
+
+\ref{combat-attack} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Refines \ref{combact-visual} \\
+\hline
+
+\ref{combat-healthchange} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Refines \ref{combat-health} \\
+\hline
+
+\ref{combat-option} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Refines \ref{combat-attack} \\
+\hline
+
+\ref{combat-numbers} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Refines \ref{combact-visual} \\
+\hline
+
+\ref{map-overworld} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+Refines \ref{combact-visual}, \ref{combat-ends} \\
+\hline
+
+\ref{map-options} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+Refines \ref{combact-visual} \\
+\hline
+
+\ref{map-confirm} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+Refines \ref{map-options} \\
+\hline
+
+\ref{map-traveling} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+Refines \ref{map-options}, \ref{map-confirm} \\
+\hline
+
+\ref{map-area-name} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+\\
+\hline
+
+\ref{hub-progression} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004} &
+\\
+\hline
+
+\ref{hub-upkeep} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004} &
+\\
+\hline
+
+\ref{hub-options} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004},
+\hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004} &
+\\
+\hline
+
+\ref{hub-cost} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004},
+\hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004} &
+Refines \ref{hub-options} \\
+\hline
+
+\ref{hub-effect} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004},
+\hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004} &
+Refines \ref{hub-options}, \ref{hub-cost} \\
+\hline
+
+\ref{hub-reject} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004},
+\hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004} &
+Refines \ref{hub-options}, \ref{hub-cost} \\
+\hline
+
+\ref{hub-variety} &
+&
+\ref{hub-options} \\
+\hline
+
+\ref{combat-variety} &
+&
+\ref{combat-attack} \\
+\hline
+
+\ref{game-better-experience} &
+\hyperlink{UC-001}{UC-001} &
+Refines \ref{game-variant-health}, \ref{game-variant-cost} \\
+\hline
+
+\ref{map-info} &
+\hyperlink{UC-002}{UC-002} &
+Refines \ref{map-options} \\
+\hline
+
+\ref{combact-attack-variety} &
+&
+Refines \ref{combat-attack} \\
+\hline
+
+SNFR-006 &
+&
+Refines \ref{combat-variety} \\
+\hline
+
+\ref{controller-nolag} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002} &
+\\
+\hline
+
+\ref{game-variant-description} &
+&
+Refines \ref{game-variant-health}, \ref{game-variant-droprate},
+\ref{game-variant-cost} \\
+\hline
+
+\ref{game-transition} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+\\
+\hline
+
+\ref{game-audio} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002},
+\hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002} &
+\\
+\hline
+
+ENV-001 &
+&
+\\
+\hline
+
+\ref{controller-constraint} &
+&
+Satisfied by \ref{controller-equivalence};
+Refined by \ref{controller-default}, \ref{controller-switching} \\
+\hline
+
+ENV-003 &
+&
+\\
 \hline
 
 \end{longtable}
