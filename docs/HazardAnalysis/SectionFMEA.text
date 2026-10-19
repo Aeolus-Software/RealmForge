@@ -83,7 +83,7 @@
 	photosensitive epilepsy &
 	Include a detailed flashing lights or epilepsy warning when the system 
 	launches, and ensure the game does not display excessive flashing graphics &
-	CREATE NEW REQS FOR THIS &
+	SSR-006 &
 	H3-A \\
 	\hline
 	
@@ -98,7 +98,7 @@
 	Retain and update enemy encounter reward variables (during encounters) in 
 	an additional memory location separate from the combat system, to ensure a 
 	backup value is available &
-	CREATE NEW REQS FOR THIS &
+	SSR-007 &
 	H4-A \\
 	\hline
 	
@@ -114,7 +114,7 @@
 	Central Hub menu, reaching a game world area to an enemy encounter) for 
 	correctness. Game state transitions can be verified against a state machine 
 	for clarity &
-	N/A &
+	SSR-007 &
 	H5-A \\
 	\hline
 	
@@ -126,7 +126,7 @@
 	System does not store any backup user save data &
 	Regularly store user save data in multiple locations; revert to an intact 
 	recent saved state on system failure &
-	CREATE NEW REQS FOR THIS &
+	SSR-004 SSR-005 SSR-007 &
 	H6-A \\
 	\hline
 	
@@ -138,7 +138,7 @@
 	System does not take steps to validate user save data &
 	Validate user save data against previous snapshots; if save data is 
 	corrupted, revert to an intact recent saved state &
-	CREATE NEW REQS FOR THIS &
+	SSR-003 &
 	H6-B \\
 	\hline
 	
