@@ -105,6 +105,7 @@
     "docs/ReflectAndTrace/ReflectAndTrace.tex"
   ],
   "docs/SRS/SRS.tex": [
+    "docs/SRS/AndysReflection.text",
     "docs/SRS/Glossary.text",
     "docs/SRS/S1Components.text",
     "docs/SRS/SRS.mtc",
@@ -120,6 +121,9 @@
     "docs/SRS/SectionE4.text",
     "docs/SRS/SectionE5.text",
     "docs/SRS/SectionE6.text",
+    "docs/SRS/SectionG1.txt",
+    "docs/SRS/SectionG2.txt",
+    "docs/SRS/SectionG3.txt",
     "docs/SRS/SectionG4.text",
     "docs/SRS/SectionG5.text",
     "docs/SRS/SectionP3.text",
