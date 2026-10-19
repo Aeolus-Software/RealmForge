@@ -85,7 +85,8 @@
     "docs/Comments.text",
     "docs/Common.text",
     "docs/HazardAnalysis/HazardAnalysis.tex",
-    "docs/Reflection.text"
+    "docs/HazardAnalysis/SectionFMEA.text",
+    "docs/HazardAnalysis/SystemBoundaries.text"
   ],
   "docs/ProblemStatementAndGoals/ProblemStatement.tex": [
     "docs/Comments.text",
@@ -105,8 +106,9 @@
     "docs/ReflectAndTrace/ReflectAndTrace.tex"
   ],
   "docs/SRS/SRS.tex": [
-    "docs/SRS/G4FunctionalRequirements.text",
+    "docs/SRS/AndysReflection.text",
     "docs/SRS/Glossary.text",
+    "docs/SRS/S1Components.text",
     "docs/SRS/SRS.mtc",
     "docs/SRS/SRS.mtc0",
     "docs/SRS/SRS.mtc1",
@@ -117,8 +119,19 @@
     "docs/SRS/SRS.tex",
     "docs/SRS/SectionE2.text",
     "docs/SRS/SectionE3.text",
+    "docs/SRS/SectionE4.text",
+    "docs/SRS/SectionE5.text",
+    "docs/SRS/SectionE6.text",
+    "docs/SRS/SectionG1.txt",
+    "docs/SRS/SectionG2.txt",
+    "docs/SRS/SectionG3.txt",
+    "docs/SRS/SectionG4.text",
+    "docs/SRS/SectionG5.text",
     "docs/SRS/SectionP3.text",
     "docs/SRS/SectionP4.text",
+    "docs/SRS/SectionP5.text",
+    "docs/SRS/SectionS4.text",
+    "docs/SRS/images/G5UseCaseDiagram.png",
     "docs/SRS/images/RealmForgeSystemContextDiagram.png"
   ],
   "docs/UserGuide/UserGuide.tex": [

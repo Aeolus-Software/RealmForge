@@ -53,7 +53,30 @@
     intended to demonstrate the possibility of its implementation without being 
     a full prototype.}
 
+    \glossaryDef {Roguelite}{RogueliteDef}{A video game genre featuring levels with randomized elements that change every playthrough and permanent death, meaning dying resets the current run. Players retain permanent upgrades unlocked between runs that make their character stronger over time.}
 
+<<<<<<< HEAD
+    \glossaryDef {Sprite}{sprite}{An in-game 2-dimensional picture representing an object in the 2D-world.}
+=======
+    \glossaryDef {GDUnit4}{GDUnit4} {A Godot module that can be added to any base godot project. 
+    The module allows for the creation of unit test cases.}
+    \glossaryDef {Inventory}{inventory} {The set of resources, items, and currency store within code and available to access for the player}
+>>>>>>> main
+
+
+    \glossaryDef {GDLint} {GDLint} {A Godot module that can be added to any base godot project. 
+    The module is a linting tool to help will proper coding styles and errors for the Godot language.}
+    
+    \glossaryDef{Integrated Development Environment}{IDE} {A set of software applications and tools within a programmer's arsenal
+    to help develop software code efficiently.}
+
+    \glossaryDef{Operation System}{OS}{A collection of software that manages a computer's hardware and software applications by
+    handling allocation of resources.}
+
+    \glossaryDef{LaTeX} {latex}{LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation.}
+    
+    \glossaryDef{Continuous Integration / Continuous Development}{CI/CD}{An iterative approach to software development  where
+    updates are pushed in small increments and re-evaluated for further development}
     % EXAMPLE
     % \glossaryDef{NAME_OF_WHAT_IS_IN_BOLD}{ACROYNYM_ID <-- this you use in hyperlink}{Description of glossary term}
     % When you want to point to glossary term
