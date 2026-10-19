@@ -85,7 +85,9 @@
     "docs/Comments.text",
     "docs/Common.text",
     "docs/HazardAnalysis/HazardAnalysis.tex",
-    "docs/Reflection.text"
+    "docs/HazardAnalysis/Introduction.text",
+    "docs/HazardAnalysis/SectionFMEA.text",
+    "docs/HazardAnalysis/SystemBoundaries.text"
   ],
   "docs/ProblemStatementAndGoals/ProblemStatement.tex": [
     "docs/Comments.text",
