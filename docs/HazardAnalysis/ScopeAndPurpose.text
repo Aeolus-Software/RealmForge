@@ -1,0 +1,17 @@
+\noindent
+The scope of this document is to provide an analysis of the system as it pertains to potential hazards. The analysis will identify hazards present in the components/boundaries of the system, provide mitigation strategies for each hazard, and provide the resulting safety and security requirements. 
+\newline
+\newline
+This analysis is important, as certain losses can be incurred by the hazards if left unchecked, such as:
+
+\begin{itemize}
+
+	\item Lower player count and interest
+
+	\item Player frustration
+
+	\item Unintended behavior, such as bugs, lag, or crashes
+
+	\item Lack of usability testing data to work from
+
+\end{itemize}
