@@ -57,8 +57,8 @@ completing encounters.
 \smallskip
 
 \noindent The central hub allows players to purchase items and upgrades using 
-resources earned throughout gameplay. Players return to the hub when their 
-health reaches zero, allowing them to prepare for future sessions.
+resources earned throughout gameplay. Players return to the hub when starting 
+a new game run, allowing them to prepare for their next session.
 \smallskip
 
 \noindent \textbf{Progress Management}
