@@ -153,7 +153,7 @@ initial starting health while the game states the current health is zero.}
 \requirement{SFR}
 {The player shall have the possibility to encounter more than one enemy at a time.}
 {This improves combat experience, because the player has to now proritize and deal with a certain enemy first over the other thus giving the player more decisions to make.}
-{The game displays two skeleton enemies.}
+{The game displays two hyperlink{skeleton}{skeleton} enemies.}
 {Satisfies \ref{combact-visual}, Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-003}{UC-003}, Refines \hyperlink{US-002}{US-002}, Refines \hyperlink{US-003}{US-003}}
 {combat-numbers}
 
@@ -230,7 +230,7 @@ initial starting health while the game states the current health is zero.}
 \requirement{SFR}{Permanent progression shall be characterized by the player keeping some progression after they lose; 
 either currency, or materials the player discovered in each attempt through combat or both.}
 {The player should some feel some sense of improvement or accomplishment during the gameplayer, otherwise they would not feel the need to continue.}
-{The game keeps track of the copper collected after the player has failed a run.}
+{The game keeps track of the \hyperlink{copper}{copper} collected after the player has failed a run.}
 {Refines \hyperlink{UC-002}{UC-002}, Refines \hyperlink{UC-004}{UC-004}}
 {hub-progression}
 

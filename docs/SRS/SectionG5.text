@@ -6,6 +6,10 @@
     \item User decides which features of the game to be changed.
     \item User finishes setting up by beginning the game.
 \end{enumerate}
+\textbf{Traceability: Satisfies \ref{controller-equivalence}, Satisfies \ref{controller-marking}, Satisfies \ref{controller-default}, Satisfies \ref{controller-switching}, Satisfies \ref{controller-onlyone},
+Satisfies \ref{ui-start}, Satisfies \ref{ui-end}}
+\newline
+\noindent
 \textbf{Use Case 002 (\hypertarget{UC-002}{UC-002}): Playing a full session}
 \begin{enumerate}
     \item User selects to begin a new game session.
