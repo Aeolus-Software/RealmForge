@@ -208,9 +208,9 @@ Satisfied by \ref{map-confirm}}
 {map-options}
 
 \requirement{SFR}
-{The the game shall show a prompt to the player for confirmation of travel.}
+{The game shall show a prompt to the player for confirmation of travel.}
 {This give the player reaffirmed knowledge and an update on the travel location.}
-{The game displays a prompt right after the player has chosen a travel destination. The prompt displays "Are you sure" with two options 'yes' or 'no'. }
+{The game displays a prompt right after the player has chosen a travel destination. The prompt displays “Are you sure” with yes-or-no options.}
 {Satisfies \ref{map-options}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002},
 Satisfies by \ref{map-traveling}}
 {map-confirm}
@@ -225,7 +225,7 @@ Satisfied by \ref{map-info}}
 
 \requirement{SFR}{The game shall show the name of the area.}
 {The player should know how far in the game he or she has reached toward the end.}
-{The game shows a label of the area the player character is currently at the top right of the screen}
+{The game shows a label of the area the player character is currently at the top right of the screen.}
 {Refines \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
 {map-area-name}
 
@@ -237,16 +237,14 @@ Satisfied by \ref{map-info}}
 \subsection*{\textbf{Central Hub:}}
 \textcolor{purple}{\textbf{Functional Requirements:}}
 
-\requirement{SFR}{Permanent progression shall be characterized by the player keeping some progression after they lose; 
-either currency, or materials the player discovered in each attempt through combat or both.}
-{The player should some feel some sense of improvement or accomplishment during the gameplayer, otherwise they would not feel the need to continue.}
+\requirement{SFR}{Permanent progression shall be characterized by the player keeping some progression after they lose; either currency, or materials the player discovered in each attempt through combat or both.}
+{The player should feel some sense of improvement or accomplishment during the gameplayer, otherwise they would not feel the need to continue.}
 {The game keeps track of the \hyperlink{copper}{copper} collected after the player has failed a run.}
 {Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
 {hub-progression}
 
-\requirement{SFR}{During gameplay, the player shall gain resources sent from the central hub, changing the gameplay experience for each run. 
-This progression will not persist after the player loses and starts a new game.}
-{This is a vital feature the game uses to help improve the odds of the player going further during a game session}
+\requirement{SFR}{During gameplay, the player shall gain resources sent from the central hub, changing the gameplay experience for each run. This progression will not persist after the player loses and starts a new game.}
+{This is a vital feature the game uses to help improve the odds of the player going further during a game session.}
 {The game transfer magic points to the player each combat instance.}
 {Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
 {hub-upkeep}
@@ -260,16 +258,16 @@ Satisfied by \ref{hub-cost}, \ref{hub-effect}, \ref{hub-reject}, \ref{hub-variet
 {hub-options}
 
 \requirement{SFR}
-{The game shall display the resource cost for each item to be purchased}
+{The game shall display the resource cost for each item to be purchased.}
 {This is needed, otherwise the player will have no idea how to allocate the resources gather during each run.}
-{The central hub shows a value for the amount of the in-game currency needed next to the item's image}
+{The central hub shows a value for the in-game currency needed next to the item’s image.}
 {Satisfies \ref{hub-options}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004},
 Satisfied by \ref{hub-effect}, \ref{hub-reject}}
 {hub-cost}
 
 \requirement{SFR}
 {The game shall describe the effect of the item in some way to the player.}
-{The player needs to know the effect before purchasing in order to make an educated guess on which item/building/weapon to prioritize purchasing first.}
+{TThe player needs to know the effect before purchasing to make an educated guess on which upgrade/enhancement to prioritize purchasing first.}
 {The game displays text for a detailed description for the use case of the purchasable.}
 {Satisfies \ref{hub-cost}, \ref{hub-options}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
 {hub-effect}
