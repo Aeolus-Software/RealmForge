@@ -1,0 +1,20 @@
+\begin{itemize}
+	\item Risk: High Amount of Features in Scope
+		\begin{itemize}
+			\item Description: Scope creep could increase development time to the point where deadlines are not met/up to standard. This can create rushed features which cause an unpleasant user experience through poor game design.
+			\item Mitigation: The team will use the GitHub Kanban board to track features and thoroughly inspect each new feature to be added. This will allow discernment of how much development time will be added from all aspects. The team will also ensure each feature added is up to the team's standard before building more features on top of them, lowering scope if necessary.
+		\end{itemize}
+	
+	\item Risk: Issues with Godot
+		\begin{itemize}
+			\item Description: Technical issues may arise with Godot, the selected game engine. The team is only somewhat experienced with Godot, making these issues difficult to troubleshoot.
+			\item Mitigation: The team will collaboratively address issues when they arise, and will make use of Godot's thorough documentation to aid in troubleshooting. The team will keep Godot inexperience in mind, and if a feature proves too complicated to implement, alternatives will be sought, such as audio/visual assets able to be used or Godot third-party modules. If this is not possible, scope will be lowered accordingly. 
+		\end{itemize}
+
+	\item Risk: Usability Testing Data Quality
+		\begin{itemize}
+			\item Description: Usability testing will be conducted in order to discern player preferences, and may not yield data of high enough quality/quantity if turnout for elicitation is lower than expected.
+			\item Mitigation: The team plans to conduct usability testing on various relevant McMaster clubs that team members are a part of, such as the McMaster Game Development Club or McMaster Geeks. This will demonstrate higher volunteer turnout for the testing than conducting it without this assistance.
+		\end{itemize}
+
+\end{itemize}
