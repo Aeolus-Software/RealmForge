@@ -277,7 +277,7 @@ Satisfied by \ref{hub-effect}, \ref{hub-reject}}
 \requirement{SFR}
 {The game shall reject the player in some way from purchasing the item if the player does not have the needed currency or materials required for purchased.}
 {Stops the player from being able to buy equipment for free or under the value prescribed.}
-{The game display a text box saying "Sorry, not enough rupees" after the player attempts to buy the item.}
+{The game displays a text box saying ‘Sorry, not enough materials’ after the player attempts to buy the item.}
 {Satisfies \ref{hub-cost}, \ref{hub-options}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
 {hub-reject}
 
@@ -301,9 +301,9 @@ an enemy that has increased armor (damage done to it is less than normal), and a
 {combat-variety}
 
 \requirement{SNFR}
-{The game shall have configuration options that drastically alter the experience such as difficulty and paced of the game.}
-{The game shall be have adjustable variables that will help tune the game for testing in order to better experience overall.}
-{The game has a configuration option that changes the how fast the combat is between the player and enemy.}
+{The game shall have configuration options that alter the experience such as difficulty and pace of the game.}
+{The game shall have adjustable variables that will help tune the game for testing to better experience overall.}
+{The game has a configuration option that changes how fast the combat is between the player and enemy.}
 {Satisfies \ref{game-variant-health}, \ref{game-variant-cost}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}}
 {game-better-experience}
 
@@ -315,16 +315,16 @@ an enemy that has increased armor (damage done to it is less than normal), and a
 {map-info}
 
 \requirement{SNFR}
-{The player shall offensive, and defensive options when facing an encounter.}
-{This keeps the player engaged because the player is not repeating the same option again constant (attack, attack, attack, attack, ...)}
+{The player shall have offensive, and defensive options when facing an encounter.}
+{This keeps the player engaged, otherwise, the player is repeating the same option of attack.}
 {The game gives the player the options to charge an attack (double damage next turn attack), attack normally, or defend with a shield.}
 {Satisfies \ref{combat-attack},
 Satisfied by \ref{combat-telegraph}}
 {combact-attack-variety}
 
 \requirement{SNFR}
-{The game shall telegraph the type of enemy encounter.}
-{The player needs to know the enemy type in order to handle them differently, so they won't fail.}
+{The game shall telegraph the type of enemy encounter to the player.}
+{The player should know how to handle each type of enemy.}
 {The game displays an enemy with a sword and another enemy with a shield; whenever the player attacks the shielded enemy, it takes less damage than the sword enemy.}
 {Satisfies \ref{combat-variety}}
 {combat-telegraph}
@@ -344,15 +344,15 @@ Satisfied by \ref{combat-telegraph}}
 \requirement{SNFR}
 {The game shall give a description to all the game selection properties.}
 {This helps the player in deciding which options he or she wants to tackle.}
-{The game displays a tool-tip text when the user select the configuration for change.}
+{The game displays a tool-tip text when the user selects a configuration for change.}
 {Satisfies \ref{game-variant-health}, \ref{game-variant-droprate}, \ref{game-variant-cost}}
 {game-variant-description}
 
 
 \requirement{SNFR}
-{The game shall have valid transitions that help the indication of game state change.}
-{Have no sign transition disorients the player and gives confusion over whether he or she is in combat or traveling.}
-{The games fades in and out (turn complete black and reappear) whenever the player enter combat.}
+{The game shall have valid transitions to indicate the game changing state}
+{This prevents the player from being disoriented or confused whether he or she is in combat or traveling.}
+{The game fades in and out (turn complete black and reappear) whenever the player enters combat.}
 {Satisfies \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
 {game-transition}
 
@@ -360,8 +360,8 @@ Satisfied by \ref{combat-telegraph}}
 \textbf{Likely to change or Out of current scope Requirements:}
 \requirement{SNFR}
 {The game shall provide audio cues for when the player does an action.}
-{This helps gives the player feedback that is not visual.}
-{The games provides a sound effect whenever the player confirms a prompt.}
+{This helps gives the player feedback response that is not visual.}
+{The game creates a sound effect whenever the player confirms a prompt.}
 {Satisfies \hyperlink{UC-002}{UC-001}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002}}
 {game-audio}
 
