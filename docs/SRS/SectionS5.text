@@ -36,7 +36,16 @@
     \item \ref{combat-variety}: This is essential for the replayability of the game, having each playthrough vary from before.
     \item \ref{combact-attack-variety}:  This is essential for a core gameplay mechanic and allowing the user to express skill.
     \item \ref{combat-telegraph}: Clearly displaying to the user why things are happening is essential to their gameplay experience so things do not feel random.
-    \item \ref{game-transition}: 
+    \item Input Interface: Essential to how users interact with the system.
+    \item Output Interface: Essential to how users interact with the system.
+    \item \ref{playtesterinfo}: Essential for keeping playtester data private and secure.
+    \item \ref{savevalidation}: Essential for data integrity and rejecting malformed saves.
+    \item \ref{savedatafailure}: Essential for preventing progress loss during unexpected failures.
+    \item \ref{exceptionsdatacorruption}: Essential for system stability and preventing file corruption.
+    \item \ref{flashinglights}: Essential for physiological safety and epilepsy warnings.
+    \item \ref{backupscombatdata}: Essential for reliability and preserving encounter rewards.
+    \item \ref{inputdevicedetection}: Essential for usability and detecting input devices.
+    \item \ref{gamestatetransitions}: Essential for system reliability during state transitions.
 \end{itemize}
 
 \subsection{Medium Priority}
@@ -48,6 +57,10 @@
     \item \ref{map-info}: Improves user experience but is not essential to core gameplay mechanics
     \item \ref{controller-nolag}: Lag will harm user experience but is not essential as this game is turn based and does not need fast reactions
     \item \ref{game-variant-description}: Users should know what they are selecting and not be choosing unknown modes.
+    \item \ref{savedataprofiles}: Essential for associating save data with specific profiles.
+    \item \ref{availablemapactions}: Essential for clear user interface navigation and decisions.
+    \item \ref{colourblinddesign}: Essential for accessibility and colorblind support.
+    \item \ref{inputdeviceguidance}: Essential for usability and device connection guidance.
 \end{itemize}
 
 \subsection{Low Priority}
@@ -56,4 +69,5 @@
     \item \ref{game-audio}: Enhances user experience but not necessary to gameplay.
     \item \ref{controller-exciting}: Enhances user experience but not necessary to gameplay.
     \item \ref{map-area-pleasing}: Enhances user experience but not necessary to gameplay.
+    \item \ref{game-transition}: Enhances user experience but not necessary to gameplay.
 \end{itemize}
