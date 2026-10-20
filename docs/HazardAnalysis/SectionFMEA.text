@@ -1,0 +1,161 @@
+\small
+\renewcommand{\arraystretch}{1.3}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.13\linewidth}|>{\raggedright\arraybackslash}p{0.14\linewidth}|>{\raggedright\arraybackslash}p{0.14\linewidth}|>{\raggedright\arraybackslash}p{0.14\linewidth}|>{\raggedright\arraybackslash}p{0.18\linewidth}|>{\raggedright\arraybackslash}p{0.08\linewidth}|>{\raggedright\arraybackslash}p{0.07\linewidth}|}
+	
+	\caption{Failure Mode and Effect Analysis (FMEA)}
+	\label{tab:fmea}\\
+	\hline
+	
+	\textbf{Component} &
+	\textbf{Failure Mode} &
+	\textbf{Effects of Failure} &
+	\textbf{Causes of Failure} &
+	\textbf{Recommended Action} &
+	\textbf{Safety Requirements} &
+	\textbf{Ref.} \\
+	\hline
+	\endfirsthead
+	
+	\multicolumn{7}{c}{Table \thetable\ -- Continued}\\
+	\hline
+	
+	\textbf{Component} &
+	\textbf{Failure Mode} &
+	\textbf{Effects of Failure} &
+	\textbf{Causes of Failure} &
+	\textbf{Recommended Action} &
+	\textbf{Safety Requirements} &
+	\textbf{Ref.} \\
+	\hline
+	\endhead
+	
+	\hline
+	\multicolumn{7}{r}{Continued on next page}\\
+	\endfoot
+	
+	\hline
+	\endlastfoot
+	
+	Property Configuration &
+	System is unable to recognize the user's connected input device (such 
+	as a controller), when selected in the feature variation menu &
+	Users waste their time and can become confused/frustrated when attempting 
+	to troubleshoot input device connection &
+	A. System does not provide sufficient guidance to the user to connect their 
+	input device
+	
+	B. System does not correctly monitor device interfaces to receive input 
+	(Bluetooth, USB) &
+	A. Provide detailed guidance to the user on how to connect each input 
+	device; prompt the user to select the device they wish to connect 
+	(PlayStation DualSense controller, Xbox Series X controller, etc.) and 
+	provide guidance specific to that device
+	
+	B. Monitor both USB and Bluetooth interfaces for connection to each type of 
+	supported input device when the user opts to connect a new device &
+	\ref{inputdeviceguidance} \ref{inputdevicedetection} &
+	H1-A \\
+	\hline
+	
+	World Navigation &
+	User is unable to understand where their player character can move next in 
+	the overall game world &
+	User can become confused/frustrated, and waste gameplay time staying in the 
+	main game world instead of progressing forwards &
+	System does not provide adequate feedback to the user regarding where the 
+	player character can move next; valid locations are indistinguishable from 
+	invalid locations, or a possible path to take to reach the end of the game 
+	is unclear &
+	Highlight valid locations that the player character can move to in the game 
+	world, and indicate invalid locations. Provide further guidance to the user 
+	regarding a possible path forward if an extended period of time is spent 
+	attempting to reach invalid locations &
+	\ref{availablemapactions} &
+	H2-A \\
+	\hline
+	
+	Combat System &
+	System displays flashing or intense graphics &
+	Users with photosensitive epilepsy can potentially suffer an epileptic 
+	seizure &
+	The system displays excessive flashing graphics without warning users with 
+	photosensitive epilepsy &
+	Include a detailed flashing lights or epilepsy warning when the system 
+	launches, and ensure the game does not display excessive flashing graphics &
+	\ref{flashinglights} &
+	H3-A \\
+	\hline
+	
+	Progression and Rewards &
+	Rewards provided to the user for succeeding in an enemy encounter are lost 
+	when exiting the encounter to the game world &
+	Gameplay progression is interrupted by earned rewards not being given to 
+	the user, preventing them from using rewards to improve their in-game 
+	capabilities; this can cause the user to become frustrated &
+	Variables storing enemy encounter rewards are erroneously overwritten by 
+	another value during transitions between game scenes &
+	Retain and update enemy encounter reward variables (during encounters) in 
+	an additional memory location separate from the combat system, to ensure a 
+	backup value is available &
+	\ref{backupscombatdata} &
+	H4-A \\
+	\hline
+	
+	Central Hub &
+	System does not return game state and display to the Central Hub menu 
+	following a failed game run (user is defeated)  &
+	User is unable to continue the correct flow of gameplay (returning to the 
+	Central Hub menu, starting again), and may need to restart the software to 
+	resolve the issue, causing frustration &
+	Software errors/faults prevent the system from correctly transitioning 
+	between game scenes (end of game run/user is defeated to Central Hub menu) &
+	Extensively test and verify major game state transitions (user defeat to 
+	Central Hub menu, reaching a game world area to an enemy encounter) for 
+	correctness. Game state transitions can be verified against a state machine 
+	for clarity &
+	\ref{gamestatetransitions} &
+	H5-A \\
+	\hline
+	
+	Progress Management &
+	System application unexpectedly crashes or closes completely due to an 
+	error &
+	Most recent user save data is corrupted and unrecoverable; the user can be 
+	frustrated due to lost progress &
+	System does not store any backup user save data &
+	Regularly store user save data in multiple locations; revert to an intact 
+	recent saved state on system failure &
+	\ref{savedatafailure} \ref{exceptionsdatacorruption} &
+	H6-A \\
+	\hline
+	
+	Progress Management &
+	System attempts to initialize the game using corrupted save data &
+	The system is unable to correctly initialize the game and enable gameplay; 
+	the user can be confused on how to proceed using their original saved game 
+	data, and can become frustrated &
+	System does not take steps to validate user save data &
+	Validate user save data against previous snapshots; if save data is 
+	corrupted, revert to an intact recent saved state &
+	\ref{savevalidation} &
+	H6-B \\
+	\hline
+	
+	User Interface &
+	System displays game and interface graphics that are difficult for 
+	colourblind users to interpret &
+	Colourblind users are unable to progress efficiently in the game, causing 
+	frustration; the game is not accessible to as many users as possible &
+	Displayed symbols in game and interface graphics are difficult to 
+	distinguish for colourblind users (colours such as red and green are used 
+	as a primary method of differentiation), or colourblind-accessible graphics 
+	filters are not provided &
+	Avoid relying only on certain colours to convey interface and game 
+	information (red and green), and provide appropriate colourblind-accessible 
+	graphics filter settings to the user &
+	\ref{colourblinddesign} &
+	H7-A \\
+	\hline
+	
+\end{longtable}
