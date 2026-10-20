@@ -20,6 +20,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{longtable}
+\usepackage{pdflscape}
 \hypersetup{
 	bookmarks=false,    % show bookmarks bar?
 	pdftitle={Software Requirement Specification},    % title
@@ -393,7 +394,21 @@
 	
 	
 	\nsection{S.4 Detailed usage scenarios}
-	
+	Included below is a System Flowchart, outlining at a high level how the 
+	logic of the system will function internally:
+	\newpage
+
+	\newpage
+	\begin{landscape}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=1.0\textwidth]{S4Flowchart.png}
+		\caption{RealmForge System Flowchart}
+		\label{fig:flowchart}
+	\end{figure}
+
+	\end{landscape}
+
 	\input{SectionS4.text}
 	
 	\nsection{S.5 Prioritization}
