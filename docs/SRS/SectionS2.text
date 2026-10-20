@@ -1,0 +1,525 @@
+%\requirement{Tag/ID} <-- SFR, SNFR, ENV
+%{Description} <-- This game must have a exploding monkey
+%{Rationale} <-- Exploding monkeys are cool
+%{Fit Criterion} <-- The game contrains a monkey exploding the moment the player attacks it
+%{Traceability tags} <-- \ref{Unique ID} some other previous functional requirement
+%{Unique ID} <-- Use this as a references -e.g Do \ref{Unique ID} anywhere where you want to mention it.
+
+% PHYSICALL CONTROLS
+%
+%
+%
+\subsection*{\textbf{Physical Controls:}}
+\textcolor{purple}{\textbf{Functional Requirements:}}
+\requirement{SFR}
+{The controller button-bindings shall have a keyboard and mouse equivalent.}
+{The user must have full access to all functionality of the game with either a controller or keyboard and mouse. This helps if the user is not experienced or comfortable with a controller option.}
+{The directional inputs of the d-pad from the controller has the same input mappings as the left, right, up, down on the keyboard. The A, B, X, Y, L and R buttons on 
+XBOX controllers also have a keyboard equivalent functionality mapped into certain keys.}
+{Satisfies \ref{controller-constraint}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}, 
+Satisfied by \ref{controller-marking}, \ref{controller-default}, \ref{controller-switching},}
+{controller-equivalence}
+
+\requirement{SFR}
+{The game shall explain what each button on the connected controller can do for the user. The same goes for the keyboard and mouse (see \ref{controller-equivalence}).}
+{Identifying the actions of what each button will do will prevent the player from feeling lost or perform an action that was not intended.}
+{The game displays a diagram of a controller that marks all the actions with the correlated button.}
+{Satisfies \ref{controller-equivalence}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001},}
+{controller-marking}
+
+\requirement{SFR}
+{The game shall default to the keyboard and mouse as the main source of input handling.}
+{A keyboard and mouse are more likely to be connected since the software will be designed to run on a computer.}
+{During the launch of the software, the software will accept keyboard key inputs, and the user will have to manually switch to the controller.}
+{Satisfies \ref{controller-constraint}, \ref{controller-equivalence}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}
+Satisfied by \ref{controller-onlyone},}
+{controller-default}
+
+\requirement{SFR}
+{The game shall give the option for the user to switch between using a controller or keyboard and mouse as inputs.}
+{This gives the player and the game knowledge of how the inputs are being handled, whether via keys or controller buttons.}
+{During the start screen, there is an option to change from the default keyboard, and mouse or connected controller.}
+{Satisfies \ref{controller-constraint}, \ref{controller-equivalence}, \ref{controller-default}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}
+Satisfied by \ref{controller-onlyone},}
+{controller-switching}
+
+\requirement{SFR}
+{The game shall handle only either a keyboard and mouse or a controller inputs at a single instance, not both at the same time.}
+{If a controller and keyboard are connected, this prevents the user from accidentally pressing inputs that were not intended.}
+{During the launch of the software, if a controller is connected, the game will not accept any action from it unless switched to.}
+{Satisfies \ref{controller-default}, \ref{controller-switching}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}}
+{controller-onlyone}
+
+% Game Settings
+%
+%
+%
+\subsection*{\textbf{Game Settings:}}
+\textcolor{purple}{\textbf{Functional Requirements:}}
+
+\requirement{SFR}
+{The game shall have a configuration that changes the player's starting health.}
+{This is a difficulty setting to test how far a user can last on average before failing and restarting a run. For example, 
+a user with minimum gaming experience will typically have a better time with the game if the user can last a little longer. 
+Dialing the health will also limit how far a player goes on their initial runs, thus preventing them from seeing too much of the game early on. 
+This configuration helps balance the player's overall experience with the pace at which the game's content is consumed.}
+{The user can change the starting health from a minimum of 50 to 150.}
+{Refines \hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003},
+Satisfied by \ref{game-variant-lock}, \ref{game-better-experience}, \ref{game-variant-description}}
+{game-variant-health}
+
+\requirement{SFR}
+{The game shall have a configuration that changes the average amount of resources gained after an encounter.}
+{This is a pacing mechanic for the game. The user should not be able to purchase all the upgrades from the central hub with only a short few runs; otherwise, the initial difficulty of the game gets trivialized by the added upgrades; not by the player’s own skill. Having this configuration will also help distinguish how long the average player feels about the overall pace of the game; different users have varying tolerances between the feeling of progression and repetition.}
+{The user can change the average number of resources dropped between 10 and 20 for enemy encounters.}
+{Refines \hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003},
+Satisfied by \ref{game-variant-cost}, \ref{game-variant-lock}, \ref{game-variant-description}}
+{game-variant-droprate}
+
+\requirement{SFR}
+{The game shall have a configuration that changes the cost of each purchasable upgrade.}
+{Changing the purchase cost is slightly different from \ref{game-variant-droprate}, because it changes how players perceive the purchase progression. 
+A player will gauge how far they must go before purchasing the next upgrade. If the cost is too high, then this discourages the player from buying things. If the cost is too low, then this runs the risk of completing all purchases too fast; there needs to be a balance for the cost.}
+{The user can change the additional cost of each purchasable  upgrade from zero to 50.}
+{Satisfies \ref{game-variant-droprate}, Refines \hyperlink{UC-004}{UC-004}, \hyperlink{US-004}{US-004},
+Satisfied by \ref{game-variant-lock}, \ref{game-better-experience}, \ref{game-variant-description}}
+{game-variant-cost}
+
+\requirement{SFR}
+{The game shall prevent the user from changing the game's configurations until starting a new game.}
+{Altering the game’s parameters while playing trivializes the idea of game variants entirely. If a user changes a configuration, then it could be because of inconvenience, and thus ruins the idea of difficulty. This can lead to an unstable game experience. This also prevents bugs due to changing variables. For example, changing the initial starting health while the game states the current health is zero.}
+{The game will not include an option to allow the user to stop the game and immediately change a setting such as initial starting health.}
+{Satisfies \ref{game-variant-cost}, \ref{game-variant-droprate}, \ref{game-variant-health}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002},
+Satisfied by \ref{game-variant-confirm}}
+{game-variant-lock}
+
+\requirement{SFR}
+{The game shall give a prompt for confirmation once the user has finished setting up the game’s configurations.}
+{The game's configurations cannot be changed (see \ref{game-variant-lock}). This gives the user a contractual obligation to finish the game whilst under the rules laid out. }
+{When a user exits from the configuration’s menu, the game will display a prompt showing the question “Is the configuration complete” followed by yes-or-no text buttons.}
+{Satisfies \ref{game-variant-lock}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002}}
+{game-variant-confirm}
+
+
+% Combat System
+%
+%
+%
+\noindent
+\subsection*{\textbf{Combat System:}}
+\textcolor{purple}{\textbf{Functional Requirements:}}
+
+\requirement{SFR}
+{The game shall display a visual for both the player and enemies' combat representation.}
+{This is needed to alert the user for when a combat encounter has occurred and gives a sense of the borders and positioning during combat.}
+{The game displays an image for the player’s character on the bottom-left screen and the enemies’ images in the top-right screen.}
+{Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003},
+Satisfied by \ref{combat-health}, \ref{combat-attack}, \ref{combat-numbers}, \ref{map-overworld}, \ref{map-options} }
+{combact-visual}
+
+\requirement{SFR}
+{The game shall display the player and the enemies’ respective health points during the combat screen.}
+{This is needed to indicate the urgency of the situation during combat; whether the player is losing or winning.}
+{The game displays health bars under their player and enemies’ images (see \ref{combact-visual}).}
+{Satisfies \ref{combact-visual}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003},
+Satisfied by \ref{combat-ends}, \ref{combat-healthchange}}
+{combat-health}
+
+\requirement{SFR}
+{The game shall display an indication of success if the enemy's health goes to zero or failure if the player's health goes to zero.}
+{This is needed in order to know when combat has concluded.}
+{The game displays a 'player wins' text when the enemies' health is reduced to zero. The game displays a 'player has failed' text when the player' health is reduced to zero.}
+{Satisfies \ref{combat-health}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003},
+Satisfied by \ref{map-options}, \ref{ui-end}, \ref{map-overworld}}
+{combat-ends}
+
+\requirement{SFR}
+{The game shall display an attack visual whenever the player presses an attack option. Similar, the game shall display a visual for the enemy's opposing attack.}
+{The combat needs to be telegraphed/presented to the player in some manner.}
+{The game displays the in-game characters weapon swinging to indicate the attack.}
+{Satisfies \ref{combact-visual}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003},
+Satisfied by \ref{combat-option}, \ref{combat-variety}, \ref{combact-attack-variety}}
+{combat-attack}
+
+\requirement{SFR}
+{The game shall indicate when the player or enemies' health is changed (decreased or increased).}
+{The player must know whether an attack done by the player or enemy was effective or not, otherwise, there is no sense of progress of combat.}
+{When the player attacks an enemy, the enemy's health bar updates accordingly.}
+{Satisfies \ref{combat-health}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
+{combat-healthchange}
+
+\requirement{SFR}
+{The game shall display at one or more combat options for the player.}
+{This is mandatory for progression during combat. Otherwise, the player will not be able to do anything.}
+{The game displays UI elements labeled 'attack' and 'defend' during combat.}
+{Satisfies \ref{combat-attack}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
+{combat-option}
+
+\requirement{SFR}
+{The player shall have the possibility to encounter more than one enemy at a time.}
+{This improves combat experience, because the player must now prioritize and deal with a certain enemy first over the others.}
+{The game displays two \hyperlink{skeleton}{skeleton} enemies. Enemy type is an example only.}
+{Satisfies \ref{combact-visual}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003}, \hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003}}
+{combat-numbers}
+
+% UI System
+%
+%
+%
+\subsection*{\textbf{User Interface System:}}
+\textcolor{purple}{\textbf{Functional Requirements:}}
+\requirement{SFR}
+{The game shall first launch and display a screen with UI component options for starting a new game, configurations, and exiting the game.}
+{This is mandatory because these are the actions the user faces first before everything else.}
+{The game displays 3 text-buttons with text saying 'start game, 'settings', and 'exit'.}
+{Refines \hyperlink{UC-001}{UC-001}, \hyperlink{UC-005}{UC-005}, \hyperlink{US-001}{US-001}, \hyperlink{US-004}{US-004}}
+{ui-start}
+
+\requirement{SFR}
+{The game shall display a screen with options to restart the game or continue a game session after the player has failed or completed the win condition of the run.}
+{This is the end point for the main loop of the game. The game cannot proceed properly without this key user decision.}
+{The game displays 2 text-buttons with text saying 'restart game, and 'continue game'.}
+{Satisfies \ref{combat-ends}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{UC-005}{UC-005}, \hyperlink{US-001}{US-001}, \hyperlink{US-004}{US-004}}
+{ui-end}
+
+% Map System
+%
+%
+%
+\noindent
+\subsection*{\textbf{Map System:}}
+\textcolor{purple}{\textbf{Functional Requirements:}}
+
+\requirement{SFR}
+{The game shall show when the player is currently in the overworld of the game.}
+{The player needs to know which situation or state the game is in, whether it is combat or exploration.}
+{The game displays a map screen along with multiple locations with pathways linking towards each location}
+{Satisfies \ref{combact-visual}, \ref{combat-ends}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
+{map-overworld}
+
+\requirement{SFR}
+{The game shall give at least one or more travel options.}
+{The player needs to have the freedom to choose where to go next to give the game variety and not feel like it is on a linear path.}
+{The game displays UI elements titled ’Bahamas’, ’Volcano’, and ’Island’ followed by an option to travel. The titles are examples only.}
+{Satisfies \ref{combact-visual}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}, 
+Satisfied by \ref{map-confirm}}
+{map-options}
+
+\requirement{SFR}
+{The game shall show a prompt to the player for confirmation of travel.}
+{This give the player reaffirmed knowledge and an update on the travel location.}
+{The game displays a prompt after the player has chosen a travel destination. The prompt displays “Are you sure” with yes-or-no options.}
+{Satisfies \ref{map-options}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002},
+Satisfies by \ref{map-traveling}}
+{map-confirm}
+
+\requirement{SFR}
+{The game shall indicate to the player where the player is traveling to.}
+{This is mandatory so that the player is not confused on if they travelled, and where they travelled to.}
+{The game displays an image of the player character moving towards a travel marker beside the next location.}
+{Satisfies \ref{map-options}, \ref{map-confirm}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002},
+Satisfied by \ref{map-info}}
+{map-traveling}
+
+\requirement{SFR}{The game shall show the name of the area.}
+{The player should know how far in the game they have reached toward the end.}
+{The game shows a label of the area the player character is currently at the top right of the screen.}
+{Refines \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
+{map-area-name}
+
+% CENTRAL HUB
+%
+%
+%
+\noindent
+\subsection*{\textbf{Central Hub:}}
+\textcolor{purple}{\textbf{Functional Requirements:}}
+
+\requirement{SFR}{Permanent progression shall be characterized by the player keeping some progression after they lose; either currency, or materials the player discovered in each attempt through combat or both.}
+{The player should feel some sense of improvement or accomplishment during the gameplay, otherwise they may feel demotivated and would not feel the need to continue.}
+{The game keeps track of the \hyperlink{copper}{copper} collected after the player has failed a run.}
+{Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
+{hub-progression}
+
+\requirement{SFR}{During gameplay, the player shall gain resources sent from the central hub, changing the gameplay experience for each run. This progression will not persist after the player loses and starts a new game.}
+{This is a vital feature the game uses to help improve the odds of the player going further during a game session.}
+{The game transfers magic points to the player each combat instance. This is an example only and more possibilities will be available.}
+{Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
+{hub-upkeep}
+
+\requirement{SFR}
+{The game shall give one or more options for the player to purchase items.}
+{The is mandatory since there is otherwise no way for the player to become stronger or get any help during the game.}
+{The game displays images of the items/buildings/weapons purchasable as well as a 'buy' option underneath.}
+{Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004},
+Satisfied by \ref{hub-cost}, \ref{hub-effect}, \ref{hub-reject}, \ref{hub-variety}}
+{hub-options}
+
+\requirement{SFR}
+{The game shall display the resource cost for each item to be purchased.}
+{This is needed, otherwise the player will not be aware of how to allocate the resources gathered during each run.}
+{The central hub shows a value for the in-game currency needed next to the item’s image.}
+{Satisfies \ref{hub-options}, \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004},
+Satisfied by \ref{hub-effect}, \ref{hub-reject}}
+{hub-cost}
+
+\requirement{SFR}
+{The game shall describe the effect of the item in some way to the player.}
+{The player needs to know the effect before purchasing to make an educated guess on which upgrade/enhancement to prioritize purchasing.}
+{The game displays text for a detailed description for the use case of the purchasable.}
+{Satisfies \ref{hub-cost}, \ref{hub-options}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
+{hub-effect}
+
+\noindent
+\textbf{Undesired Event Handling:}
+\requirement{SFR}
+{The game shall reject the player in some way from purchasing the item if the player does not have the needed currency or materials required for purchased.}
+{Stops the player from being able to buy equipment without meeting the value prescribed to the item.}
+{The game displays a text box saying ‘Sorry, not enough materials’ after the player attempts to buy the item.}
+{Satisfies \ref{hub-cost}, \ref{hub-options}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004}, \hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004}}
+{hub-reject}
+
+
+\subsection*{\textcolor{teal}{Non-Functional Requirements:}}
+\textbf{Look and Feel Requirements:}
+
+\requirement{SNFR}
+{The game shall give a variety of purchase options that differ in the ways to improve the next game session.}
+{This gives the player the ability to try and test out all the different purchasable upgrades in the central hub in order to weigh their worth; it compels the user to experiment.}
+{The game provides an upgrade to increase the amount of attacks a player can deal, being able to travel faster, or being able to collect more resources after combat. These are examples and more options are possible.}
+{Satisfies \ref{hub-options}}
+{hub-variety}
+
+\requirement{SNFR}
+{The player shall encounter different kinds of enemies varying in different ways such as attack types, health, armor, etc.}
+{The player doesn't want to feel bored fighting the same enemy over again. This feels repetitive and discourages the player from continuing the game.}
+{The player can encounter an enemy that can attack physically as well as an enemy that poisons the player (slowly decrease health over time). The player can encounter an enemy that has increased armor (damage done to it is less than normal), and an enemy with more health (health bar is longer). These are examples and more options are possible.}
+{Satisfies \ref{combat-attack}}
+{combat-variety}
+
+\requirement{SNFR}
+{The game shall have configuration options that alter the experience, such as difficulty and pace of the game.}
+{The game shall have adjustable variables that will help tune the game for testing to better experience overall.}
+{The game has a configuration option that changes how fast the combat is between the player and enemy.}
+{Satisfies \ref{game-variant-health}, \ref{game-variant-cost}, Refines \hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001}}
+{game-better-experience}
+
+\requirement{SNFR}
+{The game shall showcase a variety of different travel destinations that are visually different.}
+{This helps gives the player external knowledge and hints of the risks the player faces when heading to a certain location.}
+{The game displays images for locations showing a nice island, a volcano, a desert and grassy area. These are examples and more options are possible.}
+{Satisfies \ref{map-options}, Refines \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
+{map-info}
+
+\requirement{SNFR}
+{The player shall have offensive and defensive options when facing an encounter.}
+{This keeps the player engaged, otherwise, the player is repeating the same option of attacking with little to no change.}
+{The game gives the player the options to charge an attack (double damage next turn attack), attack normally, or defend with a shield. These are examples and more options are possible.}
+{Satisfies \ref{combat-attack},
+Satisfied by \ref{combat-telegraph}}
+{combact-attack-variety}
+
+\requirement{SNFR}
+{The game shall telegraph the type of enemy encounter to the player.}
+{The player should know how to handle each type of enemy.}
+{The game displays an enemy with a sword and another enemy with a shield; whenever the player attacks the shielded enemy, it takes less damage than the sword enemy. These are examples and more options are possible.}
+{Satisfies \ref{combat-variety}}
+{combat-telegraph}
+
+\noindent
+\textbf{Performance Requirements:}
+\requirement{SNFR}
+{The inputs for the controller being used shall have immediate feedback response for the game.}
+{Any major input delays will make the game feel slow to respond to any player feedback.}
+{The game response time in handling the players input is less than half a second.}
+{Satisfies \hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002}}
+{controller-nolag}
+
+\noindent
+\textbf{Normal Operation Requirements:}
+
+\requirement{SNFR}
+{The game shall give a description to all the game selection properties.}
+{This helps the player in deciding which options they want to tackle.}
+{The game displays a tool-tip text when the user selects a configuration for change.}
+{Satisfies \ref{game-variant-health}, \ref{game-variant-droprate}, \ref{game-variant-cost}}
+{game-variant-description}
+
+
+\requirement{SNFR}
+{The game shall have valid transitions to indicate the game changing state}
+{This prevents the player from being disoriented or confused whether they are in combat or traveling.}
+{The game fades in and out (turn complete black and reappear) whenever the player enters combat.}
+{Satisfies \hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002}}
+{game-transition}
+
+\noindent
+\textbf{Safety and Security Requirements}
+\requirement{SSR}
+{Save data shall be associated with specific game profiles saved on the device.}
+{Being able to have multiple game profiles improves usability of the system}
+{At least 3 game profiles can be stored on one at device simultaneously, and 
+saving/loading data to/from one profile never affects other saved profiles}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{savedataprofiles}
+
+\requirement{SSR}
+{The system shall ensure all play tester information and evaluation metrics are 
+securely stored and restricted from unauthorized access.}
+{Play testers should feel comfortable to test the game without fear of having 
+their information exposed to third parties.}
+{Tester information never reaches any party outside of the team and unnecessary 
+information is not collected}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{playtesterinfo}
+
+\requirement{SSR}
+{Save files and player data shall be validated upon launch, detecting and 
+rejecting malformed data.}
+{Losing data or having files be corrupted during launch will result in player 
+frustration.}
+{System detects corrupted data >99\% of the time and never loads corrupted data 
+when detected}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{savevalidation}
+
+\requirement{SSR}
+{Unsaved progress or session data shall be stored locally on the user's device 
+if an unexpected exception or failure occurs.}
+{Losing progress in-game after unexpected exceptions occur will result in 
+immense frustration in users.}
+{Unexpected failures never cause the user to lose progress that will take 
+longer than 5 minutes to recover}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{savedatafailure}
+
+\requirement{SSR}
+{The application shall handle unexpected runtime exceptions gracefully to 
+prevent permanent data corruption to local save files or destabilization of the 
+host operating system.}
+{Failure of the system resulting in destabilization outside of the game 
+environment is potentially dangerous to host system.}
+{Unexpected failures of the system never cause damage or destabilization of the 
+host environment}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{exceptionsdatacorruption}
+
+\requirement{SSR}
+{The application shall display a warning about flashing lights and not have 
+excessive flashing lights during gameplay.}
+{Excessive flashing lights without a warning previously displayed is dangerous 
+for users with epilepsy.}
+{Flashing lights warning always displays on start-up}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{flashinglights}
+
+\requirement{SSR}
+{The system shall store backups of combat reward data and verify user receives 
+these rewards.}
+{Not gaining rewards when the user should will negatively impact user 
+experience greatly.}
+{Users always receive combat rewards when they should}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{backupscombatdata}
+
+\requirement{SSR}
+{The system shall clearly distinguish between actions which are available and 
+unavailable to the user during map navigation, combat, and central hub 
+modification.}
+{Player can become frustrated while trying to make relevant decisions if their 
+options are not clearly laid out.}
+{Users are aware of all options available to them in 95\% of scenarios}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{availablemapactions}
+
+\requirement{SSR}
+{The system shall avoid using certain colours to convey important information.}
+{The system must be accommodating to users with colour blindness.}
+{Colour blind users do not miss out on any information non-colour blind users 
+can see}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{colourblinddesign}
+
+\requirement{SSR}
+{The system shall provide guidance how to connect input devices.}
+{Difficulty in connecting input devices can waste user's time and frustrate 
+them during the process.}
+{Connecting a new input device takes <2 minutes at least 95\% of the time}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{inputdeviceguidance}
+
+\requirement{SSR}
+{The system shall detect when new input devices are connected.}
+{Makes the process of connecting an input device quick and simple for the user.}
+{System always detects when a new input device is connected and notifies the 
+user}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{inputdevicedetection}
+
+\requirement{SSR}
+{The system shall reconfirm it is in the proper game state after major game 
+state transitions occur}
+{The user getting locked out of progressing through game states will prevent 
+playing the game}
+{Users never get stuck in certain game states with no way of progressing 
+without restarting the system}
+{Created from Recommended Actions devised in the FMEA included in the Hazard 
+Analysis document}
+{gamestatetransitions}
+
+\noindent
+\textbf{Likely to change or Out of current scope Requirements:}
+\requirement{SNFR}
+{The game shall provide audio cues for when the player does an action.}
+{This helps gives the player feedback response that is not visual.}
+{The game creates a sound effect whenever the player confirms a prompt.}
+{Satisfies \hyperlink{UC-002}{UC-001}, \hyperlink{UC-002}{UC-002}, \hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002}}
+{game-audio}
+
+% \textbf{Usability:}
+% \textbf{Operational:}
+% \textbf{Maintainability:}
+
+
+% \requirement{SNFR}
+% {There should not be any gameplay discrepancy or gap with using a controller over a keyboard and mouse or vice versa.}
+% {The player needs to be able to perform, control, and react to the game's stimulation equally regardless of what is being held, otherwise there will an in-balance over playing with one over the other
+% and skew testing results.}
+% {Aiming on the controller autolocks onto the target enemy whereas the mouse needs to be manually aim. This is to accomadate mouse generally being more precise to aim versus a regular analog stick on a controller.}
+% {\ref{controller-equivalence}}
+% {controller-balance}
+
+% \requirement{SNFR}
+% {Combat should be exciting and very engaging to the player.}
+% {This is a key moment of the game. If the player is not satisfied or feel exhilarated, then the player will no long feel the urge to continue the game.}
+% {The game has a very fun and addicting combat that keeps the player from turning if off.}
+% {Satisfies \hyperlink{UC-002}{UC-002}, Satisfies \hyperlink{UC-003}{UC-003}}
+% {controller-exciting}
+
+% \requirement{SNFR}{The map screen should be visually appealing to the player, but also no hindering the player.}
+% {The player shall know the current and future locations without have to constantly check the area name.}
+% {The game shows a label of the area name on the top right of the screen and gives visual indication whenever the area label is changed.}
+% {Satisfies \hyperlink{UC-002}{UC-002}}
+% {map-area-pleasing}
+
+
+
+%\requirement{Tag/ID}
+%{Description}
+%{Rationale}
+%{Fit Criterion}
+%{Traceability tags}
+%{Unique ID} <-- Use this as a references -e.g Do \ref{Unique ID} anywhere where you want to mention it.

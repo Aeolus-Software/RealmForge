@@ -1,26 +1,32 @@
 The following assumptions describe the environment in which RealmForge is expected to operate. These include the user's device setup and external components that are outside the system's control.
 
-\noindent
-\textbf{Display Device}
+\medskip
+\noindent \textbf{Display Device}
+\smallskip
 
-It is assumed that players have access to a properly connected and functioning display device that is capable of displaying RealmForge's graphics.
+\noindent It is assumed that players have access to a properly connected and functioning display device that is capable of displaying RealmForge's graphics.
 
-\noindent
-\textbf{Input Devices}
+\medskip
+\noindent \textbf{Input Devices}
+\smallskip
 
-It is assumed that players have access to properly connected and functioning input devices compatible with their system, such as a keyboard and mouse or a supported controller, to interact with the game.
+\noindent It is assumed that players have access to properly connected and functioning input devices compatible with their system, such as a keyboard and mouse or a supported controller, to interact with the game.
 
-\noindent
-\textbf{Operating System and Driver Support}
+\medskip
+\noindent \textbf{Operating System and Driver Support}
+\smallskip
 
-It is assumed that the user's operating system has the necessary drivers installed and configured to support the input and display devices used by RealmForge.
+\noindent It is assumed that the user's operating system has the necessary drivers installed and configured to support the input and display devices used by RealmForge.
 
-\noindent
-\textbf{Application Permissions}
+\medskip
+\noindent \textbf{Application Permissions}
+\smallskip
 
-It is assumed that users have permission to install and run RealmForge on their devices, as well as the necessary permissions to access local files used to save game progress.
+\noindent It is assumed that users have permission to install and run RealmForge on their devices, as well as the necessary permissions to access local files used to save game progress.
 
-\noindent
-\textbf{Available System Resources}
+\medskip
+\noindent \textbf{Available System Resources}
+\smallskip
 
-It is assumed that the user's device has enough available memory and processing power to run RealmForge without significant interference from other applications running at the same time.
+\noindent It is assumed that the user's device has enough available memory and processing power to run RealmForge without significant interference from other applications running at the same time.
+

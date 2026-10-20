@@ -15,9 +15,11 @@
 \usepackage{underscore}
 \usepackage{enumitem}
 \usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage[bookmarks=true]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage{longtable}
 \hypersetup{
 	bookmarks=false,    % show bookmarks bar?
 	pdftitle={Software Requirement Specification},    % title
@@ -43,12 +45,14 @@
 \newcounter{ENV}
 \newcounter{SFR}
 \newcounter{SNFR}
+\newcounter{SSR}
 \renewcommand{\theENV}{ENV-\reqnumber{\value{ENV}}}
 \renewcommand{\theSFR}{SFR-\reqnumber{\value{SFR}}}
 \renewcommand{\theSNFR}{SNFR-\reqnumber{\value{SNFR}}}
+\renewcommand{\theSSR}{SSR-\reqnumber{\value{SSR}}}
 
 % Format numbers as 001, 002, 003, etc.
-\newcommand{\reqnumber}[1]{%
+\newcommand{\reqnumber}[1]{%i
 	\ifnum#1<10 00%
 	\else\ifnum#1<100 0%
 	\fi\fi
@@ -56,14 +60,14 @@
 }
 
 % --- REQUIREMENT MACRO SETUP ---
-\newcommand{\requirement}[5]{%
+\newcommand{\requirement}[6]{%
 	\par\noindent
 	\begingroup
 	
 	% Increment the appropriate counter
-	\refstepcounter{#1}%
+	\refstepcounter{#1}\label{#6}%
 	\edef\reqid{\csname the#1\endcsname}%
-	\label{\reqid}%
+	
 	
 	% Adjustable formatting
 	\def\reqindent{2.3cm}
@@ -190,12 +194,20 @@
       \hline
 			Humna Saeed & 2026-10-16    & E4, E5, and E6 Draft & 1.0\\
 			\hline
+<<<<<<< HEAD
 			Andy Huynh & 2026-10-16 & First draft of S2 & 1.0 \\
 			\hline
 			Andy Huynh & 2026-10-18 & Second draft of S2 & 1.0 \\
 			\hline
 			Andy Huynh & 2026-10-19 & Final draft of S2 & 1.0 \\
 			\hline
+=======
+			Owen Johnson & 2026-10-19    & P6 Updated & 1.0\\
+			Owen Johnson & 2026-10-17    & G6 Draft & 1.0\\
+			\hline
+			Humna Saeed & 2026-10-19   & P7, Traceability table, and S3 Draft & 1.0\\
+      	\hline
+>>>>>>> main
 		\end{tabular}
 	\end{center}
 	
@@ -232,6 +244,11 @@
 		being a unique numerical identifier.
 		\item Environmental Requirements are given the unique identifier 
 		``ENV-XXX'', meaning ``Environmental Requirement'', with ``XXX'' being 
+		a 
+		unique numerical identifier.
+		\item Safety Requirements are given the unique identifier 
+		``SSR-XXX'', meaning ``Software Safety Requirement'', with ``XXX'' 
+		being 
 		a 
 		unique numerical identifier.
 		\item Mandatory Requirements that must be satisfied at the conclusion 
@@ -310,8 +327,9 @@
 	\input{SectionG5.text}
 	
 	\nsection{G.6 Limitations and exclusions}
-	\comment{Aspects that the system need not address.}
-	
+
+	\input{SectionG6.text}	
+
 	\nsection{G.7 Stakeholders and requirements sources}
 
 	%---------------------------------
@@ -364,17 +382,18 @@
 	%---------------------------------
 	
 	\nsection{S.2 Functionality}
-	\comment{One section, S.2.n, for each of the components identified in S.2, 
-	describing the corresponding behaviors (functional and non-functional 
-	properties).}
+	% \comment{One section, S.2.n, for each of the components identified in S.2, 
+	% describing the corresponding behaviors (functional and non-functional 
+	% properties).}
+	% %---------------------------------
+	% \notEmpty{}
 	%---------------------------------
-	\notEmpty{}
-	%---------------------------------
+	\input{SectionS2.text}
 
 	\nsection{S.3 Interfaces}
-	\comment{How the system makes the functionality of S.2 available to the 
-	rest of the world, particularly user interfaces and program interfaces 
-	(APIs).}
+
+	\input{SectionS3.text}
+	
 	
 	\nsection{S.4 Detailed usage scenarios}
 	
@@ -385,8 +404,8 @@
 	S.3 and S.4) by their degree of criticality.}
 	
 	\nsection{S.6 Verification and acceptance criteria}
-	\comment{Specification of the conditions under which an implementation will 
-	be deemed satisfactory.}
+	
+	\input{SectionS6.text}
 	
 	%===============================================================
 	\chapter*{Project}
@@ -400,8 +419,6 @@
 	\input{SectionP1.text}
 	
 	\nsection{P.2 Imposed technical choices}
-	\comment{Any a priori choices binding the project to specific tools, 
-	hardware, languages or other technical parameters.}
 
 	\input{P2ImposedTechChoices.text}
 	
@@ -417,12 +434,12 @@
 	\input{SectionP5.text}
 	
 	\nsection{P.6 Risks and mitigation analysis}
-	\comment{Potential obstacles to meeting the schedule of P.4, and measures 
-	for adapting the plan if they do arise.}
+
+	\input{SectionP6.text}
 	
 	\nsection{P.7 Requirements process and report}
-	\comment{Initially, description of what the requirements process will be; 
-	later, report on its steps.}
+
+	\input{SectionP7.text}
 	
 	\chapter*{Appendix}
 	\addcontentsline{toc}{chapter}{Appendix}
@@ -451,6 +468,10 @@
 	sections, and were more used as a brief second opinion. In these sections, 
 	AI tools were not used to generate any text or wholly generate any of the 
 	ideas or conclusions presented.
+
+	AI tools were also used to assist with the Traceability Table in section P.7, to help 
+	format the table and ensure that all the requirements, use cases, and user scenarios had the correct hyperlinks 
+	to their respective sections. 
 	
 	\subsection*{Verification of AI-Generated Content}
 	
@@ -660,12 +681,17 @@
 	\textbf{Humna:}
 	
 	\begin{enumerate}
-		\item
-		\item 
-		\item 
-		\item 
-		\item 
-		\item 
+		\item This deliverable allowed me to look deeper into the different components of our project. I worked primarily on sections S.3, E.4, E.5, E.6, P.7, and 
+		the requirements traceability table. These sections, especially the Environment sections, required me to consider internal and external aspects of the game 
+		that we had only briefly discussed before working on the SRS. I had to make assumptions about the environment in which RealmForge would run in and consider how the 
+		game would interact with other devices. Overall, this helped me better understand and visualize the project. Working on P.7 also made me think more about how our team 
+		would keep track of requirements throughout development. I will keep this in mind as the project progresses, since our requirements may change and it is important to keep 
+		the documentation consistent with the actual system.
+		\item My main challenge was building the requirements traceability table. I had to reference each requirement and identify how it connected to other requirements, use cases, and user scenarios. While this was time-consuming, it helped me understand the requirements and how they connect to different functionalities of RealmForge. To work through this, I reviewed the requirements in S.2 alongside the use cases and detailed user scenarios in G.5 and S.4. This helped me organize the relationships in the table and better understand how the different parts of the SRS connect.
+		\item A lot of our project’s requirements were inspired by discussions with our supervisor and TA. Their feedback helped our team consider different aspects of the game, especially the variations we would need to consider for usability testing. For the sections I worked on, I mainly focused on documenting the assumptions, interactions with the external environment, and requirements processes based on the project decisions our team discussed with our supervisor and TA. These discussions helped me gain a better understanding of the environment of RealmForge and the overall requirements.  
+		\item SFWRENG 3RA3 definitely helped me, as this course introduced me to requirements engineering. Going into this SRS document, I already understood the purpose of a requirements specification and what a good document should include. I also understood the importance of functional and non-functional requirements, which helped when reviewing the different requirements throughout the document. SFWRENG 4HC3 was also helpful, especially for S.3. This course introduced me to the importance of interfaces and how users interact with systems. When working on S.3, I applied this knowledge by breaking down RealmForge’s interfaces into three main categories (user, input, and output interfaces). 
+		\item One of the main areas our team needs to develop further is our knowledge of game development. While we have experience with software development through our courses and previous projects, game development involves different technologies and concepts that not all of us have worked with before. Specifically, we need to become more familiar with Godot and GDScript, as these will be used to develop RealmForge. 
+		\item One of our team members shared an online document containing introductory resources for game development. This has been a useful starting point, especially for team members with less game development experience. Another approach would be to work through the official Godot documentation and tutorials and testing smaller features before implementing them in the project. This would allow us to become more comfortable with game development and apply what we have learned directly to the project. I plan to work through some of the introductory Godot tutorials available online to gain more game development exposure as I progress through this project. 
 	\end{enumerate}
 	
 	\textbf{Christopher:}

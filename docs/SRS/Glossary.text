@@ -77,6 +77,10 @@
     
     \glossaryDef{Continuous Integration / Continuous Development}{CI/CD}{An iterative approach to software development  where
     updates are pushed in small increments and re-evaluated for further development}
+
+    \glossaryDef{Copper}{copper} {A metal typically used for forging armor and sometimes used as a bartering tool.}
+
+    \glossaryDef{Skeleton}{skeleton} {A human structure composed of bones. Commonly used in games to as a moving enemy to obstructs the player.}
     % EXAMPLE
     % \glossaryDef{NAME_OF_WHAT_IS_IN_BOLD}{ACROYNYM_ID <-- this you use in hyperlink}{Description of glossary term}
     % When you want to point to glossary term

@@ -1,35 +1,31 @@
 The following effects describe how RealmForge is expected to affect the user's environment while the game is running. These include the use of system resources, interactions with external devices, and changes to local storage.
 
-\noindent
-\textbf{System Resource Usage}
+\medskip
+\noindent \textbf{System Resource Usage}
+\smallskip
 
-\noindent
-While RealmForge is running, the user's CPU, GPU, and RAM will be used to support gameplay and game performance. The amount of system resources used may vary depending on the player's actions and other applications running in parallel. 
-\\
-\\
-\noindent
-\textbf{Display Output}
+\noindent While RealmForge is running, the user's CPU, GPU, and RAM will be used to support gameplay and game performance. The amount of system resources used may vary depending on the player's actions and other applications running in parallel.
 
-\noindent
-The game will be presented on the user's display through graphical content. The graphical content will update based on the player's actions and progress throughout the game.
-\\
-\\
-\noindent
-\textbf{Audio Output}
+\medskip
+\noindent \textbf{Display Output}
+\smallskip
 
-\noindent
-RealmForge will produce sound during gameplay through the user's speakers or headphones, depending on their selected audio output device. 
-\\
-\\
-\noindent
-\textbf{Input Devices}
+\noindent The game will be presented on the user's display through graphical content. The graphical content will update based on the player's actions and progress throughout the game.
 
-\noindent
-RealmForge will receive input data from supported devices connected to the system. Inputs from the keyboard and mouse will be read and reflected during gameplay, allowing the player to interact with the game.
-\\
-\\
-\noindent
-\textbf{Local Storage}
+\medskip
+\noindent \textbf{Audio Output}
+\smallskip
 
-\noindent
-Installing RealmForge will require the application to use local system storage for executable files and other necessary game files. User progress during gameplay will also be saved locally, requiring additional storage space on the user's device.
+\noindent RealmForge will produce sound during gameplay through the user's speakers or headphones, depending on their selected audio output device.
+
+\medskip
+\noindent \textbf{Input Devices}
+\smallskip
+
+\noindent RealmForge will receive input data from supported devices connected to the system. Inputs from the keyboard and mouse will be read and reflected during gameplay, allowing the player to interact with the game.
+
+\medskip
+\noindent \textbf{Local Storage}
+\smallskip
+
+\noindent Installing RealmForge will require the application to use local system storage for executable files and other necessary game files. User progress during gameplay will also be saved locally, requiring additional storage space on the user's device.

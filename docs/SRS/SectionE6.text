@@ -1,36 +1,32 @@
 The following properties of the environment must be preserved during RealmForge’s operation, including local files, operating system settings, input devices, user privacy, and audio and display settings outside of gameplay.
-\\
-\\
-\noindent
-\textbf{Files \& Storage}
 
-\noindent
-RealmForge must not modify or delete any existing files unrelated to its own installation and game data. Similarly, uninstalling the game should not remove any local files unrelated to RealmForge.
-\\
-\\
-\noindent
-\textbf{Operating System Settings}
+\medskip
+\noindent \textbf{Files \& Storage}
+\smallskip
 
-\noindent
-The overall operating system configuration must remain unchanged by RealmForge. System settings and security configurations must not be permanently modified during gameplay.
-\\
-\\
-\noindent
-\textbf{Input Device Functionality}
+\noindent RealmForge must not modify or delete any existing files unrelated to its own installation and game data. Similarly, uninstalling the game should not remove any local files unrelated to RealmForge.
 
-\noindent
-Input device functionality must remain unchanged outside of RealmForge gameplay. Keyboard and mouse functionality must remain available to the user, and any game-specific changes affecting these devices must be restored once the game exits.
-\\
-\\
-\noindent
-\textbf{User Data \& Privacy}
+\medskip
+\noindent \textbf{Operating System Settings}
+\smallskip
 
-\noindent
-User progress in RealmForge must be preserved between game sessions. Private user data must not be accessed or collected beyond what is required for gameplay and disclosed to the user.
-\\
-\\
-\noindent
-\textbf{Audio \& Display Settings}
+\noindent The overall operating system configuration must remain unchanged by RealmForge. System settings and security configurations must not be permanently modified during gameplay.
 
-\noindent
-Overall audio and display configurations must remain unchanged outside of the game. Any changes made to the system’s display or audio settings during gameplay must be restored once the game session ends. RealmForge must not modify the audio settings of other applications running in parallel. 
+\medskip
+\noindent \textbf{Input Device Functionality}
+\smallskip
+
+\noindent Input device functionality must remain unchanged outside of RealmForge gameplay. Keyboard and mouse functionality must remain available to the user, and any game-specific changes affecting these devices must be restored once the game exits.
+
+\medskip
+\noindent \textbf{User Data \& Privacy}
+\smallskip
+
+\noindent User progress in RealmForge must be preserved between game sessions. Private user data must not be accessed or collected beyond what is required for gameplay and disclosed to the user.
+
+\medskip
+\noindent \textbf{Audio \& Display Settings}
+\smallskip
+
+\noindent Overall audio and display configurations must remain unchanged outside of the game. Any changes made to the system’s display or audio settings during gameplay must be restored once the game session ends. RealmForge must not modify the audio settings of other applications running in parallel.
+
