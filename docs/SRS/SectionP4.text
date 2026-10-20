@@ -79,6 +79,7 @@ Detailed Schedule:
 			\item SNFR-002 - 005
 			\item SNFR-007
 			\item SNFR-009
+			\item SSR-001 - 012
 		\end{itemize}
 		\item \textbf{Requirements Implemented:} 
 		\begin{itemize}
@@ -87,8 +88,9 @@ Detailed Schedule:
 			\item SFR-004 - 005
 			\item SFR-007 - 008
 			\item SFR-014
-			\item SFR-017 - 028
+			\item SFR-017 - 030
 			\item SNFR-001 - 009
+			\item SSR-001 - 012
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
