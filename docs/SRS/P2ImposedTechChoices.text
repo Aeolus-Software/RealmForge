@@ -1,0 +1,11 @@
+\begin{itemize}
+
+	\item \textbf{Game Engine}: The project will entail the use of a game engine to aid in development, since it is common practice in game development and was decided upon during the development plan. A game engine provides lots of supports such as an libraries, visual development tools, and other useful features tailored to game development. This will act as the main interface for developing the game. 
+
+	\item \textbf{Coding Language}: Any given game engine only supports one or two languages for use within the engine. For example, using the game engine Godot will constrain the project to either GDScript or C\#, with GDScript having more support and documentation from the engine. 
+
+	\item \textbf{Github Actions}: The project must implement Github Actions to create a CI/CD pipeline during development since the Capstone course requires automation through Github Actions.
+
+	\item \textbf{Hardware Options}: The project is required to perform usability testing, and it was decided that as a point of variation more than one input method must be accomodated. This will be provided in order to accomodate more \hyperlink{user}{users'} preferences. 
+
+\end{itemize}
