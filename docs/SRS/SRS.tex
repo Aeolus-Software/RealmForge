@@ -45,9 +45,11 @@
 \newcounter{ENV}
 \newcounter{SFR}
 \newcounter{SNFR}
+\newcounter{SSR}
 \renewcommand{\theENV}{ENV-\reqnumber{\value{ENV}}}
 \renewcommand{\theSFR}{SFR-\reqnumber{\value{SFR}}}
 \renewcommand{\theSNFR}{SNFR-\reqnumber{\value{SNFR}}}
+\renewcommand{\theSSR}{SSR-\reqnumber{\value{SSR}}}
 
 % Format numbers as 001, 002, 003, etc.
 \newcommand{\reqnumber}[1]{%i
@@ -219,6 +221,11 @@
 		being a unique numerical identifier.
 		\item Environmental Requirements are given the unique identifier 
 		``ENV-XXX'', meaning ``Environmental Requirement'', with ``XXX'' being 
+		a 
+		unique numerical identifier.
+		\item Safety Requirements are given the unique identifier 
+		``SSR-XXX'', meaning ``Software Safety Requirement'', with ``XXX'' 
+		being 
 		a 
 		unique numerical identifier.
 		\item Mandatory Requirements that must be satisfied at the conclusion 
