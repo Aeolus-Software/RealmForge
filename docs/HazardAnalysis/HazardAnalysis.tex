@@ -43,14 +43,14 @@
 }
 
 % --- REQUIREMENT MACRO SETUP ---
-\newcommand{\requirement}[5]{%
+\newcommand{\requirement}[6]{%
 	\par\noindent
 	\begingroup
 	
 	% Increment the appropriate counter
-	\refstepcounter{#1}%
+	\refstepcounter{#1}\label{#6}%
 	\edef\reqid{\csname the#1\endcsname}%
-	\label{\reqid}%
+	
 	
 	% Adjustable formatting
 	\def\reqindent{2.3cm}
@@ -82,6 +82,7 @@
 %{Rationale}
 %{Fit Criterion}
 %{Traceability tags}
+%{Unique reference name}
 
 \begin{document}
 
@@ -142,6 +143,8 @@ October 19, 2026 & Owen Johnson & Reflection Added\\
 \input{CriticalAssumptions.text}
 \newpage
 
+\newpage
+
 \begin{landscape}
 
 \section{Failure Mode and Effect Analysis}
@@ -152,8 +155,7 @@ October 19, 2026 & Owen Johnson & Reflection Added\\
 
 \section{Safety and Security Requirements}
 
-\wss{Newly discovered requirements.  These should also be added to the SRS.  (A
-rationale design process how and why to fake it.)}
+\input{SafetyAndSecurityReqs.text}
 
 \section{Roadmap}
 
