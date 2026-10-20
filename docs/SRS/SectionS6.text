@@ -1,0 +1,14 @@
+
+Acceptance of the RealmForge system will be verified with multiple methods of testing and analysis to ensure all functional, and non-functional requirements are satisfied:
+
+\begin{itemize}
+    \item \textbf{Unit Testing:} Individual components, scripts, and helper functions will be verified using automated unit test suites. This level will be met if all unit test assertions are passed.
+    
+    \item \textbf{Integration Testing:} Interactions between components of our system will be tested to ensure that data is properly passed between them with zero loss. This level will be met if all components can safely interact with each other and still perform all functions.
+    
+    \item \textbf{System Testing:} The integrated software will be tested against environmental constraints. This level is met when the system successfully compiles, launches, and executes with no unhandled exceptions, and maintains a stable framerate.
+    
+    \item \textbf{User Acceptance Testing (UAT):} The system's behaviors will be validated against the user scenarios via structured playtesting and usability studies. This level will be met when users are observed to interact with the system as desired and user reviews are in accordance with our requirements/goals.
+    
+    \item \textbf{Static Analysis and Linting:} Code quality and style will be automatically verified using GitHub Actions CI/CD pipelines. This level is met if code contributions pass automated static analysis checks.
+\end{itemize}
