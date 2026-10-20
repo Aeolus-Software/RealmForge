@@ -147,7 +147,8 @@
     "docs/SRS/SectionS5.text",
     "docs/SRS/SectionS6.text",
     "docs/SRS/images/G5UseCaseDiagram.png",
-    "docs/SRS/images/RealmForgeSystemContextDiagram.png"
+    "docs/SRS/images/RealmForgeSystemContextDiagram.png",
+    "docs/SRS/images/S4Flowchart.png"
   ],
   "docs/UserGuide/UserGuide.tex": [
     "docs/Comments.text",
