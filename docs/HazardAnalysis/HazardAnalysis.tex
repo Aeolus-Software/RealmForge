@@ -43,14 +43,14 @@
 }
 
 % --- REQUIREMENT MACRO SETUP ---
-\newcommand{\requirement}[5]{%
+\newcommand{\requirement}[6]{%
 	\par\noindent
 	\begingroup
 	
 	% Increment the appropriate counter
-	\refstepcounter{#1}%
+	\refstepcounter{#1}\label{#6}%
 	\edef\reqid{\csname the#1\endcsname}%
-	\label{\reqid}%
+	
 	
 	% Adjustable formatting
 	\def\reqindent{2.3cm}
@@ -74,7 +74,6 @@
 	\endgroup
 	\vspace{0.8em}
 }
-
 % --- HOW TO USE IT ---
 
 %\requirement{Tag/ID}
@@ -82,6 +81,7 @@
 %{Rationale}
 %{Fit Criterion}
 %{Traceability tags}
+%{Unique reference name}
 
 \begin{document}
 
