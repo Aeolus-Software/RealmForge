@@ -87,6 +87,7 @@
     "docs/HazardAnalysis/CriticalAssumptions.text",
     "docs/HazardAnalysis/HazardAnalysis.tex",
     "docs/HazardAnalysis/Introduction.text",
+    "docs/HazardAnalysis/SafetyAndSecurityReqs.text",
     "docs/HazardAnalysis/ScopeAndPurpose.text",
     "docs/HazardAnalysis/SectionFMEA.text",
     "docs/HazardAnalysis/SystemBoundaries.text"

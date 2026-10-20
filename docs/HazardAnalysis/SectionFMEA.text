@@ -54,7 +54,7 @@
 	
 	B. Monitor both USB and Bluetooth interfaces for connection to each type of 
 	supported input device when the user opts to connect a new device &
-	CREATE NEW REQS FOR THIS &
+	\ref{inputdeviceguidance} \ref{inputdevicedetection} &
 	H1-A \\
 	\hline
 	
@@ -71,7 +71,7 @@
 	world, and indicate invalid locations. Provide further guidance to the user 
 	regarding a possible path forward if an extended period of time is spent 
 	attempting to reach invalid locations &
-	CREATE NEW REQS FOR THIS &
+	\ref{availablemapactions} &
 	H2-A \\
 	\hline
 	
@@ -83,7 +83,7 @@
 	photosensitive epilepsy &
 	Include a detailed flashing lights or epilepsy warning when the system 
 	launches, and ensure the game does not display excessive flashing graphics &
-	CREATE NEW REQS FOR THIS &
+	\ref{flashinglights} &
 	H3-A \\
 	\hline
 	
@@ -98,7 +98,7 @@
 	Retain and update enemy encounter reward variables (during encounters) in 
 	an additional memory location separate from the combat system, to ensure a 
 	backup value is available &
-	CREATE NEW REQS FOR THIS &
+	\ref{backupscombatdata} &
 	H4-A \\
 	\hline
 	
@@ -114,7 +114,7 @@
 	Central Hub menu, reaching a game world area to an enemy encounter) for 
 	correctness. Game state transitions can be verified against a state machine 
 	for clarity &
-	N/A &
+	\ref{gamestatetransitions} &
 	H5-A \\
 	\hline
 	
@@ -126,7 +126,7 @@
 	System does not store any backup user save data &
 	Regularly store user save data in multiple locations; revert to an intact 
 	recent saved state on system failure &
-	CREATE NEW REQS FOR THIS &
+	\ref{savedatafailure} \ref{exceptionsdatacorruption} &
 	H6-A \\
 	\hline
 	
@@ -138,7 +138,7 @@
 	System does not take steps to validate user save data &
 	Validate user save data against previous snapshots; if save data is 
 	corrupted, revert to an intact recent saved state &
-	CREATE NEW REQS FOR THIS &
+	\ref{savevalidation} &
 	H6-B \\
 	\hline
 	
@@ -154,7 +154,7 @@
 	Avoid relying only on certain colours to convey interface and game 
 	information (red and green), and provide appropriate colourblind-accessible 
 	graphics filter settings to the user &
-	CREATE NEW REQS FOR THIS &
+	\ref{colourblinddesign} &
 	H7-A \\
 	\hline
 	
