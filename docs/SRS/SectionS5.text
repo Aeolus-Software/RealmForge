@@ -67,7 +67,5 @@
 \begin{itemize}
     \item \ref{controller-default}: The default input into the system isn't important as it should be able to easily switch input modes.
     \item \ref{game-audio}: Enhances user experience but not necessary to gameplay.
-    \item \ref{controller-exciting}: Enhances user experience but not necessary to gameplay.
-    \item \ref{map-area-pleasing}: Enhances user experience but not necessary to gameplay.
     \item \ref{game-transition}: Enhances user experience but not necessary to gameplay.
 \end{itemize}
