@@ -1,0 +1,73 @@
+\section{Prioritization}
+
+\subsection{High Priority}
+\begin{itemize}
+    \item \hyperlink{US-001}{US-001}: This is a core use cases, essential to our core gameplay.
+    \item \hyperlink{US-002}{US-002}: This is a core use cases, essential to our core gameplay.
+    \item \hyperlink{US-003}{US-003}: This is a core use cases, essential to our core gameplay.
+    \item \hyperlink{US-004}{US-004}: This is a core use cases, essential to our core gameplay.
+    \item \ref{controller-equivalence}: Allowing input devices to have the same capabilities is essential to keeping usability of our game high for all users.
+    \item \ref{controller-switching}: Without the ability to switch input devices, having the ability to use various input devices useless.
+    \item \ref{game-variant-health}: This is important for game balancing and ease of testing different game variations.
+    \item \ref{game-variant-droprate}: This is important for game balancing and ease of testing different game variations.
+    \item \ref{game-variant-cost}: This is important for game balancing and ease of testing different game variations.
+    \item \ref{game-variant-lock}: This is important for game balancing and ease of testing different game variations.
+    \item \ref{game-variant-confirm}: This is important for game balancing and ease of testing different game variations.
+    \item \ref{combact-visual}: This is essential for players' understanding and experience of a core game mechanic.
+    \item \ref{combat-health}: This is essential for players' understanding and experience of a core game mechanic.
+    \item \ref{combat-ends}: This is essential for players' understanding and experience of a core game mechanic.
+    \item \ref{combat-attack}: This is essential for players' understanding and experience of a core game mechanic.
+    \item \ref{combat-healthchange}: This is essential for players' understanding and experience of a core game mechanic.
+    \item \ref{combat-option}: This is essential for players' understanding and experience of a core game mechanic.
+    \item \ref{combat-numbers}: This is essential for players' understanding and experience of a core game mechanic.
+    \item \ref{ui-start}: This is essential for players to easily transition from opening the system to starting or resuming the game without difficulty.
+    \item \ref{ui-end}: This is essential for players to have a smooth experience when trying to exit the game, maintaining the system's usability.
+    \item \ref{map-overworld}: This is essential for users to understand what gamestate they are in.
+    \item \ref{map-options}: This is essential to give users choice on how the game plays out, giving them more options and enhancing their experience.
+    \item \ref{map-traveling}: This is essential for users to understand the core mechanic of traveling.
+    \item \ref{map-area-name}: This is essential for users to be able to make informed choices instead of randomly choosing where to go without thinking.
+    \item \ref{hub-progression}: This is essential for the \hyperlink{RogueliteDef}{roguelite} genre allowing for permanent progression, and a reward for playing.
+    \item \ref{hub-upkeep}: This is essential for the core gameplay mechanic of generating and using resources.
+    \item \ref{hub-options}: This is essential for a core gameplay mechanic in upgrading the hub while allowing for skill in choosing specific options.
+    \item \ref{hub-cost}: This is essential for a core gameplay mechanic in upgrading the hub while allowing the player to make informed decisions.
+    \item \ref{hub-effect}: This is essential for a core gameplay mechanic in upgrading the hub while allowing the player to make informed decisions.
+    \item \ref{hub-reject}: This is essential for a core gameplay mechanic in upgrading the hub, forcing player to manage resources allowing for skill expression.
+    \item \ref{hub-variety}: This is essential for the replayability of the game, having each playthrough vary from before.
+    \item \ref{combat-variety}: This is essential for the replayability of the game, having each playthrough vary from before.
+    \item \ref{combact-attack-variety}:  This is essential for a core gameplay mechanic and allowing the user to express skill.
+    \item \ref{combat-telegraph}: Clearly displaying to the user why things are happening is essential to their gameplay experience so things do not feel random.
+    \item Input Interface: Essential to how users interact with the system.
+    \item Output Interface: Essential to how users interact with the system.
+    \item \ref{playtesterinfo}: Essential for keeping playtester data private and secure.
+    \item \ref{savevalidation}: Essential for data integrity and rejecting malformed saves.
+    \item \ref{savedatafailure}: Essential for preventing progress loss during unexpected failures.
+    \item \ref{exceptionsdatacorruption}: Essential for system stability and preventing file corruption.
+    \item \ref{flashinglights}: Essential for physiological safety and epilepsy warnings.
+    \item \ref{backupscombatdata}: Essential for reliability and preserving encounter rewards.
+    \item \ref{inputdevicedetection}: Essential for usability and detecting input devices.
+    \item \ref{gamestatetransitions}: Essential for system reliability during state transitions.
+\end{itemize}
+
+\subsection{Medium Priority}
+\begin{itemize}
+    \item \ref{controller-marking}: Without having clear guidance on input possibilities, key features can be missed and users can easily become confused and frustrated.
+    \item \ref{controller-onlyone}: Being able to cleanly handle multiple input devices connected at once is important for usability but does not come up in all scenarios.
+    \item \ref{map-confirm}: A confirm button is nice to have so misclicks do not ruin the experience but is not essential for core gameplay.
+    \item \ref{game-better-experience}: Improves user experience but is not essential to core gameplay mechanics
+    \item \ref{map-info}: Improves user experience but is not essential to core gameplay mechanics
+    \item \ref{controller-nolag}: Lag will harm user experience but is not essential as this game is turn based and does not need fast reactions
+    \item \ref{game-variant-description}: Users should know what they are selecting and not be choosing unknown modes.
+    \item \ref{savedataprofiles}: Essential for associating save data with specific profiles.
+    \item \ref{availablemapactions}: Essential for clear user interface navigation and decisions.
+    \item \ref{colourblinddesign}: Essential for accessibility and colorblind support.
+    \item \ref{inputdeviceguidance}: Essential for usability and device connection guidance.
+\end{itemize}
+
+\subsection{Low Priority}
+\begin{itemize}
+    \item \ref{controller-default}: The default input into the system isn't important as it should be able to easily switch input modes.
+    \item \ref{game-audio}: Enhances user experience but not necessary to gameplay.
+    \item \ref{controller-exciting}: Enhances user experience but not necessary to gameplay.
+    \item \ref{map-area-pleasing}: Enhances user experience but not necessary to gameplay.
+    \item \ref{game-transition}: Enhances user experience but not necessary to gameplay.
+\end{itemize}
