@@ -1,0 +1,351 @@
+\noindent The following section describes the process of gathering,
+documenting, reviewing, and updating requirements throughout the project.
+
+\medskip
+\noindent \textbf{Requirements Gathering}
+\smallskip
+
+\noindent The team identifies RealmForge's overall requirements through
+meetings and discussions about the game's functionality, expected
+behaviour, and overall project goals. Feedback from the project
+supervisor and course instructor is also considered when identifying
+the system's requirements to ensure they are consistent with the
+overall project goals. Future discussions and feedback will also
+be considered when updating requirements throughout development.
+
+\medskip
+\noindent \textbf{Requirements Review}
+\smallskip
+
+\noindent Each subsection throughout the documentation is assigned to
+a team member. These sections are additionally assigned reviewers,
+allowing other team members to review the documented requirements.
+This provides a secondary check to ensure requirements align with
+the project's goals, stay consistent across the document, and cover
+all critical requirements for RealmForge. Feedback from these reviews
+will be considered before finalizing each section. GitHub issues are
+created to track reviews and feedback, ensure reviewers are assigned,
+and communicate any necessary changes to the team.
+
+\medskip
+\noindent \textbf{Requirements Changes}
+\smallskip
+
+\noindent As the project develops, requirements may change based on
+further team discussions, feedback, changes in functionality, or
+technical limitations. Proposed changes will be discussed among
+team members and reflected in the SRS to ensure the document
+remains consistent throughout the project.
+
+\par\medskip
+
+\small
+\setlength{\arrayrulewidth}{0.5pt}
+
+\begin{longtable}{|p{2.1cm}|p{4.3cm}|p{6.0cm}|}
+
+\caption{RealmForge Requirements Traceability Summary}
+\label{tab:requirements-traceability} \\
+
+\hline
+\textbf{Requirement ID} &
+\textbf{Use Cases / Scenarios} &
+\textbf{Related Requirements} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Requirement ID} &
+\textbf{Use Cases / Scenarios} &
+\textbf{Related Requirements} \\
+\hline
+\endhead
+
+\hyperref[controller-equivalence]{SFR-001} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Satisfies \hyperref[controller-constraint]{ENV-002};
+Satisfied by \hyperref[controller-marking]{SFR-002},
+\hyperref[controller-default]{SFR-003},
+\hyperref[controller-switching]{SFR-004} \\
+\hline
+
+\hyperref[controller-marking]{SFR-002} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Satisfies \hyperref[controller-equivalence]{SFR-001} \\
+\hline
+
+\hyperref[controller-default]{SFR-003} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Satisfies \hyperref[controller-constraint]{ENV-002},
+\hyperref[controller-equivalence]{SFR-001};
+Satisfied by \hyperref[controller-onlyone]{SFR-005} \\
+\hline
+
+\hyperref[controller-switching]{SFR-004} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Satisfies \hyperref[controller-constraint]{ENV-002},
+\hyperref[controller-equivalence]{SFR-001},
+\hyperref[controller-default]{SFR-003};
+Satisfied by \hyperref[controller-onlyone]{SFR-005} \\
+\hline
+
+\hyperref[controller-onlyone]{SFR-005} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Satisfies \hyperref[controller-default]{SFR-003},
+\hyperref[controller-switching]{SFR-004} \\
+\hline
+
+\hyperref[game-variant-health]{SFR-006} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002},
+\hyperlink{UC-003}{UC-003}, \hyperlink{US-001}{US-001},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Satisfied by \hyperref[game-variant-lock]{SFR-009},
+\hyperref[game-better-experience]{SNFR-003},
+\hyperref[game-variant-description]{SNFR-008} \\
+\hline
+
+\hyperref[game-variant-droprate]{SFR-007} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002},
+\hyperlink{UC-003}{UC-003}, \hyperlink{US-001}{US-001},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Satisfied by \hyperref[game-variant-cost]{SFR-008},
+\hyperref[game-variant-lock]{SFR-009},
+\hyperref[game-variant-description]{SNFR-008} \\
+\hline
+
+\hyperref[game-variant-cost]{SFR-008} &
+\hyperlink{UC-004}{UC-004}, \hyperlink{US-004}{US-004} &
+Satisfies \hyperref[game-variant-droprate]{SFR-007};
+Satisfied by \hyperref[game-variant-lock]{SFR-009},
+\hyperref[game-better-experience]{SNFR-003},
+\hyperref[game-variant-description]{SNFR-008} \\
+\hline
+
+\hyperref[game-variant-lock]{SFR-009} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-001}{US-001},
+\hyperlink{US-002}{US-002} &
+Satisfies \hyperref[game-variant-cost]{SFR-008},
+\hyperref[game-variant-droprate]{SFR-007},
+\hyperref[game-variant-health]{SFR-006};
+Satisfied by \hyperref[game-variant-confirm]{SFR-010} \\
+\hline
+
+\hyperref[game-variant-confirm]{SFR-010} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002},
+\hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002} &
+Satisfies \hyperref[game-variant-lock]{SFR-009} \\
+\hline
+
+\hyperref[combact-visual]{SFR-011} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Satisfied by \hyperref[combat-health]{SFR-012},
+\hyperref[combat-attack]{SFR-014},
+\hyperref[combat-numbers]{SFR-017},
+\hyperref[map-overworld]{SFR-020},
+\hyperref[map-options]{SFR-021} \\
+\hline
+
+\hyperref[combat-health]{SFR-012} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Satisfies \hyperref[combact-visual]{SFR-011};
+Satisfied by \hyperref[combat-ends]{SFR-013},
+\hyperref[combat-healthchange]{SFR-015} \\
+\hline
+
+\hyperref[combat-ends]{SFR-013} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Satisfies \hyperref[combat-health]{SFR-012};
+Satisfied by \hyperref[ui-end]{SFR-019},
+\hyperref[map-overworld]{SFR-020} \\
+\hline
+
+\hyperref[combat-attack]{SFR-014} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Satisfies \hyperref[combact-visual]{SFR-011};
+Satisfied by \hyperref[combat-option]{SFR-016},
+\hyperref[combat-variety]{SNFR-002},
+\hyperref[combact-attack-variety]{SNFR-005} \\
+\hline
+
+\hyperref[combat-healthchange]{SFR-015} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Satisfies \hyperref[combat-health]{SFR-012} \\
+\hline
+
+\hyperref[combat-option]{SFR-016} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Satisfies \hyperref[combat-attack]{SFR-014} \\
+\hline
+
+\hyperref[combat-numbers]{SFR-017} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-003}{UC-003},
+\hyperlink{US-002}{US-002}, \hyperlink{US-003}{US-003} &
+Satisfies \hyperref[combact-visual]{SFR-011} \\
+\hline
+
+\hyperref[ui-start]{SFR-018} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-005}{UC-005},
+\hyperlink{US-001}{US-001}, \hyperlink{US-004}{US-004} &
+\\
+\hline
+
+\hyperref[ui-start]{SFR-019} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-005}{UC-005},
+\hyperlink{US-001}{US-001}, \hyperlink{US-004}{US-004} &
+Satisfies \hyperref[combat-ends]{SFR-013} \\
+\hline
+
+\hyperref[map-overworld]{SFR-020} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+Satisfies \hyperref[combact-visual]{SFR-011},
+\hyperref[combat-ends]{SFR-013} \\
+\hline
+
+\hyperref[map-options]{SFR-021} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+Satisfies \hyperref[combact-visual]{SFR-011};
+Satisfied by \hyperref[map-confirm]{SFR-022} \\
+\hline
+
+\hyperref[map-confirm]{SFR-022} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+Satisfies \hyperref[map-options]{SFR-021};
+Satisfied by \hyperref[map-traveling]{SFR-023} \\
+\hline
+
+\hyperref[map-traveling]{SFR-023} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+Satisfies \hyperref[map-options]{SFR-021},
+\hyperref[map-confirm]{SFR-022};
+Satisfied by \hyperref[map-info]{SNFR-004} \\
+\hline
+
+\hyperref[map-area-name]{SFR-024} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+\\
+\hline
+
+\hyperref[hub-progression]{SFR-025} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004},
+\hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004} &
+\\
+\hline
+
+\hyperref[hub-upkeep]{SFR-026} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004},
+\hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004} &
+\\
+\hline
+
+\hyperref[hub-options]{SFR-027} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004},
+\hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004} &
+Satisfied by \hyperref[hub-cost]{SFR-028},
+\hyperref[hub-effect]{SFR-029},
+\hyperref[hub-reject]{SFR-030},
+\hyperref[hub-variety]{SNFR-001} \\
+\hline
+
+\hyperref[hub-cost]{SFR-028} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004},
+\hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004} &
+Satisfies \hyperref[hub-options]{SFR-027};
+Satisfied by \hyperref[hub-effect]{SFR-029},
+\hyperref[hub-reject]{SFR-030} \\
+\hline
+
+\hyperref[hub-effect]{SFR-029} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004},
+\hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004} &
+Satisfies \hyperref[hub-cost]{SFR-028},
+\hyperref[hub-options]{SFR-027} \\
+\hline
+
+\hyperref[hub-reject]{SFR-030} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{UC-004}{UC-004},
+\hyperlink{US-002}{US-002}, \hyperlink{US-004}{US-004} &
+Satisfies \hyperref[hub-cost]{SFR-028},
+\hyperref[hub-options]{SFR-027} \\
+\hline
+
+\hyperref[hub-variety]{SNFR-001} &
+&
+Satisfies \hyperref[hub-options]{SFR-027} \\
+\hline
+
+\hyperref[combat-variety]{SNFR-002} &
+&
+Satisfies \hyperref[combat-attack]{SFR-014};
+Satisfied by \hyperref[combat-telegraph]{SNFR-006} \\
+\hline
+
+\hyperref[game-better-experience]{SNFR-003} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{US-001}{US-001} &
+Satisfies \hyperref[game-variant-health]{SFR-006},
+\hyperref[game-variant-cost]{SFR-008} \\
+\hline
+
+\hyperref[map-info]{SNFR-004} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+Satisfies \hyperref[map-options]{SFR-021} \\
+\hline
+
+\hyperref[combact-attack-variety]{SNFR-005} &
+&
+Satisfies \hyperref[combat-attack]{SFR-014};
+Satisfied by \hyperref[combat-telegraph]{SNFR-006} \\
+\hline
+
+\hyperref[combat-telegraph]{SNFR-006} &
+&
+Satisfies \hyperref[combat-variety]{SNFR-002} \\
+\hline
+
+\hyperref[controller-nolag]{SNFR-007} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002} &
+\\
+\hline
+
+\hyperref[game-variant-description]{SNFR-008} &
+&
+Satisfies \hyperref[game-variant-health]{SFR-006},
+\hyperref[game-variant-droprate]{SFR-007},
+\hyperref[game-variant-cost]{SFR-008} \\
+\hline
+
+\hyperref[game-transition]{SNFR-009} &
+\hyperlink{UC-002}{UC-002}, \hyperlink{US-002}{US-002} &
+\\
+\hline
+
+\hyperref[game-audio]{SNFR-010} &
+\hyperlink{UC-001}{UC-001}, \hyperlink{UC-002}{UC-002},
+\hyperlink{US-001}{US-001}, \hyperlink{US-002}{US-002} &
+\\
+\hline
+
+\hyperref[windows-only]{ENV-001} &
+&
+\\
+\hline
+
+\hyperref[controller-constraint]{ENV-002} &
+&
+Satisfied by \hyperref[controller-equivalence]{SFR-001},
+\hyperref[controller-default]{SFR-003} \\
+\hline
+
+\hyperref[variant-constraint]{ENV-003} &
+&
+\\
+\hline
+
+\end{longtable}
+
+\normalsize
