@@ -53,6 +53,7 @@
     intended to demonstrate the possibility of its implementation without being 
     a full prototype.}
 
+    \glossaryDef {Roguelike}{RoguelikeDef}{A video game genre featuring levels with randomized elements that change every playthrough and permanent death, meaning dying resets the current run. Players lose all permanent upgrades and start from scratch. Progress is essentially reset.}
     \glossaryDef {Roguelite}{RogueliteDef}{A video game genre featuring levels with randomized elements that change every playthrough and permanent death, meaning dying resets the current run. Players retain permanent upgrades unlocked between runs that make their character stronger over time.}
 
     \glossaryDef {Sprite}{sprite}{An in-game 2-dimensional picture representing an object in the 2D-world.}
