@@ -102,6 +102,11 @@ variations from its main menu
 		its input and begins to use the device as a main input
 	\end{itemize}
 \end{itemize}
+\textbf{Traceability: Refined by \ref{controller-equivalence}, \ref{controller-marking}, \ref{controller-default}, \ref{controller-switching}, \ref{controller-onlyone},
+\ref{ui-start}, \ref{ui-end}, \ref{game-variant-health}, \ref{game-variant-droprate}, \ref{game-variant-confirm}, \ref{ui-end}, \ref{ui-start},
+\ref{game-better-experience}, \ref{controller-nolag}, \ref{game-audio}}
+\newline
+\newline
 
 \bigskip
 
@@ -226,6 +231,13 @@ menu)
 			not yet available, and suggests alternatives
 		\end{itemize}
 \end{itemize}
+\textbf{Traceability: Refined by \ref{game-variant-health}, \ref{game-variant-droprate}, \ref{game-variant-lock}, \ref{game-variant-confirm},
+\ref{combact-visual}, \ref{combat-health}, \ref{combat-ends}, \ref{combat-attack}, \ref{combat-healthchange}, \ref{combat-option}, \ref{combat-numbers},
+\ref{map-options}, \ref{map-confirm}, \ref{map-traveling}, \ref{map-area-name},
+\ref{hub-progression}, \ref{hub-upkeep}, \ref{hub-options},\ref{hub-effect}, \ref{hub-reject}, \ref{map-info}, \ref{controller-nolag},
+\ref{game-transition}, \ref{game-audio}}
+\newline
+\newline
 
 \bigskip
 
@@ -321,6 +333,11 @@ area
 		user (see \hyperlink{US-004}{US-004})
 	\end{itemize}
 \end{itemize}
+\textbf{Traceability: Refined by \ref{game-variant-health}, \ref{game-variant-droprate},
+\ref{combact-visual}, \ref{combat-health}, \ref{combat-ends}, \ref{combat-attack}, 
+\ref{combat-healthchange}, \ref{combat-option}, \ref{combat-numbers}}
+\newline
+\newline
 
 \bigskip
 
@@ -422,3 +439,5 @@ file
 		upgrade, and returns to the main upgrade menu
 	\end{itemize}
 \end{itemize}
+\textbf{Traceability: Refined by \ref{game-variant-cost}, \ref{hub-progression}, \ref{hub-upkeep}, \ref{hub-options},
+\ref{hub-cost}, \ref{hub-effect}, \ref{hub-reject}, \ref{ui-start}, \ref{ui-end}} 
