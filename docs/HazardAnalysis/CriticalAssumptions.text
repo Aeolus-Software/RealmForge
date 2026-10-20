@@ -1,0 +1,12 @@
+\begin{itemize}
+    \item The application can be correctly installed and launched on a machine 
+    running a Windows Operating System (Windows 10 or 11). The application can 
+    be closed without causing fatal system crashes in the hardware used.
+    \item The application will not maliciously introduce any computer viruses 
+    or malware to the user's machine.
+    \item The application will not cause crashes or hardware meltdowns to input periphals (e.g., keyboard and mouse).
+    \item The contents of the software (in the RealmForge game) will not 
+    contain any inappropriate language, or extreme mature themes/images.
+    \item The application will not play any loud audio cues or 
+    sounds that can cause damage to the user's hearing (at or exceeding 85dB).
+\end{itemize}
