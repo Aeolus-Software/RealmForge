@@ -2,8 +2,9 @@
 name: Peer Review
 about: Someone outside of the team reviews one of the artifacts.
 title: Peer Review by TXX - DOCNAME - clear name for issue
-labels: documentation
+labels: documentation, Peer Review
 assignees: ''
+type: Feature
 
 ---
 
