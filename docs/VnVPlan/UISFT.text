@@ -6,12 +6,29 @@ functional requirements for the `User Interface System' (PUT REFERENCE HERE).
 \begin{enumerate}
 
 \item \functest{UISFTmainmenu}
-{Name}
+{Main Menu Interface}
 {Manual}
-{Initial State}
-{Input}
-{Output}
-{Test Case Derivation}
-{How test will be performed}
+{The RealmForge software has been launched to its initial menu on a compatible 
+device.}
+{The different main menu options are selected (`start game', `settings', and 
+`exit') via an input device (keyboard and mouse, or a controller). Once a main 
+menu option has been selected, an input is also provided to return to the main 
+menu from these options' screens (game start menu, configurations menu, etc.).}
+{The system transitions its internal state and displayed visuals to the 
+selected menu after each selection input. For example, when `settings' is 
+selected, the 
+display transitions to the configurations menu, and when an input is received 
+to return to the main menu, the system transitions back to the main menu. This 
+is also performed for other options available from the main menu.}
+{This system test verifies at a basic level that the system's main user 
+interface (the main menu) can successfully receive user inputs and transition 
+between states as necessary. This functionality is required for the system and 
+its interface to receive other inputs and provide the necessary outputs during 
+gameplay and other uses of the software.}
+{The system tester will launch the RealmForge software, and verify that the 
+system successfully transitions between each menu provided by the options 
+available from the main menu, and back to the main menu when prompted. This 
+will be verified for each major type of input device (keyboard and mouse, and 
+controller).}
 
 \end{enumerate}
