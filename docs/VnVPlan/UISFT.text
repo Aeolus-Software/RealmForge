@@ -1,0 +1,17 @@
+The system tests listed below are planned to verify the implemented system as a 
+whole against functional requirements related to the user interface component 
+of the system. These requirements can be found in the SRS, under section S.2's 
+functional requirements for the `User Interface System' (PUT REFERENCE HERE).
+
+\begin{enumerate}
+
+\item \functest{UISFTmainmenu}
+{Name}
+{Manual}
+{Initial State}
+{Input}
+{Output}
+{Test Case Derivation}
+{How test will be performed}
+
+\end{enumerate}
