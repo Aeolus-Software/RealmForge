@@ -1,0 +1,26 @@
+The following approaches will be used to verify the software requirements 
+specification for completeness, correctness, verifiability, avoidance of 
+ambiguity, and traceability, among other relevant attributes:
+
+\begin{itemize}
+	\item \textbf{Course Peer Review and Update Tracking:} The SRS document was 
+	reviewed by another Capstone team, against the rubric and success criteria 
+	provided by the course. Suggestions and feedback provided by this peer 
+	review are tracked and maintained by GitHub issues, and suitable changes to 
+	address the feedback provided will be implemented before the document's 
+	Revision 1 completion. The team that conducted the peer review of the 
+	document may be contacted to further clarify their feedback, to ensure 
+	necessary changes are made.
+	\item \textbf{Structured Team Requirements Review:} Prior to the completion 
+	of the SRS for the project's Revision 1, the RealmForge development team 
+	will conduct a structured review of the document, considering various 
+	qualities it must exhibit (completeness, correctness, etc. as listed above 
+	and in the course SRS checklist). This review will be a live team meeting, 
+	where team members will walk through each section of the document and 
+	verify its contents against the provided course SRS checklist, and the SRS 
+	document's rubric. This review will be conducted following all required 
+	document updates, such as those motivated by peer review feedback, TA 
+	feedback, course instructor feedback, or supervisor feedback. Any further 
+	required updates found during the review will be tracked and maintained in 
+	the team's GitHub repository and project (using issues).
+\end{itemize}
