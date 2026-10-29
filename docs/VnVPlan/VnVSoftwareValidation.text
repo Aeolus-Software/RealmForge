@@ -1,0 +1,10 @@
+Realmforge's software will be validated using the following techniques to ensure the right system was built to satisfy all requirements and goals of the project:
+
+    \item \textbf{Supervisor and Stakeholder Reviews:} Demonstrations of the project will be held throughout its lifecycle with  course facilitators, our supervisor and key stakeholders, such as during Proof of Concept and Rev0.
+    
+    \item \textbf{Usability testing \& Playtesting:} Playtesting sessions will be conducted with many participants to collect data. More info of usability testing can be found at **LINK THE USABILITY TESTING SECTION**
+    
+    \item \textbf{Empirical Data-Driven Evaluation:} Validation of feature variations will have thier quantitative metrics captured(run duration, win/loss ratios, resource rates) alongside post-test qualitative surveys and interviews to measure player engagement and pacing.
+    
+    \item \textbf{Accessibility \& Safety Validation:} Observational checks during playtesting will validate startup epilepsy warnings (\textbf{SSR-006}), colourblind-accessible filters (\textbf{SSR-009}), and local save data recovery (\textbf{SSR-003}, \textbf{SSR-004}).
+\end{itemize}
