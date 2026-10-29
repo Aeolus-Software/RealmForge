@@ -1,0 +1,14 @@
+The system tests below are planned to verify the implemented system as a whole against functional requirements related to the central hub component of the system.
+
+\begin{enumerate}
+
+\item \functest{CentralHubFRTPermanentProgress}
+{Permanent Upgrades to Central Hub}
+{Manual}
+{The current game state is focused on the Central Hub with a permanent upgrade available to be obtained.}
+{The permanent upgrade is obtained, and the current run is then ended.}
+{A permanent upgrade to the Central Hub is now associated with the corresponding player profile which unlocked it, and is always available to that profile in future runs.}
+{This system test verifies that upgrades which are meant to be permanent are maintained between runs and are not unintentionally deleted.}
+{The system tester will the RealmForge software, and begin a run or resume an existing one. Once they are in a run, they will trigger a permanent upgrade unlock and then end the run either by intentionally exiting or dying. They will then start a new run and see if the previously unlocked upgrade is still unlocked and working as intended.}
+
+\end{enumerate}
