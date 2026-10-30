@@ -1,0 +1,9 @@
+\noindent This document outlines a plan for verification and validation (also 
+denoted as VnV) of the RealmForge software. It includes a general summary of 
+objectives and related documents, an overall plan discussing various 
+verification and validation activities (concerning the SRS, design documents, 
+the plan itself, and other artifacts), a set of system tests for both software 
+functional and non-functional requirements, and finally a set of unit tests for 
+software functional and non-functional requirements. The section outlining all 
+unit tests (section 5) will be updated following the completion of the 
+project's detailed design document.

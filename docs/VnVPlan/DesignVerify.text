@@ -1,0 +1,45 @@
+The approaches listed below will be used to verify the project's software 
+design 
+document 
+(once it is completed for each revision) with respect to course standards, 
+checklists, 
+the 
+document's implementation feasibility, and its effectiveness in providing a 
+design that satisfies the SRS's requirements (among other relevant qualities).  
+These methods are 
+selected to provide confidence in the document, while also being feasible in 
+the 
+context of the project (as mentioned similarly for the verification of the 
+SRS).\newline
+
+\noindent \textbf{Verification Approaches:}
+
+\begin{itemize}
+\item \textbf{Course Peer Review and Update Tracking:} The design document's 
+initial revision (Revision -1) will 
+reviewed by another Capstone team, against the rubric and success criteria 
+provided by the course. Suggestions and feedback provided by this peer 
+review are tracked and maintained by GitHub issues, and suitable changes to 
+address the feedback provided will be implemented before the completion of the 
+document's next two revisions (0 and 1). The team that conducted the peer 
+review of the 
+document may be contacted to further clarify their feedback, to ensure 
+necessary changes are made.
+\item \textbf{Structured Team Design Document Reviews:} Prior to the completion 
+of the software design document for each of its revisions (-1, 0, and 1), the 
+RealmForge development team 
+will conduct a structured review of the document, considering various 
+qualities it must exhibit (as discussed in course lectures, rubrics, and 
+checklists focused on the design document). These reviews will involve live 
+team 
+meetings, 
+where team members will walk through each section of the document and 
+verify its contents against the provided course design document checklist, and 
+the document's associated rubric. Prior to the completion of the document for 
+its final two revisions (0 and 1), these reviews will be conducted following 
+all required 
+document updates, such as those motivated by peer review feedback, TA 
+feedback, course instructor feedback, or supervisor feedback. Any further 
+required updates found during each review will be tracked and maintained in 
+the team's GitHub repository and project (using issues).
+\end{itemize}
