@@ -1,0 +1,33 @@
+The area of testing below will focus on on the configurations aspect of RealmForge.
+The configurations are important because they control the overall dynamic experience
+of the game. Ensuring they work is a key to properly allow users to experiment, test, and provide
+feed for usability.
+
+\begin{enumerate}
+    \item \functest{Config-Test-Health}
+    {Configuration Test Health}
+    {Manual, Dynamic}
+    {The base increase for player health is +/- 0}
+    {Change in the range control of the configuration health option}
+    {The displayed health change is equal to the increment increase of the range control}
+    {The expected output is justified based on the SFR-006 in the SRS document}
+    {\begin{enumerate} 
+        \item Enter the configuration menu
+        \item Select the player health option
+        \item Raise / Lower value via control dial
+    \end{enumerate}} 
+\end{enumerate}
+
+fadsfdsagf
+dsg
+fdg
+fds
+gfds
+gfd
+sgf
+dsg
+fdsg
+fsdg
+fd
+s
+\ref{Config-Test-Health}
