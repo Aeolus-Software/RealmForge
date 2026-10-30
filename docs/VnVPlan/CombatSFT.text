@@ -1,0 +1,17 @@
+The system tests listed below are planned to verify the implemented system as a 
+whole against functional requirements related to the area of combat component 
+of the system. These requirements can be found in the SRS, under section S.2's 
+functional requirements for the `Combat System' (PUT REFERENCE HERE).
+
+\begin{enumerate}
+
+\item \functest{CombatSFT1}
+{Name}
+{Manual}
+{Initial State}
+{Input}
+{Output}
+{Test Case Derivation}
+{How test will be performed}
+
+\end{enumerate}
