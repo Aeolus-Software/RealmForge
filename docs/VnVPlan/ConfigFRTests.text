@@ -12,22 +12,46 @@ feed for usability.
     {The displayed health change is equal to the increment increase of the range control}
     {The expected output is justified based on the SFR-006 in the SRS document}
     {\begin{enumerate} 
-        \item Enter the configuration menu
-        \item Select the player health option
+        \item User Enter the configuration menu
+        \item Selects the player health option
         \item Raise / Lower value via control dial
+        \item User begins game
+        \item User enters sees health on UI screen
     \end{enumerate}} 
 \end{enumerate}
 
-fadsfdsagf
-dsg
-fdg
-fds
-gfds
-gfd
-sgf
-dsg
-fdsg
-fsdg
-fd
-s
+
+\begin{enumerate}
+    \item \functest{Config-Resource-Game}
+    {Configuration Resource Game}
+    {Automatic}
+    {The base bonus amount of resources gathered is +/- 0}
+    {Change in the current bonus resource is input value}
+    {The reward health change is equal to the increment increase of the range control}
+    {The expected output is justified based on the SFR-006 in the SRS document}
+    {\begin{enumerate} 
+        \item User Enter the configuration menu
+        \item Selects the bonus resource option
+        \item User enters combat
+        \item User is successful in combat
+        \item User recieves award amount equal to Normal Amount and Bonus Amount
+    \end{enumerate}} 
+\end{enumerate}
+
+\begin{enumerate}
+    \item \functest{Config-Resource-Game}
+    {Configuration Resource Game}
+    {Automatic}
+    {The base bonus amount of resources gathered is +/- 0}
+    {Change in the current bonus resource is input value}
+    {The reward health change is equal to the increment increase of the range control}
+    {The expected output is justified based on the SFR-006 in the SRS document}
+    {\begin{enumerate} 
+        \item User Enter the configuration menu
+        \item Selects the bonus resource option
+        \item User enters combat
+        \item User is successful in combat
+        \item User recieves award amount equal to Normal_Amount \+ Bonus 
+    \end{enumerate}} 
+\end{enumerate}
 \ref{Config-Test-Health}

@@ -24,6 +24,8 @@
 \traceentry{SFR-001}{ENV-002}{ENV-003}
 \traceentry{\ref{UISFTmainmenu}} {SF4-404} {{SF4-404}}
 %%%%%%%%%%%%%%%
+\traceentry{\ref{Config-Test-Health}}{SFR-006}{SFR-012}
+\traceentry{\ref{Config-Resource-Game}}{SFR-007}{Please ADD RESOURCE REQ in SRS}
 
 
 \end{longtable}
