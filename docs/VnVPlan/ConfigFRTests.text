@@ -16,7 +16,7 @@ feed for usability.
         \item Selects the player health option
         \item Raise / Lower value via control dial
         \item User begins game
-        \item User enters sees health on UI screen
+        \item User enters sees health on UI screen equal to health changed
     \end{enumerate}} 
 \end{enumerate}
 
@@ -54,4 +54,3 @@ feed for usability.
         \item User recieves award amount equal to Normal_Amount \+ Bonus 
     \end{enumerate}} 
 \end{enumerate}
-\ref{Config-Test-Health}
