@@ -12,7 +12,7 @@
     linkcolor=red,
     urlcolor=blue
 }
-\usepackage[round]{natbib}
+\usepackage[numbers]{natbib}
 
 \input{../Comments.text}
 \input{../Common.text}
@@ -146,7 +146,7 @@ in.}
 \end{tabular}\\
 
 \wss{symbols, abbreviations, or acronyms --- you can simply reference the SRS
-  \citep{SRS} tables, if appropriate}
+  \cite{SRS} tables, if appropriate}
 
 \wss{Remove this section if it isn't needed}
 
@@ -200,7 +200,7 @@ Repos.csv) if your plan changes as a result of the VnV planning exercise.}
   is done, they will be written.  You can create BibTeX entries for your
   documents and within those entries include a hyperlink to the documents.}
 
-\citet{SRS}
+Citation Example of SRS\cite{SRS}\\
 
 \wss{Don't just list the other documents.  You should explain why they are relevant and 
 how they relate to your VnV efforts.}
@@ -477,8 +477,9 @@ TBD
 
 % \wss{Provide evidence that all modules have been considered.}
 
-\bibliographystyle{plainnat}
+\cite{SRS}
 
+\bibliographystyle{plainnat}
 \bibliography{../../refs/References}
 
 \newpage
