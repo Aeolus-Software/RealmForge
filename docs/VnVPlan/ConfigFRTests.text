@@ -39,8 +39,8 @@ feed for usability.
 \end{enumerate}
 
 \begin{enumerate}
-    \item \functest{Config-Resource-Game}
-    {Configuration Resource Game}
+    \item \functest{Config-Map-Control}
+    {Map Control}
     {Automatic}
     {The base bonus amount of resources gathered is +/- 0}
     {Change in the current bonus resource is input value}
@@ -51,6 +51,57 @@ feed for usability.
         \item Selects the bonus resource option
         \item User enters combat
         \item User is successful in combat
-        \item User recieves award amount equal to Normal_Amount \+ Bonus 
+        \item User recieves award amount equal to Normal\_Amount + Bonus 
+    \end{enumerate}} 
+\end{enumerate}
+
+\begin{enumerate}
+    \item \functest{Config-Map-Switch}
+    {Map Switch}
+    {Automatic}
+    {The base bonus amount of resources gathered is \+\/\- 0}
+    {Change in the current bonus resource is input value}
+    {The reward health change is equal to the increment increase of the range control}
+    {The expected output is justified based on the SFR-006 in the SRS document}
+    {\begin{enumerate} 
+        \item User Enter the configuration menu
+        \item Selects the bonus resource option
+        \item User enters combat
+        \item User is successful in combat
+        \item User recieves award amount equal to Normal\_Amount \+ Bonus 
+    \end{enumerate}} 
+\end{enumerate}
+
+\begin{enumerate}
+    \item \functest{Config-Control Switch}
+    {Control Switch}
+    {Automatic}
+    {The base bonus amount of resources gathered is +/- 0}
+    {Change in the current bonus resource is input value}
+    {The reward health change is equal to the increment increase of the range control}
+    {The expected output is justified based on the SFR-006 in the SRS document}
+    {\begin{enumerate} 
+        \item User Enter the configuration menu
+        \item Selects the bonus resource option
+        \item User enters combat
+        \item User is successful in combat
+        \item User recieves award amount equal to Normal\_Amount \+ Bonus 
+    \end{enumerate}} 
+\end{enumerate}
+
+\begin{enumerate}
+    \item \functest{Config-Speed-Switch}
+    {Speed Switch}
+    {Automatic}
+    {The base bonus amount of resources gathered is +/- 0}
+    {Change in the current bonus resource is input value}
+    {The reward health change is equal to the increment increase of the range control}
+    {The expected output is justified based on the SFR-006 in the SRS document}
+    {\begin{enumerate} 
+        \item User Enter the configuration menu
+        \item Selects the bonus resource option
+        \item User enters combat
+        \item User is successful in combat
+        \item User recieves award amount equal to Normal\_Amount \+ Bonus 
     \end{enumerate}} 
 \end{enumerate}
