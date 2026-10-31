@@ -1,0 +1,31 @@
+\small
+\setlength{\arrayrulewidth}{0.5pt}
+
+\begin{longtable}{|p{2.1cm}|p{4.3cm}|p{6.0cm}|}
+
+\caption{RealmForge System Test Requirements Traceability Summary}
+\label{tab:systemtest-traceability} \\
+
+\hline
+\textbf{System Test ID} &
+\textbf{Requirements Coverage} &
+\textbf{Related Requirements} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Requirement ID} &
+\textbf{Requirements Coverage} &
+\textbf{Related Requirements} \\
+\hline
+\endhead
+
+%%%%%%% EXAMPLE
+\traceentry{SFR-001}{ENV-002}{ENV-003}
+\traceentry{\ref{UISFTmainmenu}} {SF4-404} {{SF4-404}}
+%%%%%%%%%%%%%%%
+
+
+\end{longtable}
+
+\normalsize
