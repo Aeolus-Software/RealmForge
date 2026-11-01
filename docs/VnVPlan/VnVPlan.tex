@@ -12,7 +12,7 @@
     linkcolor=red,
     urlcolor=blue
 }
-\usepackage[round]{natbib}
+% \usepackage[numbers]{natbib}
 
 \input{../Comments.text}
 \input{../Common.text}
@@ -127,7 +127,6 @@ in.}
 \tableofcontents
 
 \listoftables
-\wss{Remove this section if it isn't needed}
 
 \listoffigures
 \wss{Remove this section if it isn't needed}
@@ -146,7 +145,7 @@ in.}
 \end{tabular}\\
 
 \wss{symbols, abbreviations, or acronyms --- you can simply reference the SRS
-  \citep{SRS} tables, if appropriate}
+  \cite{SRS} tables, if appropriate}
 
 \wss{Remove this section if it isn't needed}
 
@@ -200,7 +199,7 @@ Repos.csv) if your plan changes as a result of the VnV planning exercise.}
   is done, they will be written.  You can create BibTeX entries for your
   documents and within those entries include a hyperlink to the documents.}
 
-\citet{SRS}
+Citation Example of SRS\cite{SRS}\\
 
 \wss{Don't just list the other documents.  You should explain why they are relevant and 
 how they relate to your VnV efforts.}
@@ -477,11 +476,13 @@ TBD
 
 % \wss{Provide evidence that all modules have been considered.}
 
-\bibliographystyle{plainnat}
 
+
+\newpage{}
+
+\bibliographystyle{IEEEtran}
+% \bibliographystyle{plainnat}
 \bibliography{../../refs/References}
-
-\newpage
 
 \section{Appendix}
 
@@ -489,8 +490,20 @@ This is where you can place additional information.
 
 \subsection{Symbolic Parameters}
 
-The definition of the test cases will call for SYMBOLIC\_CONSTANTS.
-Their values are defined in this section for easy maintenance.
+The following symbolic constants are used throughout this document:
+
+\begin{table}[htbp]
+	\centering
+	\caption{Symbolic Constants Used in the Verification and Validation Plan}
+	\label{tab:symbolicparameters}
+	\begin{tabularx}{\textwidth}{| X | c | c |}
+		\hline
+		\textbf{Constant} & \textbf{Value} & \textbf{Unit}\\
+		\hline
+		CONSTANT\_EXAMPLE\_1 & 1 & s\\
+		\hline
+	\end{tabularx}
+\end{table}
 
 \subsection{Usability Survey Questions?}
 
@@ -510,11 +523,12 @@ Their values are defined in this section for easy maintenance.
 \subsection{How and Where Used}
 
 AI tools were used for assistance with LaTeX syntax and commands, during 
-the development of sections SRS Verification, Design Verification, and when 
+the development of sections SRS Verification and Design Verification, and when 
 developing 
 LaTeX formatting for the document as a whole. Specifically, AI tools were 
 used for assistance in creating the LaTeX custom system test format macro 
-used throughout the document. In these sections, 
+used throughout the document, as well as the symbolic parameter table used in 
+section 6.1. In these sections, 
 AI tools were not used to generate any content text (LaTeX formatting code was 
 generated), or wholly generate any of the 
 ideas or conclusions presented.
