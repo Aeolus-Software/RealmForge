@@ -23,6 +23,10 @@
 \traceentry{\ref{UISFTmainmenu}}{SFR-018}{}
 \traceentry{\ref{UISFTrestart}}{SFR-019}{}
 \traceentry{\ref{UISFTflashinglights}}{SSR-006}{}
+\traceentry{\ref{UISNFTmapappearance}}{SNFR-004}{}
+\traceentry{\ref{UISNFTstatetransitions}}{SNFR-009}{}
+\traceentry{\ref{UISNFTflashinglights}}{SSR-006}{}
+\traceentry{\ref{UISNFTcolours}}{SSR-009}{}
 
 \end{longtable}
 

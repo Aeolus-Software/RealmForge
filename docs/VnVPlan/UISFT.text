@@ -83,7 +83,8 @@ compatible device.}
 {Following launch, the system displays a warning to the user that gameplay may 
 result in the display of various images and colours that can cause seizures for 
 individuals with photosensitive epilepsy (despite meeting standard guidelines, 
-as outlined in REFERENCENFRTESTHERE). The warning clearly states that users 
+as outlined in \ref{UISNFTflashinglights}). The warning clearly states that 
+users 
 with photosensitive epilepsy or a family history of the condition should 
 consult their physician before playing the game.}
 {This system test verifies that the system successfully displays a required 
@@ -92,7 +93,8 @@ of the condition), to ensure that these users do not continue gameplay without
 awareness of how it could affect their condition. While RealmForge is required 
 to meet certain accessibility standards to ensure it does not display any 
 flashing images that could harm these individuals (as outlined in 
-REFERENCENFRTESTHERE), it is important to recommend that they consult their 
+\ref{UISNFTflashinglights}), it is important to recommend that they consult 
+their 
 physician first before playing the game in the interest of caution.}
 {The system tester will launch the RealmForge software, and verify that the 
 correct flashing images/lights warning is displayed by the system.}
