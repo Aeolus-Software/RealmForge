@@ -1,22 +1,20 @@
 \small
 \setlength{\arrayrulewidth}{0.5pt}
 
-\begin{longtable}{|p{2.1cm}|p{4.3cm}|p{6.0cm}|}
+\begin{longtable}{|p{5.1cm}|p{7.3cm}|}
 
 \caption{RealmForge System Test Requirements Traceability Summary}
 \label{tab:systemtest-traceability} \\
 
 \hline
 \textbf{System Test ID} &
-\textbf{Requirements Coverage} &
-\textbf{Related Requirements} \\
+\textbf{Requirements Coverage}\\
 \hline
 \endfirsthead
 
 \hline
 \textbf{Requirement ID} &
-\textbf{Requirements Coverage} &
-\textbf{Related Requirements} \\
+\textbf{Requirements Coverage}\\
 \hline
 \endhead
 
