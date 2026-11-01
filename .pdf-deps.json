@@ -158,7 +158,7 @@
   "docs/VnVPlan/VnVPlan.tex": [
     "docs/Comments.text",
     "docs/Common.text",
-    "docs/Reflection.text",
+    "docs/VnVPlan/Section4TraceTable.text",
     "docs/VnVPlan/UISFT.text",
     "docs/VnVPlan/VnVPlan.tex",
     "refs/References.bib"
