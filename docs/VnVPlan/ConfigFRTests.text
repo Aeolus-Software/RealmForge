@@ -5,103 +5,81 @@ feed for usability.
 
 \begin{enumerate}
     \item \functest{Config-Test-Health}
-    {Configuration Test Health}
+    {Test Player Health Configuration}
     {Manual, Dynamic}
     {The base increase for player health is +/- 0}
     {Change in the range control of the configuration health option}
     {The displayed health change is equal to the increment increase of the range control}
     {The expected output is justified based on the SFR-006 in the SRS document}
-    {\begin{enumerate} 
-        \item User Enter the configuration menu
-        \item Selects the player health option
-        \item Raise / Lower value via control dial
-        \item User begins game
-        \item User enters sees health on UI screen equal to health changed
-    \end{enumerate}} 
-\end{enumerate}
+    {\\1. User Enter the configuration menu\\
+    2. Selects the player health option\\
+    3. Raise / Lower value via control dial\\
+    4. User begins game\\
+    5. User enters sees health on UI screen equal to health changed\\
+    6. Verify the displayed health is the same setting\\
+    7. User enters combat\\
+    8. User is attack by enemy\\
+    9. Verify the actual health pool is the amount displayed\\
+    } 
 
 
-\begin{enumerate}
     \item \functest{Config-Resource-Game}
-    {Configuration Resource Game}
+    {Test Resource Reward Management Configuration}
     {Automatic}
     {The base bonus amount of resources gathered is +/- 0}
     {Change in the current bonus resource is input value}
     {The reward health change is equal to the increment increase of the range control}
-    {The expected output is justified based on the SFR-006 in the SRS document}
-    {\begin{enumerate} 
-        \item User Enter the configuration menu
-        \item Selects the bonus resource option
-        \item User enters combat
-        \item User is successful in combat
-        \item User recieves award amount equal to Normal Amount and Bonus Amount
-    \end{enumerate}} 
-\end{enumerate}
+    {The expected output is justified based on the SFR-007 in the SRS document}
+    {\\1.User Enter the configuration menu\\
+    2. Selects the bonus resource option\\
+    3. User enters combat\\
+    4. User is successful in combat\\
+    5. Verify the received award amount equal to Normal Amount and Bonus Amount\\
+    } 
 
-\begin{enumerate}
-    \item \functest{Config-Map-Control}
-    {Map Control}
-    {Automatic}
-    {The base bonus amount of resources gathered is +/- 0}
-    {Change in the current bonus resource is input value}
-    {The reward health change is equal to the increment increase of the range control}
-    {The expected output is justified based on the SFR-006 in the SRS document}
-    {\begin{enumerate} 
-        \item User Enter the configuration menu
-        \item Selects the bonus resource option
-        \item User enters combat
-        \item User is successful in combat
-        \item User recieves award amount equal to Normal\_Amount + Bonus 
-    \end{enumerate}} 
-\end{enumerate}
+    \item \functest{Config-Test-Upgrade-Cost}
+    {Test Upgrade Cost Configuration}
+    {Manual, Dynamic}
+    {The base of all purchasable upgrades are set to their default value.}
+    {Change the base upgrade cost from configuration before start of the game.}
+    {The displayed and actual purchase cost is equivalent to the configured base value}
+    {The expected output is justified based on the requirement that the game shall have a configuration that changes the cost of each purchasable upgrade (SFR-008)}
+    {\\1. Users enters configuration menu\\
+    2. User selects upgrade cost option\\
+    3. User increases/decreases the cost with the provided control element\\
+    4. User begins a new game\\
+    5. User attempst to purchase an upgrade\\
+    6. Verify the displayed cost is equal to the configured value\\
+    7. Verfiy the amount of resources deducted equals the configured cost.}
 
-\begin{enumerate}
-    \item \functest{Config-Map-Switch}
-    {Map Switch}
-    {Automatic}
-    {The base bonus amount of resources gathered is \+\/\- 0}
-    {Change in the current bonus resource is input value}
-    {The reward health change is equal to the increment increase of the range control}
-    {The expected output is justified based on the SFR-006 in the SRS document}
-    {\begin{enumerate} 
-        \item User Enter the configuration menu
-        \item Selects the bonus resource option
-        \item User enters combat
-        \item User is successful in combat
-        \item User recieves award amount equal to Normal\_Amount \+ Bonus 
-    \end{enumerate}} 
-\end{enumerate}
+    \item \functest{Config-Lock-Test}
+    {Test Configuration Locked}
+    {Manual, Dynamic}
+    {The game has been configured with a game session active}
+    {Try to modify the configuration through various methods}
+    {No change in the configured values}
+    {The expected output is justified based on the requirement that the game shall prevent the user from changing the game's configurations until starting a new game (SFR-009).}
+    {\\1. User enters configuration menu\\
+    2. User modifies one or more configuration setting\\
+    3. User starts game\\
+    4. User begins gameplay and tries to navigate to configuration menu again (configuration display menu)\\
+    5. User attempts to change values again\\
+    6. Verify the configuration controls are removed or disabled.\\
+    7. Verify the original configuration values are unchanged.}
 
-\begin{enumerate}
-    \item \functest{Config-Control Switch}
-    {Control Switch}
-    {Automatic}
-    {The base bonus amount of resources gathered is +/- 0}
-    {Change in the current bonus resource is input value}
-    {The reward health change is equal to the increment increase of the range control}
-    {The expected output is justified based on the SFR-006 in the SRS document}
-    {\begin{enumerate} 
-        \item User Enter the configuration menu
-        \item Selects the bonus resource option
-        \item User enters combat
-        \item User is successful in combat
-        \item User recieves award amount equal to Normal\_Amount \+ Bonus 
-    \end{enumerate}} 
-\end{enumerate}
-
-\begin{enumerate}
-    \item \functest{Config-Speed-Switch}
-    {Speed Switch}
-    {Automatic}
-    {The base bonus amount of resources gathered is +/- 0}
-    {Change in the current bonus resource is input value}
-    {The reward health change is equal to the increment increase of the range control}
-    {The expected output is justified based on the SFR-006 in the SRS document}
-    {\begin{enumerate} 
-        \item User Enter the configuration menu
-        \item Selects the bonus resource option
-        \item User enters combat
-        \item User is successful in combat
-        \item User recieves award amount equal to Normal\_Amount \+ Bonus 
-    \end{enumerate}} 
+    \item \functest{Config-Promp-Test}
+    {Test Configuration Confirmation Prompt}
+    {Manual, Dynamic}
+    {User has finished modifying all the desired configuration values}
+    {The configuration setup is saved and displayable}
+    {A confirmation prompt is shown after the user is leaving the menu and prepared to start the game}
+    {The expected output is justified based on the requirement that the game shall give a prompt for confirmation once the user has finished setting up the game's configurations. (SFR-010)}
+    {\\1. User enters configuration menu\\
+    2. User modifies configuration settings\\
+    3. User finishes the setup\\
+    4. User leaves the configuration menu\\
+    5. Verify the confirmation prompt appears\\
+    6. Verify the contains the requirement UI elements\\
+    7. User selects "Confirm" (or any option name to proceed)\\
+    8. Verify the game has saved the configuration setup.}
 \end{enumerate}
