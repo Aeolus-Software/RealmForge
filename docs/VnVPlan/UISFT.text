@@ -1,7 +1,11 @@
 The system tests listed below are planned to verify the implemented system as a 
-whole against functional requirements related to the user interface component 
-of the system. These requirements can be found in the SRS, under section S.2's 
-functional requirements for the `User Interface System' (PUT REFERENCE HERE).
+whole against functional requirements related to its user interface component. 
+These requirements can be found in the SRS \cite{SRS}, listed in 
+section S.2's 
+functional requirements for the `User Interface System', as well as in section 
+S.2's Safety and Security Requirements. Tracebility relationships between all 
+system tests and covered requirements are provided in the traceability table in 
+section 4.3 of this document.
 
 \begin{enumerate}
 
@@ -10,7 +14,8 @@ functional requirements for the `User Interface System' (PUT REFERENCE HERE).
 {Manual}
 {The RealmForge software has been launched to its initial menu on a compatible 
 device.}
-{The different main menu options are selected (`start game', `settings', and 
+{Each available main menu option is selected (`start game', 
+`settings', and 
 `exit') via an input device (keyboard and mouse, or a controller). Once a main 
 menu option has been selected, an input is also provided to return to the main 
 menu from these options' screens (game start menu, configurations menu, etc.).}
@@ -26,9 +31,70 @@ between states as necessary. This functionality is required for the system and
 its interface to receive other inputs and provide the necessary outputs during 
 gameplay and other uses of the software.}
 {The system tester will launch the RealmForge software, and verify that the 
-system successfully transitions between each menu provided by the options 
+system successfully transitions the display output between each menu provided 
+by the options 
 available from the main menu, and back to the main menu when prompted. This 
 will be verified for each major type of input device (keyboard and mouse, and 
 controller).}
+
+\item \functest{UISFTrestart}
+{Game Session Restart Interface}
+{Manual}
+{The RealmForge software has been launched on a compatible device, and 
+initialized to a game state where the player's current game run has ended 
+(a 
+run is an attempt at completing the game, which can end following the player 
+successfully completing the game or failing during an attempt).}
+{The various options available to the user following the end of a game run are 
+selected (including restarting the run in the same saved game session / save 
+file, or starting a new save file) via an input device (keyboard and mouse, or 
+a controller).}
+{When the option to restart the game run in the same save file is selected, the 
+system transitions its internal state and display output to the initial game 
+scene displayed during a game run, with the user's previous save data included 
+where appropriate. Similarly, when the option to start a new game run in a new 
+save file is selected, the system transitions to the interface used to create a 
+new save file.}
+{This system test verifies that the interface provided by the system following 
+the end 
+of a game run can successfully receive user inputs and transition 
+between its next possible states as necessary (restarting in the same save 
+file, or creating a new save file). This functionality is required for the 
+system to allow users to continuously attempt runs of the game (which is a 
+common gameplay loop for video games in the roguelite genre, as RealmForge is), 
+or create a new save file when needed.}
+{The system tester will launch the RealmForge software, and configure it to 
+enter a game state following the end of a player's game run. The tester will 
+then verify that the 
+system successfully transitions the display output between each interface 
+provided 
+by the options 
+available following the end of a run (restarting in the same save file, and 
+creating a new save file). This 
+will be verified for each major type of input device (keyboard and mouse, and 
+controller).}
+
+\item \functest{UISFTflashinglights}
+{Display of Flashing Lights Warning}
+{Manual}
+{The RealmForge software has been installed and deployed/compiled on a 
+compatible device.}
+{The RealmForge software is launched on a compatible device.}
+{Following launch, the system displays a warning to the user that gameplay may 
+result in the display of various images and colours that can cause seizures for 
+individuals with photosensitive epilepsy (despite meeting standard guidelines, 
+as outlined in REFERENCENFRTESTHERE). The warning clearly states that users 
+with photosensitive epilepsy or a family history of the condition should 
+consult their physician before playing the game.}
+{This system test verifies that the system successfully displays a required 
+warning for users with photosensitive epilepsy (or those with a family history 
+of the condition), to ensure that these users do not continue gameplay without 
+awareness of how it could affect their condition. While RealmForge is required 
+to meet certain accessibility standards to ensure it does not display any 
+flashing images that could harm these individuals (as outlined in 
+REFERENCENFRTESTHERE), it is important to recommend that they consult their 
+physician first before playing the game in the interest of caution.}
+{The system tester will launch the RealmForge software, and verify that the 
+correct flashing images/lights warning is displayed by the system.}
 
 \end{enumerate}

@@ -20,11 +20,9 @@
 \hline
 \endhead
 
-%%%%%%% EXAMPLE
-\traceentry{SFR-001}{ENV-002}{ENV-003}
-\traceentry{\ref{UISFTmainmenu}} {SF4-404} {{SF4-404}}
-%%%%%%%%%%%%%%%
-
+\traceentry{\ref{UISFTmainmenu}}{SFR-018}{}
+\traceentry{\ref{UISFTrestart}}{SFR-019}{}
+\traceentry{\ref{UISFTflashinglights}}{SSR-006}{}
 
 \end{longtable}
 
