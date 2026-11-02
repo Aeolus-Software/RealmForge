@@ -1,0 +1,40 @@
+\begin{itemize}
+    \item Build confidence
+    \item such that all the functional, non-functional, and safety requrementsd are measured and quantified
+    \item This provides evidence that the requirements criteria are met and present in the account of the game 
+    \item Reinforce that the nature of  game behaves as outlined in the SRS, Design Document and other future documents
+    \item The game is properly tested thoroughly such that the game the functionality is robust
+    
+    \item The plan is make sure the game gets gets full coverage as possible to.
+    
+    \item Other testing methods are also used to improve the quality of the software by providing design reviews, code reviews
+    \item requirement reviews, document reviews from members within the team, and other peers from other associations
+    
+    \item usability testing will also done so that testing and feedback can be provided by other major stakeholders other than within the capstone social group
+    \item Usability test direction on the requirements and help create more or modify the existing requirements based on the overall feel from their perspective,
+    since they are users the team wants to appeal to.
+    
+    \item this plan also gives limits as to what not to test such as external libraries, apis, and other exhaustive testing that beyond the scope of 
+    \item this project.
+    
+    \item overall, the verification and validation plan provides a security in making sure the functionality of the software is maintained and correctly resolved.
+    \item Its provides a confidence level for the overall quality of the of final product within the scope of the project.
+\end{itemize}
+
+
+% \wss{State what is intended to be accomplished.  The objective will be around
+%   the qualities that are most important for your project.  You might have
+%   something like: ``build confidence in the software correctness,''
+%   ``demonstrate adequate usability.'' etc.  You won't list all of the qualities,
+%   just those that are most important.}
+
+% \wss{You should also list the objectives that are out of scope.  You don't have 
+% the resources to do everything, so what will you be leaving out.  For instance, 
+% if you are not going to verify the quality of usability, state this.  It is also 
+% worthwhile to justify why the objectives are left out.}
+
+% \wss{The objectives are important because they highlight that you are aware of 
+% limitations in your resources for verification and validation.  You can't do everything, 
+% so what are you going to prioritize?  As an example, if your system depends on an 
+% external library, you can explicitly state that you will assume that external library 
+% has already been verified by its implementation team.}
