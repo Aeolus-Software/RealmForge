@@ -3,6 +3,8 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{pdflscape}
 \hypersetup{
     colorlinks,
     citecolor=blue,
@@ -10,7 +12,7 @@
     linkcolor=red,
     urlcolor=blue
 }
-\usepackage[round]{natbib}
+% \usepackage[numbers]{natbib}
 
 \input{../Comments.text}
 \input{../Common.text}
@@ -78,6 +80,12 @@
 %{Output/Result}
 %{How test will be performed}
 
+% TRACE TABLE MACRO 
+\newcommand{\traceentry}[2]{
+  #1 & #2\\
+  \hline
+}
+
 
 \begin{document}
 
@@ -119,7 +127,6 @@ in.}
 \tableofcontents
 
 \listoftables
-\wss{Remove this section if it isn't needed}
 
 \listoffigures
 \wss{Remove this section if it isn't needed}
@@ -138,7 +145,7 @@ in.}
 \end{tabular}\\
 
 \wss{symbols, abbreviations, or acronyms --- you can simply reference the SRS
-  \citep{SRS} tables, if appropriate}
+  \cite{SRS} tables, if appropriate}
 
 \wss{Remove this section if it isn't needed}
 
@@ -188,6 +195,8 @@ has already been verified by its implementation team.}
   can include these even before they are written, since by the time the project
   is done, they will be written.  You can create BibTeX entries for your
   documents and within those entries include a hyperlink to the documents.}
+
+Citation Example of SRS\cite{SRS}\\
 
 \wss{Don't just list the other documents.  You should explain why they are relevant and 
 how they relate to your VnV efforts.}
@@ -260,23 +269,7 @@ that document.}
 
 \subsection{Software Validation}
 
-\wss{If there is any external data that can be used for validation, you should
-  point to it here.  If there are no plans for validation, you should state that
-  here.}
-
-\wss{You might want to use review sessions with the stakeholder to check that
-the requirements document captures the right requirements.  Maybe task based
-inspection?}
-
-\wss{For those capstone teams with an external supervisor, the Rev 0 demo should 
-be used as an opportunity to validate the requirements.  You should plan on 
-demonstrating your project to your supervisor shortly after the scheduled Rev 0 demo.  
-The feedback from your supervisor will be very useful for improving your project.}
-
-\wss{For teams without an external supervisor, user testing can serve the same purpose 
-as a Rev 0 demo for the supervisor.}
-
-\wss{This section might reference back to the SRS verification section.}
+\input{VnvSoftwareValidation.text}
 
 \section{System Tests}
 
@@ -394,145 +387,77 @@ How test will be performed:
 
 \end{enumerate}
 
-\subsubsection{Area of Testing2}
+\subsubsection{User Interface Tests for Non-Functional Requirements}
 
-...
+\input{UISNFT.text}
 
 \subsection{Traceability Between Test Cases and Requirements}
 
-\wss{Provide a table that shows which test cases are supporting which
-  requirements.}
+% \wss{Provide a table that shows which test cases are supporting which
+%   requirements.}
+\input{Section4TraceTable.text}
 
 \section{Unit Test Description}
 
-\wss{This section should not be filled in until after the MIS (detailed design
-  document) has been completed.}
+TBD
 
-\wss{Reference your MIS (detailed design document) and explain your overall
-philosophy for test case selection.}  
+% \wss{This section should not be filled in until after the MIS (detailed design
+  % document) has been completed.}
 
-\wss{To save space and time, it may be an option to provide less detail in this section.  
-For the unit tests you can potentially layout your testing strategy here.  That is, you 
-can explain how tests will be selected for each module.  For instance, your test building 
-approach could be test cases for each access program, including one test for normal behaviour 
-and as many tests as needed for edge cases.  Rather than create the details of the input 
-and output here, you could point to the unit testing code.  For this to work, you code 
-needs to be well-documented, with meaningful names for all of the tests.}
+% \wss{Reference your MIS (detailed design document) and explain your overall
+% philosophy for test case selection.}  
 
-\subsection{Unit Testing Scope}
+% \wss{To save space and time, it may be an option to provide less detail in this section.  
+% For the unit tests you can potentially layout your testing strategy here.  That is, you 
+% can explain how tests will be selected for each module.  For instance, your test building 
+% approach could be test cases for each access program, including one test for normal behaviour 
+% and as many tests as needed for edge cases.  Rather than create the details of the input 
+% and output here, you could point to the unit testing code.  For this to work, you code 
+% needs to be well-documented, with meaningful names for all of the tests.}
 
-\wss{What modules are outside of the scope.  If there are modules that are
-  developed by someone else, then you would say here if you aren't planning on
-  verifying them.  There may also be modules that are part of your software, but
-  have a lower priority for verification than others.  If this is the case,
-  explain your rationale for the ranking of module importance.}
+% \subsection{Unit Testing Scope}
 
-\subsection{Tests for Functional Requirements}
+% \wss{What modules are outside of the scope.  If there are modules that are
+%   developed by someone else, then you would say here if you aren't planning on
+%   verifying them.  There may also be modules that are part of your software, but
+%   have a lower priority for verification than others.  If this is the case,
+%   explain your rationale for the ranking of module importance.}
 
-\wss{Most of the verification will be through automated unit testing.  If
-  appropriate specific modules can be verified by a non-testing based
-  technique.  That can also be documented in this section.}
+% \subsection{Tests for Functional Requirements}
 
-\subsubsection{Module 1}
+% \wss{Most of the verification will be through automated unit testing.  If
+%   appropriate specific modules can be verified by a non-testing based
+%   technique.  That can also be documented in this section.}
 
-\wss{Include a blurb here to explain why the subsections below cover the module.
-  References to the MIS would be good.  You will want tests from a black box
-  perspective and from a white box perspective.  Explain to the reader how the
-  tests were selected.}
+% \subsubsection{Module 1}
 
-\begin{enumerate}
+% \wss{Include a blurb here to explain why the subsections below cover the module.
+%   References to the MIS would be good.  You will want tests from a black box
+%   perspective and from a white box perspective.  Explain to the reader how the
+%   tests were selected.}
 
-\item{test-id1\\}
+% \subsubsection{Module 2}
 
-Type: \wss{Functional, Dynamic, Manual, Automatic, Static etc. Most will
-  be automatic}
-					
-Initial State: 
-					
-Input: 
-					
-Output: \wss{The expected result for the given inputs}
+% \subsection{Tests for Nonfunctional Requirements}
 
-Test Case Derivation: \wss{Justify the expected value given in the Output field}
+% \wss{If there is a module that needs to be independently assessed for
+%   performance, those test cases can go here.  In some projects, planning for
+%   nonfunctional tests of units will not be that relevant.}
 
-How test will be performed: 
-					
-\item{test-id2\\}
+% \wss{These tests may involve collecting performance data from previously
+%   mentioned functional tests.}
 
-Type: \wss{Functional, Dynamic, Manual, Automatic, Static etc. Most will
-  be automatic}
-					
-Initial State: 
-					
-Input: 
-					
-Output: \wss{The expected result for the given inputs}
+% \subsection{Traceability Between Test Cases and Modules}
 
-Test Case Derivation: \wss{Justify the expected value given in the Output field}
+% \wss{Provide evidence that all modules have been considered.}
 
-How test will be performed: 
 
-\item{...\\}
-    
-\end{enumerate}
 
-\subsubsection{Module 2}
+\newpage{}
 
-...
-
-\subsection{Tests for Nonfunctional Requirements}
-
-\wss{If there is a module that needs to be independently assessed for
-  performance, those test cases can go here.  In some projects, planning for
-  nonfunctional tests of units will not be that relevant.}
-
-\wss{These tests may involve collecting performance data from previously
-  mentioned functional tests.}
-
-\subsubsection{Module ?}
-		
-\begin{enumerate}
-
-\item{test-id1\\}
-
-Type: \wss{Functional, Dynamic, Manual, Automatic, Static etc. Most will
-  be automatic}
-					
-Initial State: 
-					
-Input/Condition: 
-					
-Output/Result: 
-					
-How test will be performed: 
-					
-\item{test-id2\\}
-
-Type: Functional, Dynamic, Manual, Static etc.
-					
-Initial State: 
-					
-Input: 
-					
-Output: 
-					
-How test will be performed: 
-
-\end{enumerate}
-
-\subsubsection{Module ?}
-
-...
-
-\subsection{Traceability Between Test Cases and Modules}
-
-\wss{Provide evidence that all modules have been considered.}
-				
-\bibliographystyle{plainnat}
-
+\bibliographystyle{IEEEtran}
+% \bibliographystyle{plainnat}
 \bibliography{../../refs/References}
-
-\newpage
 
 \section{Appendix}
 
@@ -540,8 +465,28 @@ This is where you can place additional information.
 
 \subsection{Symbolic Parameters}
 
-The definition of the test cases will call for SYMBOLIC\_CONSTANTS.
-Their values are defined in this section for easy maintenance.
+The following symbolic constants are used throughout this document:
+
+\begin{table}[htbp]
+	\centering
+	\caption{Symbolic Constants Used in the Verification and Validation Plan}
+	\label{tab:symbolicparameters}
+	\begin{tabularx}{\textwidth}{| X | c | c |}
+		\hline
+		\textbf{Constant} & \textbf{Value} & \textbf{Unit}\\
+		\hline
+		\leavevmode\hypertarget{DISTINCT_LOCATION_ICONS}{DISTINCT\_LOCATION\_ICONS}
+		 & 5 
+		& Unitless/Quantity\\
+		\hline
+		\leavevmode\hypertarget{TRANSITION_TIME}{TRANSITION\_TIME} & 4 & 
+		Seconds\\
+		\hline
+		\leavevmode\hypertarget{TRANSITION_TESTS}{TRANSITION\_TESTS} & 3 & 
+		Unitless/Quantity\\
+		\hline
+	\end{tabularx}
+\end{table}
 
 \subsection{Usability Survey Questions?}
 
@@ -561,11 +506,12 @@ Their values are defined in this section for easy maintenance.
 \subsection{How and Where Used}
 
 AI tools were used for assistance with LaTeX syntax and commands, during 
-the development of sections SRS Verification, Design Verification, and when 
+the development of sections SRS Verification and Design Verification, and when 
 developing 
 LaTeX formatting for the document as a whole. Specifically, AI tools were 
 used for assistance in creating the LaTeX custom system test format macro 
-used throughout the document. In these sections, 
+used throughout the document, as well as the symbolic parameter table used in 
+section 6.1. In these sections, 
 AI tools were not used to generate any content text (LaTeX formatting code was 
 generated), or wholly generate any of the 
 ideas or conclusions presented.
@@ -582,13 +528,7 @@ newly generated by AI tools and presented in the document.
 
 \section{Appendix --- Reflection}
 
-\wss{This section is not required for CAS 741}
-
-The information in this section will be used to evaluate the team members on the
-graduate attribute of Lifelong Learning.
-
-\input{../Reflection.text}
-
+\textbf{Reflection Questions Answered:}
 \begin{enumerate}
   \item What went well while writing this deliverable? 
   \item What pain points did you experience during this deliverable, and how
@@ -602,6 +542,89 @@ graduate attribute of Lifelong Learning.
   question, what are at least two approaches to acquiring the knowledge or
   mastering the skill?  Of the identified approaches, which will each team
   member pursue, and why did they make this choice?
+\end{enumerate}
+
+\textbf{Andreas:}
+\begin{enumerate}
+	\item When writing this deliverable, our team worked well to divide the 
+	work required evenly, and ensure that all team members contributed to each 
+	important section of the document. This helped us to ensure that critical 
+	sections were developed by taking all team members' ideas and contributions 
+	into account. Specifically, instead of having one team member focus on 
+	writing a large swath of system tests, and making other members focus on 
+	most of the general plan sections of the document (SRS verification, etc.), 
+	all users contributed to the system tests, ensuring that our ideas and 
+	perspectives were combined to cover the system's requirements as much as 
+	possible.
+	\item One pain point I experienced during the deliverable was attempting to 
+	find a balance between feasibility and coverage when writing system tests. 
+	When creating a plan to test the system as a whole, our goal was to cover 
+	all requirements mandated in the SRS, and extensively test the system so 
+	that it is verified and validated as a professional engineering product. 
+	However, since the project's development must fit in an eight month scope 
+	(of which there are approximately five to six months remaining), with 
+	verification 
+	activities likely being allotted a fraction of that time (to fit with other 
+	development activities), the plan for testing must be scoped to be feasible 
+	in the project's context. This balance was found by ensuring that the 
+	system tests I wrote minimally cover the requirements provided in the SRS, 
+	and any other system qualities that must be tested, but do not necessarily 
+	have to extend into a large, complex set of tests across a large sample 
+	size. For example, while primary playtests (usability tests) for the 
+	software are planned, the number of participants in these tests and the 
+	amount of testing they must participate in is given a conservative bound, 
+	to ensure feasibility. However, if extra time and resources are available 
+	in the project to complete more testing, the scope of the tests planned can 
+	be increased to ensure better coverage.
+	\item One skill I will personally need to acquire is a proficiency with 
+	unit testing Godot game engine code. Since Godot has been selected as the 
+	game engine that will be used for the development of the project's 
+	software, its capabilities for unit testing its GDScript language must be 
+	used to implement automated unit testing. Additionally, I will need to 
+	acquire the skill of executing automated unit tests of GDScript code with 
+	GitHub Actions or CI/CD pipelines, since it is required for the project.
+	\item For both skills above, the knowledge required to improve my 
+	proficiency could be found from video tutorials (on YouTube, for example), 
+	official Godot tutorials and documentation, or from being taught by other 
+	team members or peers with experience with Godot. In my case, I will 
+	primarily use the official Godot tutorials and documentation to learn these 
+	skills, as official sources tend to have the most accurate information for 
+	the exact version of the game engine we will use in the project. 
+	Additionally, not relying on others for instruction related to the skills 
+	(while help can still be acquired from team members or peers occasionally) 
+	can help me to efficiently learn the skills required asynchronously.
+\end{enumerate}
+
+\textbf{Humna:}
+\begin{enumerate}
+	\item 
+	\item
+	\item 
+	\item 
+\end{enumerate}
+
+\textbf{Christopher:}
+\begin{enumerate}
+	\item 
+	\item
+	\item 
+	\item 
+\end{enumerate}
+
+\textbf{Owen:}
+\begin{enumerate}
+	\item 
+	\item
+	\item 
+	\item 
+\end{enumerate}
+
+\textbf{Andy:}
+\begin{enumerate}
+	\item 
+	\item
+	\item 
+	\item 
 \end{enumerate}
 
 \end{document}

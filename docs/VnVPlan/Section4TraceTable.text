@@ -1,0 +1,31 @@
+\small
+\setlength{\arrayrulewidth}{0.5pt}
+
+\begin{longtable}{|p{5.1cm}|p{7.3cm}|}
+
+\caption{RealmForge System Test Requirements Traceability Summary}
+\label{tab:systemtest-traceability} \\
+
+\hline
+\textbf{System Test ID} &
+\textbf{Requirements Coverage}\\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Requirement ID} &
+\textbf{Requirements Coverage}\\
+\hline
+\endhead
+
+\traceentry{\ref{UISFTmainmenu}}{SFR-018}{}
+\traceentry{\ref{UISFTrestart}}{SFR-019}{}
+\traceentry{\ref{UISFTflashinglights}}{SSR-006}{}
+\traceentry{\ref{UISNFTmapappearance}}{SNFR-004}{}
+\traceentry{\ref{UISNFTstatetransitions}}{SNFR-009}{}
+\traceentry{\ref{UISNFTflashinglights}}{SSR-006}{}
+\traceentry{\ref{UISNFTcolours}}{SSR-009}{}
+
+\end{longtable}
+
+\normalsize
