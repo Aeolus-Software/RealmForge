@@ -30,8 +30,8 @@ feed for usability.
     {Change in the current bonus resource is input value.}
     {The reward health change is equal to the increment increase of the range control.}
     {The expected output is justified based on the SFR-007 in the SRS document.}
-    {\\1.User Enter the configuration menu\\
-    2. Selects the bonus resource option\\
+    {\\1. User enters the configuration menu\\
+    2. User selects the bonus resource option\\
     3. User enters combat\\
     4. User is successful in combat\\
     5. Verify the received award amount equal to Normal Amount and Bonus Amount\\
