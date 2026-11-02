@@ -1,8 +1,8 @@
 The primary mechanism of validating RealmForge's software will be through extensive usability testing and playtesting, having users interact with the system, providing feedback according to our Usability Testing Plan found at **LINK THE PLAN**. Supplementary methods to usability testing and playtesting for software validation are:
-
+\begin{itemize}
     \item \textbf{Supervisor and Stakeholder Reviews:} Demonstrations of the project will be held throughout its lifecycle with course facilitators, key stakeholders (peers, potential users, etc.), and our project supervisor, Dr. Welch, such as during Proof of Concept and Rev0. We have also scheduled meetings to be held with Dr. Welch every other week to review anything in this project, including software validation.
     
     \item \textbf{Empirical Metric Validation:} Metrics (run duration, win/loss ratios, resource rates, etc.) will be collected with built-in tools will be collected during system use to create minimalistic quantitative date reports measuring engagement and other goals of the software. If tools allow, automated playthroughs of the game can be run to increase amount of empirical data.
     
-    \item \textbf{Accessibility \& Safety Validation:} Observational checks during playtesting alongside the execution of our UI system test suite will validate startup epilepsy warnings (\textbf{SSR-006}), colourblind-accessible filters (\textbf{SSR-009}). Local save data recovery (\textbf{SSR-003}, \textbf{SSR-004}) will be calidated through our functional testing.
+    \item \textbf{Accessibility \& Safety Validation:} Observational checks during playtesting alongside the execution of our UI system test suite will validate startup epilepsy warnings (\textbf{SSR-006}), colourblind-accessible filters (\textbf{SSR-009}). Local save data recovery (\textbf{SSR-003}, \textbf{SSR-004}) will be validated through our functional testing.
 \end{itemize}
