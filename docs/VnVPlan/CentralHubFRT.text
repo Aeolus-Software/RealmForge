@@ -47,4 +47,13 @@ The system tests below are planned to verify the implemented system as a whole a
 {The system test ensures that the upgrade unlock mechanic is working as intended and does not allow users to unlock all upgrades for free, eliminating all need for thought and strategy for upgrade selection.}
 {The system tester will launch the RealmForge software, and begin a run or resume an existing one. Once they are in the run, they will play until reaching a game state where they can unlock upgrades for the Central Hub and one of  the available upgrades is one in which they do not meet the requirements for. They will then attempt to unlock that upgrade and note down how the system responds.}
 
+\item \functest{CentralHubFRTGameStateVerification}
+{Verifying Game State Transition to the Central Hub}
+{Manual}
+{The RealmForge software has been launched on the user's device and the current game state has the option to switch to the game state focused on the Central Hub.}
+{The user triggers the game state transition to focus on the Central Hub.}
+{The system transitions from one game state to the next, verifying a game state change did occur.}
+{The system test verifies that game state transitions are working in our system and bugs will not lock users out of progressing forward.}
+{The system tester will launch the RealmForge software, and begin a run or resume an existing one. Once they are in a run, they will play the game normally but they should keep close track of game information. When a game state transition should occur, the tester will verify the state change did happen and that no data was corrupted during the transition.}
+
 \end{enumerate}
