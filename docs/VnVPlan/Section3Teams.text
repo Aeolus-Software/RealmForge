@@ -1,0 +1,53 @@
+All members will contribute to and complete the
+verification and validation of RealmForge. Each team member has been
+assigned specific sections of the VnV Plan and is responsible for
+developing system tests related to their assigned areas, such as 
+configuration and physical controls, combat, central hub functionality,
+overall gameplay and map navigation, and user interfaces.
+
+Team members will also be assigned responsibility to review sections
+completed by other team members to ensure that tests align with the
+project requirements that have been outlined in the SRS documentation. 
+
+The following table outlines each member's primary responsibilities
+for the verification and validation process:
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|p{2.7cm}|X|}
+\hline
+\textbf{Team Member} & \textbf{Role} \\
+\hline
+
+Andreas Sideris &
+SRS verification, design verification, and functional and
+nonfunctional user interface system tests. \\
+\hline
+
+Andy Huynh &
+VnV Plan verification, functional and nonfunctional system tests
+for configuration and physical controls, and the system test
+traceability table. \\
+\hline
+
+Owen Johnson &
+Implementation verification and functional and nonfunctional
+combat system tests. \\
+\hline
+
+Christopher Ludwig &
+Software validation and functional and nonfunctional
+central hub system tests. \\
+\hline
+
+Humna Saeed &
+VnV team documentation, automated testing and verification tools,
+and functional and nonfunctional system tests for overall
+gameplay and map functions. \\
+\hline
+
+\end{tabularx}
+\caption{Verification and Validation Team Roles}
+\label{tab:vnv-team}
+\end{table}
