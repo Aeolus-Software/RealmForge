@@ -1,4 +1,4 @@
-The system tests below are planned to verify the implemented system as a whole against functional requirements related to the central hub component of the system.
+The system tests below are planned to verify the implemented system as a whole against functional requirements related to the Central Hub component of the system.
 
 \begin{enumerate}
 
@@ -6,18 +6,18 @@ The system tests below are planned to verify the implemented system as a whole a
 {Permanent Upgrades to Central Hub}
 {Manual}
 {The current game state is focused on the Central Hub with a permanent upgrade available to be obtained.}
-{The permanent upgrade is obtained, and the current run is then ended.}
+{The user unlocks the permanent upgrade, and the current run is then ended.}
 {A permanent upgrade to the Central Hub is now associated with the corresponding player profile which unlocked it, and is always available to that profile in future runs.}
-{This system test verifies that upgrades which are meant to be permanent are maintained between runs and are not unintentionally deleted.}
-{The system tester will launch the RealmForge software, and begin a run or resume an existing one. Once they are in a run, they will trigger a permanent upgrade unlock and then end the run either by intentionally exiting or dying. They will then start a new run and see if the previously unlocked upgrade is still unlocked and working as intended.}
+{This system test verifies that upgrades which are meant to be permanent are maintained between runs and are not unintentionally removed from the player profile.}
+{The system tester will launch the RealmForge software, and begin a run or resume an existing one. Once they are in a run, they will trigger a permanent upgrade unlock and then end the run either by intentionally exiting or dying. If the upgrade is supposed to take effect immediately, the system tester shall continue their run to see it's effect and then end the run. They will then start a new run and see if the previously unlocked upgrade is still unlocked and working as intended.}
 
 \item \functest{CentralHubFRTResourceGeneration}
 {Resource Generation from Central Hub}
 {Manual}
 {The RealmForge software has been launched on the user's device and initialized into a game state where they are starting a combat encounter.}
-{The user selects to enters the combat encounter and performs any action that requires resources resources.}
+{The user selects to enters the combat encounter and performs any action that requires resources.}
 {The system initializes resource count variables to the starting amount corresponding with Central Hub progress, updating it in accordance to the resource generation rate of the Central Hub and maintaining an accurate count as user actions expend resources simultaneously. This resource count should be constantly displayed to the user.}
-{This test verifies an essential mechanic of the core gameplay loop of RealmForge, ensuring that resource generation from the Central Hub works as intended, giving the user access to the correct number of resources in accordance to upgrades to the central hub.}
+{This test verifies an essential mechanic of the core gameplay loop of RealmForge, ensuring that resource generation from the Central Hub works as intended, giving the user access to the correct number of resources in accordance to upgrades to the Central Hub.}
 {The system tester will launch the RealmForge software, and begin a run or resume an existing one. Once they are in the run, they will note down the current state of the Central Hub and calculate the correct amount of starting resources and the rate of generation of each resource type. Then the system tester shall enter a combat encounter, verifying the starting resource count against the calculated number as well as recording the rate at which they gain resources precisely to verify against the other calculated numbers.}
 
 \item \functest{CentralHubFRTTempUpgradePurchase}
@@ -25,7 +25,7 @@ The system tests below are planned to verify the implemented system as a whole a
 {Manual}
 {The RealmForge software has been launched on the user's device and the current game state is initialized to focus on the Central Hub with a temporary upgrade available to be obtained.}
 {The user obtains the temporary upgrade and continues playing the game until their run ends and then begins a new run.}
-{The central hub is upgraded for the rest of the run, altering how it functions according to the upgrade selected, and then is reinitialized with none of the temporary upgrades when the new run is started after the initial run has ended.}
+{The Central Hub is upgraded for the rest of the run, altering how it functions according to the upgrade selected, and then is reinitialized with none of the temporary upgrades when a new run is started after the initial run has ended.}
 {This system test verifies that temporary upgrades do affect how the Central Hub functions as well as not being initially present in the Central Hub when a new run is started.}
 {The system tester will launch the RealmForge software, and begin a run or resume an existing one. Once they are in a run, they will trigger a temporary upgrade unlock and then continue their run, tracking that the upgrade to the Central Hub has altered it in exactly the way intended for the rest of the run. Then the system tester will end the run either by intentionally exiting or dying. They will then start a new run and see if the previously unlocked upgrade is no longer unlocked initially.}
 
