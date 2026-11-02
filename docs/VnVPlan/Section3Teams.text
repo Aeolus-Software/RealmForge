@@ -5,20 +5,19 @@ developing system tests related to their assigned areas, such as
 configuration and physical controls, combat, central hub functionality,
 overall gameplay and map navigation, and user interfaces.
 
-/noindent
-/medskip
+\medskip
+\noindent
 Team members will also be assigned responsibility to review sections
 completed by other team members to ensure that tests align with the
 project requirements that have been outlined in the SRS documentation. 
 
-/noindent
-/medskip
+\medskip
+\noindent
 The following table outlines each member's primary responsibilities
 for the verification and validation process:
 
-\begin{center}
-\renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\textwidth}{|p{2.7cm}|X|}
+\begin{table}[H]
+\centering
 \renewcommand{\arraystretch}{1.3}
 \begin{tabularx}{\textwidth}{|p{2.7cm}|X|}
 \hline
@@ -53,8 +52,6 @@ gameplay and map functions. \\
 \hline
 
 \end{tabularx}
-
-\captionof{table}{Verification and Validation Team Roles}
+\caption{Verification and Validation Team Roles}
 \label{tab:vnv-team}
-
-\end{center}
+\end{table}
