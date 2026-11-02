@@ -1,4 +1,4 @@
-The area of testing below will focus on on the configurations aspect of RealmForge.
+The area of testing below will focus on the configurations aspect of RealmForge.
 The configurations are important because they control the overall dynamic experience
 of the game. Ensuring they work is a key to properly allow users to experiment, test, and provide
 feed for usability.
@@ -9,13 +9,13 @@ feed for usability.
     {Manual, Dynamic}
     {The base increase for player health is +/- 0.}
     {Change in the range control of the configuration health option.}
-    {The displayed health change is equal to the increment increase of the range control.}
+    {The displayed health change is equal to the increase of the range control.}
     {The expected output is justified based on the SFR-006 in the SRS document.}
     {\\1. User Enter the configuration menu\\
     2. Selects the player health option\\
     3. Raise / Lower value via control dial\\
     4. User begins game\\
-    5. User enters sees health on UI screen equal to health changed\\
+    5. User enters health on UI screen equal to health changed\\
     6. Verify the displayed health is the same setting\\
     7. User enters combat\\
     8. User is attack by enemy\\
