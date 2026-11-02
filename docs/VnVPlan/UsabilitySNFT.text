@@ -1,0 +1,52 @@
+The usability tests listed below are planned to assist other primary tests in 
+verifying the implemented system as a 
+whole against requirements related to the user experience, as well as validate 
+the RealmForge software with respect to the needs of its users.
+The tests' related requirements can be found in the SRS \cite{SRS} in Section 
+S.2. Tracebility 
+relationships between all 
+system tests and covered requirements are provided in the traceability table in 
+section 4.3 of this document.
+
+\begin{enumerate}
+
+\item \nonfunctest{UISNFTmainplaytest}
+{Primary System Playtests}
+{Dynamic, Manual}
+{A minimum of \hyperlink{MIN_TESTERS}{MIN\_\allowbreak TESTERS} playtesters 
+(game usability test participants) owning compatible devices have been 
+contacted and selected to participate in testing. The RealmForge software has 
+been installed and compiled on each participants' device.}
+{Each participant will launch the RealmForge software on their device, and play 
+through at least two game runs (an attempt at completing the game, from the 
+beginning to completion/success or defeat, after which the user can start a new 
+run) for each potential feature configuration provided by the game.}
+{Each participant will complete a survey (with questions available in 
+\hyperref[SurveyQ]{6.2 Usability Survey Questions}). This survey will collect 
+data from participants related to their experience when playing the RealmForge 
+game, when configured with specific gameplay feature variations. This data is 
+the primary output of the system playtests, and will be used to inform the 
+development of the software. Participant experience data may be summarized 
+using various charts and plots to better inform development.}
+{Each participant will play through at least two game runs for each of the 
+following gameplay feature variation points provided by the software:
+\begin{itemize}
+	\item Player Character Starting Health
+	\item Rewards Gained Following an Enemy Encounter
+	\item Central Hub Upgrade Costs
+	\item Enemy Encounter Combat Pace
+\end{itemize}
+
+For each variation point, each participant will play through one game run with 
+the configured feature set to its default state, and at least one game run with 
+the configured feature set to an alternative state. This will allow 
+participants 
+to understand how their experience is positively or negatively impacted (in 
+their own opinion) by the variation of each feature configuration, and find 
+which configurations improve their experience overall (which they will then 
+report via the survey). Participants will also be able to report other details 
+related to their experiences playing the game, such as errors they detected, or 
+suggestions they may have to improve gameplay.
+}
+
+\end{enumerate}

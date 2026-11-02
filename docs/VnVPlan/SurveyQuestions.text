@@ -1,0 +1,53 @@
+The following questions will be posed to participants of the RealmForge 
+software's primary system playtests, as outlined in 
+\ref{UISNFTmainplaytest}:\newline
+
+\noindent \textbf{Primary System Playtest Survey:}
+
+\begin{enumerate}
+\item During your gameplay session, which configurations of the player 
+character's starting health were tested?
+\item How was your experience impacted by varying this feature's parameters? 
+Did increasing the player character's initial health cause the game to be more 
+engaging and rewarding to play, or the opposite? How did reducing the player 
+character's initial health impact your experience?
+\item Which configuration of this feature that you tested resulted in the most 
+engaging experience, in your opinion?
+\item During your gameplay session, which configurations of the rewards gained 
+following an enemy encounter were tested?
+\item How was your experience impacted by varying this feature's parameters? 
+Did increasing the rewards granted to you following a successful enemy 
+encounter cause the game to be more engaging and rewarding to play, or the 
+opposite? How did reducing the rewards granted impact your experience?
+\item Which configuration of this feature that you tested resulted in the most 
+engaging experience, in your opinion?
+\item During your gameplay session, which configurations of the central hub's 
+upgrade costs were tested?
+\item How was your experience impacted by varying this feature's parameters? 
+Did increasing the costs of upgrades available in the central hub cause the 
+game to be more engaging and rewarding to play, or the opposite? How did 
+reducing the costs impact your experience?
+\item Which configuration of this feature that you tested resulted in the most 
+engaging experience, in your opinion?
+\item During your gameplay session, which configurations of the enemy encounter 
+combat pace were tested?
+\item How was your experience impacted by varying this feature's parameters? 
+Did increasing the speed of enemy encounters cause the game to be more engaging 
+and rewarding to play, or the opposite? How did reducing the speed impact your 
+experience?
+\item Which configuration of this feature that you tested resulted in the most 
+engaging experience, in your opinion?
+\item Did you encounter any errors, unexpected events, or unexpected displayed 
+visuals during your game session? If so:
+	\begin{enumerate}
+	\item What occurred?
+	\item Which part of the game were you playing at the time?
+	\item What inputs did you provide?
+	\end{enumerate}
+\item Did any features of the game negatively impact your experience, or were 
+any features frustrating (for example, if a certain menu was difficult to use)? 
+If so, which features, and why?
+\item Do you have any suggestions for new features that would improve your 
+experience when playing the game, or modifications to existing features that 
+would improve your experience?
+\end{enumerate}
