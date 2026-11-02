@@ -1,5 +1,5 @@
 Realmforge's software will be validated using the following techniques to ensure the right system was built to satisfy all requirements and goals of the project:
-
+\begin{itemize}
     \item \textbf{Supervisor and Stakeholder Reviews:} Demonstrations of the project will be held throughout its lifecycle with  course facilitators, our supervisor and key stakeholders, such as during Proof of Concept and Rev0.
     
     \item \textbf{Usability testing \& Playtesting:} Playtesting sessions will be conducted with many participants to collect data. More info of usability testing can be found at **LINK THE USABILITY TESTING SECTION**
