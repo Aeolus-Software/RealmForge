@@ -1,11 +1,14 @@
 The verification and validation plan objective is to build confidence in the functional sustainability of the software product. 
 Systems tests are created to ensure the functional, nonfunctional and safety requirements are measured and quantified; 
 this provides evidence that fit criteria are met and present in the account of the game. The system tests also reinforce the 
-behavior of the game so that the requirements and other elements outlined in the SRS, Design Document and other future documents are tracked. \\
+behavior of the game so that the requirements and other elements outlined in the SRS, Design Document and other future documents are tracked. 
+\\
+\\
 \noindent
 The VnV plan also makes sure that the game gets as full testing coverage as possible within the boundaries of the project; 
 this provides a great steppingstone for CI implementation. Specific tools such as GDUnit4 and GDLint can implement the 
 system tests (appropriate ones) to maintain coding standards, and requirement completion.
+\\
 \\
 \noindent
 Other testings methods are also used to improve the quality of the software documentation and product. 

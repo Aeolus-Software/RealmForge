@@ -1,10 +1,30 @@
-The verification and validation plan is an artifact, it too must be verified.
-The base guidlines in in terms 
+The verification and validation plan is an artifact in itself; it too must be verified.\\
+Internal reviews for the verification plan are as follows:  
 \begin{itemize}
-    \item For testing, each feature must be secluded between eachother such that testing is done specifically for a particarly area of testing
-    \item A hub or in more gaming terms a debug room will be created for the 
+    \item Peer reviews from classmates, other team factions, and teaching assistant feedback
+    \item Documentation review from Prof. Welch for project feasiblity and scope overview
+    \item Group review for discussion of the overall quality of the VnV plan
+    \item Consistent review and coverage of issues (tracked on GitHub) that are related to each section, lecture, and meeting  
+    \item Mutation testing that introduces small defects to the requirements, test cases, and traceabilty links in order to 
+    determine if the VnV plan verfication can detect actual documentation faults
 \end{itemize}
-
+\noindent
+Below is a checklist to ensure the VnV plan is correct and complete
+\begin{itemize}
+    \item [$\square$] Does the VnV plan verify all functional requirements
+    \item [$\square$] Does the VnV plan verify all nonfunctional requirements
+    \item [$\square$] Does the VnV plan verify all safety requirements
+    \item [$\square$] Do all the outputs match the system tests desired output
+    \item [$\square$] Does the system test cover all requirements listed in the SRS
+    \item [$\square$] Do all system tests provide complete traceability
+    \item [$\square$] Do all traceability links work 
+    \item [$\square$] Are all sections written with correct grammar
+    \item [$\square$] Have all team members peer reviewed at least one of each of the other team member's work and the work is satisfactory
+    \item [$\square$] Have all peer review (from other teams) issues been resolved
+    \item [$\square$] Do all references, acronyms, and internal constants are properly detailed and linked
+    \item [$\square$] Does the document cover all points provided in the respective checklists and rubric
+    % \item Are all external libraries, third-party components, and 
+\end{itemize}
 
 % \wss{The verification and validation plan is an artifact that should also be
 % verified.  Techniques for this include review and mutation testing.}
