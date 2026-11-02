@@ -1,13 +1,11 @@
-\medskip
-
-RealmForge will implement the use of GitHub Actions to support
+\noindent RealmForge will implement the use of GitHub Actions to support
 continuous integration throughout development. Automated testing
 will be used to check changes in the project's code and help
 identify any major issues before changes are merged into the
 main branch.
 
 \medskip
-
+\noindent
 If Godot is used for development, the team will consider
 implementing GdUnit4 for unit testing, along with GdUnit4 Coverage
 to measure how much of the code is covered by automated tests.
@@ -19,7 +17,7 @@ which can be used to maintain overall code quality and identify
 potential issues throughout development.
 
 \medskip
-
+\noindent
 These testing and verification tools will allow for automated
 checks, unit testing, code coverage, and code quality checks.
 Code coverage results can be summarized in reports to help the
@@ -28,7 +26,7 @@ may also be applied to pull requests before they are submitted
 for team review.
 
 \medskip
-
+\noindent
 The testing and verification tools are subject to change as
 development progresses and further aspects of the game engine
 are explored.
