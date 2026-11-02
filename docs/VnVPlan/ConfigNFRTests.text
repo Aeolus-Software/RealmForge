@@ -1,0 +1,37 @@
+\begin{enumerate}
+    \item \nonfunctest{Config-Test-alter-experience}
+    {Nonfunctional Test for Difficulty}
+    {Manual Dynamic}
+    {The configuration is set to the lowest difficulty (Low Health, Low upgrade cost, etc.)}
+    {Change the difficulty before starting a new game}
+    {The game difficulty is set based on the select configurations.}
+    {The expected output is justified based on SNFR-003 in the SRS document.}
+    {\\
+    1. \\
+    2. \\
+    3. \\
+    4. \\
+    5. \\
+    6. \\}
+
+    % \item \nonfunctest{Config-Test}
+\end{enumerate}
+
+
+% item \functest{Config-Test-Health}
+%     {Test Player Health Configuration}
+%     {Manual, Dynamic}
+%     {The base increase for player health is +/- 0}
+%     {Change in the range control of the configuration health option}
+%     {The displayed health change is equal to the increment increase of the range control}
+%     {The expected output is justified based on the SFR-006 in the SRS document}
+%     {\\1. User Enter the configuration menu\\
+%     2. Selects the player health option\\
+%     3. Raise / Lower value via control dial\\
+%     4. User begins game\\
+%     5. User enters sees health on UI screen equal to health changed\\
+%     6. Verify the displayed health is the same setting\\
+%     7. User enters combat\\
+%     8. User is attack by enemy\\
+%     9. Verify the actual health pool is the amount displayed\\
+%     } 
