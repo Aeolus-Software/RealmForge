@@ -1,0 +1,17 @@
+The following system tests will verify RealmForge's overall gameplay and map functions against the functional requirements outlined in the SRS
+documentation. These tests focus on the game map display and navigation options, including travel between different areas within RealmForge. 
+The relevant functional requirements can be found in Section S.2 of the SRS, along with the safety and security requirements related to navigation. 
+
+\begin{enumerate}
+
+\item \functest{MapSFTdisplay}
+{Map Display}
+{Manual}
+{The RealmForge software has been launched on the player's compatible device, and a game session has been started.}
+{The player enters the map during gameplay.}
+{The system displays the game map with different locations and pathways connecting them. The name of the current location is also displayed to the user.}
+{This system test verifies that the game map is displayed correctly during the game session, while also providing the player with information regarding their current location in the game. This allows players to understand their current location and identify the available locations for navigation.}
+{The system tester will launch RealmForge and begin a game session. The tester will verify that the game map displays multiple locations with pathways connecting the different areas. The tester will also verify that the player's current area name is displayed in the top-right corner of the screen.}
+
+\end{enumerate}
+
