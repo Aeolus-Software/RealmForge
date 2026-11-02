@@ -1,0 +1,19 @@
+The system tests below are planned to verify the implemented system as a whole against non-functional requirements related to the central hub component of the system.
+
+\begin{enumerate}
+
+\item \nonfunctest{CentralHubNFRTUpgradeVariety}
+{Sufficient Variety to Upgrades in Central Hub}
+{Manual}
+{The RealmForge software has been launched on the users device and they have started a new run or resumed an existing one.}
+{The user plays through multiple runs of the game, unlocking temporary and permanent upgrades from the Central Hub as they see fit.}
+{The user will have their Central Hub upgraded and will report their opinion on variety of upgrade options given to them.}
+{The system tester shall play through many runs of the game, noting down the number of upgrade options available to them whenever they are give the option to unlock upgrades. They should also be recording how different and impactful each upgrade seems to help measure variety between upgrades.}
+
+\item \nonfunctest{CentralHubNFRTAvailabilityIndicator}
+{Available Vs. Unavailable Upgrade Indicator in Central Hub}
+{Manual}
+{The RealmForge software has been launched on the user's device and the system is initialized to a game state where the user should be able to upgrade the Central Hub.}
+{No input is required for this test}
+{The user will report if they were ever confused whether an upgrade as available for upgrade or not.}
+{The system tester shall launch the RealmForge software and begin a new one or resume an existing one. They will play through these runs and every time an upgrade is available, they should confirm if their first thought whether an upgrade was available or not, recording every instance in which they were wrong.}
