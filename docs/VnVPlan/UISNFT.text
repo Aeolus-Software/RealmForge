@@ -38,7 +38,7 @@ device as a player would, and verify that at least
 \hyperlink{DISTINCT_LOCATION_ICONS}{DISTINCT\_\allowbreak LOCATION\_\allowbreak 
 ICONS} distinct location symbols are displayed in the total game world, 
 following the 
-defintion of distinct described above.}
+definition of distinct described above.}
 
 \item \nonfunctest{UISNFTstatetransitions}
 {Game State Display Transitions}
@@ -53,7 +53,7 @@ input device (entering the configuration menu from the main menu, for example).}
 {The system completes and displays each prompted game scene transition in under 
 \hyperlink{TRANSITION_TIME}{TRANSITION\_\allowbreak TIME} seconds. During each 
 transition, the system fades the display output to black (or another suitable 
-intermediate screen), to communicate that the transition is ocurring.}
+intermediate screen), to communicate that the transition is occurring.}
 {The system tester will launch the RealmForge software, and initialize its 
 state to each generalized state it can enter (as discussed above). The tester 
 will then prompt the system to execute each possible scene/menu transition from 
