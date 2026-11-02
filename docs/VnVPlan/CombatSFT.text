@@ -5,13 +5,13 @@ functional requirements for the `Combat System' (PUT REFERENCE HERE).
 
 \begin{enumerate}
 
-\item \functest{CombatSFT1}
-{Name}
+\item \functest{CombatSFTResults}
+{Display Combat Outcome}
 {Manual}
-{Initial State}
-{Input}
-{Output}
-{Test Case Derivation}
-{How test will be performed}
+{The RealmForge software has been launched on a compatible device, and initialized to a game state where the player's current combat encounter is over.}
+{After a player/enemy action, the system detects either the player's or enemies' HP [GLOSSARY CITATION NEEDED] decreasing to or below 0, corresponding to either a win or a loss (the case where both player and enemy HP are depleted counts as a loss).}
+{The system transitions its internal state from a combat state to a results state. If the player won, the display transitions to a results screen. If the player lost, the display transitions to a game session restart screen.}
+{This system test verifies that the combat system can successfully detect win/lose conditions within a combat encounter and transition game state/display as necessary (results screen, or game session restart screen). This functionality is required for the system to allow transition out of a combat encounter, preventing the player from being softlocked [GLOSSARY CITATION NEEDED] and requiring the system to restart.}
+{The system tester will launch the RealmForge software, and configure it to enter a game state where the player has just won a combat encounter. The tester will then verify that the system successfully transitions the display output to the results screen following the end of a combat encounter. The test will be repeated for a combat loss.}
 
 \end{enumerate}
