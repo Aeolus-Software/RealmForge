@@ -1,21 +1,21 @@
-\begin{enumerate}
-    \item \nonfunctest{Config-Test-alter-experience}
-    {Nonfunctional Test for Difficulty}
-    {Manual Dynamic}
-    {The configuration is set to the lowest difficulty (Low Health, Low upgrade cost, etc.)}
-    {Change the difficulty before starting a new game}
-    {The game difficulty is set based on the select configurations.}
-    {The expected output is justified based on SNFR-003 in the SRS document.}
-    {\\
-    1. \\
-    2. \\
-    3. \\
-    4. \\
-    5. \\
-    6. \\}
+% \begin{enumerate}
+%     \item \nonfunctest{Config-Test-alter-experience}
+%     {Nonfunctional Test for Difficulty}
+%     {Manual Dynamic}
+%     {The configuration is set to the lowest difficulty (Low Health, Low upgrade cost, etc.)}
+%     {Change the difficulty before starting a new game}
+%     {The game difficulty is set based on the select configurations.}
+%     {The expected output is justified based on SNFR-003 in the SRS document.}
+%     {\\
+%     1. \\
+%     2. \\
+%     3. \\
+%     4. \\
+%     5. \\
+%     6. \\}
 
-    % \item \nonfunctest{Config-Test}
-\end{enumerate}
+%     % \item \nonfunctest{Config-Test}
+% % \end{enumerate}
 
 
 % item \functest{Config-Test-Health}

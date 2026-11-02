@@ -1,0 +1,14 @@
+The verification and validation plan is an artifact, it too must be verified.
+The base guidlines in in terms 
+\begin{itemize}
+    \item For testing, each feature must be secluded between eachother such that testing is done specifically for a particarly area of testing
+    \item A hub or in more gaming terms a debug room will be created for the 
+\end{itemize}
+
+
+% \wss{The verification and validation plan is an artifact that should also be
+% verified.  Techniques for this include review and mutation testing.}
+
+% \wss{The review will include reviews by your classmates}
+
+% \wss{Create a checklists?}
