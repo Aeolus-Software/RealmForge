@@ -18,10 +18,13 @@
 \hline
 \endhead
 
-%%%%%%% EXAMPLE
-\traceentry{SFR-001}{ENV-002}
-\traceentry{\ref{UISFTmainmenu}} {SF4-404}
-%%%%%%%%%%%%%%%
+\traceentry{\ref{CombatSFTAppearance}}{SFR-011, SFR-012, SFR-017}
+\traceentry{\ref{CombatSFTUpdate}}{SFR-014, SFR-015, SFR-016}
+\traceentry{\ref{CombatSFTResults}}{SFR-013, SSR-007, SSR-012}
+\traceentry{\ref{CombatSNFTActionSelection}}{SNFR-008, SSR-008}
+\traceentry{\ref{CombatSNFTActionFeedback}}{SNFR-002, SNFR-005}
+\traceentry{\ref{CombatSNFTEnemyVariation}}{SFR-017, SNFR-002, SNFR-005}
+
 
 
 \end{longtable}

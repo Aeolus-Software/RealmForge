@@ -5,13 +5,31 @@ functional requirements for the `Combat System' (PUT REFERENCE HERE).
 
 \begin{enumerate}
 
+\item \functest{CombatSFTAppearance}
+{System Initialization}
+{Manual, Dynamic}
+{The RealmForge software has been launched on a compatible device, and initialized to a game state where the player is selecting a combat encounter.}
+{A valid player input is selected using a valid input device (keyboard and mouse, or controller) to select an encounter.}
+{The system transitions its internal state to a combat encounter.}
+{This system test verifies that the combat system can successfully load and display the relevant information within a combat encounter. This functionality is required for the system to allow proper visual feedback within a combat encounter.}
+{The system tester will launch the RealmForge software, and configure it to enter a game state where a combat encounter is selected. Visual inspection takes place to ensure the combat encounter is properly initialized (player/enemy sprites and health displayed properly), and the displayed values will be checked against the proper values associated with the player/enemies.}
+
+\item \functest{CombatSFTUpdate}
+{System Feedback}
+{Manual, Dynamic}
+{The RealmForge software has been launched on a compatible device, and initialized to a game state where the player is in a combat encounter and and action is about to take place.}
+{A valid player action is selected using a valid input device (keyboard and mouse, or controller), or an enemy proceeds with an action.}
+{The system displays a visual that signifies an action has taken place, and transitions its internal state depending on the result of the action taken. All relevant measured statistics are updated accordingly.}
+{This system test verifies that the combat system can successfully update the display of the relevant information within a combat encounter and update this information as necessary. This functionality is required for the system to allow change to the proper visual feedback within of a combat encounter, allowing an encounter to visually progress.}
+{The system tester will launch the RealmForge software, and configure it to enter a game state where either the player can select an action or an enemy is about to do an action. The tester along with the test suite will then verify that the system successfully transitions the information and corresponding visuals following an action. The test will be repeated as discussed in SNFT-2.1 [HYPERLINK NEEDED] to ensure variability.}
+
 \item \functest{CombatSFTResults}
 {Display Combat Outcome}
 {Manual}
 {The RealmForge software has been launched on a compatible device, and initialized to a game state where the player's current combat encounter is over.}
-{After a player/enemy action, the system detects either the player's or enemies' HP [GLOSSARY CITATION NEEDED] decreasing to or below 0, corresponding to either a win or a loss (the case where both player and enemy HP are depleted counts as a loss).}
-{The system transitions its internal state from a combat state to a results state. If the player won, the display transitions to a results screen. If the player lost, the display transitions to a game session restart screen.}
-{This system test verifies that the combat system can successfully detect win/lose conditions within a combat encounter and transition game state/display as necessary (results screen, or game session restart screen). This functionality is required for the system to allow transition out of a combat encounter, preventing the player from being softlocked [GLOSSARY CITATION NEEDED] and requiring the system to restart.}
+{After a player/enemy action is input, the system detects either the player's or enemies' health decreasing to or below 0, corresponding to either a win or a loss (the case where both player and enemy health are depleted counts as a loss).}
+{The system transitions its internal state from a combat state to a results state. If the player won, the display transitions to a results screen and presents the player rewards, ensuring they are properly awarded. If the player lost, the display transitions to a game session restart screen.}
+{This system test verifies that the combat system can successfully detect win/lose conditions within a combat encounter and transition game state/display as necessary (results screen and rewards, or game session restart screen). This functionality is required to ensure that the player actually keeps their encounter rewards on victory. This functionality is also required for the system to allow transition out of a combat encounter, preventing the player from being softlocked [GLOSSARY CITATION NEEDED] and requiring the system to restart.}
 {The system tester will launch the RealmForge software, and configure it to enter a game state where the player has just won a combat encounter. The tester will then verify that the system successfully transitions the display output to the results screen following the end of a combat encounter. The test will be repeated for a combat loss.}
 
 \end{enumerate}
