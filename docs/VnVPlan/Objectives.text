@@ -6,7 +6,7 @@ behavior of the game so that the requirements and other elements outlined in the
 \\
 \noindent
 The VnV plan also makes sure that the game gets as full testing coverage as possible within the boundaries of the project; 
-this provides a great steppingstone for CI implementation. Specific tools such as GDUnit4 and GDLint can implement the 
+this provides a great steppingstone for \hyperlink{CI}{CI} implementation. Specific tools such as GDUnit4 and GDLint can implement the 
 system tests (appropriate ones) to maintain coding standards, and requirement completion.
 \\
 \\

@@ -77,7 +77,7 @@ ensures that the test is feasible in the context of the project.}
 \testfield{Type}{Static, Manual}
 \testfield{How test will be performed}{The RealmForge software's source code 
 will be reviewed by the RealmForge developers to ensure that any graphical 
-displays or changes follow the WCAG 2.2 accessibility guidelines' guideline 
+displays or changes follow the \hyperlink{WCAG}{WCAG} 2.2 accessibility guidelines' guideline 
 2.3.1 \cite{WCAG}. This guideline mandates that presented content does not 
 display any flashing images more than three times in any one second period, to 
 reduce any risks to individuals with photosensitive epilepsy.
