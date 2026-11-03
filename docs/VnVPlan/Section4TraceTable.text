@@ -18,11 +18,19 @@
 \hline
 \endhead
 
+%%%%%%% EXAMPLE
+\traceentry{SFR-001}{ENV-002}
+\traceentry{\ref{UISFTmainmenu}} {SF4-404}
+%%%%%%%%%%%%%%%
 
 \traceentry{\ref{Config-Test-Health}}{SFR-006}
 \traceentry{\ref{Config-Resource-Game}}{SFR-007}
 \traceentry{\ref{Config-Test-Upgrade-Cost}}{SFR-008}
 \traceentry{\ref{Config-Lock-Test}}{SFR-009}
+\traceentry{\ref{Config-Promp-Test}}{SFR-010, SSR-012}
+\traceentry{\ref{Config-Controller-Test}}{SFR-001, SFR-002,SFR-003,SFR-004,SFR-005}
+\traceentry{\ref{Config-Controller-Performance}}{SFR-007, SSR-011}
+\traceentry{\ref{Config-Descriptive-Config}}{SFR-008, SSR-10}
 \traceentry{\ref{Config-Promp-Test}}{SFR-010}
 \traceentry{\ref{Config-Controller-Test}}{SFR-003, SFR-004, SFR-005}
 \traceentry{\ref{CombatSFTAppearance}}{SFR-011, SFR-012, SFR-017}

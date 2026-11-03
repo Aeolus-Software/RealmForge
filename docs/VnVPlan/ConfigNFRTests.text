@@ -1,22 +1,39 @@
-% \begin{enumerate}
-%     \item \nonfunctest{Config-Test-alter-experience}
-%     {Nonfunctional Test for Difficulty}
-%     {Manual Dynamic}
-%     {The configuration is set to the lowest difficulty (Low Health, Low upgrade cost, etc.)}
-%     {Change the difficulty before starting a new game}
-%     {The game difficulty is set based on the select configurations.}
-%     {The expected output is justified based on SNFR-003 in the SRS document.}
-%     {\\
-%     1. \\
-%     2. \\
-%     3. \\
-%     4. \\
-%     5. \\
-%     6. \\}
+The following nonfunctional system tests are important for connectivity, performance and guidance for controller correctness.  
 
-%     % \item \nonfunctest{Config-Test}
-% % \end{enumerate}
+\begin{enumerate}
+    \item \nonfunctest{Config-Test-alter-experience}
+    {Nonfunctional Test for Difficulty}
+    {Manual}
+    {The configuration is set to the lowest difficulty (Low Health, Low upgrade cost, etc.)}
+    {The difficulty is changed before starting a new game.}
+    {The game difficulty is set based on the selected configurations.}
+    {\\Verify requirements are met \ref{Config-Test-Health} and \ref{Config-Test-Upgrade-Cost}.\\
+    Have the system tester go through the overall gameplay (combat, travel, hub) and tell them to describe the difficulty of the game with a frame of reference. For example, easy, normal hard.}
+\end{enumerate}
 
+\begin{enumerate}
+    \item \nonfunctest{Config-Controller-Performance}
+    {Nonfunctional Test for Controller Performance}
+    {Manual}
+    {The keyboard is the default input option.}
+    {The controller is selected in the configuration.}
+    {The controls are within the \hyperlink{ControllerThreshold}{CONTROLLER\_THRESHOLD}.}
+    {\\If there is no input at all, have the system tester check for connection (whether physical or wireless) until inputs are registered.
+    Have the system tester go through the overall gameplay and describe the delay between inputs. If the controller does not match the threshold, 
+    have the system tester switch to keyboard instead to see if the same feeling is repeated. If there is still a delay, have the software be reset.}
+\end{enumerate}
+
+\begin{enumerate}
+    \item \nonfunctest{Config-Descriptive-Config}
+    {Nonfunctional Test for Descriptive Configurations}
+    {Manual}   
+    {The game at launch shows a ``configuration" option. The configuration screen will show no description, since there is no option selected yet.}
+    {The system tester enters the configuration screen and highlight each option.}
+    {Each configuration displays a short description of its functional such as what is altered or manipulated.}
+    {\\
+    The system tester enters the configuration menu and selects each available configuration option one at a time. For every option selected, the tester verifies that the corresponding description is displayed to the user and accurately explains the purpose and effect of the configuration setting. This process is repeated for all configuration options to ensure that each setting provides the required descriptive information through the user interface.
+    }
+\end{enumerate}
 
 % item \functest{Config-Test-Health}
 %     {Test Player Health Configuration}
@@ -25,13 +42,13 @@
 %     {Change in the range control of the configuration health option}
 %     {The displayed health change is equal to the increment increase of the range control}
 %     {The expected output is justified based on the SFR-006 in the SRS document}
-%     {\\1. User Enter the configuration menu\\
+%     {\\1. system tester Enter the configuration menu\\
 %     2. Selects the player health option\\
 %     3. Raise / Lower value via control dial\\
-%     4. User begins game\\
-%     5. User enters sees health on UI screen equal to health changed\\
+%     4. system tester begins game\\
+%     5. system tester enters sees health on UI screen equal to health changed\\
 %     6. Verify the displayed health is the same setting\\
-%     7. User enters combat\\
-%     8. User is attack by enemy\\
+%     7. system tester enters combat\\
+%     8. system tester is attack by enemy\\
 %     9. Verify the actual health pool is the amount displayed\\
 %     } 
