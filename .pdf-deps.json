@@ -164,8 +164,10 @@
     "docs/VnVPlan/ImplementationVerification.text",
     "docs/VnVPlan/RelevantDocumentation.text",
     "docs/VnVPlan/Section4TraceTable.text",
+    "docs/VnVPlan/SurveyQuestions.text",
     "docs/VnVPlan/UISFT.text",
     "docs/VnVPlan/UISNFT.text",
+    "docs/VnVPlan/UsabilitySNFT.text",
     "docs/VnVPlan/VnVPlan.tex",
     "docs/VnVPlan/VnVSoftwareValidation.text",
     "refs/References.bib"
