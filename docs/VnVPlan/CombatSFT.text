@@ -21,7 +21,7 @@ functional requirements for the `Combat System'.
 {A valid player action is selected using a valid input device (keyboard and mouse, or controller), or an enemy proceeds with an action.}
 {The system displays a visual that signifies an action has taken place, and transitions its internal state depending on the result of the action taken. All relevant measured statistics are updated accordingly.}
 {This system test verifies that the combat system can successfully update the display of the relevant information within a combat encounter and update this information as necessary. This functionality is required for the system to allow change to the proper visual feedback within of a combat encounter, allowing an encounter to visually progress.}
-{The system tester will launch the RealmForge software, and configure it to enter a game state where either the player can select an action or an enemy is about to do an action. The tester along with the test suite will then verify that the system successfully transitions the information and corresponding visuals following an action. The test will be repeated as discussed in SNFT-2.2 to ensure variability.}
+{The system tester will launch the RealmForge software, and configure it to enter a game state where either the player can select an action or an enemy is about to do an action. The tester along with the test suite will then verify that the system successfully transitions the information and corresponding visuals following an action. The test will be repeated as discussed in \ref{CombatSNFTActionFeedback} to ensure variability.}
 
 \item \functest{CombatSFTResults}
 {Display Combat Outcome}
