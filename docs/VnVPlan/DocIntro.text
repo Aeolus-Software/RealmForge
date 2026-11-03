@@ -5,5 +5,7 @@ verification and validation activities (concerning the SRS, design documents,
 the plan itself, and other artifacts), a set of system tests for both software 
 functional and non-functional requirements, and finally a set of unit tests for 
 software functional and non-functional requirements. The section outlining all 
-unit tests (section 5) will be updated following the completion of the 
+unit tests (section 5) is currently incomplete (as it must be written taking 
+the project's design document into account). The section will be updated 
+following the completion of the 
 project's detailed design document.
