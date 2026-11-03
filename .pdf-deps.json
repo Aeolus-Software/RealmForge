@@ -168,6 +168,8 @@
     "docs/VnVPlan/DesignVerify.text",
     "docs/VnVPlan/DocIntro.text",
     "docs/VnVPlan/ImplementationVerification.text",
+    "docs/VnVPlan/MapSFT.text",
+    "docs/VnVPlan/MapSNFT.text",
     "docs/VnVPlan/Objectives.text",
     "docs/VnVPlan/PlanIntro.text",
     "docs/VnVPlan/RelevantDocumentation.text",
