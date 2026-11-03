@@ -44,7 +44,7 @@
 	\testfield{Input}{#5}
 	\testfield{Output}{#6}
 	\testfield{Test Case Derivation}{#7}
-	\testfield{How test will be performed}{#8}
+	\testfield{How the test will be performed}{#8}
 }
 
 % Nonfunctional test:
@@ -147,10 +147,10 @@ in.}
   \bottomrule
 \end{tabular}\\
 
-\wss{symbols, abbreviations, or acronyms --- you can simply reference the SRS
-  \cite{SRS} tables, if appropriate}
+% \wss{symbols, abbreviations, or acronyms --- you can simply reference the SRS
+%   \cite{SRS} tables, if appropriate}
 
-\wss{Remove this section if it isn't needed}
+% \wss{Remove this section if it isn't needed}
 
 \newpage
 
@@ -246,12 +246,15 @@ the contents of the subsections.}
 
 \subsection{Tests for Functional Requirements}
 
-\wss{Subsets of the tests may be in related, so this section is divided into
-  different areas.  If there are no identifiable subsets for the tests, this
-  level of document structure can be removed.}
+% \wss{Subsets of the tests may be in related, so this section is divided into
+%   different areas.  If there are no identifiable subsets for the tests, this
+%   level of document structure can be removed.}
 
-\wss{Include a blurb here to explain why the subsections below
-  cover the requirements.  References to the SRS would be good here.}
+% \wss{Include a blurb here to explain why the subsections below
+%   cover the requirements.  References to the SRS would be good here.}
+
+Theses area of  system tests for configuration, combat, user interface, central hub, and mapping are important because
+they are based off of the components that were described in the SRS\cite{SRS} 
 
 \subsubsection{Configuration Tests for Functional Requirements}
 
@@ -273,6 +276,7 @@ the contents of the subsections.}
 \input{MapSFT.text}
 
 \subsection{Tests for Nonfunctional Requirements}
+The nonfunctional system tests cover the requirements that do not fully match areas of testing or are required in a variety of areas.
 
 % \wss{The nonfunctional requirements for accuracy will likely just reference the
 %   appropriate functional tests from above.  The test cases should mention
@@ -429,7 +433,7 @@ The following symbolic constants are used throughout this document:
 	\centering
 	\caption{Symbolic Constants Used in the Verification and Validation Plan}
 	\label{tab:symbolicparameters}
-	\begin{tabularx}{\textwidth}{| X | c | c |}
+	\begin{tabularx}{\textwidth}{| p{6.1cm} | p{2.1cm} | X|}
 		\hline
 		\textbf{Constant} & \textbf{Value} & \textbf{Unit}\\
 		\hline
@@ -442,6 +446,8 @@ The following symbolic constants are used throughout this document:
 		\hline
 		\leavevmode\hypertarget{TRANSITION_TESTS}{TRANSITION\_TESTS} & 3 & 
 		Unitless/Quantity\\
+		\hline
+    	\leavevmode\hypertarget{ControllerThreshold}{CONTROLLER\_THRESHOLD} & 1 & Seconds\\
 		\hline
 		\leavevmode\hypertarget{ACCEPTABLE_FRAMERATE}{ACCEPTABLE\_FRAMERATE} & 60
 		& FPS\\
