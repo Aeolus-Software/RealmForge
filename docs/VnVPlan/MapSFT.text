@@ -44,7 +44,10 @@ cancel their selection.}
 and the player is currently viewing the game map during a game session.}
 {The player selects an available travel location on the game map
 and confirms their selection.}
-{The system displays the player's character relocating to the selected location on the game map.}
+{The system displays the player's character relocating to the
+selected location on the game map. Once the player reaches the
+selected location, the system transitions to the associated
+game scene or encounter.}
 {This system test verifies that the player's travel selection is
 correctly reflected on the game map. This allows the player to
 understand where they are travelling to within the game map, and ensures navigation is clearly displayed during the game session.}
@@ -52,8 +55,9 @@ understand where they are travelling to within the game map, and ensures navigat
 The tester will navigate to the game map, select an available
 travel destination, and confirm the selection. The tester will
 verify that the player's character moves to the selected
-destination and that the destination initially selected corresponds to the location
-in the game.}
+destination and that the destination initially selected matches the location
+in the game. The tester will also verify that reaching the selected
+location triggers the appropriate game state or scene transition.}
 
 \item \functest{MapSFTinvalid}
 {Invalid Travel Selection}
