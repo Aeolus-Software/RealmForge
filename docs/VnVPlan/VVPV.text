@@ -1,10 +1,11 @@
 The verification and validation plan is an artifact in itself; it too must be verified.\\
 Internal reviews for the verification plan are as follows:  
 \begin{itemize}
-    \item Peer reviews from classmates, other team factions, and teaching assistant feedback
+    \item Peer reviews should be collected from classmates, another capstone group(s), and teaching assistants; these are formatted into GitHub issues. The suggestions and critiques should then be responded to from a project member with another GitHub issue that lays out the actions and changes required; these issues are labeled as ``feedback response".  
     % \item Documentation review from Prof. Welch for project feasiblity and scope overview
-    \item Each team member will   
-    \item Consistent review and coverage of issues (tracked on GitHub) that are related to each section, lecture, and meeting  
+    \item Each member should create GitHub issues for their written sections. The issues should be updated and maintained to accurate feedback and response.  
+    \item Each team member will have an evenly divide number of sections and system tests corresponding to the document to look over such that the VnV plan will be completely reviewed. Each team member should note the section
+    they are reviewing via the corresponding issue created.
     \item Mutation testing that introduces small defects to the requirements, test cases, and traceabilty links in order to 
     determine if the VnV plan verfication can detect actual documentation faults
 \end{itemize}
