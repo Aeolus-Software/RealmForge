@@ -1,6 +1,6 @@
 The system tests listed below are planned to verify the implemented system as a 
 whole against non-functional requirements related to the area of combat component 
-of the system. These requirements can be found in the SRS [CITATION NEEDED], under section S.2's 
+of the system. These requirements can be found in the SRS \cite{SRS}, under section S.2's 
 Non-Functional Requirements and Safety and Security Requirments. 
 
 \begin{enumerate}
@@ -27,6 +27,6 @@ Non-Functional Requirements and Safety and Security Requirments.
 {The RealmForge software has been launched on a compatible device, and initialized to a game state where the player is in a combat encounter.}
 {A combat action that affects an enemy is selected using a valid input device (keyboard and mouse, or controller).}
 {The system completes the player action if valid, displays the proper visual for the action taken, and updates any visual indicators or stat changes (e.g. health). These action visuals are distinct from each other (following required accessibility guidelines).}
-{The system tester will launch the RealmForge software, and initialize its state to a combat encounter. The tester will visually inspect the enemy sprites and visible stats to evaluate visual indication of enemy variability. They will then select an action using a valid input device as a player would, and evaluate if enemies have varying statistics that are hinted at through their visuals (e.g. the one with a shield has higher defense and loses less health from an attack). This is repeated as necessary for the relevant enemies present in the encounter, and repeated for as many encounters as necessary to prove enemy variability.}
+{The system tester will launch the RealmForge software, and initialize its state to a combat encounter. The tester will visually inspect the enemy sprites and visible stats to evaluate visual indication of enemy variability. They will then select an action using a valid input device as a player would, and evaluate if enemies have varying statistics that are hinted at through their visuals (e.g. the one with a shield has higher defense and loses less health from an attack). This is repeated as necessary for the relevant enemies present in the encounter, and repeated to find at least MINIMUM\_VARIABLE\_ENCOUNTERS encounters with varying aspects to prove enemy variability.}
 
 \end{enumerate}

@@ -1,27 +1,27 @@
 The system tests listed below are planned to verify the implemented system as a 
 whole against functional requirements related to the area of combat component 
-of the system. These requirements can be found in the SRS, under section S.2's 
-functional requirements for the `Combat System' (PUT REFERENCE HERE).
+of the system. These requirements can be found in the SRS \cite{SRS}, under section S.2's 
+functional requirements for the `Combat System'.
 
 \begin{enumerate}
 
 \item \functest{CombatSFTAppearance}
 {System Initialization}
-{Manual, Dynamic}
+{Manual}
 {The RealmForge software has been launched on a compatible device, and initialized to a game state where the player is selecting a combat encounter.}
-{A valid player input is selected using a valid input device (keyboard and mouse, or controller) to select an encounter.}
-{The system transitions its internal state to a combat encounter.}
+{A valid input is pressed using a valid input device (keyboard and mouse, or controller) in order to begin an encounter.}
+{The system transitions its internal state to a combat encounter, and displays the encounter to the player.}
 {This system test verifies that the combat system can successfully load and display the relevant information within a combat encounter. This functionality is required for the system to allow proper visual feedback within a combat encounter.}
-{The system tester will launch the RealmForge software, and configure it to enter a game state where a combat encounter is selected. Visual inspection takes place to ensure the combat encounter is properly initialized (player/enemy sprites and health displayed properly), and the displayed values will be checked against the proper values associated with the player/enemies.}
+{The system tester will launch the RealmForge software, and configure it to enter a game state where a combat encounter is selected from the valid locations on the map. Visual inspection takes place to ensure the combat encounter is properly initialized (player/enemy sprites and health displayed properly), and the displayed values will be checked against the proper values associated with the player/enemies.}
 
 \item \functest{CombatSFTUpdate}
 {System Feedback}
-{Manual, Dynamic}
+{Manual}
 {The RealmForge software has been launched on a compatible device, and initialized to a game state where the player is in a combat encounter and and action is about to take place.}
 {A valid player action is selected using a valid input device (keyboard and mouse, or controller), or an enemy proceeds with an action.}
 {The system displays a visual that signifies an action has taken place, and transitions its internal state depending on the result of the action taken. All relevant measured statistics are updated accordingly.}
 {This system test verifies that the combat system can successfully update the display of the relevant information within a combat encounter and update this information as necessary. This functionality is required for the system to allow change to the proper visual feedback within of a combat encounter, allowing an encounter to visually progress.}
-{The system tester will launch the RealmForge software, and configure it to enter a game state where either the player can select an action or an enemy is about to do an action. The tester along with the test suite will then verify that the system successfully transitions the information and corresponding visuals following an action. The test will be repeated as discussed in SNFT-2.1 [HYPERLINK NEEDED] to ensure variability.}
+{The system tester will launch the RealmForge software, and configure it to enter a game state where either the player can select an action or an enemy is about to do an action. The tester along with the test suite will then verify that the system successfully transitions the information and corresponding visuals following an action. The test will be repeated as discussed in SNFT-2.2 to ensure variability.}
 
 \item \functest{CombatSFTResults}
 {Display Combat Outcome}
