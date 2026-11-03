@@ -13,6 +13,13 @@ project requirements that have been outlined in the SRS documentation.
 
 \medskip
 \noindent
+Alongside team members, the project supervisor, Dr. Welch, and teaching 
+assistant, Rashid Bhuiyan, will also be involved throughout the project 
+to provide continuous feedback on the overall project scope, deliverables, 
+and the verification and validation process for RealmForge.
+
+\medskip
+\noindent
 The following table outlines each member's primary responsibilities
 for the verification and validation process:
 
@@ -49,6 +56,17 @@ Humna Saeed &
 VnV team documentation, automated testing and verification tools,
 and functional and nonfunctional system tests for overall
 gameplay and map functions. \\
+\hline
+
+Dr. Welch (Project Supervisor) &
+Provide feedback on the verification and validation process
+and review the overall feasibility of the project plan. \\
+\hline
+
+Rashid Bhuiyan (Teaching Assistant) &
+Provide feedback through regular TA meetings to discuss project
+deliverables, review documentation, and assess the overall
+completeness of the VnV Plan. \\
 \hline
 
 \end{tabularx}
