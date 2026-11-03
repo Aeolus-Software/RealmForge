@@ -24,14 +24,12 @@
 \begin{enumerate}
     \item \nonfunctest{Config-Descriptive-Config}
     {Nonfunctional Test for Descriptive Configurations}
-    {Manual, Dynamic}
-    {The game at launch shows a "configuration" option. The configuration screen will show no description, since there is no option selected yet.}
+    {Manual, Dynamic}   
+    {The game at launch shows a ``configuration" option. The configuration screen will show no description, since there is no option selected yet.}
     {The system tester enters the configuration screen and highlight each option.}
     {Each configuration displays a short description of its functional such as what is altered or manipulated.}
     {\\
-    1. System tester enters the configuration menu\\
-    2. System tester selects each configuration option\\
-    3. Verify that description shows up for each configuration\\
+    The system tester enters the configuration menu and selects each available configuration option one at a time. For every option selected, the tester verifies that the corresponding description is displayed to the user and accurately explains the purpose and effect of the configuration setting. This process is repeated for all configuration options to ensure that each setting provides the required descriptive information through the user interface.
     }
 \end{enumerate}
 
