@@ -17,3 +17,5 @@ The system tests below are planned to verify the implemented system as a whole a
 {No input is required for this test}
 {The user will report if they were ever confused whether an upgrade as available for upgrade or not.}
 {The system tester shall launch the RealmForge software and begin a new one or resume an existing one. They will play through these runs and every time an upgrade is available, they should confirm if their first thought whether an upgrade was available or not, recording every instance in which they were wrong.}
+
+\end{enumerate}
