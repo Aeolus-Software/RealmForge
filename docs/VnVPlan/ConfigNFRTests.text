@@ -8,6 +8,7 @@ The following nonfunctional system tests are important for connectivity, perform
     {The difficulty is changed before starting a new game.}
     {The game difficulty is set based on the selected configurations.}
     {\\Verify requirements are met \ref{Config-Test-Health} and \ref{Config-Test-Upgrade-Cost}.\\
+    If there is no input at all, have the system tester check for connection (whether physical or wireless) until inputs are registered.
     Have the system tester go through the overall gameplay (combat, travel, hub) and tell them to describe the difficulty of the game with a frame of reference. For example, easy, normal hard.}
 \end{enumerate}
 

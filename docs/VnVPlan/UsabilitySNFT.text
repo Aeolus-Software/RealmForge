@@ -9,8 +9,8 @@ system tests and covered requirements are provided in the traceability table in
 section 4.3 of this document.
 
 \begin{enumerate}
-
-\item \nonfunctest{UISNFTmainplaytest}
+\label{usability-section}
+\item \nonfunctest{UISNFTmainplaytest} 
 {Primary System Playtests}
 {Dynamic, Manual}
 {A number of playtesters (game usability test participants) greater than or 
