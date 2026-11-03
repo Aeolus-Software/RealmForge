@@ -25,6 +25,7 @@
 \traceentry{\ref{UISNFTstatetransitions}}{SNFR-009}{}
 \traceentry{\ref{UISNFTflashinglights}}{SSR-006}{}
 \traceentry{\ref{UISNFTcolours}}{SSR-009}{}
+\traceentry{\ref{UISNFTmainplaytest}}{SFR-006, SFR-007, SFR-008, SNFR-003}
 \traceentry{\ref{CentralHubFRTPermanentProgress}}{SFR-025}{}
 \traceentry{\ref{CentralHubFRTResourceGeneration}}{SFR-026}{}
 \traceentry{\ref{CentralHubFRTTempUpgradePurchase}}{SFR-026}{}
