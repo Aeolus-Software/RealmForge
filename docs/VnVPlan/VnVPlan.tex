@@ -13,6 +13,8 @@
     urlcolor=blue
 }
 % \usepackage[numbers]{natbib}
+\usepackage{float}
+\usepackage{tabularx}
 
 \input{../Comments.text}
 \input{../Common.text}
@@ -207,10 +209,11 @@ how they relate to your VnV efforts.}
   come.}
 
 \subsection{Verification and Validation Team}
+\input{Section3Teams.text}
 
-\wss{Your teammates.  Maybe your supervisor.
-  You should do more than list names.  You should say what each person's role is
-  for the project's verification.  A table is a good way to summarize this information.}
+% \wss{Your teammates.  Maybe your supervisor.
+%   You should do more than list names.  You should say what each person's role is
+%   for the project's verification.  A table is a good way to summarize this information.}
 
 \subsection{SRS Verification}
 
@@ -251,21 +254,22 @@ verified.  Techniques for this include review and mutation testing.}
   testing plan.}}
 
 \subsection{Automated Testing and Verification Tools}
+\input{Section6Tools.text}
 
-\wss{What tools are you using for automated testing.  Likely a unit testing
-  framework and maybe a profiling tool, like ValGrind.  Other possible tools
-  include a static analyzer, make, continuous integration tools, test coverage
-  tools, etc.  Explain your plans for summarizing code coverage metrics.
-  Linters are another important class of tools.  For the programming language
-  you select, you should look at the available linters.  There may also be tools
-  that verify that coding standards have been respected, like flake9 for
-  Python.}
+% \wss{What tools are you using for automated testing.  Likely a unit testing
+%   framework and maybe a profiling tool, like ValGrind.  Other possible tools
+%   include a static analyzer, make, continuous integration tools, test coverage
+%   tools, etc.  Explain your plans for summarizing code coverage metrics.
+%   Linters are another important class of tools.  For the programming language
+%   you select, you should look at the available linters.  There may also be tools
+%   that verify that coding standards have been respected, like flake9 for
+%   Python.}
 
-\wss{If you have already done this in the development plan, you can point to
-that document.}
+% \wss{If you have already done this in the development plan, you can point to
+% that document.}
 
-\wss{The details of this section will likely evolve as you get closer to the
-  implementation.}
+% \wss{The details of this section will likely evolve as you get closer to the
+%   implementation.}
 
 \subsection{Software Validation}
 

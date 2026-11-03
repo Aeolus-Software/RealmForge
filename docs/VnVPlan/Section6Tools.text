@@ -1,0 +1,34 @@
+RealmForge will implement the use of GitHub Actions to support
+continuous integration throughout development. Automated testing
+will be used to check changes in the project's code and help
+identify any major issues before changes are merged into the
+main branch.
+
+\medskip
+\noindent
+If Godot is used for development, the team will consider
+implementing GdUnit4 for unit testing, along with GdUnit4 Coverage
+to assess how much of the code is covered by automated tests.
+This will allow for testing of individual scripts and game logic
+throughout the development process. The results can also help
+identify areas that may require refactoring, fixes, or additional
+testing. Another GDScript tool the team is considering is GdLint,
+which can be used to maintain overall code quality and identify
+potential issues throughout development.
+
+\medskip
+\noindent
+These testing and verification tools will allow for automated
+checks, unit testing, code coverage, and code quality checks.
+Code coverage results can be summarized in reports to help the
+team identify areas that require further testing. Automated testing
+may also be applied to pull requests before they are submitted
+for team review.
+
+\medskip
+\noindent
+The testing and verification tools are subject to change as
+development progresses and further aspects of the game engine
+are explored. The team may also consider using additional external 
+Godot modules and libraries as needed based on the project requirements. 
+
