@@ -29,8 +29,8 @@ for differentiating between locked and unlocked locations.}
 device, and the player has started a game session.}
 {The player navigates the game map and travels
 between available locations during gameplay.}
-{The system supports a frame rate of 60 frames per
-second (FPS) while displaying the game map and processing
+{The system supports a frame rate of \hyperlink{ACCEPTABLE_FRAMERATE}{ACCEPTABLE\_\allowbreak FRAMERATE}
+while displaying the game map and processing
 the player's navigation actions.}
 {The system tester will launch RealmForge on a device
 that meets the requirement ENV-001 of the SRS.
@@ -38,6 +38,6 @@ The tester will enable an FPS counter and begin a game
 session. The tester will navigate through the game map
 and travel between multiple available locations while
 monitoring the frame rate. The tester will verify that
-the system supports a stable 60 FPS during map navigation.}
+the system supports a stable \hyperlink{ACCEPTABLE_FRAMERATE}{ACCEPTABLE\_\allowbreak FRAMERATE} while displaying map the game map and processing player actions.}
 
 \end{enumerate}
