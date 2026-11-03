@@ -13,6 +13,8 @@
     urlcolor=blue
 }
 % \usepackage[numbers]{natbib}
+\usepackage{float}
+\usepackage{tabularx}
 
 \input{../Comments.text}
 \input{../Common.text}
@@ -184,14 +186,11 @@ has already been verified by its implementation team.}
 
 \subsection{Custom Documents}
 
-\wss{Summarize the CDs (Custom Documents) that were tackled by this project.  CDs 
-can include usability testing, code walkthroughs, user documentation, formal
-proof, GenderMag personas, Design Thinking, etc.  CDs should have already
-been approved by the course instructor as included in your problem statement.
-You can use a pull request to update your CDs (in TeamComposition.csv or
-Repos.csv) if your plan changes as a result of the VnV planning exercise.}
+\input{CustomDocuments.text}
 
 \subsection{Relevant Documentation}
+
+\input{RelevantDocumentation.text}
 
 \wss{Reference relevant documentation.  This will definitely include your SRS
   and your other project documents (design documents, like MG, MIS, etc).  You
@@ -210,10 +209,11 @@ how they relate to your VnV efforts.}
   come.}
 
 \subsection{Verification and Validation Team}
+\input{Section3Teams.text}
 
-\wss{Your teammates.  Maybe your supervisor.
-  You should do more than list names.  You should say what each person's role is
-  for the project's verification.  A table is a good way to summarize this information.}
+% \wss{Your teammates.  Maybe your supervisor.
+%   You should do more than list names.  You should say what each person's role is
+%   for the project's verification.  A table is a good way to summarize this information.}
 
 \subsection{SRS Verification}
 
@@ -248,53 +248,32 @@ verified.  Techniques for this include review and mutation testing.}
 
 \subsection{Implementation Verification}
 
-\wss{You should at least point to the tests listed in this document and the unit
-  testing plan.}
+\input{ImplementationVerification.text}
 
-\wss{In this section you would also give any details of any plans for static
-  verification of the implementation.  Potential techniques include code
-  walkthroughs, code inspection, static analyzers, etc.}
-
-\wss{The final class presentation in CAS 741 could be used as a code
-walkthrough.  There is also a possibility of using the final presentation (in
-CAS741) for a partial usability survey.}
+\wss{\textbf{You should at least point to the tests listed in this document and the unit
+  testing plan.}}
 
 \subsection{Automated Testing and Verification Tools}
+\input{Section6Tools.text}
 
-\wss{What tools are you using for automated testing.  Likely a unit testing
-  framework and maybe a profiling tool, like ValGrind.  Other possible tools
-  include a static analyzer, make, continuous integration tools, test coverage
-  tools, etc.  Explain your plans for summarizing code coverage metrics.
-  Linters are another important class of tools.  For the programming language
-  you select, you should look at the available linters.  There may also be tools
-  that verify that coding standards have been respected, like flake9 for
-  Python.}
+% \wss{What tools are you using for automated testing.  Likely a unit testing
+%   framework and maybe a profiling tool, like ValGrind.  Other possible tools
+%   include a static analyzer, make, continuous integration tools, test coverage
+%   tools, etc.  Explain your plans for summarizing code coverage metrics.
+%   Linters are another important class of tools.  For the programming language
+%   you select, you should look at the available linters.  There may also be tools
+%   that verify that coding standards have been respected, like flake9 for
+%   Python.}
 
-\wss{If you have already done this in the development plan, you can point to
-that document.}
+% \wss{If you have already done this in the development plan, you can point to
+% that document.}
 
-\wss{The details of this section will likely evolve as you get closer to the
-  implementation.}
+% \wss{The details of this section will likely evolve as you get closer to the
+%   implementation.}
 
 \subsection{Software Validation}
 
-\wss{If there is any external data that can be used for validation, you should
-  point to it here.  If there are no plans for validation, you should state that
-  here.}
-
-\wss{You might want to use review sessions with the stakeholder to check that
-the requirements document captures the right requirements.  Maybe task based
-inspection?}
-
-\wss{For those capstone teams with an external supervisor, the Rev 0 demo should 
-be used as an opportunity to validate the requirements.  You should plan on 
-demonstrating your project to your supervisor shortly after the scheduled Rev 0 demo.  
-The feedback from your supervisor will be very useful for improving your project.}
-
-\wss{For teams without an external supervisor, user testing can serve the same purpose 
-as a Rev 0 demo for the supervisor.}
-
-\wss{This section might reference back to the SRS verification section.}
+\input{VnvSoftwareValidation.text}
 
 \section{System Tests}
 
@@ -352,6 +331,9 @@ Test Case Derivation: \wss{Justify the expected value given in the Output field}
 How test will be performed: 
 
 \end{enumerate}
+
+\subsubsection{Central Hub Tests for Functional Requirements}
+\input{CentralHubFRT.text}
 
 \subsubsection{User Interface Tests for Functional Requirements}
 
@@ -416,6 +398,10 @@ How test will be performed:
 
 \end{enumerate}
 
+\subsubsection{Central Hub Tests for Nonfunctional Requirements}
+
+\input{CentralHubNFRT.text}
+
 \subsubsection{User Interface Tests for Non-Functional Requirements}
 
 \input{UISNFT.text}
@@ -423,6 +409,9 @@ How test will be performed:
 \subsubsection{Overall Gameplay and Map Functions}
 
 \input{MapSNFT.text}
+\subsubsection{Software Usability Tests}
+
+\input{UsabilitySNFT.text}
 
 \subsection{Traceability Between Test Cases and Requirements}
 
@@ -492,6 +481,7 @@ TBD
 % \bibliographystyle{plainnat}
 \bibliography{../../refs/References}
 
+\newpage
 \section{Appendix}
 
 This is where you can place additional information.
@@ -522,12 +512,16 @@ The following symbolic constants are used throughout this document:
 		& FPS\\
 \hline
 
+		\leavevmode\hypertarget{MIN_TESTERS}{MIN\_TESTERS} & 5 & 
+		Unitless/Quantity\\
+		\hline
 	\end{tabularx}
 \end{table}
 
-\subsection{Usability Survey Questions?}
+\newpage
+\subsection{Usability Survey Questions} \label{SurveyQ}
 
-\wss{This is a section that would be appropriate for some projects.}
+\input{SurveyQuestions.text}
 
 \newpage{}
 

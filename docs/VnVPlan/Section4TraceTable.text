@@ -31,6 +31,15 @@
 \traceentry{\ref{MapSFTinvalid}}{SSR-008}{}
 \traceentry{\ref{MapSNFTclarity}}{SSR-008}{}
 \traceentry{\ref{MapSNFTperformance}}{ENV-001}{}
+\traceentry{\ref{UISNFTmainplaytest}}{SFR-006, SFR-007, SFR-008, SNFR-003}
+\traceentry{\ref{CentralHubFRTPermanentProgress}}{SFR-025}{}
+\traceentry{\ref{CentralHubFRTResourceGeneration}}{SFR-026}{}
+\traceentry{\ref{CentralHubFRTTempUpgradePurchase}}{SFR-026}{}
+\traceentry{\ref{CentralHubFRTUpgradeSelection}}{SFR-027, SFR-028, SFR-029}{}
+\traceentry{\ref{CentralHubFRTGameStateVerification}}{SSR-012}{}
+\traceentry{\ref{CentralHubNFRTAvailabilityIndicator}}{SSR-008}{}
+\traceentry{\ref{CentralHubFRTInsufficientFunds}}{SFR-030}{}
+\traceentry{\ref{CentralHubNFRTUpgradeVariety}}{SNFR-001}{}
 
 \end{longtable}
 
