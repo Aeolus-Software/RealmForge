@@ -158,12 +158,18 @@
   "docs/VnVPlan/VnVPlan.tex": [
     "docs/Comments.text",
     "docs/Common.text",
+    "docs/VnVPlan/CentralHubFRT.text",
+    "docs/VnVPlan/CentralHubNFRT.text",
     "docs/VnVPlan/CustomDocuments.text",
     "docs/VnVPlan/ImplementationVerification.text",
     "docs/VnVPlan/RelevantDocumentation.text",
+    "docs/VnVPlan/Section3Teams.text",
     "docs/VnVPlan/Section4TraceTable.text",
+    "docs/VnVPlan/Section6Tools.text",
+    "docs/VnVPlan/SurveyQuestions.text",
     "docs/VnVPlan/UISFT.text",
     "docs/VnVPlan/UISNFT.text",
+    "docs/VnVPlan/UsabilitySNFT.text",
     "docs/VnVPlan/VnVPlan.tex",
     "docs/VnVPlan/VnVSoftwareValidation.text",
     "refs/References.bib"

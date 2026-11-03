@@ -13,6 +13,8 @@
     urlcolor=blue
 }
 % \usepackage[numbers]{natbib}
+\usepackage{float}
+\usepackage{tabularx}
 
 \input{../Comments.text}
 \input{../Common.text}
@@ -207,10 +209,11 @@ how they relate to your VnV efforts.}
   come.}
 
 \subsection{Verification and Validation Team}
+\input{Section3Teams.text}
 
-\wss{Your teammates.  Maybe your supervisor.
-  You should do more than list names.  You should say what each person's role is
-  for the project's verification.  A table is a good way to summarize this information.}
+% \wss{Your teammates.  Maybe your supervisor.
+%   You should do more than list names.  You should say what each person's role is
+%   for the project's verification.  A table is a good way to summarize this information.}
 
 \subsection{SRS Verification}
 
@@ -251,21 +254,22 @@ verified.  Techniques for this include review and mutation testing.}
   testing plan.}}
 
 \subsection{Automated Testing and Verification Tools}
+\input{Section6Tools.text}
 
-\wss{What tools are you using for automated testing.  Likely a unit testing
-  framework and maybe a profiling tool, like ValGrind.  Other possible tools
-  include a static analyzer, make, continuous integration tools, test coverage
-  tools, etc.  Explain your plans for summarizing code coverage metrics.
-  Linters are another important class of tools.  For the programming language
-  you select, you should look at the available linters.  There may also be tools
-  that verify that coding standards have been respected, like flake9 for
-  Python.}
+% \wss{What tools are you using for automated testing.  Likely a unit testing
+%   framework and maybe a profiling tool, like ValGrind.  Other possible tools
+%   include a static analyzer, make, continuous integration tools, test coverage
+%   tools, etc.  Explain your plans for summarizing code coverage metrics.
+%   Linters are another important class of tools.  For the programming language
+%   you select, you should look at the available linters.  There may also be tools
+%   that verify that coding standards have been respected, like flake9 for
+%   Python.}
 
-\wss{If you have already done this in the development plan, you can point to
-that document.}
+% \wss{If you have already done this in the development plan, you can point to
+% that document.}
 
-\wss{The details of this section will likely evolve as you get closer to the
-  implementation.}
+% \wss{The details of this section will likely evolve as you get closer to the
+%   implementation.}
 
 \subsection{Software Validation}
 
@@ -288,6 +292,9 @@ the contents of the subsections.}
 \subsubsection{Configuration Tests for Functional Requirements}
 
 \input{ConfigFRTests.text}
+
+\subsubsection{Central Hub Tests for Functional Requirements}
+\input{CentralHubFRT.text}
 
 \subsubsection{User Interface Tests for Functional Requirements}
 
@@ -350,9 +357,17 @@ How test will be performed:
 
 \end{enumerate}
 
-\subsubsection{User Interface Tests for Nonfunctional Requirements}
+\subsubsection{Central Hub Tests for Nonfunctional Requirements}
+
+\input{CentralHubNFRT.text}
+
+\subsubsection{User Interface Tests for Non-Functional Requirements}
 
 \input{UISNFT.text}
+
+\subsubsection{Software Usability Tests}
+
+\input{UsabilitySNFT.text}
 
 \subsection{Traceability Between Test Cases and Requirements}
 
@@ -422,6 +437,7 @@ TBD
 % \bibliographystyle{plainnat}
 \bibliography{../../refs/References}
 
+\newpage
 \section{Appendix}
 
 This is where you can place additional information.
@@ -448,13 +464,17 @@ The following symbolic constants are used throughout this document:
 		\leavevmode\hypertarget{TRANSITION_TESTS}{TRANSITION\_TESTS} & 3 & 
 		Unitless/Quantity\\
 		\hline
-    \hypertarget{ControllerThreshold}{CONTROLLER\_THRESHOLD} & The response time for inputs being $\leq 1$ & s\\
+    	\hypertarget{ControllerThreshold}{CONTROLLER\_THRESHOLD} & 1 & s\\
+		\leavevmode\hypertarget{MIN_TESTERS}{MIN\_TESTERS} & 5 & 
+		Unitless/Quantity\\
+		\hline
 	\end{tabularx}
 \end{table}
 
-\subsection{Usability Survey Questions?}
+\newpage
+\subsection{Usability Survey Questions} \label{SurveyQ}
 
-\wss{This is a section that would be appropriate for some projects.}
+\input{SurveyQuestions.text}
 
 \newpage{}
 
