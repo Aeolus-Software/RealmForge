@@ -13,8 +13,9 @@ section 4.3 of this document.
 \item \nonfunctest{UISNFTmainplaytest}
 {Primary System Playtests}
 {Dynamic, Manual}
-{A minimum of \hyperlink{MIN_TESTERS}{MIN\_\allowbreak TESTERS} playtesters 
-(game usability test participants) owning compatible devices have been 
+{A number of playtesters (game usability test participants) greater than or 
+equal to \hyperlink{MIN_TESTERS}{MIN\_\allowbreak TESTERS} owning compatible 
+devices have been 
 contacted and selected to participate in testing. The RealmForge software has 
 been installed and compiled on each participants' device.}
 {Each participant will launch the RealmForge software on their device, and play 
