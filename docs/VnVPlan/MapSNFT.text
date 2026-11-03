@@ -1,0 +1,43 @@
+The following tests are to test the implementation of the map and
+navigation features against the non-functional requirements outlined
+in the SRS \cite{SRS}. These tests specifically address map navigation
+comprehensibility and overall game performance.
+
+\begin{enumerate}
+
+\item \nonfunctest{MapSNFTclarity}
+{Map Navigation Comprehensibility}
+{Dynamic, Manual}
+{The RealmForge software has been launched on a compatible device,
+and the player is viewing the game map during a game session.
+The map display includes both available and locked travel locations.}
+{The player views the game map and attempts to identify which
+locations are available for travel and which are locked.}
+{The player can differentiate between available and
+locked locations based on the details displayed
+on the game map.}
+{The system tester will launch RealmForge and begin a game session.
+The tester will navigate to the game map and check the available
+and unavailable travel locations. The tester will verify that
+the game provides a clear indication on the map display that allows
+for differentiating between locked and unlocked locations.}
+
+\item \nonfunctest{MapSNFTperformance}
+{Game Map Performance}
+{Dynamic, Manual}
+{The RealmForge software has been launched on a compatible
+device, and the player has started a game session.}
+{The player navigates the game map and travels
+between available locations during gameplay.}
+{The system supports a frame rate of \hyperlink{ACCEPTABLE_FRAMERATE}{ACCEPTABLE\_\allowbreak FRAMERATE}
+while displaying the game map and processing
+the player's navigation actions.}
+{The system tester will launch RealmForge on a device
+that meets the requirement ENV-001 of the SRS.
+The tester will enable an FPS counter and begin a game
+session. The tester will navigate through the game map
+and travel between multiple available locations while
+monitoring the frame rate. The tester will verify that
+the system supports a stable \hyperlink{ACCEPTABLE_FRAMERATE}{ACCEPTABLE\_\allowbreak FRAMERATE} while displaying map the game map and processing player actions.}
+
+\end{enumerate}

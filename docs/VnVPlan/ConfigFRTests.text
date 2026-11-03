@@ -1,6 +1,6 @@
 The area of testing below will focus on the configurations aspect of RealmForge.
 The configurations are important because they control the overall dynamic experience
-of the game. Ensuring they work is a key to properly allow system testers to experiment, test, and provide
+of the game. Ensuring these tests work is a key component to allow users to experiment, test, and provide
 feed for usability.
 
 \begin{enumerate}

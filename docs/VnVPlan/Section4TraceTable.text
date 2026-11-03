@@ -22,6 +22,7 @@
 \traceentry{SFR-001}{ENV-002}
 \traceentry{\ref{UISFTmainmenu}} {SF4-404}
 %%%%%%%%%%%%%%%
+
 \traceentry{\ref{Config-Test-Health}}{SFR-006}
 \traceentry{\ref{Config-Resource-Game}}{SFR-007}
 \traceentry{\ref{Config-Test-Upgrade-Cost}}{SFR-008}
@@ -30,6 +31,14 @@
 \traceentry{\ref{Config-Controller-Test}}{SFR-001, SFR-002,SFR-003,SFR-004,SFR-005}
 \traceentry{\ref{Config-Controller-Performance}}{SFR-007, SSR-011}
 \traceentry{\ref{Config-Descriptive-Config}}{SFR-008, SSR-10}
+\traceentry{\ref{Config-Promp-Test}}{SFR-010}
+\traceentry{\ref{Config-Controller-Test}}{SFR-003, SFR-004, SFR-005}
+\traceentry{\ref{CombatSFTAppearance}}{SFR-011, SFR-012, SFR-017}
+\traceentry{\ref{CombatSFTUpdate}}{SFR-014, SFR-015, SFR-016}
+\traceentry{\ref{CombatSFTResults}}{SFR-013, SSR-007, SSR-012}
+\traceentry{\ref{CombatSNFTActionSelection}}{SNFR-008, SSR-008}
+\traceentry{\ref{CombatSNFTActionFeedback}}{SNFR-002, SNFR-005}
+\traceentry{\ref{CombatSNFTEnemyVariation}}{SFR-017, SNFR-002, SNFR-005}
 \traceentry{\ref{UISFTmainmenu}}{SFR-018}{}
 \traceentry{\ref{UISFTrestart}}{SFR-019}{}
 \traceentry{\ref{UISFTflashinglights}}{SSR-006}{}
@@ -37,6 +46,12 @@
 \traceentry{\ref{UISNFTstatetransitions}}{SNFR-009}{}
 \traceentry{\ref{UISNFTflashinglights}}{SSR-006}{}
 \traceentry{\ref{UISNFTcolours}}{SSR-009}{}
+\traceentry{\ref{MapSFTdisplay}}{SFR-020, SFR-024}{}
+\traceentry{\ref{MapSFTselection}}{SFR-021, SFR-022}{}
+\traceentry{\ref{MapSFTtravel}}{SFR-023}{}
+\traceentry{\ref{MapSFTinvalid}}{SSR-008}{}
+\traceentry{\ref{MapSNFTclarity}}{SSR-008}{}
+\traceentry{\ref{MapSNFTperformance}}{ENV-001}{}
 \traceentry{\ref{UISNFTmainplaytest}}{SFR-006, SFR-007, SFR-008, SNFR-003}
 \traceentry{\ref{CentralHubFRTPermanentProgress}}{SFR-025}{}
 \traceentry{\ref{CentralHubFRTResourceGeneration}}{SFR-026}{}
