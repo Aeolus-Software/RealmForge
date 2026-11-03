@@ -16,7 +16,7 @@ Code reviews, requirement reviews and document reviews are done by members withi
 Usability testing will be done so that testing and feedback provided by the major stakeholder that are not in the capstone social group. 
 Usability testing will help give direction on the requirements in order to create more or modify existing ones based on the results. 
 All in all, this solidifies and strengthens the documentation and requirements which in turn improves the software product.
-Overall, the verification and validation plan contributes to the security in making sure the functional of the software is maintained and correctly resolved. The VnV plan gives a certain confidence level for the overall quality of  the final product.
+Overall, the verification and validation plan contributes to the security in making sure the functional of the software is maintained and correctly resolved. The VnV plan gives a certain confidence level for quality and correctness of the final product.
 
 % \begin{itemize}
 %     \item Build confidence

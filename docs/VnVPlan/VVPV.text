@@ -2,8 +2,8 @@ The verification and validation plan is an artifact in itself; it too must be ve
 Internal reviews for the verification plan are as follows:  
 \begin{itemize}
     \item Peer reviews from classmates, other team factions, and teaching assistant feedback
-    \item Documentation review from Prof. Welch for project feasiblity and scope overview
-    \item Group review for discussion of the overall quality of the VnV plan
+    % \item Documentation review from Prof. Welch for project feasiblity and scope overview
+    \item Each team member will   
     \item Consistent review and coverage of issues (tracked on GitHub) that are related to each section, lecture, and meeting  
     \item Mutation testing that introduces small defects to the requirements, test cases, and traceabilty links in order to 
     determine if the VnV plan verfication can detect actual documentation faults
