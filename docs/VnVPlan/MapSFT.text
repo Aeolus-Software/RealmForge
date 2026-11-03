@@ -1,6 +1,5 @@
-The following system tests will verify RealmForge's overall gameplay and map functions against the functional requirements outlined in the SRS
-documentation. These tests focus on the game map display and navigation options, including travel between different areas within RealmForge. 
-The relevant functional requirements can be found in Section S.2 of the SRS, along with the safety and security requirements related to navigation. 
+The following system tests will verify RealmForge's map and navigation features against the functional requirements outlined in the SRS. These tests focus on the game map display, available navigation options, and travel between different locations during gameplay. The relevant functional requirements can be found in Section S.2 of the SRS.
+
 
 \begin{enumerate}
 
@@ -21,7 +20,7 @@ device, and the player is currently viewing the game map
 during a game session.}
 {The player selects one of the available travel locations
 displayed on the game map.}
-{The system displays the available options for navigation and allows
+{The system displays the available options for travel and allows
 the player to select a location. Once a location has
 been selected, the system displays a confirmation prompt
 with options yes or no before proceeding with navigation.}
@@ -29,7 +28,7 @@ with options yes or no before proceeding with navigation.}
 the appropriate options for travel and can select a location during gameplay.
 The confirmation prompt allows the player to review their
 selection before travelling to a new location,
-preventing unintended movements.}
+preventing unintentional movements.}
 {The system tester will launch RealmForge and begin a game
 session. The tester will navigate to the game map and verify
 that at least one travel location is available for selection.
@@ -48,12 +47,12 @@ and confirms their selection.}
 {The system displays the player's character relocating to the selected location on the game map.}
 {This system test verifies that the player's travel selection is
 correctly reflected on the game map. This allows the player to
-understand where they are travelling to within the game map, and ensures that navigation is clearly displayed during the game session.}
+understand where they are travelling to within the game map, and ensures navigation is clearly displayed during the game session.}
 {The system tester will launch RealmForge and begin a game session.
 The tester will navigate to the game map, select an available
 travel destination, and confirm the selection. The tester will
 verify that the player's character moves to the selected
-destination and that the destination initially selected matches the location
+destination and that the destination initially selected corresponds to the location
 in the game.}
 
 \item \functest{MapSFTinvalid}
@@ -82,4 +81,3 @@ a notification is provided to the player that the location is unavailable and ca
 continue with selecting other travel locations.}
 
 \end{enumerate}
-
