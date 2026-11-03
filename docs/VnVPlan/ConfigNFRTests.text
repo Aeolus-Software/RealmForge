@@ -1,18 +1,20 @@
+The following nonfunctional system tests are important for connectivity, performance and guidance for controller correctness.  
+
 \begin{enumerate}
     \item \nonfunctest{Config-Test-alter-experience}
     {Nonfunctional Test for Difficulty}
-    {Non-Dynamic}
+    {Manual}
     {The configuration is set to the lowest difficulty (Low Health, Low upgrade cost, etc.)}
     {The difficulty is changed before starting a new game.}
     {The game difficulty is set based on the selected configurations.}
     {\\Verify requirements are met \ref{Config-Test-Health} and \ref{Config-Test-Upgrade-Cost}.\\
-    Have the stakeholder go through the overall gameplay (combat, travel, hub) and tell them to describe the difficulty of the game with a frame of reference. For example, easy, normal hard.}
+    Have the system tester go through the overall gameplay (combat, travel, hub) and tell them to describe the difficulty of the game with a frame of reference. For example, easy, normal hard.}
 \end{enumerate}
 
 \begin{enumerate}
     \item \nonfunctest{Config-Controller-Performance}
     {Nonfunctional Test for Controller Performance}
-    {Non-Dynamic}
+    {Manual}
     {The keyboard is the default input option.}
     {The controller is selected in the configuration.}
     {The controls are within the \hyperlink{ControllerThreshold}{CONTROLLER\_THRESHOLD}.}
@@ -24,7 +26,7 @@
 \begin{enumerate}
     \item \nonfunctest{Config-Descriptive-Config}
     {Nonfunctional Test for Descriptive Configurations}
-    {Manual, Dynamic}   
+    {Manual}   
     {The game at launch shows a ``configuration" option. The configuration screen will show no description, since there is no option selected yet.}
     {The system tester enters the configuration screen and highlight each option.}
     {Each configuration displays a short description of its functional such as what is altered or manipulated.}
