@@ -14,7 +14,6 @@ feed for usability.
     {\\The system tester enters the configuration menu and selects the player health option. Using the control dial, the tester increases or decreases the health value to a desired setting and then starts the game. Once in the game, the tester accesses the health display on the user interface and verifies that the displayed health value matches the configured setting. The tester then enters combat and allows an enemy to attack the player. Finally, the tester verifies that the player's actual health pool corresponds to the health value displayed on the interface, confirming that the configured health setting has been correctly applied and reflected during gameplay.
     } 
 
-
     \item \functest{Config-Resource-Game}
     {Test Resource Reward Management Configuration}
     {Automatic}
