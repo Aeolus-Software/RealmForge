@@ -38,6 +38,12 @@
 \traceentry{\ref{UISNFTstatetransitions}}{SNFR-009}{}
 \traceentry{\ref{UISNFTflashinglights}}{SSR-006}{}
 \traceentry{\ref{UISNFTcolours}}{SSR-009}{}
+\traceentry{\ref{MapSFTdisplay}}{SFR-020, SFR-024}{}
+\traceentry{\ref{MapSFTselection}}{SFR-021, SFR-022}{}
+\traceentry{\ref{MapSFTtravel}}{SFR-023}{}
+\traceentry{\ref{MapSFTinvalid}}{SSR-008}{}
+\traceentry{\ref{MapSNFTclarity}}{SSR-008}{}
+\traceentry{\ref{MapSNFTperformance}}{ENV-001}{}
 \traceentry{\ref{UISNFTmainplaytest}}{SFR-006, SFR-007, SFR-008, SNFR-003}
 \traceentry{\ref{CentralHubFRTPermanentProgress}}{SFR-025}{}
 \traceentry{\ref{CentralHubFRTResourceGeneration}}{SFR-026}{}
