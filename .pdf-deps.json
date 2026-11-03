@@ -160,6 +160,8 @@
     "docs/Common.text",
     "docs/VnVPlan/CentralHubFRT.text",
     "docs/VnVPlan/CentralHubNFRT.text",
+    "docs/VnVPlan/CombatSFT.text",
+    "docs/VnVPlan/CombatSNFT.text",
     "docs/VnVPlan/ConfigFRTests.text",
     "docs/VnVPlan/ConfigNFRTests.text",
     "docs/VnVPlan/CustomDocuments.text",
