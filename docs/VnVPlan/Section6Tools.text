@@ -1,4 +1,4 @@
-\noindent RealmForge will implement the use of GitHub Actions to support
+RealmForge will implement the use of GitHub Actions to support
 continuous integration throughout development. Automated testing
 will be used to check changes in the project's code and help
 identify any major issues before changes are merged into the
