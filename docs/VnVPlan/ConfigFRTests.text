@@ -1,6 +1,6 @@
 The area of testing below will focus on the configurations aspect of RealmForge.
 The configurations are important because they control the overall dynamic experience
-of the game. Ensuring they work is a key to properly allow users to experiment, test, and provide
+of the game. Ensuring they work is a key to properly allow system testers to experiment, test, and provide
 feed for usability.
 
 \begin{enumerate}
@@ -11,15 +11,7 @@ feed for usability.
     {Change in the range control of the configuration health option.}
     {The displayed health change is equal to the increase of the range control.}
     {The expected output is justified based on the SFR-006 in the SRS document.}
-    {\\1. User Enter the configuration menu\\
-    2. Selects the player health option\\
-    3. Raise / Lower value via control dial\\
-    4. User begins game\\
-    5. User enters health on UI screen equal to health changed\\
-    6. Verify the displayed health is the same setting\\
-    7. User enters combat\\
-    8. User is attack by enemy\\
-    9. Verify the actual health pool is the amount displayed\\
+    {\\The system tester enters the configuration menu and selects the player health option. Using the control dial, the tester increases or decreases the health value to a desired setting and then starts the game. Once in the game, the tester accesses the health display on the user interface and verifies that the displayed health value matches the configured setting. The tester then enters combat and allows an enemy to attack the player. Finally, the tester verifies that the player's actual health pool corresponds to the health value displayed on the interface, confirming that the configured health setting has been correctly applied and reflected during gameplay.
     } 
 
 
@@ -30,11 +22,7 @@ feed for usability.
     {Change in the current bonus resource is input value.}
     {The reward health change is equal to the increment increase of the range control.}
     {The expected output is justified based on the SFR-007 in the SRS document.}
-    {\\1. User enters the configuration menu\\
-    2. User selects the bonus resource option\\
-    3. User enters combat\\
-    4. User is successful in combat\\
-    5. Verify the received award amount equal to Normal Amount and Bonus Amount\\
+    {\\The system tester enters the configuration menu and selects the bonus resource option. After configuring the bonus resource value, the tester proceeds into combat and successfully completes an encounter. Upon receiving the combat rewards, the tester verifies that the total amount of resources awarded is equal to the standard base reward plus the configured bonus resource amount, confirming that the bonus resource setting has been correctly applied to gameplay rewards. 
     } 
 
     \item \functest{Config-Test-Upgrade-Cost}
@@ -44,13 +32,7 @@ feed for usability.
     {Change the base upgrade cost from configuration before start of the game.}
     {The displayed and actual purchase cost is equivalent to the configured base value.}
     {The expected output is justified based on the requirement that the game shall have a configuration that changes the cost of each purchasable upgrade (SFR-008).}
-    {\\1. Users enters configuration menu\\
-    2. User selects upgrade cost option\\
-    3. User increases/decreases the cost with the provided control element\\
-    4. User begins a new game\\
-    5. User attempst to purchase an upgrade\\
-    6. Verify the displayed cost is equal to the configured value\\
-    7. Verfiy the amount of resources deducted equals the configured cost.}
+    {\\The system tester enters the configuration menu and selects the upgrade cost option. Using the provided control element, the tester increases or decreases the upgrade cost to a desired value and then begins a new game. During gameplay, the tester attempts to purchase an upgrade and verifies that the cost displayed to the player matches the configured upgrade cost. After completing the purchase, the tester confirms that the amount of resources deducted from the player's available resources is equal to the configured upgrade cost, ensuring that the setting is correctly reflected in both the user interface and the game's underlying resource management system.}
 
     \item \functest{Config-Lock-Test}
     {Test Configuration Locked}
@@ -59,29 +41,21 @@ feed for usability.
     {Try to modify the configuration through various methods.}
     {No change in the configured values.}
     {The expected output is justified based on the requirement that the game shall prevent the user from changing the game's configurations until starting a new game (SFR-009).}
-    {\\1. User enters configuration menu\\
-    2. User modifies one or more configuration setting\\
-    3. User starts game\\
-    4. User begins gameplay and tries to navigate to configuration menu again (configuration display menu)\\
-    5. User attempts to change values again\\
-    6. Verify the configuration controls are removed or disabled.\\
-    7. Verify the original configuration values are unchanged.}
+    {\\The user enters the configuration menu and modifies one or more configuration settings before starting a new game. During gameplay, the user attempts to access the configuration menu again and tries to change the configuration values. The tester then verifies that the configuration controls are either removed or disabled, preventing further modifications after gameplay has begun. Finally, the tester confirms that the original configuration values remain unchanged, ensuring that settings cannot be altered while a game session is in progress.}
 
     \item \functest{Config-Promp-Test}
     {Test Configuration Confirmation Prompt}
     {Manual, Dynamic}
-    {User has finished modifying all the desired configuration values.}
+    {System tester has finished modifying all the desired configuration values.}
     {The configuration setup is saved and displayable.}
     {A confirmation prompt is shown after the user is leaving the menu and prepared to start the game.}
     {The expected output is justified based on the requirement that the game shall give a prompt for confirmation once the user has finished setting up the game's configurations (SFR-010).}
-    {\\1. User enters configuration menu\\
-    2. User modifies configuration settings\\
-    3. User finishes the setup\\
-    4. User leaves the configuration menu\\
-    5. Verify the confirmation prompt appears\\
-    6. Verify the contains the requirement UI elements\\
-    7. User selects "Confirm" (or any option name to proceed)\\
-    8. Verify the game has saved the configuration setup.}
+    {\\The system tester enters the configuration menu and modifies one or more configuration settings. 
+    After completing the desired setup, the tester exits the configuration menu and verifies that a confirmation 
+    prompt appears. The tester then confirms that the prompt contains all required user interface elements, such as 
+    confirmation and cancellation options. Next, the tester selects the ``Confirm" option to proceed with saving the changes. 
+    Finally, the tester verifies that the game has successfully saved the configuration settings and that the selected values 
+    persist as configured.}
 
 
     
@@ -92,13 +66,11 @@ feed for usability.
     {Switch to controller and vice versa afterwards.}
     {The game accepts inputs from only the controller after configuration setting and only keyboard and mouse after changing back.}
     {The expected output is justified based on the requirement that the game shall allow the user to configure the input device before starting a new game (SFR-003, SFR-004, SFR-005).}
-    {\\
-    1. User enters configuration menu\\
-    2. User navigates to input device option\\
-    3. User selects "Controller" via the UI toggle\\
-    4. User exits configuration menu.\\
-    5. Verify that controller reponse works. Also verify keyboard response does not work.\\
-    6. Repeat steps 1-2. User selects "Keyboard \& Mouse" via UI toggle\\
-    7. Verify that keyboard reponse works. Also verify controller response does not work.
-    }
+    {\\The system tester enters the configuration menu, navigates to the input device option, 
+    and selects ``Controller" using the available user interface toggle. After exiting the configuration menu, 
+    the tester verifies that all controller inputs function as expected and confirms that keyboard and mouse 
+    inputs no longer produce any response. The tester then returns to the configuration menu, navigates back 
+    to the input device option, and selects ``Keyboard and Mouse'' using the same toggle control. 
+    Finally, the tester verifies that keyboard and mouse inputs function correctly while controller inputs are disabled, 
+    confirming that the selected input device setting is properly applied and enforced by the system.}
 \end{enumerate}
