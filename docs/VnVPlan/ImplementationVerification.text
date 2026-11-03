@@ -1,0 +1,13 @@
+The implementation verification will ensure that the implementation of RealmForge's codebase adheres to the SRS specifications set out. A combination of unit testing, static analysis, and regular code inspections. 
+\\
+
+\noindent
+Unit tests will be carried out using GDUnit4 [CITATION] as listed in this document. Passing these unit tests will verify if functionality has changed in any unintended way during refactoring a PR is allowed to be merged into their parent branch.
+\\
+
+\noindent
+Static analysis will be carried out by GDLint [CITATION] throughout development to ensure a consistent code quality and style (as described in the Development Plan [CITATION]). 
+\\
+
+\noindent
+All code written will be reviewed by at least one other team member in a routine code inspection before merging. This will ensure not only that the code is of proper quality, but will ensure that the team is all on the same page and nothing takes anyone by surprise.
