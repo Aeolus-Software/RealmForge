@@ -105,34 +105,16 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+11/2/2026 & Revision 0 & All sections of document completed for initial 
+revision \\
 \bottomrule
 \end{tabularx}
-
-~\\
-\wss{The intention of the VnV plan is to increase confidence in the software.
-However, this does not mean listing every verification and validation technique
-that has ever been devised.  The VnV plan should also be a \textbf{feasible}
-plan. Execution of the plan should be possible with the time and team available.
-If the full plan cannot be completed during the time available, it can either be
-modified to ``fake it'', or a better solution is to add a section describing
-what work has been completed and what work is still planned for the future.}
-
-\wss{The VnV plan is typically started after the requirements stage, but before
-the design stage.  This means that the sections related to unit testing cannot
-initially be completed.  The sections will be filled in after the design stage
-is complete.  the final version of the VnV plan should have all sections filled
-in.}
 
 \newpage
 
 \tableofcontents
 
 \listoftables
-
-\listoffigures
-\wss{Remove this section if it isn't needed}
 
 \newpage
 
@@ -176,17 +158,6 @@ in.}
 
 \input{RelevantDocumentation.text}
 
-\wss{Reference relevant documentation.  This will definitely include your SRS
-  and your other project documents (design documents, like MG, MIS, etc).  You
-  can include these even before they are written, since by the time the project
-  is done, they will be written.  You can create BibTeX entries for your
-  documents and within those entries include a hyperlink to the documents.}
-
-Citation Example of SRS\cite{SRS}\\
-
-\wss{Don't just list the other documents.  You should explain why they are relevant and 
-how they relate to your VnV efforts.}
-
 \section{Plan}
 
 \input{PlanIntro.text}
@@ -214,9 +185,6 @@ how they relate to your VnV efforts.}
 
 \input{ImplementationVerification.text}
 
-\wss{\textbf{You should at least point to the tests listed in this document and the unit
-  testing plan.}}
-
 \subsection{Automated Testing and Verification Tools}
 \input{Section6Tools.text}
 
@@ -241,8 +209,20 @@ how they relate to your VnV efforts.}
 
 \section{System Tests}
 
-\wss{There should be text between all headings, even if it is just a roadmap of
-the contents of the subsections.}
+The following system tests include tests for functional and nonfunctional 
+requirements of the SRS \cite{SRS}, across the following testing areas 
+(primarily 
+focused on the RealmForge software's components identified in the SRS):
+
+\begin{itemize}
+	\item Feature Variation Configurations
+	\item Physical Controls
+	\item Central Hub
+	\item Combat System
+	\item User Interface
+	\item Game World Map System
+	\item Software Usability Tests
+\end{itemize}
 
 \subsection{Tests for Functional Requirements}
 
@@ -271,7 +251,8 @@ they are based off of the components that were described in the SRS\cite{SRS}
 
 \input{UISFT.text}
 
-\subsubsection{Overall Gameplay and Map Functions}
+\subsubsection{Overall Gameplay and Map System Tests for Functional 
+Requirements}
 
 \input{MapSFT.text}
 
@@ -299,53 +280,24 @@ The nonfunctional system tests cover the requirements that do not fully match ar
 % How will they be done?  In cases like code (or document) walkthroughs, who will
 % be involved? Be specific.}
 
-\subsubsection{Configuration Tests for Nonfunctional Requirements }
+\subsubsection{Configuration Tests for Nonfunctional Requirements}
+
 \input{ConfigNFRTests.text}
-\subsubsection{Area of Testing1}
-		
-\paragraph{Title for Test}
-
-\begin{enumerate}
-
-\item{test-id1\\}
-
-Type: Functional, Dynamic, Manual, Static etc.
-					
-Initial State: 
-					
-Input/Condition: 
-					
-Output/Result: 
-					
-How test will be performed: 
-					
-\item{test-id2\\}
-
-Type: Functional, Dynamic, Manual, Static etc.
-					
-Initial State: 
-					
-Input: 
-					
-Output: 
-					
-How test will be performed: 
-
-\end{enumerate}
-
-\subsubsection{Area of Combat Tests for Non-Functional Requirements}
-
-\input{CombatSNFT.text}
 
 \subsubsection{Central Hub Tests for Nonfunctional Requirements}
 
 \input{CentralHubNFRT.text}
 
-\subsubsection{User Interface Tests for Non-Functional Requirements}
+\subsubsection{Area of Combat Tests for Nonfunctional Requirements}
+
+\input{CombatSNFT.text}
+
+\subsubsection{User Interface Tests for Nonfunctional Requirements}
 
 \input{UISNFT.text}
 
-\subsubsection{Overall Gameplay and Map Functions}
+\subsubsection{Overall Gameplay and Map System Tests for Nonfunctional 
+Requirements}
 
 \input{MapSNFT.text}
 \subsubsection{Software Usability Tests}
@@ -422,8 +374,6 @@ TBD
 
 \newpage
 \section{Appendix}
-
-This is where you can place additional information.
 
 \subsection{Symbolic Parameters}
 
