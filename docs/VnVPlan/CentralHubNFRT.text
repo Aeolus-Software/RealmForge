@@ -11,7 +11,7 @@ The system tests below are planned to verify the implemented system as a whole a
 {The system tester shall play through many runs of the game, noting down the number of upgrade options available to them whenever they are give the option to unlock upgrades. They should also be recording how different and impactful each upgrade seems to help measure variety between upgrades.}
 
 \item \nonfunctest{CentralHubNFRTAvailabilityIndicator}
-{Available Vs. Unavailable Upgrade Indicator in Central Hub}
+{Available and Unavailable Upgrade Test for Central Hub}
 {Manual}
 {The RealmForge software has been launched on the user's device and the system is initialized to a game state where the user should be able to upgrade the Central Hub.}
 {No input is required for this test}
