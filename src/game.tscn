@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dqbt1thb6854l"]
+
+[ext_resource type="Script" uid="uid://iy7oylejwdol" path="res://game.gd" id="1_80nbo"]
+
+[node name="Game" type="Node2D" unique_id=2088374998]
+script = ExtResource("1_80nbo")
+
+[node name="Control" type="Control" parent="." unique_id=1365644612]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="DebugLabel" type="Label" parent="Control" unique_id=987977796]
+layout_mode = 0
+offset_left = 333.00003
+offset_top = 11.0
+offset_right = 433.00003
+offset_bottom = 36.0
+scale = Vector2(5.962, 6)
+text = "Debug Menu"
+
+[node name="ConfigureButton" type="Button" parent="Control" unique_id=957541611]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 328.0
+offset_right = 315.0
+offset_bottom = 359.0
+scale = Vector2(4, 4)
+text = "Configure
+"
+
+[node name="CombatButton" type="Button" parent="Control" unique_id=168280470]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 329.0
+offset_right = 835.0
+offset_bottom = 360.0
+scale = Vector2(4, 4)
+text = "Combat
+"
+
+[node name="UIButton" type="Button" parent="Control" unique_id=1328529315]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 520.0
+offset_right = 549.0
+offset_bottom = 551.0
+scale = Vector2(3.6177504, 3.7320497)
+text = "UI Button
+"
+
+[connection signal="button_up" from="Control/ConfigureButton" to="." method="_on_configure_button_up"]
+[connection signal="button_up" from="Control/CombatButton" to="." method="_on_combat_button_up"]
