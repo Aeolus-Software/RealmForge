@@ -18,3 +18,8 @@ func _on_configure_button_up() -> void:
 	# This could be changed to hide and show
 	print("Configure button press")
 	get_tree().change_scene_to_packed(load("res://configure_feature/configure_screen.tscn"))
+
+
+func make_random_button() -> void:
+	print("Hellow World")
+	
