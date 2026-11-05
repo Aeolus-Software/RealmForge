@@ -9,6 +9,7 @@ UI Module:
     - User Interface feature
 
 Combat Module:
-    - Combat Feature
+    - Combat Features
 
+Please add more stuff
 
