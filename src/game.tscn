@@ -52,3 +52,4 @@ text = "UI Button
 
 [connection signal="button_up" from="Control/ConfigureButton" to="." method="_on_configure_button_up"]
 [connection signal="button_up" from="Control/CombatButton" to="." method="_on_combat_button_up"]
+[connection signal="button_up" from="Control/UIButton" to="." method="_on_ui_button_button_up"]
