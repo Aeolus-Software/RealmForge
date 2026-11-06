@@ -1,0 +1,33 @@
+\begin{table}[hp]
+\caption{Revision History} \label{TblRevisionHistory}
+\begin{tabularx}{\textwidth}{llX}
+\toprule
+\textbf{Date} & \textbf{Developer(s)} & \textbf{Change}\\
+\midrule
+November 05, 2026 & Andy & First draft of FODA document \\
+% September 22, 2026 & Andy & added rough draft for PoC and Expected Tech \\
+% September 23, 2026 & Andreas Sideris & Initial draft of Workflow 
+% Plan\\
+% September 23, 2026 & Andy & added revisions to PoC and Expected Tech \\
+% September 24, 2026 & Andreas Sideris & Initial draft of Project 
+% Decomposition and Scheduling\\
+% September 25, 2026 & Andreas Sideris & Use of AI and LLMs Completed\\
+% September 26, 2026 & Owen Johnson & Confidential Information and IP to Protect 
+% Completed\\
+% September 26, 2026 & Christopher Ludwig & Team Charter, Communication, 
+% Meetings, Roles Rough Draft\\
+% September 26, 2026 & Andreas Sideris & Coding Standard Added\\
+% September 27, 2026 & Owen Johnson & PoC Demo Plan Expanded, Expected 
+% Technology Slightly Edited\\
+% September 27, 2026 & Humna Saeed & Introduction, Team Charter\\ 
+% September 27, 2026 & Andreas Sideris & Added Reflection\\ 
+% September 27, 2026 & Owen Johnson & PoC Demo Plan Rewritten, Added 
+% Reflection\\
+% September 28, 2026 & Owen Johnson & PoC Demo Plan Edited, Added 
+% Copyright License\\
+% September 28, 2026 & Humna Saeed & Added reflection \\
+% September 28, 2026 & Christopher Ludwig & Fixed formatting and cleaned up contents 
+% of Team Meeting Plan, Communication Plan, and Team Roles, as well as adding reflection\\
+\bottomrule
+\end{tabularx}
+\end{table}

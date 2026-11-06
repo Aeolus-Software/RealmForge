@@ -1,5 +1,6 @@
 \documentclass[12pt, titlepage] {article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PLACE PACKAGES HERE
 \usepackage{booktabs}
@@ -18,80 +19,51 @@
 \input{../Common.text}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setting up graphics path
+\graphicspath{{./images/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \title{Feature-Oriented Domain Analysis (FODA)}
 \author{\authname}
 \date{\today}
 
+
 \maketitle
 
-\pagenumbering{roman}
+\tableofcontents
+\listoftables
 
-\section{Symbols, Abbreviations, and Acronyms}
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{l p{12cm}} 
-  \toprule		
-  \textbf{symbol} & \textbf{description}\\
-  \midrule 
-  \hypertarget{VnV}{VnV} & The Verification and Validation Plan. The Document itself.\\
-  \hypertarget{SRS}{SRS} & The Software Requirement Spefications\\
-  \hypertarget{WCAG}{WCAG} & The Web Content Accessibility Guidelines are 
-  an international standard for accessibility in web content\\
-  \hypertarget{HUD}{HUD} & Heads-up-Display\\
-  \hypertarget{CI}{CI} & Continuous Integration\\
-  \bottomrule
-\end{tabular}\\
+\pagenumbering{arabic}
+\input{S0RevisionHistory.text}
+\newpage{}
+\input{S1TermsAcronyms.text}
+\input{S2Constants.text}
 
 
+\newpage{}
 \section{General}
+\subsection{Introduction}
 \cite{SRS}
+\subsection{Purpose of Document}
 
-\section{Commonalaties}
 
-\section{Variables}
+\newpage{}
+\section{Commonalities}
+\wss{list of commonalities (the things that all games have)}
 
+
+\section{Variabilities}
+\wss{list of variabilities (the variation points between games)} \\
+\wss{list of parameters of variation (the possible values for each of the variabilities)}\\
+\wss{the relationship between commonalities and variabilities - examples of relationships are when picking one variabilities means you cannot pick another one (the variabilities are mutually exclusive). For instance, if you have a variability between a command line interface and a gui, once you pick command line interface, any variabilities related to graphics are not options}
+\wss{the binding time for each variability - pre-compilation time, compile time, runtime. Pre-compilation means that you are using tools, like model driven development tools to customize the application. Compile time means that the binding happens during the build process, like with conditional compilation. Runtime means that the binding happens during live execution. If you allow the user to change the variabilities while running your game, then your binding time is runtime.}
+
+
+%% REFERENCES
 \bibliographystyle{IEEEtran}
-% \bibliographystyle{plainnat}
 \bibliography{../../refs/References}
 
 \newpage{}
 \section{Appendix}
-
-\subsection{Symbolic Parameters}
-
-The following symbolic constants are used throughout this document:
-
-\begin{table}[htbp]
-	\centering
-	\caption{Symbolic Constants Used in the Verification and Validation Plan}
-	\label{tab:symbolicparameters}
-	\begin{tabularx}{\textwidth}{| p{6.1cm} | p{2.1cm} | X|}
-		\hline
-		\textbf{Constant} & \textbf{Value} & \textbf{Unit}\\
-		\hline
-		\leavevmode\hypertarget{DISTINCT_LOCATION_ICONS}{DISTINCT\_LOCATION\_ICONS}
-		 & 5 
-		& Unitless/Quantity\\
-		\hline
-		\leavevmode\hypertarget{TRANSITION_TIME}{TRANSITION\_TIME} & 4 & 
-		Seconds\\
-		\hline
-		\leavevmode\hypertarget{TRANSITION_TESTS}{TRANSITION\_TESTS} & 3 & 
-		Unitless/Quantity\\
-		\hline
-    	\leavevmode\hypertarget{ControllerThreshold}{CONTROLLER\_THRESHOLD} & 1 & Seconds\\
-		\hline
-		\leavevmode\hypertarget{ACCEPTABLE_FRAMERATE}{ACCEPTABLE\_FRAMERATE} & 60
-		& FPS\\
-\hline
-
-		\leavevmode\hypertarget{MIN_TESTERS}{MIN\_TESTERS} & 5 & 
-		Unitless/Quantity\\
-		\hline
-	\end{tabularx}
-\end{table}
-
 
 \end{document}

@@ -1,0 +1,33 @@
+\section{Glossary Definitions, Symbols, Abbreviations, and Acronyms}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{l p{10cm }} 
+  \toprule		
+  \textbf{Term} & \textbf{Definition}\\
+  \midrule 
+  \hypertarget{player}{Player} & The person that plays the game, gives the inputs and responds to the outputs of the game.\\
+  \hypertarget{user}{User} & Another term for a person that operates the software\\
+  \hypertarget{roguelike}{Rogue-Like} &  video game genre featuring levels with randomized elements that
+  change every playthrough and permanent death, meaning dying resets the current
+  run. Players lose all permanent upgrades and start from scratch. Progress is
+  essentially reset.\\
+  \hypertarget{roguelite}{Rogue-Lite} & A video game genre featuring levels with randomized elements that
+  change every playthrough and permanent death, meaning dying resets the current
+  run. Players retain permanent upgrades unlocked between runs that make their
+  character stronger over time.\\
+  \bottomrule
+\end{tabular}\\
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{l p{10cm }} 
+  \toprule		
+  \textbf{Acronyms} & \textbf{Description}\\
+  \midrule 
+  \hypertarget{VnV}{VnV} & The Verification and Validation Plan. The Document itself.\\
+  \hypertarget{SRS}{SRS} & The Software Requirement Specification\\
+  \hypertarget{WCAG}{WCAG} & The Web Content Accessibility Guidelines are 
+  an international standard for accessibility in web content\\
+  \hypertarget{HUD}{HUD} & Heads-up-Display\\
+  \hypertarget{CI}{CI} & Continuous Integration\\
+  \bottomrule
+\end{tabular}\\
