@@ -1,49 +1,100 @@
-The main risks identified are an initial \textbf{Learning Curve}, the possibility of \textbf{Scope Creep}, and the resulting implementation being \textbf{Hard to Modify/Vary}.
+The main risks to the project's development that were identified include a 
+\textbf{Large Technical Learning Curve}, the possibility of \textbf{Scope 
+Creep}, and a \textbf{Failure to Implement Variation Capabilities}.
 \\
 
-\noindent With whatever expected technology the team will use, there will certainly be a learning curve for the game engine/framework chosen. This could prove to be a barrier when creating complex portions of the project, and can make it hard to write robust code straight away since this is new software. 
+\noindent \textbf{Large Learning Curve:} Each project team member has varying 
+experience in the field of game development, and some team members may have 
+little experience with the game engine used to develop the project's software. 
+Team members who are not experienced with the game engine used in the project 
+may suffer from a large learning curve, delaying their ability to contribute to 
+the project software's source code while they improve their skills. This could 
+lead to a failure of the team to complete the development of the software 
+within course deadlines.
 \\ 
 
-\noindent Scope creep is an important risk to acknowledge as well. With today's technologies such as AI and LLMs it is much easier to implement new features without thinking it all the way through. If scope creep becomes an issue it may become more difficult to implement new features, since building features without solidifying the core components of the project leads to them being more complex and taking more time to implement. 
+\noindent \textbf{Scope Creep:} Each project team member is passionate about 
+video games and game development, and has many ideas for how the project's 
+software (the RealmForge game) could function, behave, and look. However, the 
+software must be developed within the bounds of the time available in the 
+Capstone course. Scope creep could occur if the planned scope for the software 
+became larger than what is feasible within the Capstone course's constraints, 
+if the team plans to implement a large amount of features from their various 
+ideas. This could lead to a failure of the team to complete the development of 
+the software within course deadlines, as the majority of development time 
+would be spent on individual complex components of the entire software.
 \\
 
-\noindent The aforementioned risks culminate into a weak code base, which could be less modifiable and extendable than the project demands it to be. This would make implementing the myriad of feature variation points a very difficult task to the point of not being able to meet deadlines.
+\noindent \textbf{Failure to Implement Variation Capabilities:} The purpose of 
+the project is to develop a video game, but specifically to develop a video 
+game with explicit feature variation points, that can be modified to facilitate 
+deeper and more productive usability testing. If the team failed to provide 
+explicit variation capabilities for a suitable number of the implemented 
+software's features, it would not fulfill the overall goal of the project. This 
+could occur if sufficient planning and regular incremental development of the 
+software's variation capabilities was not completed, as hapharzardly 
+introducing feature variation to an already completed video game would not be 
+able to fulfill the goal of the project.
 \\
 
-\noindent To prove these risks can be overcome, the proof of concept demonstration will include strong core components. To avoid scope creep it will stick to these core components so that they are very robust and extendable by the time they are finished. This means:
+\noindent The aforementioned risks could compound to result in the required 
+goals and scope of the RealmForge software not being fulfilled, or the software 
+being delivered in an incomplete or erroneous state.
+\\
+
+\noindent To demonstrate that these risks can be overcome, the project's proof 
+of concept demonstration will include the functionality outlined below. To 
+ensure that the proof of concept build of the software is feasible to complete 
+by the date of the demonstration, it is planned to be completely focused on 
+providing the minimum functionality to address each risk. The proof of concept 
+software build will include:
 \begin{itemize}
-        \item Basic unit testing with good code coverage
-        \item The main encounter/combat loop, with variation points for features:
+        \item An initial version of the RealmForge software's main menu, 
+        providing options to configure its feature variations and open the 
+        primary combat game scene described below.
+        \item An initial version of one of the software's enemy combat 
+        encounter game scenes. This game scene will not include its planned 
+        complete functionality (users will not be able to complete the combat 
+        encounter and select actions to defeat the enemy), but it will include:
         \begin{itemize}
-                 \item At least 1 distinct enemy, with varying properties
-                 \item At least 2 Player/Enemy properties
-                 \item Central Hub operations to gather resources and upgrade production for at least 2 resources
-                 \item At least 1 item/skill that uniquely affects Player/Enemy/Hub properties when used
-                 \item Encounter completion conditions and reward options (different between runs)
+        	\item A representation of the player character, that displays their 
+        	current health attribute
+        	\item A representation of an enemy (the player's opponent within 
+        	the encounter), that displays their current health attribute
+        	\item An initial version of the game scene's user interface, 
+        	providing buttons that correspond to the player's available actions 
+        	(these butttons will respond to input in some way, but will not 
+        	execute the complete planned game logic)
+        \end{itemize}
+        \item An initial version of the software's feature variation 
+        capabilities. The following variation points will be demonstrated:
+        \begin{itemize}
+	        \item A capability to modify the player's starting health (in the 
+	        final version of the software, users will be able to modify the 
+	        player's starting health to adjust the difficulty of their gameplay 
+	        sessions)
+	        \item A capability to toggle the combat encounter's initial user 
+	        interface described above between at least two configurations (a 
+	        different set or permutation of provided buttons)
         \end{itemize}
 \end{itemize}
 
-
-\noindent It is imperative that important gameplay features have elements of \textbf{modifiability} and \textbf{scalability}. This will ensure that the features are robust and that the current \textbf{feature variation points} set a good precedent for implementing further variability. This variability is important, as it forms the basis of the subsequent usability testing.
+\noindent This planned scope will demonstrate that the RealmForge development 
+team has 
+the capabilities required to overcome the learning curve of their chosen game 
+development tool (by completing a small version of the software, developed 
+using the tool). It will also demonstrate that the project's need for explicit 
+feature variation points can be fulfilled, and that the development team has 
+the capabilities required to produce a functional software program within a 
+feasible scope for the Capstone course.
 \\
 
-\noindent In the event of a failed proof of concept, the team has various methods of regrouping. First, the scope of the project could be pared down, focusing on more rigid plans and deadlines for core features. This would aid the direction of the project and ensure that it stays on course, avoiding scope creep through adding unnecessary features. Another method to refocus could be pivoting some key structure of the game to make it easier to fully flesh out. For example, changing the game engine/framework to something more familiar would allow the team to worry more about the quality of the work rather than learning while developing features. 
-
-
-%\begin{itemize}
-%    \item What will you demonstrate?
-%	    \begin{itemize}
-%	        \item The key components to our game
-%	        \item The player is given the ability to traverse to different forking areas to loot
-%	        \item The main combat loop (how the interacts and defeats the encounter)
-%	        \item The player is given the ability to recieve loot (optional: given a choice to pick which to loot to take)  
-%	    \end{itemize}
-%    \begin{itemize}
-%        \item \textbf{Inexperience with the technologies} and framework being used which leads to us unable to finish key %components of our game
-%        \item All of the group members need to learn the coding framework and other technologies and be familiar with them in the %allotted timeframe
-%        \item \textbf{Unable to create viable unit testing mechanisms}
-%        \item Difficulting in utilizing the fullest code coverage tools for our framework
-%        \item If our software testing is not proficient enough then certain bugs and logic errors might fall through delaying our %progress
-%    \end{itemize}
-%
-%\end{itemize}
+\noindent In the event of a failed proof of concept, the team has various 
+methods of regrouping. First, the scope of the project could be pared down, 
+focusing on more rigid plans and deadlines for core features. This would aid 
+the direction of the project and ensure that it stays on course, avoiding scope 
+creep through adding unnecessary features. Another method to refocus could be 
+pivoting some key structure of the game to make it easier to fully flesh out. 
+For example, changing the game engine/framework to something more familiar 
+would allow the team to worry more about the quality of the work rather than 
+learning while developing features. 
