@@ -1,0 +1,97 @@
+\documentclass[12pt, titlepage] {article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PLACE PACKAGES HERE
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PLACE NEW COMMANDS RIGHT HERE
+\input{../Comments.text}
+\input{../Common.text}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\title{Feature-Oriented Domain Analysis (FODA)}
+\author{\authname}
+\date{\today}
+
+\maketitle
+
+\pagenumbering{roman}
+
+\section{Symbols, Abbreviations, and Acronyms}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{l p{12cm}} 
+  \toprule		
+  \textbf{symbol} & \textbf{description}\\
+  \midrule 
+  \hypertarget{VnV}{VnV} & The Verification and Validation Plan. The Document itself.\\
+  \hypertarget{SRS}{SRS} & The Software Requirement Spefications\\
+  \hypertarget{WCAG}{WCAG} & The Web Content Accessibility Guidelines are 
+  an international standard for accessibility in web content\\
+  \hypertarget{HUD}{HUD} & Heads-up-Display\\
+  \hypertarget{CI}{CI} & Continuous Integration\\
+  \bottomrule
+\end{tabular}\\
+
+
+\section{General}
+\cite{SRS}
+
+\section{Commonalaties}
+
+\section{Variables}
+
+\bibliographystyle{IEEEtran}
+% \bibliographystyle{plainnat}
+\bibliography{../../refs/References}
+
+\newpage{}
+\section{Appendix}
+
+\subsection{Symbolic Parameters}
+
+The following symbolic constants are used throughout this document:
+
+\begin{table}[htbp]
+	\centering
+	\caption{Symbolic Constants Used in the Verification and Validation Plan}
+	\label{tab:symbolicparameters}
+	\begin{tabularx}{\textwidth}{| p{6.1cm} | p{2.1cm} | X|}
+		\hline
+		\textbf{Constant} & \textbf{Value} & \textbf{Unit}\\
+		\hline
+		\leavevmode\hypertarget{DISTINCT_LOCATION_ICONS}{DISTINCT\_LOCATION\_ICONS}
+		 & 5 
+		& Unitless/Quantity\\
+		\hline
+		\leavevmode\hypertarget{TRANSITION_TIME}{TRANSITION\_TIME} & 4 & 
+		Seconds\\
+		\hline
+		\leavevmode\hypertarget{TRANSITION_TESTS}{TRANSITION\_TESTS} & 3 & 
+		Unitless/Quantity\\
+		\hline
+    	\leavevmode\hypertarget{ControllerThreshold}{CONTROLLER\_THRESHOLD} & 1 & Seconds\\
+		\hline
+		\leavevmode\hypertarget{ACCEPTABLE_FRAMERATE}{ACCEPTABLE\_FRAMERATE} & 60
+		& FPS\\
+\hline
+
+		\leavevmode\hypertarget{MIN_TESTERS}{MIN\_TESTERS} & 5 & 
+		Unitless/Quantity\\
+		\hline
+	\end{tabularx}
+\end{table}
+
+
+\end{document}
