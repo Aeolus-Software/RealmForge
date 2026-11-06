@@ -9,12 +9,41 @@
 \usepackage{longtable}
 \usepackage{pdflscape}
 \usepackage{amssymb}
+\usepackage[english]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAKE TITLE
+\title{	\normalsize \textsc{Title page subtitle} 	% Subtitle
+		 	\\[2.0cm]								% 2cm spacing
+			\HRule{0.5pt} \\						% Upper rule
+			\LARGE \textbf{\uppercase{This is a rather long but nice looking title example}}	% Title
+			\HRule{2pt} \\ [0.5cm]		% Lower rule + 0.5cm spacing
+			\normalsize \today			% Todays date
+		}
+
+\author{
+		John F. Doe\\	
+		Imaginary University of Examples\\	
+		Made up department of Randomness\\
+        \texttt{your@email.com} \\
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PLACE NEW COMMANDS RIGHT HERE
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+\makeatletter							% Title
+\def\printtitle{%						
+    {\centering \@title\par}}
+\makeatother									
+
+\makeatletter							% Author
+\def\printauthor{%					
+    {\centering \large \@author}}				
+\makeatother	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{../Comments.text}
 \input{../Common.text}
 
@@ -23,17 +52,26 @@
 \graphicspath{{./images/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\title{Feature-Oriented Domain Analysis (FODA)}
+% \title{Feature-Oriented Domain Analysis (FODA)}
+\title{	\normalsize \textsc{Custom Document} 	% Subtitle
+    \\[2.0cm]								% 2cm spacing
+    \HRule{0.5pt} \\						% Upper rule
+    \LARGE \textbf{\uppercase{Feature-Oriented Domain Analysis (FODA)}}	% Title
+    \HRule{2pt} \\ [0.5cm]		% Lower rule + 0.5cm spacing
+    % \normalsize \today			% Todays date
+}
 \author{\authname}
-\date{\today}
+\thispagestyle{empty}		% Remove page numbering on this page
 
 
 \maketitle
 
+
 \tableofcontents
 \listoftables
 
-\pagenumbering{arabic}
+\pagenumbering{roman}
+\setcounter{page}{1}		% Set page numbering to begin on this page
 \input{S0RevisionHistory.text}
 \newpage{}
 \input{S1TermsAcronyms.text}
@@ -41,6 +79,8 @@
 
 
 \newpage{}
+\pagenumbering{arabic}
+\setcounter{page}{1}		% Set page numbering to begin on this page
 \section{General}
 \subsection{Introduction}
 \cite{SRS}
