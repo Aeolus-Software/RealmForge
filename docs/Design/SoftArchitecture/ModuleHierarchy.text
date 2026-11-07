@@ -1,0 +1,48 @@
+This section provides an overview of the module design. Modules are summarized
+in a hierarchy decomposed by secrets in Table \ref{TblMH}. The modules listed
+below, which are leaves in the hierarchy tree, are the modules that will
+actually be implemented.
+
+\begin{description}
+	\item [\refstepcounter{mnum} \mthemnum \label{mInput}:] User Input Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mSave}:] Save Data Module
+\end{description}
+
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
+		\toprule
+		\textbf{Level 1} & \textbf{Level 2}\\
+		\midrule
+		
+		\multirow{7}{0.3\textwidth}{Hardware-Hiding Module} & User Input Module 
+		\\
+		& Save Data Module \\
+		& ?\\
+		& ?\\
+		& ?\\
+		& ?\\
+		& ?\\ 
+		& ?\\
+		\midrule
+		
+		\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} & ?\\
+		& ?\\
+		& ?\\
+		& ?\\
+		& ?\\
+		& ?\\
+		& ?\\ 
+		& ?\\
+		\midrule
+		
+		\multirow{3}{0.3\textwidth}{Software Decision Module} & {?}\\
+		& ?\\
+		& ?\\
+		\bottomrule
+		
+	\end{tabular}
+	\caption{Module Hierarchy}
+	\label{TblMH}
+\end{table}
