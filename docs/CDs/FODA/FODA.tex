@@ -43,9 +43,11 @@
 \def\printauthor{%					
     {\centering \large \@author}}				
 \makeatother	
+\newcommand{\acronym}[4]{\hypertarget{#1}{\textbf{#2} & {#3} & {#4} \\ }}
+\newcommand{\glossaryDef}[4]{\hypertarget{#1}{\textbf{#2} & {#3} & {#4}\\}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{../Comments.text}
-\input{../Common.text}
+\input{../../Comments.text}
+\input{../../Common.text}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Setting up graphics path
@@ -74,36 +76,45 @@
 \setcounter{page}{1}		% Set page numbering to begin on this page
 \input{S0RevisionHistory.text}
 \newpage{}
-\input{S1TermsAcronyms.text}
-\input{S2Constants.text}
+\input{S1Glossary.text}
+\input{S2Acronyms.text}
 
 
 \newpage{}
 \pagenumbering{arabic}
 \setcounter{page}{1}		% Set page numbering to begin on this page
 \section{General}
+\input{S3General.text}
 \subsection{Introduction}
-\cite{SRS}
+\input{SS1Introduction.text}
+\cite{SRS} --\> For reference example
 \subsection{Purpose of Document}
-
+\input{SS2Purpose.text}
 
 \newpage{}
 \section{Commonalities}
-\wss{list of commonalities (the things that all games have)}
-
-
-\section{Variabilities}
-\wss{list of variabilities (the variation points between games)} \\
-\wss{list of parameters of variation (the possible values for each of the variabilities)}\\
-\wss{the relationship between commonalities and variabilities - examples of relationships are when picking one variabilities means you cannot pick another one (the variabilities are mutually exclusive). For instance, if you have a variability between a command line interface and a gui, once you pick command line interface, any variabilities related to graphics are not options}
-\wss{the binding time for each variability - pre-compilation time, compile time, runtime. Pre-compilation means that you are using tools, like model driven development tools to customize the application. Compile time means that the binding happens during the build process, like with conditional compilation. Runtime means that the binding happens during live execution. If you allow the user to change the variabilities while running your game, then your binding time is runtime.}
-
-
-%% REFERENCES
-\bibliographystyle{IEEEtran}
-\bibliography{../../refs/References}
+\label{sec:Commonalities}
+\input{S4Commonalities.text}
 
 \newpage{}
-\section{Appendix}
+\section{Variabilities}
+\label{sec:Variabilities}
+\input{S5Variabilities.text}
+
+\newpage{}
+\section{Relationship between Commonalities and Variabilities}
+\label{sec:RelationshipCommonalitiesVariabilities}
+\input{S6RelationshipsCV.text}
+
+%% REFERENCES
+\newpage{}
+\bibliographystyle{IEEEtran}
+\bibliography{../../../refs/References}
+
+\newpage{}
+\section*{Appendix}
+\label{sec:Appendix}
+% \input{A1Constants.text} --> UNCOMMENT IF THERE IS A CONSTANT YOU ARE ADDING
+
 
 \end{document}

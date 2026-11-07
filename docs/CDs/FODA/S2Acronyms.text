@@ -1,0 +1,25 @@
+\section{Abbreviations and Acronyms}
+\label{sec:Acronyms}
+\renewcommand{\arraystretch}{1.2}
+% \begin{tabularx}{\textwidth}{lXl}
+  \begin{tabularx}{\textwidth}{l X l}
+    \toprule		
+  \textbf{Abbreviation} & \textbf{Description} & \textbf{Section}\\
+  \midrule 
+  
+  % EXAMPLES BELOW
+  % \acronym{ID}{Acronym}{Description}{Section #-- USE \ref{sec:Variabilities}}
+  
+  % \acronym{VnV}{VnV}{The Verification and Validation Plan.}{ \ref{sec:Commonalities}, \ref{sec:Variabilities},}
+  % \acronym{SRS}{SRS}{The Software Requirement Specification} { \ref{sec:Commonalities}}
+  % \acronym{WCAG}{WCAG}{The Web Content Accessibility Guidelines are an international standard for accessibility in web content}{ \ref{sec:Commonalities}}
+  % \acronym{HUD}{HUD}{Heads-up-Display}{{ \ref{sec:Commonalities}}}
+  % \acronym{CI}{CI}{Continuous Integration} {{ \ref{sec:Commonalities}}}
+  \bottomrule
+  \end{tabularx}
+
+  % EXAMPLE TO LINK
+% \hyperlink{ID}{What you want to say}
+% \hyperlink{SRS}{SRS}
+% \hyperlink{VnV}{VnV}
+% \hyperlink{SRS}{SRS}

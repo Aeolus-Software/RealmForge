@@ -1,0 +1,3 @@
+\wss{list of variabilities (the variation points between games)} \\
+\wss{list of parameters of variation (the possible values for each of the variabilities)}\\
+\wss{the binding time for each variability - pre-compilation time, compile time, runtime. Pre-compilation means that you are using tools, like model driven development tools to customize the application. Compile time means that the binding happens during the build process, like with conditional compilation. Runtime means that the binding happens during live execution. If you allow the user to change the variabilities while running your game, then your binding time is runtime.}

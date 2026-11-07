@@ -1,4 +1,5 @@
-\subsection{Symbolic Parameters}
+\subsection*{Symbolic Parameters}
+\label{subsec:symbolic parameters}
 The following symbolic constants are used throughout this document:
 \begin{table}[htbp]
 	\centering
@@ -28,3 +29,6 @@ The following symbolic constants are used throughout this document:
 		\hline
 	\end{tabularx}
 \end{table}
+
+% WARNING: COMMENTED OUT FOR NOW
+% \input{A1Constants.text} --> UNCOMMENT IN INDEX FILE IF THERE IS A CONSTANT YOU ARE ADDING
