@@ -1,11 +1,21 @@
 {
-  "docs/CDs/MLReport/main.tex": [
-    "docs/CDs/FODA/FODA.tex"
+  "docs/CDs/FODA/FODA.tex": [
+    "docs/CDs/FODA/FODA.tex",
+    "docs/CDs/FODA/S0RevisionHistory.text",
+    "docs/CDs/FODA/S1Glossary.text",
+    "docs/CDs/FODA/S2Acronyms.text",
+    "docs/CDs/FODA/S3General.text",
+    "docs/CDs/FODA/S4Commonalities.text",
+    "docs/CDs/FODA/S5Variabilities.text",
+    "docs/CDs/FODA/S6RelationshipsCV.text",
+    "docs/CDs/FODA/SS1Introduction.text",
+    "docs/CDs/FODA/SS2Purpose.text",
+    "docs/Comments.text",
+    "docs/Common.text",
+    "refs/References.bib"
   ],
-  "docs/CDs/MLReport/main.tex": [
-    "docs/CDs/MLReport/acl.sty",
-    "docs/CDs/MLReport/custom.bib",
-    "docs/CDs/MLReport/main.tex"
+  "docs/CDs/FODA/ReadMe.md": [
+    "docs/CDs/FODA/ReadMe.md"
   ],
   "docs/Checklists/Code-Checklist.tex": [
     "docs/Checklists/Code-Checklist.tex",
