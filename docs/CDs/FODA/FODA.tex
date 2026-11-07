@@ -13,6 +13,7 @@
 \usepackage[protrusion=true,expansion=true]{microtype}	
 \usepackage{amsmath,amsfonts,amsthm,amssymb}
 \usepackage{graphicx}
+% \usepackage{mathbb}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MAKE TITLE
@@ -45,6 +46,25 @@
 \makeatother	
 \newcommand{\acronym}[4]{\hypertarget{#1}{\textbf{#2} & {#3} & {#4} \\ }}
 \newcommand{\glossaryDef}[4]{\hypertarget{#1}{\textbf{#2} & {#3} & {#4}\\}}
+\newcounter{var}
+\newcommand{\variable}[5]{
+	\refstepcounter{var} \subsection*	{Var-\thevar: #1} \label{var:#1}
+	\renewcommand{\arraystretch}{1.2} 
+	\begin{tabularx}{\textwidth}{|p{3cm}|X|}
+		\hline 
+		\textbf{Variable} & #1 \\ 
+		\hline 
+		\textbf{Type} & #2 \\ 
+		\hline  
+		\textbf{Parameter} & #3 \\ 
+		\hline 
+		\textbf{Description} & #4 \\
+		\hline 
+		\textbf{Binding Time} & #5 \\
+		% \hline \textbf{History:} & Created -- June 12, 2007 \\ 
+		\hline 
+	\end{tabularx}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{../../Comments.text}
 \input{../../Common.text}

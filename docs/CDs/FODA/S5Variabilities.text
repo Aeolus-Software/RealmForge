@@ -1,3 +1,20 @@
 \wss{list of variabilities (the variation points between games)} \\
 \wss{list of parameters of variation (the possible values for each of the variabilities)}\\
 \wss{the binding time for each variability - pre-compilation time, compile time, runtime. Pre-compilation means that you are using tools, like model driven development tools to customize the application. Compile time means that the binding happens during the build process, like with conditional compilation. Runtime means that the binding happens during live execution. If you allow the user to change the variabilities while running your game, then your binding time is runtime.}
+
+% LAST ARGUMENT CAN BE:
+% runtime
+% compile time
+% precompile time
+
+\variable{Health}{$\mathbb{Z}^{+}$}{Intervals between 50, 100, 150}
+{The player health. A resource and condition value that determines whether the game continues or not depending on if the values reaches zero.}     
+{runtime} 
+
+\variable{Enemy Health}{$\mathbb{Z}^{+}$}{Intervals between 20, 60, 90}
+{The enemy health. A condition value that determines whether the enemy is defeated or not depending on if the values reaches zero.}     
+{runtime} 
+
+Reference Examples (Please remove later)
+\nameref{var:Health}
+\nameref{var:Enemy Health}
