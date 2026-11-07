@@ -54,8 +54,7 @@ software build will include:
         primary combat game scene described below.
         \item An initial version of one of the software's enemy combat 
         encounter game scenes. This game scene will not include its planned 
-        complete functionality (users will not be able to complete the combat 
-        encounter and select actions to defeat the enemy), but it will include:
+        complete functionality, but it will include:
         \begin{itemize}
         	\item A representation of the player character, that displays their 
         	current health attribute
@@ -63,8 +62,13 @@ software build will include:
         	the encounter), that displays their current health attribute
         	\item An initial version of the game scene's user interface, 
         	providing buttons that correspond to the player's available actions 
-        	(these butttons will respond to input in some way, but will not 
-        	execute the complete planned game logic)
+        	(these butttons will not 
+        	execute the complete planned game logic currently)
+        	\item An initial version of the game scene's combat functionality, 
+        	allowing simple actions selected by the user to damage the enemy 
+        	and 
+        	affect their health attribute. This could also be extended to 
+        	include the enemy responding with a simple action.
         \end{itemize}
         \item An initial version of the software's feature variation 
         capabilities. The following variation points will be demonstrated:
