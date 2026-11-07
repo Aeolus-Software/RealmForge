@@ -48,7 +48,10 @@
 \newcommand{\glossaryDef}[4]{\hypertarget{#1}{\textbf{#2} & {#3} & {#4}\\}}
 \newcounter{var}
 \newcommand{\variable}[5]{
-	\refstepcounter{var} \subsection*	{Var-\thevar: #1} \label{var:#1}
+	\refstepcounter{var} 
+	\subsection*{Var-\thevar: #1}
+	\addcontentsline{toc}{subsection}{Var-\thevar: #1} 
+	\label{var:#1}
 	\renewcommand{\arraystretch}{1.2} 
 	\begin{tabularx}{\textwidth}{|p{3cm}|X|}
 		\hline 
