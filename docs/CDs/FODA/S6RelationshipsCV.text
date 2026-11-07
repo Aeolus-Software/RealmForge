@@ -1,0 +1,1 @@
+\wss{the relationship between commonalities and variabilities - examples of relationships are when picking one variabilities means you cannot pick another one (the variabilities are mutually exclusive). For instance, if you have a variability between a command line interface and a gui, once you pick command line interface, any variabilities related to graphics are not options}

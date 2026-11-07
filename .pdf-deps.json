@@ -1,5 +1,8 @@
 {
   "docs/CDs/MLReport/main.tex": [
+    "docs/CDs/FODA/FODA.tex"
+  ],
+  "docs/CDs/MLReport/main.tex": [
     "docs/CDs/MLReport/acl.sty",
     "docs/CDs/MLReport/custom.bib",
     "docs/CDs/MLReport/main.tex"
