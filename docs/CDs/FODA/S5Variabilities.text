@@ -8,12 +8,20 @@
 % precompile time
 
 \variable{Health}{$\mathbb{Z}^{+}$}{Intervals between 50, 100, 150}
-{The player health. A resource and condition value that determines whether the game continues or not depending on if the values reaches zero.}     
+{The player health. A resource and condition value that determines whether the game continues or not depending on if the values reaches zero.
+In order for the game to showcase a sense of "hard", "medium", and "easy" configuration settings, three values were given as the benchmark points.
+The lowest value will be the hard setting while the largest is the easy setting.}     
 {runtime} 
 
 \variable{Enemy Health}{$\mathbb{Z}^{+}$}{Intervals between 20, 60, 90}
-{The enemy health. A condition value that determines whether the enemy is defeated or not depending on if the values reaches zero.}     
+{The enemy health. A condition value that determines whether the enemy is defeated or not depending on if the values reaches zero.
+The highest set value will give off a sense of harder difficulty while the lowest will be the opposite. Three values are given to broadly describe hard, medium, and easy settings.}     
 {runtime} 
+
+\variable{Award Resource}{$\mathbb{R}^{+}$}{10, 15, 20, 25, 30}
+{This is the amount on \textit{average}}
+{runtime}
+
 
 Reference Examples (Please remove later)
 \nameref{var:Health}
