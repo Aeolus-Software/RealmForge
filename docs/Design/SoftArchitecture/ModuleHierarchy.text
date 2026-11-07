@@ -5,7 +5,20 @@ actually be implemented.
 
 \begin{description}
 	\item [\refstepcounter{mnum} \mthemnum \label{mInput}:] User Input Module
-	\item [\refstepcounter{mnum} \mthemnum \label{mSave}:] Save Data Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mSaveIO}:] Save Data IO Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mUI}:] User Interface Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mConfig}:] Variation 
+	Configuration Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mWorld}:] Game World Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mEncounter}:] Combat 
+	Encounter Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mPlayer}:] Player Character 
+	Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mEnemy}:] Enemy Character 
+	Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mHub}:] Central Hub Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mSaveStore}:] Save Data 
+	Storage Module
 \end{description}
 
 
@@ -16,30 +29,24 @@ actually be implemented.
 		\textbf{Level 1} & \textbf{Level 2}\\
 		\midrule
 		
-		\multirow{7}{0.3\textwidth}{Hardware-Hiding Module} & User Input Module 
+		\multirow{2}{0.3\textwidth}{Hardware-Hiding Module} & M\ref{mInput}: 
+		User Input Module
 		\\
-		& Save Data Module \\
-		& ?\\
-		& ?\\
-		& ?\\
-		& ?\\
-		& ?\\ 
-		& ?\\
+		& M\ref{mSaveIO}: Save Data IO Module \\
 		\midrule
 		
-		\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} & ?\\
-		& ?\\
-		& ?\\
-		& ?\\
-		& ?\\
-		& ?\\
-		& ?\\ 
-		& ?\\
+		\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} & M\ref{mUI}: User 
+		Interface Module\\
+		& M\ref{mConfig}: Variation Configuration Module \\
+		& M\ref{mWorld}: Game World Module \\
+		& M\ref{mEncounter}: Combat Encounter Module \\
+		& M\ref{mPlayer}: Player Character Module \\
+		& M\ref{mEnemy}: Enemy Character Module \\
+		& M\ref{mHub}: Central Hub Module \\ 
 		\midrule
 		
-		\multirow{3}{0.3\textwidth}{Software Decision Module} & {?}\\
-		& ?\\
-		& ?\\
+		\multirow{1}{0.3\textwidth}{Software Decision Module} & 
+		M\ref{mSaveStore}: Save Data Storage Module\\
 		\bottomrule
 		
 	\end{tabular}
