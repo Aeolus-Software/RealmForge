@@ -1,0 +1,36 @@
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
+		\toprule
+		\textbf{Level 1} & \textbf{Level 2}\\
+		\midrule
+		
+		\multirow{2}{0.3\textwidth}{Hardware-Hiding Module} & User Input Module 
+		\\
+		& Save Data IO Module \\
+		\midrule
+		
+		\multirow{11}{0.3\textwidth}{Behaviour-Hiding Module} & 
+		Main 
+		Menu 
+		Interface Module\\
+		& Configuration Interface Module \\
+		& Variation Configuration Module \\
+		& Game World Interface Module \\
+		& Game World Module \\
+		& Combat Encounter Interface Module \\
+		& Combat Encounter Module \\
+		& Player Character Module \\
+		& Enemy Character Module \\
+		& Central Hub Interface Module \\
+		& Central Hub Module \\ 
+		\midrule
+		
+		\multirow{1}{0.3\textwidth}{Software Decision Module} & 
+		Save Data Storage Module\\
+		\bottomrule
+		
+	\end{tabular}
+	\caption{Module Hierarchy}
+	\label{TblMH}
+\end{table}
