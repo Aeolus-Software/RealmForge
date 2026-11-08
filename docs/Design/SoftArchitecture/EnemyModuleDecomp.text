@@ -1,0 +1,13 @@
+\begin{description}
+	\item[Secrets:]An enemy character in the RealmForge game's internal 
+	attributes and 
+	state, including the assets used for the character (displayed character 
+	image), the character's health, the character's game actions, and other 
+	details.
+	\item[Services:]Provides the state and attributes of an enemy character to 
+	other system modules where needed. Provides the enemy character's displayed 
+	image and animation to the Godot Engine for display, and provides their 
+	health, game actions, and other attributes or states to the Combat 
+	Encounter Module to facilitate combat encounter game scenes.
+	\item[Implemented By:] RealmForge
+\end{description}
