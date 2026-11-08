@@ -6,16 +6,25 @@ actually be implemented.
 \begin{description}
 	\item [\refstepcounter{mnum} \mthemnum \label{mInput}:] User Input Module
 	\item [\refstepcounter{mnum} \mthemnum \label{mSaveIO}:] Save Data IO Module
-	\item [\refstepcounter{mnum} \mthemnum \label{mUI}:] User Interface Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mMainMenu}:] Main Menu 
+	Interface Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mConfigMenu}:] Configuration 
+	Interface Module
 	\item [\refstepcounter{mnum} \mthemnum \label{mConfig}:] Variation 
 	Configuration Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mWorldMenu}:] Game World 
+	Interface Module
 	\item [\refstepcounter{mnum} \mthemnum \label{mWorld}:] Game World Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mEncounterMenu}:] Combat 
+	Encounter Interface Module
 	\item [\refstepcounter{mnum} \mthemnum \label{mEncounter}:] Combat 
 	Encounter Module
 	\item [\refstepcounter{mnum} \mthemnum \label{mPlayer}:] Player Character 
 	Module
 	\item [\refstepcounter{mnum} \mthemnum \label{mEnemy}:] Enemy Character 
 	Module
+	\item [\refstepcounter{mnum} \mthemnum \label{mHubMenu}:] Central Hub 
+	Interface Module
 	\item [\refstepcounter{mnum} \mthemnum \label{mHub}:] Central Hub Module
 	\item [\refstepcounter{mnum} \mthemnum \label{mSaveStore}:] Save Data 
 	Storage Module
@@ -35,13 +44,19 @@ actually be implemented.
 		& M\ref{mSaveIO}: Save Data IO Module \\
 		\midrule
 		
-		\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} & M\ref{mUI}: User 
+		\multirow{11}{0.3\textwidth}{Behaviour-Hiding Module} & 
+		M\ref{mMainMenu}: Main 
+		Menu 
 		Interface Module\\
+		& M\ref{mConfigMenu}: Configuration Interface Module \\
 		& M\ref{mConfig}: Variation Configuration Module \\
+		& M\ref{mWorldMenu}: Game World Interface Module \\
 		& M\ref{mWorld}: Game World Module \\
+		& M\ref{mEncounterMenu}: Combat Encounter Interface Module \\
 		& M\ref{mEncounter}: Combat Encounter Module \\
 		& M\ref{mPlayer}: Player Character Module \\
 		& M\ref{mEnemy}: Enemy Character Module \\
+		& M\ref{mHubMenu}: Central Hub Interface Module \\
 		& M\ref{mHub}: Central Hub Module \\ 
 		\midrule
 		
