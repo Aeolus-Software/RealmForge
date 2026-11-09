@@ -3,17 +3,16 @@ These items are not expected to change during the capstone, so they are not trea
 module secrets and are documented rather than encapsulated in a separate module secret:
 
 \begin{description}
-    \UC{main menu stuff} {description}{Please add rationale}
-    \UC{Input output stuff} {description}{Please add rationale}
-    \UC{LOOK AT MY Anticipated CHANGES} {description}{Please add rationale}
-    \UC{ADD MORE STUFF} {description}{Please add rationale}
-    \UC{LOOK AT MY Anticipated CHANGES} {description}{Please add rationale  }
+    \ULC{main menu stuff} {description}{Please add rationale}
+    \ULC{Input output stuff} {description}{Please add rationale}
+    \ULC{LOOK AT MY Anticipated CHANGES} {description}{Please add rationale}
+    \ULC{ADD MORE STUFF} {description}{Please add rationale}
+    \ULC{LOOK AT MY Anticipated CHANGES} {description}{Please add rationale  }
 \end{description}
 
 % EXAMPLE OF REFERENCE WITH UC
-\uref{UC-ADD MORE STUFF}
-\uref{UC-LOOK AT MY Anticipated CHANGES}
-
+\uref{ULC-ADD MORE STUFF}
+\uref{ULC-LOOK AT MY Anticipated CHANGES}
 
 % The module design should be as general as possible. However, a general system is
 % more complex. Sometimes this complexity is not necessary. Fixing some design
