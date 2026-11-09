@@ -1,0 +1,12 @@
+\begin{description}
+\item[Secrets:]The programmed logic, behavior, and data structures used to 
+manage configurations of the system's variation points. This includes how the 
+variation points' current values are stored, updated, and validated.
+\item[Services:]Provides input to other system modules to configure their 
+features with respect to the user's selected variation point configurations 
+(irrespective of how these configurations are stored and managed). These 
+configurations can take the form of discrete variables, or selections of larger 
+structural features (as discussed in the project's Feature-Oriented Domain 
+Analysis Report).
+\item[Implemented By:] RealmForge
+\end{description}

@@ -1,0 +1,11 @@
+\begin{description}
+\item[Secrets:]The programmed logic and behaviour used to provide a graphical 
+interface to the user to allow them to configure the system. This includes the 
+layout and behaviour of graphical labels, buttons, and other fields. 
+\item[Services:]Provides a graphical user interface to configure the system at 
+its explicit variation points. Selections made using this interface are then 
+provided to other system modules (primarily the Variation Configuration 
+Module), to facilitate the behaviour of the system irrespective of how the 
+interface is presented or constructed.
+\item[Implemented By:] RealmForge
+\end{description}
