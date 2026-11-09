@@ -1,0 +1,61 @@
+\begin{description}
+    
+\AC{Save Data Configurations}
+{The data that will persist once the game has started and ended. The game will keep these changes even after closing the application. 
+The configuration data will be fine-tuned and expanded upon once more configurations are thought of.
+The configurations that were changed will remain the same after relaunch such that the player will not have to reconfigure the setting.}
+{This will likely change when considering what is logical to keep stored. Extra configuration options will also be added
+in the future which changes the stored structure.}
+    
+\AC{UI Interface}
+{The many interface elements that give intractability between the game and the player; these range from combat, game world travel, store interaction, configuration, saving and any viable action the player can be allowed to do. }
+{The UI segments will change when adding or removing options from the above examples. For instance, adding a combat option will expand the combat interface which changes it. The UI will also change from usability and configuration to figure out the ‘best look and feel’ for the game.}
+
+\AC{Variation points}
+{The variables the player can alter between game sessions to change the user experience. }
+{New variations can be added, or old variations can be removed depending on whether they are impactful to the playthrough, i.e., they greatly alter the experience of the game.}
+    
+\AC{Combat Effects}
+{The different behaviours and effects that can be used during combat against enemy parties or even the player itself.}
+{The game needs variety in combat options, but the various ways could change depending on complications such as game balance, implementation difficulty, or other aspects.}
+
+\AC{Central Hub Design and Upgrade Options -- not happy with this one}
+{The area or station that allows the player to improve their run effectiveness by buying resource improvements, upgrades, and much more.}
+{The central hub can be represented in different manners depending on player feel. The hub needs to be functional and easy to use as it gives the player a short break from traveling and combat. Upgrade improvements are also subject to game balancing, and implementation. Adding a special resource improvement can trivialize item collection and the progression of the game. }
+
+\AC{Player Model}
+{The properties of the in-game character such as health, resources, inventory, stat modifiers and more. }
+{The player properties will change depending on the variety of in-game features added. For instance, adding a stamina resource that the player can run and drain stamina. The player may or may not equip headwear gear, so then a head item slot must be implemented.}
+
+\AC{Enemy Model}
+{The properties of enemies such as typing, attacks, health, and stat modifiers and more.}
+{The enemy capabilities will likely be expanded on to give the player a good obstacle to overcome that is rewarding and fun.}
+
+\AC{Game World Design}
+{The implementation of the game world which ranges from possible travel locations, resource materials, currency, landscape, enemies, and in-game character representations.}
+{All manners of feature changes will likely change the look and feel of the game world. For instance, adding a new travel destination will alter the map of the game.}
+
+\AC{Reward System}
+{The reward system that will transfer currency, resources, and other reward items to the player.}
+{This feature will be changed based on decisions on how much or what should be given to the player. Awarding the player with too much will trivialize the experience or awarding too little will dissatisfy them. Other concepts of achievements can be implemented as well.}
+
+    
+\end{description}
+
+% Anticipated changes are the source of the information that is to be hidden
+% inside the modules. Ideally, changing one of the anticipated changes will only
+% require changing the one module that hides the associated decision. The approach
+% adapted here is called design for
+% change.
+
+% \begin{description}
+% \item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
+%   hardware on which the software is running.
+% \item[\refstepcounter{acnum} \actheacnum \label{acInput}:] The format of the
+%   initial input data.
+% \item ...
+% \end{description}
+
+% \wss{Anticipated changes relate to changes that would be made in requirements,
+% design or implementation choices.  They are not related to changes that are made
+% at run-time, like the values of parameters.}

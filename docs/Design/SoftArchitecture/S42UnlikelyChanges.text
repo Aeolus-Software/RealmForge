@@ -1,0 +1,29 @@
+
+These items are not expected to change during the capstone, so they are not treated as 
+module secrets and are documented rather than encapsulated in a separate module secret:
+
+\begin{description}
+    \UC{main menu stuff} {description}{Please add rationale}
+    \UC{Input output stuff} {description}{Please add rationale}
+    \UC{LOOK AT MY Anticipated CHANGES} {description}{Please add rationale}
+    \UC{ADD MORE STUFF} {description}{Please add rationale}
+    \UC{LOOK AT MY Anticipated CHANGES} {description}{Please add rationale  }
+\end{description}
+
+% EXAMPLE OF REFERENCE WITH UC
+\uref{UC-ADD MORE STUFF}
+\uref{UC-LOOK AT MY Anticipated CHANGES}
+
+
+% The module design should be as general as possible. However, a general system is
+% more complex. Sometimes this complexity is not necessary. Fixing some design
+% decisions at the system architecture stage can simplify the software design. If
+% these decision should later need to be changed, then many parts of the design
+% will potentially need to be modified. Hence, it is not intended that these
+% decisions will be changed.
+
+% \begin{description}
+% \item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
+%   (Input: File and/or Keyboard, Output: File, Memory, and/or Screen).
+% \item ...
+% \end{description}
