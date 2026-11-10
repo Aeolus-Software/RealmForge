@@ -1,15 +1,12 @@
 \begin{description}
     
 \AC{Save Data Configurations}
-{The data that will persist once the game has started and ended. The game will keep these changes even after closing the application. 
-The configuration data will be fine-tuned and expanded upon once more configurations are thought of.
-The configurations that were changed will remain the same after relaunch such that the player will not have to reconfigure the setting.}
-{This will likely change when considering what is logical to keep stored. Extra configuration options will also be added
-in the future which changes the stored structure.}
+{User configurations settings are stored as persistent data once they are set by the user; these include elements such as audio, graphics, control, or gameplay. The saved configurations are loaded after relaunching the application, so that the user does not need to reconfigure.}
+{Configurations to improve player experience are likely to be added in the future.}
     
 \AC{UI Interface}
-{The many interface elements that give intractability between the game and the player; these range from combat, game world travel, store interaction, configuration, saving and any viable action the player can be allowed to do. }
-{The UI segments will change when adding or removing options from the above examples. For instance, adding a combat option will expand the combat interface which changes it. The UI will also change from usability and configuration to figure out the ‘best look and feel’ for the game.}
+{The visible interface elements on the screen that allow the player to perform actions such as combat, travel, shopping, and configurations.}
+{The UI Interface will change based on user testing and usability; this is so that the UI is simple, easy to use, and cause little confusion on action is being done.}
 
 \AC{Variation points}
 {The variables the player can alter between game sessions to change the user experience. }
@@ -21,7 +18,7 @@ in the future which changes the stored structure.}
 
 \AC{Central Hub Design and Upgrade Options -- not happy with this one}
 {The area or station that allows the player to improve their run effectiveness by buying resource improvements, upgrades, and much more.}
-{The central hub can be represented in different manners depending on player feel. The hub needs to be functional and easy to use as it gives the player a short break from traveling and combat. Upgrade improvements are also subject to game balancing, and implementation. Adding a special resource improvement can trivialize item collection and the progression of the game. }
+{It is not yet clear what is going to be presented in the central hub. There could be several upgrades, items, and equipment that could be added or removed from the game due to user testing and other feedback.}
 
 \AC{Player Model}
 {The properties of the in-game character such as health, resources, inventory, stat modifiers and more. }
