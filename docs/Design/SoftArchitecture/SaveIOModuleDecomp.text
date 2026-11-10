@@ -1,0 +1,6 @@
+\subsubsection{Save Data IO Module ({\mref{mSaveIO}})}
+\begin{description}
+\item[Secrets:] The logic for collecting and storing data types and values into a readable format for later use on the hardware. Logic for labeling profile creation. Saving logic for interrupted behavior such as immediate closure of application or backing up data when something go wrong.
+\item[Services:] Serves as the games saving feature to record configuration settings and profile creation.
+\item[Implemented By:] Godot Engine
+\end{description}

@@ -1,0 +1,6 @@
+\subsubsection{Save Data Storage Module ({\mref{mSaveStore}})}
+\begin{description}
+\item[Secrets:] The data and objects that are stored on the hardware. Information regarding player metrics. Logic checking for correct and corrupted data types and objects. 
+\item[Services:] Serves as a communication system for file access on local hardware. Informs the user of any malformed data and rejects it.
+\item[Implemented By:] Godot Engine
+\end{description}

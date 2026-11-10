@@ -1,0 +1,7 @@
+\subsubsection{Game World Module ({\mref{mWorld}})}
+\begin{description}
+\item[Secrets:] The game logic and behavior for transitional between game states such as traveling over world, combat, and central hub.
+\item[Services:] Serves as the main control to transition the player into each game state and screen.
+\item[Implemented By:] Realmforge
+\item[Type of Module:] Abstract Object
+\end{description}
