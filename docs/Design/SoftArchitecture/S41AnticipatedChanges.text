@@ -1,5 +1,9 @@
 \begin{description}
     
+\AC{User Input}
+{The input commands used to navigate through the application.}
+{Inputs and the nature of navigation could change especially when integration of keyboard and mouse equivalence to controller.}
+
 \AC{Save Data Configurations}
 {User configurations settings are stored as persistent data once they are set by the user; these include elements such as audio, graphics, control, or gameplay. The saved configurations are loaded after relaunching the application, so that the user does not need to reconfigure.}
 {Configurations to improve player experience are likely to be added in the future.}
@@ -16,7 +20,7 @@
 {The different behaviours and effects that can be used during combat against enemy parties or even the player itself.}
 {The game needs variety in combat options, but the various ways could change depending on complications such as game balance, implementation difficulty, or other aspects.}
 
-\AC{Central Hub Design and Upgrade Options -- not happy with this one}
+\AC{Central Hub Design and Upgrade Options}
 {The area or station that allows the player to improve their run effectiveness by buying resource improvements, upgrades, and much more.}
 {It is not yet clear what is going to be presented in the central hub. There could be several upgrades, items, and equipment that could be added or removed from the game due to user testing and other feedback.}
 
