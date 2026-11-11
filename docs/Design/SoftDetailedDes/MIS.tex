@@ -75,7 +75,18 @@ See SRS Documentation at \wss{give url}
 \begin{tabular}{l p{10cm } l} 
 	\toprule		
 	\textbf{Term} & \textbf{Definition} & \textbf{Section}\\
-	\midrule 
+	\midrule
+	\glossaryDef{singleton}{Godot Singleton}{A globally accessible single 
+	instance of a class provided by the Godot Engine. An example of a Godot 
+	Singleton is the Input singleton, which is provided by the engine to allow 
+	any game code to access inputs provided by the user.}{MIS Sections}
+	\glossaryDef{scene}{Godot Node}{An abstract object that Godot Scenes, and 
+	by extension Godot game projects are composed of. Nodes can be a game 
+	character, an interface button, or any other various game objects that the 
+	engine provides support for \cite{GodotDocs}.}{MIS Sections}
+	\glossaryDef{scene}{Godot Scene}{A reusable and instantiable tree of Godot 
+	Nodes. Godot game projects are created as a collection of scenes 
+	\cite{GodotDocs}.}{MIS Sections}
 	%EXAMPLES BELOW ARE SHOW FOR USE
 	% \glossaryDef{id}{Glossary Term} {Description}{Section # -- USE 
 	%\ref{sec:Variabilities}}
@@ -244,6 +255,10 @@ The following table is taken directly from the Module Guide document for this pr
 \section{MIS of User Input Module M1} \label{mInput}
 
 \input{UserInputMIS.text}
+
+\section{MIS of Enemy Character Module M11} \label{mEnemy}
+
+\input{EnemyMIS.text}
 
 \newpage
 
