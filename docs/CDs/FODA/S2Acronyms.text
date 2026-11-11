@@ -18,8 +18,23 @@
   \bottomrule
   \end{tabularx}
 
+
   % EXAMPLE TO LINK
 % \hyperlink{ID}{What you want to say}
 % \hyperlink{SRS}{SRS}
 % \hyperlink{VnV}{VnV}
 % \hyperlink{SRS}{SRS}
+
+
+\subsection{Types}
+The notation used to explain type terminology in Section \ref{sec:Variabilities}.\\
+\renewcommand{\arraystretch}{1.2}
+% \begin{tabularx}{\textwidth}{lXl}
+\begin{tabularx}{\textwidth}{l X l}
+  \toprule		
+  \textbf{Notation} & \textbf{Description} \\
+  \midrule 
+  $\mathbb{R}$ & All real numbers \\
+  $\mathbb{R}^{+}$ & Real positive numbers \{0, 1, 2, ... \} \\
+  \bottomrule
+\end{tabularx}
