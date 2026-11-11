@@ -1,0 +1,7 @@
+\subsubsection{Game World Interface Module ({\mref{mWorldMenu}})}
+\begin{description}
+\item[Secrets:] UI interface logic for traveling and travel confirmation. Logic and transition behavior on what sub-interface menu is always present.
+\item[Services:] Shows interface overworld information such as player location, travel destination area name. Serves as a switching mechanism between the several sub-UI interfaces for each module such as configuration, combat, central hub etc.
+\item[Implemented By:] Realmforge
+\item[Type of Module] Abstract Object
+\end{description}

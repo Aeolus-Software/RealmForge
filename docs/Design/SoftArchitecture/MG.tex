@@ -46,8 +46,7 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+Nov 10, 2026 & 1.0 & SaveIO/Storage, GameWorld/UI first draft \\
 \bottomrule
 \end{tabularx}
 
@@ -227,6 +226,8 @@ to be implemented.
 \item[Implemented By:] OS
 \end{description}
 
+\input{SaveIOModuleDecomp.text}
+
 \subsection{Behaviour-Hiding Module}
 
 \begin{description}
@@ -252,6 +253,9 @@ to be implemented.
 
 \subsubsection{Etc.}
 
+\input{GameWorldUIModuleDecomp.text}
+\input{GameWorldModuleDecomp.text}
+
 
 \subsection{Software Decision Module}
 
@@ -267,6 +271,8 @@ to be implemented.
 \end{description}
 
 \subsubsection{Etc.}
+
+\input{SaveDataStorageModuleDecomp.text}
 
 \section{Traceability Matrix} \label{SecTM}
 
@@ -316,6 +322,22 @@ R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
 \acref{acSeqDS} & \mref{mSeqDS}\\
 \acref{acSolver} & \mref{mSolver}\\
 \acref{acPlot} & \mref{mPlot}\\
+
+SR-020 & \mref{mWorldMenu} \\
+SR-021 & \mref{mWorld} \\
+SR-022 & \mref{mWorldMenu} \\
+SR-023 & \mref{mWorldMenu} \\
+SR-024 & \mref{mWorld}, \mref{mWorldMenu} \\
+
+SSR-001 & \mref{mSaveIO} \\
+SSR-002 & \mref{mSaveIO} \\
+SSR-003 & \mref{mSaveStore} \\
+SSR-004 & \mref{mSaveIO} \\
+SSR-005 & \mref{mSaveIO}, \mref{mSaveStore}\\
+SRR-007 & NONE FOR NOW \\
+SSR-007 & \mref{mSaveIO}, \mref{mSaveStore}\\
+
+
 \bottomrule
 \end{tabular}
 \caption{Trace Between Anticipated Changes and Modules}
