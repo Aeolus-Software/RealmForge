@@ -1,0 +1,34 @@
+\section{MIS of Game World Interface (M6)} \label{M6-GameWorldInterface}
+
+\subsection{Module}
+Game World UI
+\subsection{Uses}
+Used throughout the main game loop. Important for SRS requirements SRS-021
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+\subsubsection{Exported Access Programs}
+\subsubsection{}
+
+\begin{center}
+\begin{tabular}{p{2cm} p{4cm} p{4cm} p{2cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+\wss{accessProg} & - & - & - \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Syntax}
+\subsubsection{State Variables}
+\subsubsection{Environment Variables}
+\subsubsection{Assumptions}
+\subsubsection{Access Routine Semantics}
+\subsubsection{Local Functions}
+\subsubsection{Considerations}
+
+
+
+

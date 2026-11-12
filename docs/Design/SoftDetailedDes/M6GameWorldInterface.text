@@ -1,0 +1,76 @@
+\section{MIS of Game World Interface (M6)} \label{M6-GameWorldInterface}
+
+\subsection{Module}
+Game World UI
+\subsection{Uses}
+Used throughout the main game loop. 
+Important for SRS requirements SRS-020, SRS-021, SRS-022, SRS-023, SRS-024.
+Satisfies UC-002
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+None.
+\subsubsection{Exported Access Programs}
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{2cm} p{3cm} p{2cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+\verb|get_game_state()| & None & \verb|game_state| & \verb|assert(faulty_game_state)| \\
+\hline
+\end{tabularx}
+\end{center}
+
+\subsection{Syntax}
+\subsubsection{State Variables}
+\begin{itemize}
+    \item \verb|GAME_STATE current_ui|: The state that states what set of UI components are show.
+    \item STRING \verb|current_location|: The designated current area shown and process.
+\end{itemize} 
+\subsubsection{Environment Variables}
+None.
+\subsubsection{Assumptions}
+\begin{itemize}
+    \item The Game World UI is the main root node for controlling UI nodes.
+\end{itemize}
+\subsubsection{Access Routine Semantics}
+\begin{itemize}
+    % \item \texttt{get_current_ui_state}
+    \item {\verb|get_current_ui_state()| \\ 
+    output: \verb|GAME_STATE current_ui|}
+
+
+    \item {\verb|on_ui_change(GAME_STATE game_state)| \\
+    transition: \verb|ui_state := game_state|}
+
+
+    \item {\verb|on_travel_button_up(destination)| \\
+    transition := \verb|current_location := destination| \\
+    input: \verb|String destination_name| }
+
+
+    \item {\verb|get_current_location()| \\
+    output: \verb|STRING current_location|}
+
+
+    \item {\verb|show_prompt()| \\
+    transition: prompt.visible := true}
+
+
+    \item {\verb|confirm_prompt(true)| \\
+    input: Boolean true}
+
+
+    \item {\verb|diplay_area(current_location)| \\
+    transition: \verb|area.text := current_location|}
+
+
+\end{itemize}
+\subsubsection{Local Functions}
+None.
+\subsubsection{Considerations}
+\begin{description}
+\item[Secrets:] UI interface logic for traveling and travel confirmation. Logic and transition behavior on what sub-interface menu is always present.
+\item[Services:] Shows interface overworld information such as player location, travel destination area name. Serves as a switching mechanism between the several sub-UI interfaces for each module such as configuration, combat, central hub etc.
+\end{description}
