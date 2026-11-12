@@ -1,10 +1,14 @@
 \subsection{Module}
 
-This module handles external input from the user, via an input device (a 
+This module handles external input from the user, via a physical input device 
+(a 
 controller, or a keyboard and mouse). It is implemented by the Godot Engine 
 (through its provided input functionality spread throughtout the engine) for 
 use by the RealmForge software. The details provided in this MIS description 
-are provided by the Godot Engine Documentation \cite{GodotDocs}
+are provided by the Godot Engine Documentation \cite{GodotDocs}. The full set 
+of access programs, exported constants, and other functionalities the Godot 
+Engine provides for input will not be enumerated (as it is quite lengthy); 
+details relevant to the RealmForge software's development are included.
 
 \subsection{Uses}
 
@@ -18,14 +22,92 @@ are provided by the Godot Engine Documentation \cite{GodotDocs}
 
 \subsubsection{Exported Constants}
 
+Input singleton (provides a globally accessible interface to the user input 
+state):
+\begin{itemize}
+	\item enum MouseMode (controls the mouse cursor), with values:
+	\{MOUSE\_MODE\_VISIBLE, 
+	MOUSE\_MODE\_HIDDEN, 
+	MOUSE\_MODE\_CAPTURED, MOUSE\_MODE\_CONFINED, 
+	MOUSE\_MODE\_CONFINED\_HIDDEN, 
+	MOUSE\_MODE\_MAX\}
+\end{itemize}
+
+\noindent InputEvent class (provides a class to type system events related to 
+user input by, 
+that can be handled accordingly by the software):
+
+\begin{itemize}
+	\item DEVICE\_ID\_EMULATION = -1
+	\item DEVICE\_ID\_KEYBOARD = 16
+	\item DEVICE\_ID\_MOUSE = 32
+\end{itemize}
+
 \subsubsection{Exported Access Programs}
 
+The Godot Engine does not provide functionality for exceptions, in favour of 
+methods returning error values, or raising error warnings/flags (to avoid 
+crashing or halting the software, so that errors can be handled and the game 
+can continue to execute). As an alternative, exported access programs outlined 
+for each module's specification in this document will describe the error 
+logging or returned error values that are provided following an error in an 
+access program.\\
+
+\noindent Input singleton:
+
 \begin{center}
-	\begin{tabular}{p{2cm} p{4cm} p{4cm} p{2cm}}
+	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{6.5cm}}
 		\hline
 		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 		\hline
-		\wss{accessProg} & - & - & - \\
+		is\_action\_pressed & \shortstack[l]{\strut action : String \\ 
+		exact\_match : 
+		Boolean} & 
+		Boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
+		Logs an error message in the console} \\
+		\hline
+	\end{tabular}\newline
+\end{center}
+
+\noindent InputMap singleton (provided to manage InputEventActions, describes 
+the actions 
+that the Input singleton can handle):
+
+\begin{center}
+	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{6.5cm}}
+		\hline
+		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+		\hline
+		add\_action & \shortstack[l]{\strut action : String \\ 
+		deadzone : 
+		Float} & 
+		- & Logs an error message in the console \\
+		\hline
+		action\_add\_event & \shortstack[l]{\strut action : String \\ 
+		event : InputEvent} & 
+		- & Logs an error message in the console \\
+		\hline
+	\end{tabular}\newline
+\end{center}
+
+\noindent InputEvent:
+
+\begin{center}
+	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{6.5cm}}
+		\hline
+		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+		\hline
+		is\_action\_pressed & \shortstack[l]{\strut action : String \\ 
+		allow\_echo : Boolean \\ exact\_match : 
+		 Boolean} & 
+		Boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
+		Logs an error message in the console} \\
+		\hline
+		is\_action & \shortstack[l]{\strut action : String \\ 
+		exact\_match : 
+		Boolean} & 
+		Boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
+		Logs an error message in the console} \\
 		\hline
 	\end{tabular}
 \end{center}
@@ -34,40 +116,39 @@ are provided by the Godot Engine Documentation \cite{GodotDocs}
 
 \subsubsection{State Variables}
 
-\wss{Not all modules will have state variables.  State variables give the module
-	a memory.}
+All internal variables related to the current state of the user's input, and 
+its connection to the user's machine. These variables are used internally by 
+the Godot Engine and hidden to RealmForge's implemented software.
 
 \subsubsection{Environment Variables}
 
-\wss{This section is not necessary for all modules.  Its purpose is to capture
-	when the module has external interaction with the environment, such as for a
-	device driver, screen interface, keyboard, file, etc.}
+For a controller used as an input device:
+\begin{itemize}
+	\item states of controller buttons
+	\item joystick positions
+	\item trigger positions
+\end{itemize}
+
+\noindent For a keyboard and mouse combination used as input devices:
+\begin{itemize}
+\item currently pressed keys
+\item mouse cursor position
+\item states of mouse buttons
+\end{itemize}
 
 \subsubsection{Assumptions}
 
-\wss{Try to minimize assumptions and anticipate programmer errors via
-	exceptions, but for practical purposes assumptions are sometimes 
-	appropriate.}
+\begin{itemize}
+	\item Input variables and data provided by the Godot Engine's Input, 
+	InputEvent, and InputMap classes are valid, when a valid physical input 
+	device is correctly connected to the user's machine.
+\end{itemize}
 
 \subsubsection{Access Routine Semantics}
 
-\noindent \wss{accessProg}():
-\begin{itemize}
-	\item transition: \wss{if appropriate} 
-	\item output: \wss{if appropriate} 
-	\item exception: \wss{if appropriate} 
-\end{itemize}
-
-\wss{A module without environment variables or state variables is unlikely to
-	have a state transition.  In this case a state transition can only occur if
-	the module is changing the state of another module.}
-
-\wss{Modules rarely have both a transition and an output.  In most cases you
-	will have one or the other.}
+Will be updated in Revision 0 of the document.
 
 \subsubsection{Local Functions}
 
-\wss{As appropriate} \wss{These functions are for the purpose of specification.
-	They are not necessarily something that is going to be implemented
-	explicitly.  Even if they are implemented, they are not exported; they only
-	have local scope.}
+The local functions used to provide input functionality by the Godot Engine are 
+hidden to RealmForge's implemented software.
