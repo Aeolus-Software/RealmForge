@@ -1,78 +1,104 @@
 \section{MIS of Game World Interface (M6)} \label{M6-GameWorldInterface}
-
 \subsection{Module}
-Game World UI
+The Game World interface handles logic for traveling and travel confirmation; it will be present options of destination and label current locations, overworld information.
+Serves as a switching mechanism between the multiple sub-UI interfaces for each module such as configuration, combat, central hub etc.
+
+
 \subsection{Uses}
-Used throughout the main game loop. 
-Important for SRS requirements SRS-020, SRS-021, SRS-022, SRS-023, SRS-024.
-Satisfies UC-002
+Godot Engine - Godot Control Nodes (used specifically for UI) as well as the built-in libraries.
+
 
 \subsection{Syntax}
 
+
 \subsubsection{Exported Constants}
-None.
+\begin{itemize}
+    \item enum GameState with values: {TRAVEL, COMBAT, CENTRAL\_HUB}
+\end{itemize}
+
+
 \subsubsection{Exported Access Programs}
 \begin{center}
-\begin{tabularx}{\textwidth}{p{4cm} p{2cm} p{4cm} p{4cm}}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{4cm} p{4cm}}
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-get\_game\_state() & None & GAME\_STATE game\_state & returns default state \\
+get\_game\_state& - & GAME\_STATE: GameState & Returns default state \\
+\hline
+get\_current\_ui\_state& - & GAME\_STATE: GameState & Returns default state \\ 
+\hline
+on\_ui\_change& GAME\_STATE: GameState & - & Logs "Game state invalid" \\
+\hline
+on\_travel\_button\_up& destination: String & - & Logs "destination not found" \\
+\hline
+get\_current\_location& - & location: String  & Logs "no location found" \\
+\hline
+show\_prompt& - & - & Logs "prompt not shown" \\
+\hline
+confirm\_prompt& is\_true: Boolean  & action: Boolean  & Logs an error message of confirmation\\
+\hline
+diplay\_area& - & - & Logs "no area to display \\
 \hline
 \end{tabularx}
 \end{center}
 
+
 \subsection{Syntax}
 \subsubsection{State Variables}
 \begin{itemize}
-    \item \verb|GAME_STATE current_ui|: The state that states what set of UI components are show.
+    \item \verb|GameState current_ui|: The state that states what set of UI components are show.
     \item STRING \verb|current_location|: The designated current area shown and process.
 \end{itemize} 
+
+
 \subsubsection{Environment Variables}
 None.
+
+
 \subsubsection{Assumptions}
 \begin{itemize}
     \item The Game World UI is the main root node for controlling UI nodes.
 \end{itemize}
+
+
 \subsubsection{Access Routine Semantics}
-\begin{itemize}
-    % \item \texttt{get_current_ui_state}
-    \item {\verb|get_current_ui_state()| \\ 
-    output: \verb|GAME_STATE current_ui|}
+Will be updated in Revision 0 of the document
+% \begin{itemize}
+%     % \item \texttt{get_current_ui_state}
+%     \item {\verb|get_current_ui_state()| \\ 
+%     output: \verb|GAME_STATE current_ui|}
 
 
-    \item {\verb|on_ui_change(game_state)| \\
-    transition: \verb|ui_state := game_state|}
-    input: \verb|GAME_STATE game_state|
+%     \item {\verb|on_ui_change(game_state)| \\
+%     transition: \verb|ui_state := game_state|}
+%     input: \verb|GAME_STATE game_state|
 
 
-    \item {\verb|on_travel_button_up(destination)| \\
-    transition := \verb|current_location := destination| \\
-    input: \verb|String destination_name| }
+%     \item {\verb|on_travel_button_up(destination)| \\
+%     transition := \verb|current_location := destination| \\
+%     input: \verb|String destination_name| }
 
 
-    \item {\verb|get_current_location()| \\
-    output: \verb|STRING current_location|}
+%     \item {\verb|get_current_location()| \\
+%     output: \verb|STRING current_location|}
 
 
-    \item {\verb|show_prompt()| \\
-    transition: prompt.visible := true}
+%     \item {\verb|show_prompt()| \\
+%     transition: prompt.visible := true}
 
 
-    \item {\verb|confirm_prompt(true)| \\
-    input: Boolean true}
+%     \item {\verb|confirm_prompt(true)| \\
+%     input: Boolean true}
 
 
-    \item {\verb|diplay_area(current_location)| \\
-    transition: \verb|area.text := current_location|}
+%     \item {\verb|diplay_area(current_location)| \\
+%     transition: \verb|area.text := current_location|}
 
 
-\end{itemize}
+% \end{itemize}
 \subsubsection{Local Functions}
-None.
+Will be updated in Revision 0 of the document
+
+
 \subsubsection{Considerations}
-\begin{description}
-\item[Secrets:] UI interface logic for traveling and travel confirmation. Logic and transition behavior on what sub-interface menu is always present.
-\item[Services:] Shows interface overworld information such as player location, travel destination area name. Serves as a switching mechanism between the several sub-UI interfaces for each module such as configuration, combat, central hub etc.
-\item This module contains its own set of UI logic for overworld menus, as well as transition between other UI menus
-\end{description}
+Will be updated in Revision 0 of the document
