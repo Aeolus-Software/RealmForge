@@ -1,33 +1,72 @@
-\section{MIS of Game World Interface (M6)} \label{M6-GameWorldInterface}
+\section{MIS of Game World (M7)} \label{M7-GameWorld}
 
 \subsection{Module}
-Game World UI
+The main module that handles game states, transitioning between game states, communication with all other sub modules, helping with UI signals and rendering the whole game. Is a Godot Singleton and has leaves such as the player, enemy, and combat module.
+
+
 \subsection{Uses}
-Used throughout the main game loop. Important for SRS requirements SRS-021
+\begin{itemize}
+    \item Uses the Godot Singleton class
+    \item Godot World Interface Module
+\end{itemize}
+
 
 \subsection{Syntax}
-
 \subsubsection{Exported Constants}
+\begin{itemize}
+    \item enum GameState with values: {TRAVEL, COMBAT, CENTRAL\_HUB,}
+\end{itemize}
 \subsubsection{Exported Access Programs}
-\subsubsection{}
 
 \begin{center}
-\begin{tabular}{p{2cm} p{4cm} p{4cm} p{2cm}}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-\wss{accessProg} & - & - & - \\
+state\_change & new\_state: GameState & - & Logs message showing what is the current state. Logs invalid state changes. \\
 \hline
-\end{tabular}
+location\_change & destination: String & - & Logs destination. Logs invalid location changes. \\
+\hline
+set\_focus\_node & focus\_node: Node & - & Logs an error message when a invalid node is inputted.\\
+\end{tabularx}
 \end{center}
+
+\noindent Godot built-in routines
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+\_ready & - & - & Logs all initialized variables\\
+\hline
+\_process & delta: Float & - & Logs any pass render images\\
+\hline
+\end{tabularx}
+\end{center}
+
+
 
 \subsection{Syntax}
 \subsubsection{State Variables}
+\begin{itemize}
+    \item GameState state: The state of the game; this could indicate a node, scene or the like.
+\end{itemize}
+
+
 \subsubsection{Environment Variables}
+None.
+
+
 \subsubsection{Assumptions}
+The main root node and hub that controls the other nodes and sub modules.
+
+
 \subsubsection{Access Routine Semantics}
+Will be updated in Revision 0 of document
 \subsubsection{Local Functions}
+Will be updated in Revision 0 of document
 \subsubsection{Considerations}
+Will be updated in Revision 0 of document
 
 
 
