@@ -13,11 +13,11 @@ Satisfies UC-002
 None.
 \subsubsection{Exported Access Programs}
 \begin{center}
-\begin{tabularx}{\textwidth}{p{4cm} p{2cm} p{3cm} p{2cm}}
+\begin{tabularx}{\textwidth}{p{4cm} p{2cm} p{4cm} p{4cm}}
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-\verb|get_game_state()| & None & \verb|game_state| & \verb|assert(faulty_game_state)| \\
+get\_game\_state() & None & GAME\_STATE game\_state & returns default state \\
 \hline
 \end{tabularx}
 \end{center}
@@ -41,8 +41,9 @@ None.
     output: \verb|GAME_STATE current_ui|}
 
 
-    \item {\verb|on_ui_change(GAME_STATE game_state)| \\
+    \item {\verb|on_ui_change(game_state)| \\
     transition: \verb|ui_state := game_state|}
+    input: \verb|GAME_STATE game_state|
 
 
     \item {\verb|on_travel_button_up(destination)| \\
@@ -73,4 +74,5 @@ None.
 \begin{description}
 \item[Secrets:] UI interface logic for traveling and travel confirmation. Logic and transition behavior on what sub-interface menu is always present.
 \item[Services:] Shows interface overworld information such as player location, travel destination area name. Serves as a switching mechanism between the several sub-UI interfaces for each module such as configuration, combat, central hub etc.
+\item This module contains its own set of UI logic for overworld menus, as well as transition between other UI menus
 \end{description}
