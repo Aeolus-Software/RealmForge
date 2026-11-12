@@ -31,6 +31,8 @@ urlcolor=cyan          % color of external links
 
 \usepackage{array}
 
+\newcommand{\acronym}[4]{\hypertarget{#1}{\textbf{#2} & {#3} & {#4} \\ }}
+
 \externaldocument{../../SRS/SRS}
 
 \input{../../Comments.text}
@@ -61,12 +63,23 @@ Date 2 & 1.1 & Notes\\
 ~\newpage
 
 \section{Symbols, Abbreviations and Acronyms}
+\label{sec:Acronyms}
+\renewcommand{\arraystretch}{1.2}
+  \begin{tabularx}{\textwidth}{l X l}
+    \toprule		
+  \textbf{Abbreviation} & \textbf{Description} & \textbf{Section}\\
+  \midrule 
+  % EXAMPLES BELOW
+  % \acronym{ID}{Acronym}{Description}{Section #-- USE \ref{sec:Variabilities}}
+  
+  \acronym{IO}{IO}{Input and Output. Usually is association with hardware interfaces or software environment interfaces.}{ \ref{M2-SaveIO}}
+  \bottomrule
+  \end{tabularx}
 
-See SRS Documentation at \wss{give url}
+  See SRS Documentation at \wss{give url}
 
 \wss{Also add any additional symbols, abbreviations or acronyms}
 
-UC - Section 7
 \newpage
 
 \tableofcontents
@@ -203,8 +216,10 @@ The following table is taken directly from the Module Guide document for this pr
 
 \newpage
 
+\input{M2SaveIO.text}
 \input{M6GameWorldInterface.text}
 \input{M7GameWorld.text}
+\input{M14SaveDataStorage.text}
 
 \bibliographystyle {plainnat}
 \bibliography {../../../refs/References}
