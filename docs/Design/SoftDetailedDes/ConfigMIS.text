@@ -1,0 +1,71 @@
+\subsection{Module}
+
+This module abstracts the programmed logic used to manage the RealmForge 
+software's feature variation point values, and provides these values as needed 
+to other system modules.
+
+\subsection{Uses}
+
+\begin{enumerate}
+\item Godot Engine (functions, nodes, and signals provided by the engine 
+automatically)
+\end{enumerate}
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+
+N/A
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabular}{p{4cm} p{2cm} p{1cm} p{6.5cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+set\_input\_device & integer & - & Log a custom error message if the 
+provided value is corrupted or not within a valid range \\
+\hline
+set\_starting\_health & integer & - & Log a custom error message if the 
+provided value is corrupted or not within a valid range \\
+\hline
+set\_encounter\_rewards & integer & - & Log a custom error message if the 
+provided value is corrupted or not within a valid range \\
+\hline
+set\_hub\_costs & integer & - & Log a custom error message if the 
+provided value is corrupted or not within a valid range \\
+\hline
+set\_combat\_pace & integer & - & Log a custom error message if the 
+provided value is corrupted or not within a valid range \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+
+\begin{itemize}
+	\item input\_device : integer
+	\item player\_starting\_health : integer
+	\item avg\_encounter\_rewards : integer
+	\item hub\_cost\_config : integer
+	\item combat\_pace : integer
+\end{itemize}
+
+\subsubsection{Environment Variables}
+
+N/A
+
+\subsubsection{Assumptions}
+
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Access Routine Semantics}
+
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Local Functions}
+
+Will be updated in Revision 0 of the document.

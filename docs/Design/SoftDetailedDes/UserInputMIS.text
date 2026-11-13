@@ -2,7 +2,8 @@
 
 This module handles external input from the user, via a physical input device 
 (a 
-controller, or a keyboard and mouse). It is implemented by the Godot Engine 
+controller, or a keyboard and mouse combination). It is implemented by the 
+Godot Engine 
 (through its provided input functionality spread throughtout the engine) for 
 use by the RealmForge software. The details provided in this MIS description 
 are provided by the Godot Engine Documentation \cite{GodotDocs}. The full set 
@@ -21,17 +22,6 @@ details relevant to the RealmForge software's development are included.
 \subsection{Syntax}
 
 \subsubsection{Exported Constants}
-
-Input singleton (provides a globally accessible interface to the user input 
-state):
-\begin{itemize}
-	\item enum MouseMode (controls the mouse cursor), with values:
-	\{MOUSE\_MODE\_VISIBLE, 
-	MOUSE\_MODE\_HIDDEN, 
-	MOUSE\_MODE\_CAPTURED, MOUSE\_MODE\_CONFINED, 
-	MOUSE\_MODE\_CONFINED\_HIDDEN, 
-	MOUSE\_MODE\_MAX\}
-\end{itemize}
 
 \noindent InputEvent class (provides a class to type system events related to 
 user input by, 
@@ -53,17 +43,19 @@ for each module's specification in this document will describe the error
 logging or returned error values that are provided following an error in an 
 access program.\\
 
-\noindent Input singleton:
+\noindent Input singleton (provides a globally accessible interface to the user 
+input 
+state):
 
 \begin{center}
 	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{6.5cm}}
 		\hline
 		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 		\hline
-		is\_action\_pressed & \shortstack[l]{\strut action : String \\ 
+		is\_action\_pressed & \shortstack[l]{\strut action : string \\ 
 		exact\_match : 
-		Boolean} & 
-		Boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
+		boolean} & 
+		boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
 		Logs an error message in the console} \\
 		\hline
 	\end{tabular}\newline
@@ -78,12 +70,12 @@ that the Input singleton can handle):
 		\hline
 		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 		\hline
-		add\_action & \shortstack[l]{\strut action : String \\ 
+		add\_action & \shortstack[l]{\strut action : string \\ 
 		deadzone : 
 		Float} & 
 		- & Logs an error message in the console \\
 		\hline
-		action\_add\_event & \shortstack[l]{\strut action : String \\ 
+		action\_add\_event & \shortstack[l]{\strut action : string \\ 
 		event : InputEvent} & 
 		- & Logs an error message in the console \\
 		\hline
@@ -97,16 +89,16 @@ that the Input singleton can handle):
 		\hline
 		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 		\hline
-		is\_action\_pressed & \shortstack[l]{\strut action : String \\ 
-		allow\_echo : Boolean \\ exact\_match : 
-		 Boolean} & 
-		Boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
+		is\_action\_pressed & \shortstack[l]{\strut action : string \\ 
+		allow\_echo : boolean \\ exact\_match : 
+		 boolean} & 
+		boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
 		Logs an error message in the console} \\
 		\hline
-		is\_action & \shortstack[l]{\strut action : String \\ 
+		is\_action & \shortstack[l]{\strut action : string \\ 
 		exact\_match : 
-		Boolean} & 
-		Boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
+		boolean} & 
+		boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
 		Logs an error message in the console} \\
 		\hline
 	\end{tabular}

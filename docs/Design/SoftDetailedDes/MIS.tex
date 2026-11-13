@@ -141,12 +141,9 @@ found at \url{...}.  \wss{provide the url for your repo}
 
 \section{Notation}
 
-\wss{You should describe your notation.  You can use what is below as
-  a starting point.}
-
 The structure of the MIS for modules comes from \citet{HoffmanAndStrooper1995},
 with the addition that template modules have been adapted from
-\cite{GhezziEtAl2003}.  The mathematical notation comes from Chapter 3 of
+\citet{GhezziEtAl2003}.  The mathematical notation comes from Chapter 3 of
 \citet{HoffmanAndStrooper1995}.  For instance, the symbol := is used for a
 multiple assignment statement and conditional rules follow the form $(c_1
 \Rightarrow r_1 | c_2 \Rightarrow r_2 | ... | c_n \Rightarrow r_n )$.
@@ -161,9 +158,13 @@ The following table summarizes the primitive data types used by \progname.
 \textbf{Data Type} & \textbf{Notation} & \textbf{Description}\\ 
 \midrule
 character & char & a single symbol or digit\\
-integer & $\mathbb{Z}$ & a number without a fractional component in (-$\infty$, $\infty$) \\
+boolean & boolean & a binary value of true or false \\
+integer & $\mathbb{Z}$, or integer & a number without a fractional component in 
+(-$\infty$, $\infty$) \\
 natural number & $\mathbb{N}$ & a number without a fractional component in [1, $\infty$) \\
 real & $\mathbb{R}$ & any number in (-$\infty$, $\infty$)\\
+float & float & a 64-bit double-precision floating point number\\
+
 \bottomrule
 \end{tabular} 
 \end{center}
@@ -176,6 +177,8 @@ different types. In addition, \progname \ uses functions, which
 are defined by the data types of their inputs and outputs. Local functions are
 described by giving their type signature followed by their specification.
 
+\newpage
+
 \section{Module Decomposition}
 
 The following table is taken directly from the Module Guide document for this project.
@@ -183,7 +186,6 @@ The following table is taken directly from the Module Guide document for this pr
 \input{ModuleHierarchyTable.text}
 
 \newpage
-~\newpage
 
 \section{MIS of \wss{Module Name}} \label{Module} \wss{Use labels for
   cross-referencing}
@@ -264,13 +266,25 @@ The following table is taken directly from the Module Guide document for this pr
 
 \newpage
 
+\section{MIS of Configuration Interface Module M4} \label{mConfigMenu}
+
+\input{ConfigInterfaceMIS.text}
+
+\newpage
+
+\section{MIS of Variation Configuration Module M5} \label{mConfig}
+
+\input{ConfigMIS.text}
+
+\newpage
+
 \section{MIS of Enemy Character Module M11} \label{mEnemy}
 
 \input{EnemyMIS.text}
 
 \newpage
 
-\bibliographystyle{IEEEtran}
+\bibliographystyle{IEEEtranN}
 \bibliography {../../../refs/References}
 
 \newpage
