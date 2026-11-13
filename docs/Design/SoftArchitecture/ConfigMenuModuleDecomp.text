@@ -1,0 +1,11 @@
+\begin{description}
+\item[Secrets:]The programmed logic used to provide a graphical 
+interface to the user to allow them to configure the system, as managed by the 
+Variation Configuration Module \mref{mConfig}. 
+\item[Services:]Provides a graphical user interface to configure the system at 
+its explicit variation points. Selections made using this interface are then 
+provided to other system modules, to facilitate the behaviour of the system 
+irrespective of how the 
+interface is presented or constructed.
+\item[Implemented By:] RealmForge
+\end{description}

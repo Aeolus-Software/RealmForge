@@ -210,63 +210,32 @@ without documenting \emph{how} to do it. For each module, a suggestion for the
 implementing software is given under the \emph{Implemented By} title. If the
 entry is \emph{OS}, this means that the module is provided by the operating
 system or by standard programming language libraries.  \emph{\progname{}} means the
-module will be implemented by the \progname{} software.
+module will be implemented by the \progname{} software. The software is 
+implemented using the Godot game engine. If a module's services are provided by 
+Godot's capabilities, the entry \emph{Godot Engine} signifies that the module 
+is implemented by Godot.
 
 Only the leaf modules in the hierarchy have to be implemented. If a dash
 (\emph{--}) is shown, this means that the module is not a leaf and will not have
 to be implemented.
 
-\subsection{Hardware Hiding Modules (\mref{mHH})}
+\subsection{Hardware Hiding Modules}
 
-\begin{description}
-\item[Secrets:]The data structure and algorithm used to implement the virtual
-  hardware.
-\item[Services:]Serves as a virtual hardware used by the rest of the
-  system. This module provides the interface between the hardware and the
-  software. So, the system can use it to display outputs or to accept inputs.
-\item[Implemented By:] OS
-\end{description}
+\subsubsection{User Input Module M\ref{mInput}}
+\input{InputModuleDecomp.text}
 
 \subsection{Behaviour-Hiding Module}
 
-\begin{description}
-\item[Secrets:]The contents of the required behaviours.
-\item[Services:]Includes programs that provide externally visible behaviour of
-  the system as specified in the software requirements specification (SRS)
-  documents. This module serves as a communication layer between the
-  hardware-hiding module and the software decision module. The programs in this
-  module will need to change if there are changes in the SRS.
-\item[Implemented By:] --
-\end{description}
+\subsubsection{Configuration Interface Module M\ref{mConfigMenu}}
+\input{ConfigMenuModuleDecomp.text}
 
-\subsubsection{Input Format Module (\mref{mInput})}
+\subsubsection{Variation Configuration Module M\ref{mConfig}}
+\input{ConfigModuleDecomp.text}
 
-\begin{description}
-\item[Secrets:]The format and structure of the input data.
-\item[Services:]Converts the input data into the data structure used by the
-  input parameters module.
-\item[Implemented By:] [Your Program Name Here]
-\item[Type of Module:] [Record, Library, Abstract Object, or Abstract Data Type]
-  [Information to include for leaf modules in the decomposition by secrets tree.]
-\end{description}
-
-\subsubsection{Etc.}
-
+\subsubsection{Enemy Character Module M\ref{mEnemy}}
+\input{EnemyModuleDecomp.text}
 
 \subsection{Software Decision Module}
-
-\begin{description}
-\item[Secrets:] The design decision based on mathematical theorems, physical
-  facts, or programming considerations. The secrets of this module are
-  \emph{not} described in the SRS.
-\item[Services:] Includes data structure and algorithms used in the system that
-  do not provide direct interaction with the user. 
-  % Changes in these modules are more likely to be motivated by a desire to
-  % improve performance than by externally imposed changes.
-\item[Implemented By:] --
-\end{description}
-
-\subsubsection{Etc.}
 
 \section{Traceability Matrix} \label{SecTM}
 
@@ -281,17 +250,31 @@ requirements and between the modules and the anticipated changes.
 \toprule
 \textbf{Req.} & \textbf{Modules}\\
 \midrule
-R1 & \mref{mHH}, \mref{mInput}, \mref{mParams}, \mref{mControl}\\
-R2 & \mref{mInput}, \mref{mParams}\\
-R3 & \mref{mVerify}\\
-R4 & \mref{mOutput}, \mref{mControl}\\
-R5 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R6 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R7 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R8 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R9 & \mref{mVerifyOut}\\
-R10 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}\\
-R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
+ENV-002 & \mref{mInput}\\
+ENV-003 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-001 & \mref{mInput}, \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-002 & \mref{mConfigMenu}\\
+SFR-003 & \mref{mConfig}\\
+SFR-004 & \mref{mInput}, \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-005 & \mref{mConfig}\\
+SFR-006 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-007 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-008 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-009 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-010 & \mref{mConfigMenu}\\
+SFR-011 & \mref{mEnemy}\\
+SFR-012 & \mref{mEnemy}\\
+SFR-013 & \mref{mEnemy}\\
+SFR-014 & \mref{mEnemy}\\
+SFR-015 & \mref{mEnemy}\\
+SFR-017 & \mref{mEnemy}\\
+SNFR-002 & \mref{mEnemy}\\
+SNFR-003 & \mref{mConfigMenu}, \mref{mConfig}\\
+SNFR-006 & \mref{mEnemy}\\
+SNFR-007 & \mref{mInput}\\
+SNFR-008 & \mref{mConfigMenu}\\
+SNFR-010 & \mref{mConfigMenu}\\
+SNFR-011 & \mref{mInput}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Requirements and Modules}
