@@ -24,20 +24,15 @@ N/A
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-set\_input\_device & integer & - & Log a custom error message if the 
-provided value is corrupted or not within a valid range \\
+set\_input\_device & integer & - & InvalidDeviceIDException \\
 \hline
-set\_starting\_health & integer & - & Log a custom error message if the 
-provided value is corrupted or not within a valid range \\
+set\_starting\_health & integer & - & InvalidHealthException \\
 \hline
-set\_encounter\_rewards & integer & - & Log a custom error message if the 
-provided value is corrupted or not within a valid range \\
+set\_encounter\_rewards & integer & - & InvalidRewardsConfigException \\
 \hline
-set\_hub\_costs & integer & - & Log a custom error message if the 
-provided value is corrupted or not within a valid range \\
+set\_hub\_costs & integer & - & InvalidHubConfigException \\
 \hline
-set\_combat\_pace & integer & - & Log a custom error message if the 
-provided value is corrupted or not within a valid range \\
+set\_combat\_pace & integer & - & InvalidPaceException \\
 \hline
 \end{tabular}
 \end{center}

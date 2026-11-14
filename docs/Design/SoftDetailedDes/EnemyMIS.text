@@ -20,23 +20,19 @@ N/A
 \subsubsection{Exported Access Programs}
 
 \begin{center}
-	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{6.5cm}}
+	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{7cm}}
 		\hline
 		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 		\hline
 		get\_health & - & integer & \parbox[t]{6.5cm}{\strut Return an error 
 		value 
 		of -1 that can be handled appropriately \\ 
-		Log a custom error message if the 
-		health variable is not available / corrupted} \\
+		EnemyHealthNotInitializedException} \\
 		\hline
-		set\_health & health : integer & - & Log a custom error message if the 
-		health variable provided is not the correct type, or is not in a valid 
-		range \\
+		set\_health & health : integer & - & InvalidHealthException \\
 		\hline
-		get\_next\_action & - & custom enemy action resource & Log a custom 
-		error message if the 
-		module's available actions variable does not exist \\
+		get\_next\_action & - & custom enemy action resource & 
+		AvailableActionsNotInitializedException \\
 		\hline
 	\end{tabular}
 \end{center}

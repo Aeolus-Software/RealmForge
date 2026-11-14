@@ -35,13 +35,19 @@ that can be handled accordingly by the software):
 
 \subsubsection{Exported Access Programs}
 
-The Godot Engine does not provide functionality for exceptions, in favour of 
+The Godot Engine does not provide functionality for exceptions (in its own 
+provided classes and functions, as well as in code written by developers), in 
+favour of 
 methods returning error values, or raising error warnings/flags (to avoid 
 crashing or halting the software, so that errors can be handled and the game 
-can continue to execute). As an alternative, exported access programs outlined 
-for each module's specification in this document will describe the error 
-logging or returned error values that are provided following an error in an 
-access program.\\
+can continue to execute).\\
+
+\noindent Custom exception names will be provided for access 
+programs in this document, to correctly follow the MIS structure.
+However, these exceptions may be implemented in the system by custom logged 
+error 
+messages or returned error values, as opposed to the traditional "try-catch" 
+pattern used in other software. \\
 
 \noindent Input singleton (provides a globally accessible interface to the user 
 input 
@@ -55,8 +61,7 @@ state):
 		is\_action\_pressed & \shortstack[l]{\strut action : string \\ 
 		exact\_match : 
 		boolean} & 
-		boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
-		Logs an error message in the console} \\
+		boolean & Returns false if an error occurs \\
 		\hline
 	\end{tabular}\newline
 \end{center}
@@ -73,11 +78,11 @@ that the Input singleton can handle):
 		add\_action & \shortstack[l]{\strut action : string \\ 
 		deadzone : 
 		Float} & 
-		- & Logs an error message in the console \\
+		- & ActionAlreadyExistsException \\
 		\hline
 		action\_add\_event & \shortstack[l]{\strut action : string \\ 
 		event : InputEvent} & 
-		- & Logs an error message in the console \\
+		- & ActionDoesNotExistException \\
 		\hline
 	\end{tabular}\newline
 \end{center}
@@ -92,14 +97,12 @@ that the Input singleton can handle):
 		is\_action\_pressed & \shortstack[l]{\strut action : string \\ 
 		allow\_echo : boolean \\ exact\_match : 
 		 boolean} & 
-		boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
-		Logs an error message in the console} \\
+		boolean & Returns false if an error occurs \\
 		\hline
 		is\_action & \shortstack[l]{\strut action : string \\ 
 		exact\_match : 
 		boolean} & 
-		boolean & \shortstack[l]{\strut Returns false if an error occurs \\ 
-		Logs an error message in the console} \\
+		boolean & ActionDoesNotExistException \\
 		\hline
 	\end{tabular}
 \end{center}

@@ -27,18 +27,17 @@ N/A
 \subsubsection{Exported Access Programs}
 
 \begin{center}
-	\begin{tabular}{p{4cm} p{2cm} p{2cm} p{6.5cm}}
+	\begin{tabular}{p{4cm} p{2cm} p{2cm} p{7cm}}
 		\hline
 		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 		\hline
-		open\_config\_interface & - & - & Log a custom error message if an 
-		error occurs when opening/displaying the interface \\
+		open\_config\_interface & - & - & 
+		ConfigInterfaceNotInitializedException \\
 		\hline
-		close\_config\_interface & - & - & Log a custom error message if an 
-		error occurs when closing the interface \\
+		close\_config\_interface & - & - & 
+		ConfigInterfaceNotInitializedException \\
 		\hline
-		is\_visible & - & Boolean & Log a custom error message if the module is 
-		not able to determine its status \\
+		is\_visible & - & Boolean & ConfigInterfaceNotInitializedException \\
 		\hline
 	\end{tabular}
 \end{center}
