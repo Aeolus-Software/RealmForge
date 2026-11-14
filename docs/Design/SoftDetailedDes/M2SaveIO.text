@@ -1,0 +1,53 @@
+\section{MIS of Save Data IO (M2)} \label{M2-SaveIO}
+
+\subsection{Module}
+The \hyperlink{IO}{IO} module that indicates what is saved and showing save messages.
+
+\subsection{Uses}
+\begin{itemize}
+    \item Godot Engine JSON class for JSON conversion
+\end{itemize}
+
+
+\subsection{Syntax}
+\subsubsection{Exported Constants}
+\begin{itemize}
+    \item File Location Save Directory (String)
+\end{itemize}
+
+
+\subsubsection{Exported Access Programs}
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+save & - & - & Logs message for saved dictionary. \\
+\hline
+\end{tabularx}
+\end{center}
+
+\subsection{Syntax}
+\subsubsection{State Variables}
+\begin{itemize}
+    \item Dictionary with list of saved items
+\end{itemize}
+
+\subsubsection{Environment Variables}
+None.
+
+
+\subsubsection{Assumptions}
+This module has access to all node groups, and configurations that need saving.
+
+
+\subsubsection{Access Routine Semantics}
+Will be updated in Revision 0 of document
+\subsubsection{Local Functions}
+Will be updated in Revision 0 of document
+\subsubsection{Considerations}
+Will be updated in Revision 0 of document
+
+
+
+
