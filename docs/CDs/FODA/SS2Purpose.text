@@ -1,1 +1,10 @@
---\> Why are we making this document in the first place
+\medskip
+\noindent
+The following FODA (Feature-Oriented Domain Analysis) document 
+focuses on identifying the commonalities and variabilities within 
+RealmForge. The document identifies and describes properties of 
+RealmForge that remain consistent throughout gameplay, as well 
+as variable features that are subject to change based on different 
+game configurations. Identifying these features will allow for a 
+better understanding of how the variable features relate to the 
+features that remain consistent throughout the game.
