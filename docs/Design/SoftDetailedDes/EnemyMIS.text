@@ -1,0 +1,70 @@
+\subsection{Module}
+
+This module abstracts the attributes of each instantiated enemy 
+character in the RealmForge game, and provides these details to other modules 
+as needed.
+
+\subsection{Uses}
+
+\begin{enumerate}
+	\item Godot Engine (functions, nodes, and signals provided by the engine 
+	automatically)
+\end{enumerate}
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+
+N/A
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{7cm}}
+		\hline
+		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+		\hline
+		get\_health & - & integer & \parbox[t]{6.5cm}{\strut Return an error 
+		value 
+		of -1 that can be handled appropriately \\ 
+		EnemyHealthNotInitializedException} \\
+		\hline
+		set\_health & health : integer & - & InvalidHealthException \\
+		\hline
+		get\_next\_action & - & custom enemy action resource & 
+		AvailableActionsNotInitializedException \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+
+\begin{itemize}
+	\item health : int
+	\item available\_actions : array of custom resources (a resource will be 
+	defined to store data related to each possible action the enemy character 
+	can take in combat, such as its damage, speed, or other qualities)
+\end{itemize}
+
+\subsubsection{Environment Variables}
+
+\begin{itemize}
+	\item the enemy character's visual depiction (two-dimensional sprite) 
+	displayed by the user's display device
+	\item the enemy character's visual animations displayed by the user's 
+	display device
+\end{itemize}
+
+\subsubsection{Assumptions}
+
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Access Routine Semantics}
+
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Local Functions}
+
+Will be updated in Revision 0 of the document.

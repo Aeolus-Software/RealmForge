@@ -2,7 +2,7 @@
 
 \usepackage{amsmath, mathtools}
 
-\usepackage[round]{natbib}
+\usepackage[numbers, square]{natbib}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -75,7 +75,24 @@ See SRS Documentation at \wss{give url}
 \begin{tabular}{l p{10cm } l} 
 	\toprule		
 	\textbf{Term} & \textbf{Definition} & \textbf{Section}\\
-	\midrule 
+	\midrule
+	\glossaryDef{singleton}{Godot Singleton}{A globally accessible single 
+	instance of a class provided by the Godot Engine. An example of a Godot 
+	Singleton is the Input singleton, which is provided by the engine to allow 
+	any game code to access inputs provided by the user.}{MIS Sections}
+	\glossaryDef{node}{Godot Node}{An abstract object that Godot Scenes, and 
+	by extension Godot game projects are composed of. Nodes can be a game 
+	character, an interface button, or any other various game objects that the 
+	engine provides support for \cite{GodotDocs}.}{MIS Sections}
+	\glossaryDef{scene}{Godot Scene}{A reusable and instantiable tree of Godot 
+	Nodes. Godot game projects are created as a collection of scenes 
+	\cite{GodotDocs}.}{MIS Sections}
+	\glossaryDef{signal}{Godot Signal}{A message emitted by nodes, that can be 
+	received by other nodes and handled accordingly. Signals follow the 
+	Observer pattern \cite{GodotDocs}.}{MIS Sections}
+	\glossaryDef{resource}{Godot Resource}{A data container object, without 
+	associated behaviour or functions. Custom resources can be created and used 
+	as needed in Godot game projects \cite{GodotDocs}.}{MIS Sections}
 	%EXAMPLES BELOW ARE SHOW FOR USE
 	% \glossaryDef{id}{Glossary Term} {Description}{Section # -- USE 
 	%\ref{sec:Variabilities}}
@@ -124,12 +141,9 @@ found at \url{...}.  \wss{provide the url for your repo}
 
 \section{Notation}
 
-\wss{You should describe your notation.  You can use what is below as
-  a starting point.}
-
 The structure of the MIS for modules comes from \citet{HoffmanAndStrooper1995},
 with the addition that template modules have been adapted from
-\cite{GhezziEtAl2003}.  The mathematical notation comes from Chapter 3 of
+\citet{GhezziEtAl2003}.  The mathematical notation comes from Chapter 3 of
 \citet{HoffmanAndStrooper1995}.  For instance, the symbol := is used for a
 multiple assignment statement and conditional rules follow the form $(c_1
 \Rightarrow r_1 | c_2 \Rightarrow r_2 | ... | c_n \Rightarrow r_n )$.
@@ -144,9 +158,13 @@ The following table summarizes the primitive data types used by \progname.
 \textbf{Data Type} & \textbf{Notation} & \textbf{Description}\\ 
 \midrule
 character & char & a single symbol or digit\\
-integer & $\mathbb{Z}$ & a number without a fractional component in (-$\infty$, $\infty$) \\
+boolean & boolean & a binary value of true or false \\
+integer & $\mathbb{Z}$, or integer & a number without a fractional component in 
+(-$\infty$, $\infty$) \\
 natural number & $\mathbb{N}$ & a number without a fractional component in [1, $\infty$) \\
 real & $\mathbb{R}$ & any number in (-$\infty$, $\infty$)\\
+float & float & a 64-bit double-precision floating point number\\
+
 \bottomrule
 \end{tabular} 
 \end{center}
@@ -159,6 +177,8 @@ different types. In addition, \progname \ uses functions, which
 are defined by the data types of their inputs and outputs. Local functions are
 described by giving their type signature followed by their specification.
 
+\newpage
+
 \section{Module Decomposition}
 
 The following table is taken directly from the Module Guide document for this project.
@@ -166,7 +186,6 @@ The following table is taken directly from the Module Guide document for this pr
 \input{ModuleHierarchyTable.text}
 
 \newpage
-~\newpage
 
 \section{MIS of \wss{Module Name}} \label{Module} \wss{Use labels for
   cross-referencing}
@@ -241,7 +260,31 @@ The following table is taken directly from the Module Guide document for this pr
 
 \newpage
 
-\bibliographystyle {plainnat}
+\section{MIS of User Input Module M1} \label{mInput}
+
+\input{UserInputMIS.text}
+
+\newpage
+
+\section{MIS of Configuration Interface Module M4} \label{mConfigMenu}
+
+\input{ConfigInterfaceMIS.text}
+
+\newpage
+
+\section{MIS of Variation Configuration Module M5} \label{mConfig}
+
+\input{ConfigMIS.text}
+
+\newpage
+
+\section{MIS of Enemy Character Module M11} \label{mEnemy}
+
+\input{EnemyMIS.text}
+
+\newpage
+
+\bibliographystyle{IEEEtranN}
 \bibliography {../../../refs/References}
 
 \newpage
