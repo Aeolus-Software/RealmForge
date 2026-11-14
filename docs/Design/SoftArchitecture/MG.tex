@@ -20,16 +20,31 @@
 \input{../../Common.text}
 
 \newcounter{acnum}
-\newcommand{\actheacnum}{AC\theacnum}
-\newcommand{\acref}[1]{AC\ref{#1}}
+\newcommand{\actheacnum}{AC-\theacnum}
+\newcommand{\acref}[1]{AC-\ref{#1}}
 
 \newcounter{ucnum}
-\newcommand{\uctheucnum}{UC\theucnum}
-\newcommand{\uref}[1]{UC\ref{#1}}
+\newcommand{\uctheucnum}{ULC-\theucnum}
+\newcommand{\uref}[1]{ULC-\ref{#1}}
 
 \newcounter{mnum}
 \newcommand{\mthemnum}{M\themnum}
 \newcommand{\mref}[1]{M\ref{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%NEW COMMANDS%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\newcommand{\AC}[3]{
+  \item[\refstepcounter{acnum} \actheacnum \label{ac#1} #1:]
+  #2\par
+  \noindent\textbf{Rationale}: #3 \par
+	\addcontentsline{toc}{subsubsection}{AC--\theacnum: #1}
+}
+\newcommand{\ULC}[3]{
+  \item[\refstepcounter{ucnum} \uctheucnum \label{ULC-#1} #1:]
+  #2\par
+  \noindent\textbf{Rationale}: #3 \par
+	\addcontentsline{toc}{subsubsection}{ULC--\theucnum: #1} 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%NEW COMMANDS%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 
 \begin{document}
 
@@ -46,8 +61,8 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+Nov 8, 2026 & 1.0 & Andy Huynh's Anticipated Changes first draft \\
+Nov 10, 2026 & 1.0 & Andy Huynh's Anticipated Changes second draft \\
 \bottomrule
 \end{tabularx}
 
@@ -73,7 +88,7 @@ This section records information for easy reference.
   SC & Scientific Computing \\
   SRS & Software Requirements Specification\\
   \progname & Explanation of program name\\
-  UC & Unlikely Change \\
+  ULC & Unlikely Change \\
   \wss{etc.} & \wss{...}\\
   \bottomrule
 \end{tabular}\\
@@ -146,42 +161,17 @@ other shows the relation between anticipated changes and the modules. Section
 This section lists possible changes to the system. According to the likeliness
 of the change, the possible changes are classified into two
 categories. Anticipated changes are listed in Section \ref{SecAchange}, and
-unlikely changes are listed in Section \ref{SecUchange}.
+unlikely changes are listed in Section \ref{SecUchange}. Each Anticipated and
+unlikely change is denoted by AC-X, and ULC-X for reference in the tracability tables.
 
 \subsection{Anticipated Changes} \label{SecAchange}
-
-Anticipated changes are the source of the information that is to be hidden
-inside the modules. Ideally, changing one of the anticipated changes will only
-require changing the one module that hides the associated decision. The approach
-adapted here is called design for
-change.
-
-\begin{description}
-\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
-  hardware on which the software is running.
-\item[\refstepcounter{acnum} \actheacnum \label{acInput}:] The format of the
-  initial input data.
-\item ...
-\end{description}
-
-\wss{Anticipated changes relate to changes that would be made in requirements,
-design or implementation choices.  They are not related to changes that are made
-at run-time, like the values of parameters.}
+\input{S41AnticipatedChanges.text}
 
 \subsection{Unlikely Changes} \label{SecUchange}
+\input{S42UnlikelyChanges.text}
 
-The module design should be as general as possible. However, a general system is
-more complex. Sometimes this complexity is not necessary. Fixing some design
-decisions at the system architecture stage can simplify the software design. If
-these decision should later need to be changed, then many parts of the design
-will potentially need to be modified. Hence, it is not intended that these
-decisions will be changed.
 
-\begin{description}
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
-  (Input: File and/or Keyboard, Output: File, Memory, and/or Screen).
-\item ...
-\end{description}
+
 
 \section{Module Hierarchy} \label{SecMH}
 
@@ -287,18 +277,30 @@ SNFR-011 & \mref{mInput}\\
 \toprule
 \textbf{AC} & \textbf{Modules}\\
 \midrule
-\acref{acHardware} & \mref{mHH}\\
-\acref{acInput} & \mref{mInput}\\
-\acref{acParams} & \mref{mParams}\\
-\acref{acVerify} & \mref{mVerify}\\
-\acref{acOutput} & \mref{mOutput}\\
-\acref{acVerifyOut} & \mref{mVerifyOut}\\
-\acref{acODEs} & \mref{mODEs}\\
-\acref{acEnergy} & \mref{mEnergy}\\
-\acref{acControl} & \mref{mControl}\\
-\acref{acSeqDS} & \mref{mSeqDS}\\
-\acref{acSolver} & \mref{mSolver}\\
-\acref{acPlot} & \mref{mPlot}\\
+% \acref{acHardware} & \mref{mHH}\\
+% \acref{acInput} & \mref{mInput}\\
+% \acref{acParams} & \mref{mParams}\\
+% \acref{acVerify} & \mref{mVerify}\\
+% \acref{acOutput} & \mref{mOutput}\\
+% \acref{acVerifyOut} & \mref{mVerifyOut}\\
+% \acref{acODEs} & \mref{mODEs}\\
+% \acref{acEnergy} & \mref{mEnergy}\\
+% \acref{acControl} & \mref{mControl}\\
+% \acref{acSeqDS} & \mref{mSeqDS}\\
+% \acref{acSolver} & \mref{mSolver}\\
+% \acref{acPlot} & \mref{mPlot}\\
+\acref{acUser Input} & \mref{mInput} \\
+\acref{acSave Data Configurations} & \mref{mSaveIO}, \mref{mSaveStore} \\
+\acref{acUI Interface} & \mref{mConfigMenu}, \mref{mEncounterMenu}, \mref{mHubMenu}, \mref{mMainMenu}, \mref{mWorldMenu} \\
+\acref{acVariation points} & \mref{mConfig} \\
+\acref{acCombat Effects} & \mref{mEncounter} \\ 
+\acref{acCentral Hub Design and Upgrade Options} & \mref{mHub} \\
+\acref{acPlayer Model} & \mref{mPlayer} \\
+\acref{acEnemy Model} & \mref{mEnemy} \\
+\acref{acGame World Design} & \mref{mWorld} \\
+\acref{acReward System} & \mref{mWorld} \\
+
+
 \bottomrule
 \end{tabular}
 \caption{Trace Between Anticipated Changes and Modules}

@@ -1,0 +1,62 @@
+\begin{description}
+    
+\AC{User Input}
+{The input commands used to navigate through the application.}
+{Inputs and the nature of navigation could change especially when integration of keyboard and mouse equivalence to controller.}
+
+\AC{Save Data Configurations}
+{User configurations settings are stored as persistent data once they are set by the user; these include elements such as audio, graphics, control, or gameplay. The saved configurations are loaded after relaunching the application, so that the user does not need to reconfigure.}
+{Configurations to improve player experience are likely to be added in the future.}
+    
+\AC{UI Interface}
+{The visible interface elements on the screen that allow the player to perform actions such as combat, travel, shopping, and configurations.}
+{The UI Interface will change based on user testing and usability; this is so that the UI is simple, easy to use, and cause little confusion on action is being done.}
+
+\AC{Variation points}
+{The variables the player can alter between game sessions to change the user experience. }
+{New variations can be added, or old variations can be removed depending on whether they are impactful to the playthrough, i.e., they greatly alter the experience of the game.}
+    
+\AC{Combat Effects}
+{The different behaviours and effects that can be used during combat against enemy parties or even the player itself.}
+{The game needs variety in combat options, but the various ways could change depending on complications such as game balance, implementation difficulty, or other aspects.}
+
+\AC{Central Hub Design and Upgrade Options}
+{The area or station that allows the player to improve their run effectiveness by buying resource improvements, upgrades, and much more.}
+{It is not yet clear what is going to be presented in the central hub. There could be several upgrades, items, and equipment that could be added or removed from the game due to user testing and other feedback.}
+
+\AC{Player Model}
+{The properties of the in-game character such as health, resources, inventory, stat modifiers and more. }
+{The player properties will change depending on the variety of in-game features added. For instance, adding a stamina resource that the player can run and drain stamina. The player may or may not equip headwear gear, so then a head item slot must be implemented.}
+
+\AC{Enemy Model}
+{The properties of enemies such as typing, attacks, health, and stat modifiers and more.}
+{The enemy capabilities will likely be expanded on to give the player a good obstacle to overcome that is rewarding and fun.}
+
+\AC{Game World Design}
+{The implementation of the game world which ranges from possible travel locations, resource materials, currency, landscape, enemies, and in-game character representations.}
+{All manners of feature changes will likely change the look and feel of the game world. For instance, adding a new travel destination will alter the map of the game.}
+
+\AC{Reward System}
+{The reward system that will transfer currency, resources, and other reward items to the player.}
+{This feature will be changed based on decisions on how much or what should be given to the player. Awarding the player with too much will trivialize the experience or awarding too little will dissatisfy them. Other concepts of achievements can be implemented as well.}
+
+    
+\end{description}
+
+% Anticipated changes are the source of the information that is to be hidden
+% inside the modules. Ideally, changing one of the anticipated changes will only
+% require changing the one module that hides the associated decision. The approach
+% adapted here is called design for
+% change.
+
+% \begin{description}
+% \item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
+%   hardware on which the software is running.
+% \item[\refstepcounter{acnum} \actheacnum \label{acInput}:] The format of the
+%   initial input data.
+% \item ...
+% \end{description}
+
+% \wss{Anticipated changes relate to changes that would be made in requirements,
+% design or implementation choices.  They are not related to changes that are made
+% at run-time, like the values of parameters.}
