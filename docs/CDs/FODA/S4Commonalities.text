@@ -1,1 +1,42 @@
-\wss{list of commonalities (the things that all games have)}
+The RealmForge software is developed to provide explicit variation points for 
+its features, as described in section \ref{sec:Variabilities}. This section 
+will outline the common features and functionality provided by each build of 
+the RealmForge software, that persist in each variation configuration.
+
+\comm{env}{Deployed Environment}
+
+Each configuration of the RealmForge software will:
+
+\begin{itemize}
+	\item Be deployed on a compatible Windows 
+	machine, that meets the recommended specifications described in the 
+	project's Software Requirements Specification (in requirement ENV-001).
+	\item Provide a capability to accept input 
+	from a physical input device (which can include a controller or a keyboard 
+	and mouse combination, as a variation point).
+	\item Be implemented using the Godot game 
+	engine.
+\end{itemize}
+
+\comm{menus}{Primary Menus and Interfaces}
+
+Each configuration of the RealmForge software will:
+
+\begin{itemize}
+	\item Provide a main menu, that is opened 
+	when the RealmForge game is launched.
+	\item Provide a menu to manage its 
+	variation configurations (as discussed in section \ref{sec:Variabilities}), 
+	that is accessible from the main menu.
+	\item Provide a menu to manage the user's save files, and enter the 
+	RealmForge game for a certain save file.
+	\item Provide an interface to the game's 
+	overall game world scene, where the user can select inputs to move the 
+	player character between discrete world locations.
+	\item Provide an enemy encounter interface, 
+	where the user can manage gameplay of enemy combat encounters, associated 
+	with each discrete world location.
+	\item Provide a central hub menu (as described in the project's SRS and 
+	other documents), where the user can purchase gameplay upgrades (with 
+	fictional in-game currency), following the completion of a game run.
+\end{itemize}

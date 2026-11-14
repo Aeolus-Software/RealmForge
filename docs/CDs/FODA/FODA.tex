@@ -68,6 +68,15 @@
 		\hline 
 	\end{tabularx}
 }
+
+% Commonality Macro
+\newcounter{com}
+\newcommand{\comm}[2]{
+	\refstepcounter{com} 
+	\subsection*{Comm-\thecom: #2}
+	\addcontentsline{toc}{subsection}{Comm-\thecom: #2} 
+	\label{#1}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{../../Comments.text}
 \input{../../Common.text}
