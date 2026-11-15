@@ -7,43 +7,45 @@
 % compile time
 % precompile time
 
-\variable{Health}{$\mathbb{Z}^{+}$}{Intervals between 50, 100, 150}
-{The player health. A resource and condition value that determines whether the game continues or not depending on if the values reaches zero.
-In order for the game to showcase a sense of "hard", "medium", and "easy" configuration settings, three values were given as the benchmark points.
-The lowest value will be the hard setting while the largest is the easy setting.}     
+\variable{Player Character}
+{Dictionary: $string \mapsto \{String \cap integer \cap Bool \cap Array[Int]\}$}
+{Player = \{`health' = 60/120/15, `resource' = 5/10/20, `name' = `Alan', `is\_dead' = true, `inventory' = \{3,2,5,7\}\}}
+{The player contains attributes such as health, resource, inventory and a variety of components that can be customized later when designing the game. A resource value controls how many actions a player can use, health is the life condition which determines whether the game continues or not depending on if the values reach zero; this marks is\_dead to true. The variation shows three values representing  "hard", "medium", and "easy" for the configuration settings. Three values were given as the benchmark points, but more can be added. The lowest value will be the hard setting while the largest is the easy setting. The inventory is a list of item IDs.}     
 {runtime} 
 
-\variable{Player Attacks}
-{}
-{}
-{}
-
-\variable{Enemy Health}{$\mathbb{Z}^{+}$}{Intervals between 20, 60, 90}
-{The enemy health. A condition value that determines whether the enemy is defeated or not depending on if the values reaches zero.
-The highest set value will give off a sense of harder difficulty while the lowest will be the opposite. Three values are given to broadly describe hard, medium, and easy settings.}     
+\variable{Enemy}
+{Dictionary: $string \mapsto \{string \cap integer \cap Bool \cap Array[Int, Str]\}$}
+{Enemy = \{`health' = 60/120/15, `type' = `weak/normal/strong', `type' = `Giant', `is\_dead' = true, `rewards' = \{`rock', 02\}\}}
+{Similar to the player variation, the enemy contains two unique attributes, type and reward. The type is an identification marker to discern the uniqueness and class of the enemy. The reward is the resource given after the enemy is defeated and the player is rewards with a certain quality. The configuration of the game can dictate what type of enemy shows up or how much health they bring in terms of difficulty.}     
 {runtime} 
 
-\variable{Enemy Attacks}
-{}
-{}
-{}
+\variable{Attacks}
+{Array[string]}
+{{Attack, Block, Item,... `action phrases'}}
+{These are the actions that allow the player and enemy to interact and convey progress in combat. They will also appear on the UI options for the player combat screen.
+Each action will have a unique logic to how it effects the target opposition.}
+{compile-time}
 
-\variable{Resource Destribution}{$\mathbb{R}^{+}$}{10, 15, 20, 25, 30}
-{This is the amount on \textit{average}}
+\variable{Resource Destribution}
+{Dictionary: ${string} \mapsto Integer$, $integer \mapsto integer$}
+{resource1 = `Rock': 50, or 02: 20 (Item ID 2: 20 amount )}
+{These are the possible rewards situations that can take place when completing a combat encounter. These values can once again be tuned in the configuration menu for pacing, and difficulty.}
 {runtime}
 
+\variable{Purchase Options}
+{Dictionary:  $string \mapsto string \cap integer \cap Array[Str,Int] \cap Bool$}
+{item1 = \{`purchase\_name': "vigor", `cost': 100/150/200, `description': `Strength of will', `is\_purchased': true\}}
+{These are the requirements and description of a purchasable. The name of the purchasable and description will hint at the effect of the item. The cost is the requirement needed to obtain the purchasable. Once purchased, the flag `is\_purchased’ will denote true and the purchasable can no longer be purchased again.}
+{compile-time}
+
 \variable{User Interface}
-{}
-{}
-{}
+{Dictionary: $string \mapsto integer \cap string$}
+{button1 = {`x': 10, `y': 20, `width': 200, `height': 500, `text' = `buy'}}
+{The UI elements can vary in size, shape, and positioning. These values can be tuned to improve the look and feel of the game. A clean UI is something that will prevent confusion and frustration for the user. The look and feel for a game UI is different based on the preference of the user, so different UI configurations are available on the configuration menu.}
+{compile, runtime (configuration)}
 
 
-\variable{Purchase Options}{}{}
-{}
 
-\variable{Central Hub}{}{}
-{}
-
-Reference Examples (Please remove later)
-\nameref{var:Health}
-\nameref{var:Enemy Health}
+% Reference Examples (Please remove later)
+% \nameref{var:Health}
+% \nameref{var:Enemy Health}
