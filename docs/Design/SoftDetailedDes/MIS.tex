@@ -36,6 +36,8 @@ urlcolor=cyan          % color of external links
 \input{../../Comments.text}
 \input{../../Common.text}
 
+\newcommand{\glossaryDef}[4]{\hypertarget{#1}{\textbf{#2}} & {#3} & {#4}\\}
+
 \begin{document}
 
 \title{Module Interface Specification for \progname{}}
@@ -65,6 +67,43 @@ Date 2 & 1.1 & Notes\\
 See SRS Documentation at \wss{give url}
 
 \wss{Also add any additional symbols, abbreviations or acronyms}
+
+\section{Glossary}
+\label{sec:Glossary}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{l p{10cm } l} 
+	\toprule		
+	\textbf{Term} & \textbf{Definition} & \textbf{Section}\\
+	\midrule 
+	%EXAMPLES BELOW ARE SHOW FOR USE
+	% \glossaryDef{id}{Glossary Term} {Description}{Section # -- USE 
+	%\ref{sec:Variabilities}}
+	
+	% \glossaryDef{player}{Player}{The person that plays the game, gives the 
+	%inputs and responds to the outputs of the game.}{\ref{sec:Commonalities} 
+	%\ref{sec:Variabilities},}
+	% \glossaryDef{user}{User}{Another term for a person that operates the 
+	%software.}{\ref{sec:Variabilities}}
+	% \glossaryDef{roguelike}{Rogue-Like}{A video game genre featuring levels 
+	%with randomized elements that change every playthrough and permanent 
+	%death, 
+	%meaning dying resets the current.}{\ref{sec:Variabilities}}
+	% \glossaryDef{roguelite}{Rogue-Lite}{A video game genre featuring levels 
+	%with randomized elements that
+		% change every playthrough and permanent death, meaning dying resets 
+		%the current
+		% run. Players retain permanent upgrades unlocked between runs that 
+		%make their
+		% character stronger over time.}{\ref{sec:Variabilities}}
+	\bottomrule
+\end{tabular}\\
+
+% EXAMPLE TO LINK
+% \hyperlink{ID}{What you want to say}
+% \hyperlink{SRS}{SRS}
+% \hyperlink{VnV}{VnV}
+% \hyperlink{SRS}{SRS}
 
 \newpage
 
@@ -124,34 +163,7 @@ described by giving their type signature followed by their specification.
 
 The following table is taken directly from the Module Guide document for this project.
 
-\begin{table}[h!]
-\centering
-\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
-\toprule
-\textbf{Level 1} & \textbf{Level 2}\\
-\midrule
-
-{Hardware-Hiding} & ~ \\
-\midrule
-
-\multirow{7}{0.3\textwidth}{Behaviour-Hiding} & Input Parameters\\
-& Output Format\\
-& Output Verification\\
-& Temperature ODEs\\
-& Energy Equations\\ 
-& Control Module\\
-& Specification Parameters Module\\
-\midrule
-
-\multirow{3}{0.3\textwidth}{Software Decision} & {Sequence Data Structure}\\
-& ODE Solver\\
-& Plotting\\
-\bottomrule
-
-\end{tabular}
-\caption{Module Hierarchy}
-\label{TblMH}
-\end{table}
+\input{ModuleHierarchyTable.text}
 
 \newpage
 ~\newpage

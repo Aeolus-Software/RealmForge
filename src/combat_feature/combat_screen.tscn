@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bn2yggawt61at"]
+
+[ext_resource type="Script" uid="uid://dww8ep8mtdamt" path="res://combat_feature/combat_script.gd" id="1_obaly"]
+
+[node name="CombatScreen" type="Node2D" unique_id=814379326]
+script = ExtResource("1_obaly")
+
+[node name="CombatLabel" type="Label" parent="." unique_id=590111850]
+offset_left = 375.0
+offset_top = 5.0
+offset_right = 493.0
+offset_bottom = 28.0
+scale = Vector2(4, 4)
+text = "Combat Screen"
+
+[node name="ReturnButton" type="Button" parent="." unique_id=167114103]
+offset_left = 453.0
+offset_top = 625.0
+offset_right = 640.0
+offset_bottom = 656.0
+scale = Vector2(2, 2)
+text = "Return To Debug Menu
+"
+
+[connection signal="button_up" from="ReturnButton" to="." method="return_to_debug"]
