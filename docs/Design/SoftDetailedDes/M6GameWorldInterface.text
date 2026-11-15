@@ -1,7 +1,6 @@
 \section{MIS of Game World Interface (M6)} \label{M6-GameWorldInterface}
 \subsection{Module}
-The Game World interface handles logic for traveling and travel confirmation; it will be present options of destination and label current locations, overworld information.
-Serves as a switching mechanism between the multiple sub-UI interfaces for each module such as configuration, combat, central hub etc.
+The Game World interface handles logic for player input navigation between game areas. Displays navigational information such as the current, and travel options.
 
 
 \subsection{Uses}
@@ -12,32 +11,25 @@ Godot Engine - Godot Control Nodes (used specifically for UI) as well as the bui
 
 
 \subsubsection{Exported Constants}
-\begin{itemize}
-    \item enum GameState with values: {TRAVEL, COMBAT, CENTRAL\_HUB,}
-\end{itemize}
-
+None.
 
 \subsubsection{Exported Access Programs}
 \begin{center}
 \begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{4cm} p{4cm}}
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+% \hline
+% get\_game\_state& - & GAME\_STATE: GameState & StateException("Invalid state") \\
 \hline
-get\_game\_state& - & GAME\_STATE: GameState & Returns default state \\
+get\_current\_location& - & location: String  & LocationException \\
 \hline
-get\_current\_ui\_state& - & GAME\_STATE: GameState & Returns default state \\ 
+on\_travel\_button\_up& destination: String & - & InputException \\
 \hline
-on\_ui\_change& GAME\_STATE: GameState & - & Logs "Game state invalid" \\
+show\_prompt& - & - & MissingUIComponent \\
 \hline
-on\_travel\_button\_up& destination: String & - & Logs "destination not found" \\
+confirm\_prompt& is\_true: Boolean  & action: Boolean  & InputException\\
 \hline
-get\_current\_location& - & location: String  & Logs "no location found" \\
-\hline
-show\_prompt& - & - & Logs "prompt not shown" \\
-\hline
-confirm\_prompt& is\_true: Boolean  & action: Boolean  & Logs an error message of confirmation\\
-\hline
-diplay\_area& - & - & Logs "no area to display \\
+diplay\_area\_name& - & - & MissingUIComponent \\
 \hline
 \end{tabularx}
 \end{center}
@@ -45,19 +37,19 @@ diplay\_area& - & - & Logs "no area to display \\
 
 \subsection{Syntax}
 \subsubsection{State Variables}
-\begin{itemize}
-    \item \verb|GameState current_ui|: The state that states what set of UI components are show.
-    \item STRING \verb|current_location|: The designated current area shown and process.
-\end{itemize} 
+None.
 
 
 \subsubsection{Environment Variables}
-None.
+\begin{itemize}
+    \item location: String - from GameWorld Module
+    \item ui\_components: Array[Node] - the set of ui components such as buttons.
+\end{itemize}
 
 
 \subsubsection{Assumptions}
 \begin{itemize}
-    \item The Game World UI is the main root node for controlling UI nodes.
+    \item The Game World UI has access to Game World variables public access routines.
 \end{itemize}
 
 

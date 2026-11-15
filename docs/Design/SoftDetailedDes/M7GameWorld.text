@@ -1,8 +1,7 @@
 \section{MIS of Game World (M7)} \label{M7-GameWorld}
 
 \subsection{Module}
-The main module that handles game states, transitioning between game states, communication with all other sub modules, helping with UI signals and rendering the whole game. Is a Godot Singleton and has leaves such as the player, enemy, and combat module.
-
+The game world module handles game state and player location changes. It communicates with the respective Game World UI for player input.  
 
 \subsection{Uses}
 \begin{itemize}
@@ -14,7 +13,7 @@ The main module that handles game states, transitioning between game states, com
 \subsection{Syntax}
 \subsubsection{Exported Constants}
 \begin{itemize}
-    \item enum GameState with values: {TRAVEL, COMBAT, CENTRAL\_HUB,}
+    \item GameState constants
 \end{itemize}
 \subsubsection{Exported Access Programs}
 
@@ -23,11 +22,13 @@ The main module that handles game states, transitioning between game states, com
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-state\_change & new\_state: GameState & - & Logs message showing what is the current state. Logs invalid state changes. \\
+state\_change & new\_state: GameState & - & StateException \\
 \hline
-location\_change & destination: String & - & Logs destination. Logs invalid location changes. \\
+location\_change & destination: String & - & LocationException \\
 \hline
-set\_focus\_node & focus\_node: Node & - & Logs an error message when a invalid node is inputted.\\
+
+% \hline
+% set\_focus\_node & focus\_node: Node & - & Logs an error message when a invalid node is inputted.\\
 \end{tabularx}
 \end{center}
 
@@ -37,9 +38,9 @@ set\_focus\_node & focus\_node: Node & - & Logs an error message when a invalid 
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-\_ready & - & - & Logs all initialized variables\\
+\_ready & - & - & Handle from self modules \\
 \hline
-\_process & delta: Float & - & Logs any pass render images\\
+\_process & delta: Float & - & Handle from self modules \\
 \hline
 \end{tabularx}
 \end{center}
@@ -49,16 +50,22 @@ set\_focus\_node & focus\_node: Node & - & Logs an error message when a invalid 
 \subsection{Syntax}
 \subsubsection{State Variables}
 \begin{itemize}
-    \item GameState state: The state of the game; this could indicate a node, scene or the like.
+    \item state: GameState - The state of the game. This is important so that the game knows what sequence or step it is currently on. The game should be follow a strict flowchart guideline (See SRS Figure: RealmForge System Flowchart \cite{SRS}). 
+    \item \verb|current_location|: String - The designated current area shown and process.
 \end{itemize}
 
 
 \subsubsection{Environment Variables}
-None.
+
 
 
 \subsubsection{Assumptions}
-The main root node and hub that controls the other nodes and sub modules.
+\begin{itemize}
+    \item This module maintains the state of the overall game.   
+    \item No other module should be able to change the state of the game.
+    \item The other modules may signal to the game world module for a game state change.
+    \item One instance of Game World Module
+\end{itemize}
 
 
 \subsubsection{Access Routine Semantics}

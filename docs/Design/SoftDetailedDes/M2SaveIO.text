@@ -1,7 +1,7 @@
 \section{MIS of Save Data IO (M2)} \label{M2-SaveIO}
 
 \subsection{Module}
-The \hyperlink{IO}{IO} module that indicates what is saved and showing save messages.
+The \hyperlink{IO}{IO} module responsible for reading and writing saved data from storage.
 
 \subsection{Uses}
 \begin{itemize}
@@ -11,9 +11,7 @@ The \hyperlink{IO}{IO} module that indicates what is saved and showing save mess
 
 \subsection{Syntax}
 \subsubsection{Exported Constants}
-\begin{itemize}
-    \item File Location Save Directory (String)
-\end{itemize}
+
 
 
 \subsubsection{Exported Access Programs}
@@ -22,7 +20,33 @@ The \hyperlink{IO}{IO} module that indicates what is saved and showing save mess
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-save & - & - & Logs message for saved dictionary. \\
+save & - & - & DataException \\
+load & - & - & DataException \\
+\hline
+\end{tabularx}
+\end{center}
+
+JSON Class Godot built-ins
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+stringify & saved\_items: Dictionary & - & handled from self modules \\
+parse & json\_string: String & - & handled from self modules \\
+\hline
+\end{tabularx}
+\end{center}
+FileAccess Class Godot built-ins
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+open & path: String & file\_open: Boolean & handled from self modules \\
+\hline
+get\_as\_text & - & text: String & handled from self modules \\
+store\_string & array: Array & - & handled from self modules \\
 \hline
 \end{tabularx}
 \end{center}
@@ -30,15 +54,20 @@ save & - & - & Logs message for saved dictionary. \\
 \subsection{Syntax}
 \subsubsection{State Variables}
 \begin{itemize}
-    \item Dictionary with list of saved items
+    \item saved\_items: Dictionary - The current set of key-value pair data structure that is set to be saved.
 \end{itemize}
 
 \subsubsection{Environment Variables}
-None.
+\begin{itemize}
+    \item save\_directory: String
+\end{itemize}
+\begin{itemize}
+    \item load\_directory: String
+\end{itemize}
 
 
 \subsubsection{Assumptions}
-This module has access to all node groups, and configurations that need saving.
+This module will have access to all variables, and configurations that need saving in some way.
 
 
 \subsubsection{Access Routine Semantics}

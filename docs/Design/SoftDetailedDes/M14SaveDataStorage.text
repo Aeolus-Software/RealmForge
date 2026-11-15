@@ -1,30 +1,20 @@
 \section{MIS of Save Data Storage (M14)} \label{M14-SaveStorage}
 
 \subsection{Module}
-The save module that handles with checking valid and invalid save data files.
+The save module that maintains save data structure along with checking valid and invalid save data files.
 
 \subsection{Uses}
-\begin{itemize}
-    \item Godot Engine FileAcces built-in library
-\end{itemize}
-
 
 \subsection{Syntax}
 \subsubsection{Exported Constants}
-\begin{itemize}
-    \item File Location Load Directory (String)
-\end{itemize}
-
 
 \subsubsection{Exported Access Programs}
 \begin{center}
-\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+\begin{tabularx}{\textwidth}{p{5cm} p{3cm} p{2cm} p{4cm}}
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-load & - & - & Logs vital messages to informing when file is loaded. \\
-\hline
-check\_save\_file & - & - & Logs whether file is corrupted, valid or invalid save file.\\
+check\_save\_file\_structure & save\_data: Dictionary & file\_correct: Boolean & FileStructureException \\
 \hline
 \end{tabularx}
 \end{center}
@@ -35,7 +25,8 @@ None.
 
 \subsubsection{Environment Variables}
 \begin{itemize}
-    \item Loaded Save file. On start is NULL, but will be loaded in via access
+    \item save\_data: Dictionary - The save data from the hardware directory
+    \item file\_structure: Modal - The contractual guidlines for the right file structure
 \end{itemize}
 
 
