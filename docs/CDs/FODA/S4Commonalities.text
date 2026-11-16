@@ -40,3 +40,48 @@ Each configuration of the RealmForge software will:
 	other documents), where the user can purchase gameplay upgrades (with 
 	fictional in-game currency), following the completion of a game run.
 \end{itemize}
+
+\comm{coregameplay}{Core Gameplay Loop}
+
+Each configuration of the RealmForge software will:
+
+\begin{itemize}
+	\item Structure gameplay through the repetition of game runs: A run is an 
+	attempt of the user to successfully reach the end or win condition of the 
+	game without failing in the process. If the player character's health 
+	attribute reaches zero during a run, the user has failed, and must start a 
+	new run.
+	\item Present the central hub menu (discussed above) to the user following 
+	a failed run. The central hub menu will allow users to purchase upgrades to 
+	the player character's capabilities within the game (using earned in-game 
+	currency), that persist between game runs.
+\end{itemize}
+
+\comm{characters}{Game Characters}
+
+Each configuration of the RealmForge software will:
+
+\begin{itemize}
+	\item Provide the user with a graphical depiction of a player character, 
+	that the user will control during gameplay. The player character will:
+	\begin{itemize}
+		\item Have an associated "health" attribute, which will cause the 
+		user's current game run to end in defeat if it reaches zero.
+		\item Be displayed in the overall game world when moving between 
+		locations, and in each enemy combat encounter.
+		\item Provide the user with actions to take to control the player 
+		character during enemy encounters, in order to be successful.
+	\end{itemize}
+	\item Provide the user with a graphical depiction of one or more enemy 
+	characters in each combat encounter, that attack the player character to 
+	reduce their health.
+\end{itemize}
+
+\comm{savedata}{Save Data}
+
+Each configuration of the RealmForge software will:
+
+\begin{itemize}
+	\item Allow the user to save their game progress in a specific save file, 
+	that can be reloaded at a later point to continue.
+\end{itemize}
