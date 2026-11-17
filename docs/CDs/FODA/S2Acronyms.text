@@ -6,6 +6,7 @@
     \toprule		
   \textbf{Abbreviation} & \textbf{Description} & \textbf{Section}\\
   \midrule 
+  \acronym{envreqs}{ENV}{Environmental Requirement}{\ref{sec:Commonalities}}
   
   % EXAMPLES BELOW
   % \acronym{ID}{Acronym}{Description}{Section #-- USE \ref{sec:Variabilities}}
