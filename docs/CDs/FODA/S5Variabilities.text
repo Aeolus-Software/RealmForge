@@ -7,29 +7,49 @@
 % compile time
 % precompile time
 
-\variable{Player Character}
-{Dictionary: $string \mapsto \{String \cap integer \cap Bool \cap Array[Int]\}$}
-{Player = \{`health' = 60/120/15, `resource' = 5/10/20, `name' = `Alan', `is\_dead' = true, `inventory' = \{3,2,5,7\}\}}
-{The player contains attributes such as health, resource, inventory and a variety of components that can be customized later when designing the game. A resource value controls how many actions a player can use, health is the life condition which determines whether the game continues or not depending on if the values reach zero; this marks is\_dead to true. The variation shows three values representing  "hard", "medium", and "easy" for the configuration settings. Three values were given as the benchmark points, but more can be added. The lowest value will be the hard setting while the largest is the easy setting. The inventory is a list of item IDs.}     
+% \variable{User controls}
+% {Integer}
+% {{Integer}}
+% {}
+% {}
+% \textbf{Note:} The parameter ranges and 
+
+\variable{Player Health}
+{player\_health}
+{$\mathbb{R}^{+}$}
+{50\dots200}
+{The player contains attributes such as health (and variety of components) that can be customized later on when designing the game. Health is the life condition which determines whether the game continues or not depending on if the values reach zero. The variation parameter ranges between 50 to 200 which is subject to change and could be much higher. This is a basic setting to test how well the player can last with different starting amounts.}     
 {runtime} 
 
-\variable{Enemy}
-{Dictionary: $string \mapsto \{string \cap integer \cap Bool \cap Array[Int, Str]\}$}
-{Enemy = \{`health' = 60/120/15, `type' = `weak/normal/strong', `type' = `Giant', `is\_dead' = true, `rewards' = \{`rock', 02\}\}}
-{Similar to the player variation, the enemy contains two unique attributes, type and reward. The type is an identification marker to discern the uniqueness and class of the enemy. The reward is the resource given after the enemy is defeated and the player is rewards with a certain quality. The configuration of the game can dictate what type of enemy shows up or how much health they bring in terms of difficulty.}     
+\variable{Enemy Health}
+{enemy\_health}
+{$\mathbb{R}^{+}$}
+{60\dots150}
+{Similar to the player variation, the enemy contains health. This is another difficulty setting to test how well a player does against an enemy with high or low amounts of health.}     
 {runtime} 
 
-\variable{Attacks}
-{Array[string]}
-{{Attack, Block, Item,... `action phrases'}}
+\variable{Enemy Type}
+{enemy\_types}
+{set of string}
+{Weak, Normal, Strong, ...`adjectives'}
+{The type of the enemy is meant to convey broad details of the opponent such that the player knows how to categorize and deal with certain enemies.}
+{compile-time}
+
+\variable{Attack Type}
+{attack\_types}
+{set of string}
+{Attack, Block, Item,... `action phrases'}
 {These are the actions that allow the player and enemy to interact and convey progress in combat. They will also appear on the UI options for the player combat screen.
 Each action will have a unique logic to how it effects the target opposition.}
 {compile-time}
 
-\variable{Resource Destribution}
-{Dictionary: ${string} \mapsto Integer$, $integer \mapsto integer$}
-{resource1 = `Rock': 50, or 02: 20 (Item ID 2: 20 amount )}
-{These are the possible rewards situations that can take place when completing a combat encounter. These values can once again be tuned in the configuration menu for pacing, and difficulty.}
+% \variable{Attack modifier}
+
+\variable{Resource Distribution}
+{resource\_amount}
+{$\mathbb{R}^{+}$}
+{0\dots200}
+{These are the possible rewards amounts that can take place when completing a combat encounter. These values can once again be tuned in the configuration menu for pacing, and difficulty.}
 {runtime}
 
 \variable{Purchase Options}
