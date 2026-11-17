@@ -46,8 +46,8 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+11/8/2026 & 1.0 & Module Hierarchy Completed\\
+11/9/2026 & 1.1 & Module Decomposition for M1,4,5,11\\
 \bottomrule
 \end{tabularx}
 
@@ -66,15 +66,17 @@ This section records information for easy reference.
   \midrule 
   AC & Anticipated Change\\
   DAG & Directed Acyclic Graph \\
+  ENV & Environmental Requirement\\
   M & Module \\
   MG & Module Guide \\
   OS & Operating System \\
-  R & Requirement\\
+  \progname & The title of the project, and its produced software product\\
   SC & Scientific Computing \\
+  SFR & Software Functional Requirement\\
+  SNFR & Software Non-Functional Requirement\\
   SRS & Software Requirements Specification\\
-  \progname & Explanation of program name\\
+  SSR & Software Safety Requirement\\
   UC & Unlikely Change \\
-  \wss{etc.} & \wss{...}\\
   \bottomrule
 \end{tabular}\\
 
@@ -198,7 +200,9 @@ between requirements and modules is listed in Table~\ref{TblRT}.
   design decisions need to be made.  Rather than make these decisions implicit,
   they are explicitly recorded here.  For instance, if a program has security
   requirements, a specific design decision may be made to satisfy those
-  requirements with a password.}
+  requirements with a password.}\\
+  
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Module Decomposition} \label{SecMD}
 
@@ -339,25 +343,35 @@ arrows in the diagram typically correspond to the presence of import statement.}
 \section{User Interfaces}
 
 \wss{Design of user interface for software and hardware.  Attach an appendix if
-needed. Drawings, Sketches, Figma}
+needed. Drawings, Sketches, Figma}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Design of Communication Protocols}
 
 \wss{If there is communication between hardware and software, it may be necessary 
 to explain the design of the communication protocol.  This section should be filled 
-in with NA if it is not appropriate for a given project.}
+in with NA if it is not appropriate for a given project.}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Database Design}
 
 \wss{If a database is a significant component of the project, the database
 design should be summarized here.  This section should be filled in with NA if
-it is not appropriate for a given project.}
+it is not appropriate for a given project.}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Timeline}
 
 \wss{Schedule of tasks and who is responsible}
 
-\wss{You can point to GitHub if this information is included there}
+\wss{You can point to GitHub if this information is included there}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
+
+\newpage
 
 \section{Generative AI Use Disclosure}
 
@@ -372,7 +386,8 @@ it is not appropriate for a given project.}
 
 AI tools were used for assistance with LaTeX syntax and commands, during 
 the development of the Module Hierarchy, and portions of the Module 
-Decomposition section. AI tools were used for guidance on how to correctly 
+Decomposition section (for modules M1, M4, M5, and M11). AI tools were used for 
+guidance on how to correctly 
 structure LaTeX code to create a hyperlink-able list of software modules and 
 include them in the module hierarchy table, as well as other various small 
 formatting 
