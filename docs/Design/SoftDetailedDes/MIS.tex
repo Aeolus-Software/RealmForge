@@ -55,8 +55,7 @@ urlcolor=cyan          % color of external links
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+11/12/2026 & 1.0 & MIS for M1,4,5,11 Completed\\
 \bottomrule
 \end{tabularx}
 
@@ -64,9 +63,22 @@ Date 2 & 1.1 & Notes\\
 
 \section{Symbols, Abbreviations and Acronyms}
 
-See SRS Documentation at \wss{give url}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{l l} 
+	\toprule		
+	\textbf{symbol} & \textbf{description}\\
+	\midrule 
+	M & Module \\
+	MG & Module Guide \\
+	\progname & The title of the project, and its produced software product\\
+	SRS & Software Requirements Specification\\
+	\bottomrule
+\end{tabular}\\
+\\
 
-\wss{Also add any additional symbols, abbreviations or acronyms}
+\noindent See SRS Documentation at 
+\href{https://github.com/Aeolus-Software/RealmForge/blob/main/pdfs/SRS/SRS.pdf}{RealmForge
+	SRS}.
 
 \section{Glossary}
 \label{sec:Glossary}
@@ -124,12 +136,9 @@ found at \url{...}.  \wss{provide the url for your repo}
 
 \section{Notation}
 
-\wss{You should describe your notation.  You can use what is below as
-  a starting point.}
-
 The structure of the MIS for modules comes from \citet{HoffmanAndStrooper1995},
 with the addition that template modules have been adapted from
-\cite{GhezziEtAl2003}.  The mathematical notation comes from Chapter 3 of
+\citet{GhezziEtAl2003}.  The mathematical notation comes from Chapter 3 of
 \citet{HoffmanAndStrooper1995}.  For instance, the symbol := is used for a
 multiple assignment statement and conditional rules follow the form $(c_1
 \Rightarrow r_1 | c_2 \Rightarrow r_2 | ... | c_n \Rightarrow r_n )$.
@@ -137,27 +146,36 @@ multiple assignment statement and conditional rules follow the form $(c_1
 The following table summarizes the primitive data types used by \progname. 
 
 \begin{center}
-\renewcommand{\arraystretch}{1.2}
-\noindent 
-\begin{tabular}{l l p{7.5cm}} 
-\toprule 
-\textbf{Data Type} & \textbf{Notation} & \textbf{Description}\\ 
-\midrule
-character & char & a single symbol or digit\\
-integer & $\mathbb{Z}$ & a number without a fractional component in (-$\infty$, $\infty$) \\
-natural number & $\mathbb{N}$ & a number without a fractional component in [1, $\infty$) \\
-real & $\mathbb{R}$ & any number in (-$\infty$, $\infty$)\\
-\bottomrule
-\end{tabular} 
+	\renewcommand{\arraystretch}{1.2}
+	\noindent 
+	\begin{tabular}{l l p{7.5cm}} 
+		\toprule 
+		\textbf{Data Type} & \textbf{Notation} & \textbf{Description}\\ 
+		\midrule
+		character & char & a single symbol or digit\\
+		boolean & boolean & a binary value of true or false \\
+		integer & $\mathbb{Z}$, or integer & a number without a fractional 
+		component in 
+		(-$\infty$, $\infty$) \\
+		natural number & $\mathbb{N}$ & a number without a fractional component 
+		in [1, $\infty$) \\
+		real & $\mathbb{R}$ & any number in (-$\infty$, $\infty$)\\
+		float & float & a 64-bit double-precision floating point number\\
+		
+		\bottomrule
+	\end{tabular} 
 \end{center}
 
 \noindent
-The specification of \progname \ uses some derived data types: sequences, strings, and
+The specification of \progname \ uses some derived data types: sequences, 
+strings, and
 tuples. Sequences are lists filled with elements of the same data type. Strings
 are sequences of characters. Tuples contain a list of values, potentially of
 different types. In addition, \progname \ uses functions, which
 are defined by the data types of their inputs and outputs. Local functions are
 described by giving their type signature followed by their specification.
+
+\newpage
 
 \section{Module Decomposition}
 
@@ -165,7 +183,6 @@ The following table is taken directly from the Module Guide document for this pr
 
 \input{ModuleHierarchyTable.text}
 
-\newpage
 ~\newpage
 
 \section{MIS of \wss{Module Name}} \label{Module} \wss{Use labels for
@@ -250,42 +267,40 @@ The following table is taken directly from the Module Guide document for this pr
 
 \section{Appendix --- Generative AI Use Disclosure}
 
-\wss{ChatGPT (version 5) was used to brainstorm ideas for the template for this disclose section.}
-
 \subsection{AI Tools Used}
 
-\wss{Give the name of the AI tool(s) used and the version.}
+\begin{itemize}
+	\item Anthropic Claude Sonnet 5.5
+	\item Google Search AI Overview (Google Gemini)
+\end{itemize}
 
 \subsection{How and Where Used}
 
-\wss{Explain what the tool(s) were used for.  Examples include: brainstorming,
-explaining a technical concept, reviewing the document, generating or modifying
-text, generating or modifying diagrams, identifying errors or omissions or
-inconsistencies.}
-
-\wss{For each of the uses, identify which parts of the document were affected.}
-
-\wss{You do not need to report every interaction, but you should disclose the 
-uses that materially contributed to your work}
+AI tools were used for assistance with LaTeX syntax and commands, during 
+the development of the Module Hierarchy/Decomposition table, and the MIS 
+descriptions for modules M1, M4, M5, and M11. AI tools were used for 
+guidance on how to correctly 
+structure LaTeX code to create a hyperlink-able list of software modules and 
+include them in the module hierarchy table, as well as other various small 
+formatting 
+fixes. In these sections, 
+AI tools were not used to generate any content text, or wholly generate any of 
+the 
+ideas or conclusions presented.
 
 \subsection{Verification of AI-Generated Content}
 
-\wss{\begin{itemize}
-    \item Describe how the team checked AI-generated or AI-assisted material
-    before including it in the document.
-    \item In particular, verify factual claims, technical assertions,
-    requirements, calculations, references, and other information for which an
-    AI system may produce incorrect or fabricated results.
-    \item \textbf{The team is responsible for the accuracy, completeness,
-consistency, and appropriateness of the submitted document, regardless of
-whether material was generated by a human or an AI system.}
-\end{itemize}}
+Any LaTeX syntax or code provided by AI tools was verified by testing 
+compilation in LaTeX documents, and ensuring the resulting output was 
+correctly formatted and matched the needs of the document. No ideas or text 
+were 
+newly generated by AI tools and presented in the document.
 
 \newpage{}
 
 \section{Appendix --- Reflection}
 
-\wss{Not required for CAS 741 projects}
+\textbf{This section will be updated in Revision 0 of the document.}\\
 
 The information in this section will be used to evaluate the team members on the
 graduate attribute of Problem Analysis and Design.
