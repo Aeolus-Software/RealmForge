@@ -15,9 +15,6 @@
     "docs/Common.text",
     "refs/References.bib"
   ],
-  "docs/CDs/FODA/ReadMe.md": [
-    "docs/CDs/FODA/ReadMe.md"
-  ],
   "docs/Checklists/Code-Checklist.tex": [
     "docs/Checklists/Code-Checklist.tex",
     "docs/Comments.text"
@@ -64,6 +61,10 @@
   "docs/Design/SoftArchitecture/MG.tex": [
     "docs/Comments.text",
     "docs/Common.text",
+    "docs/Design/SoftArchitecture/ConfigMenuModuleDecomp.text",
+    "docs/Design/SoftArchitecture/ConfigModuleDecomp.text",
+    "docs/Design/SoftArchitecture/EnemyModuleDecomp.text",
+    "docs/Design/SoftArchitecture/InputModuleDecomp.text",
     "docs/Design/SoftArchitecture/MG.tex",
     "docs/Design/SoftArchitecture/ModuleHierarchy.text",
     "refs/References.bib"
