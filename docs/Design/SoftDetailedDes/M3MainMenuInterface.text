@@ -1,0 +1,64 @@
+
+\section{MIS of Main Menu Interface (M3)}
+\label{M3-MainMenuInterface}
+
+\subsection{Module}
+The Main Menu Interface Module provides the player with
+an interactive graphical interface to navigate through
+different menu options. The interface allows players to
+access various features and elements of RealmForge.
+
+\subsection{Uses}
+\begin{itemize}
+    \item Godot Engine for displaying and managing
+    the graphical interface.
+    \item Game World Module for handling game state
+    changes based on the player's menu selections.
+\end{itemize}
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+None.
+
+\subsubsection{Exported Access Programs}
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{3cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+show\_main\_menu & - & - & MissingUIComponent \\
+\hline
+on\_menu\_selection & option: String & - & InputException \\
+\hline
+\end{tabularx}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+None.
+
+\subsubsection{Environment Variables}
+\begin{itemize}
+    \item ui\_components: Array[Node] - The graphical
+    components used to display and interact with the
+    main menu, such as buttons and text elements.
+\end{itemize}
+
+\subsubsection{Assumptions}
+\begin{itemize}
+    \item The main menu has access to the required
+    graphical interface components.
+    \item The Game World Module is available to handle
+    game state changes requested through the main menu.
+\end{itemize}
+
+\subsubsection{Access Routine Semantics}
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Local Functions}
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Considerations}
+Will be updated in Revision 0 of the document.
