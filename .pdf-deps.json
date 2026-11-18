@@ -15,9 +15,6 @@
     "docs/Common.text",
     "refs/References.bib"
   ],
-  "docs/CDs/FODA/ReadMe.md": [
-    "docs/CDs/FODA/ReadMe.md"
-  ],
   "docs/Checklists/Code-Checklist.tex": [
     "docs/Checklists/Code-Checklist.tex",
     "docs/Comments.text"
@@ -64,13 +61,30 @@
   "docs/Design/SoftArchitecture/MG.tex": [
     "docs/Comments.text",
     "docs/Common.text",
+    "docs/Design/SoftArchitecture/CentralHubInterfaceModuleDecomp.text",
+    "docs/Design/SoftArchitecture/CentralHubModuleDecomp.text",
+    "docs/Design/SoftArchitecture/CombatInterfaceModuleDecomp.text",
+    "docs/Design/SoftArchitecture/CombatModuleDecomp.text",
+    "docs/Design/SoftArchitecture/ConfigMenuModuleDecomp.text",
+    "docs/Design/SoftArchitecture/ConfigModuleDecomp.text",
+    "docs/Design/SoftArchitecture/EnemyModuleDecomp.text",
+    "docs/Design/SoftArchitecture/GameWorldModuleDecomp.text",
+    "docs/Design/SoftArchitecture/GameWorldUIModuleDecomp.text",
+    "docs/Design/SoftArchitecture/InputModuleDecomp.text",
     "docs/Design/SoftArchitecture/MG.tex",
     "docs/Design/SoftArchitecture/ModuleHierarchy.text",
+    "docs/Design/SoftArchitecture/PlayerModuleDecomp.text",
+    "docs/Design/SoftArchitecture/SaveDataStorageModuleDecomp.text",
+    "docs/Design/SoftArchitecture/SaveIOModuleDecomp.text",
     "refs/References.bib"
   ],
   "docs/Design/SoftDetailedDes/MIS.tex": [
     "docs/Comments.text",
     "docs/Common.text",
+    "docs/Design/SoftDetailedDes/M14SaveDataStorage.text",
+    "docs/Design/SoftDetailedDes/M2SaveIO.text",
+    "docs/Design/SoftDetailedDes/M6GameWorldInterface.text",
+    "docs/Design/SoftDetailedDes/M7GameWorld.text",
     "docs/Design/SoftDetailedDes/MIS.tex",
     "docs/Design/SoftDetailedDes/ModuleHierarchyTable.text",
     "docs/Reflection.text",

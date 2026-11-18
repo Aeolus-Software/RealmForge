@@ -13,6 +13,7 @@
 \usepackage[protrusion=true,expansion=true]{microtype}	
 \usepackage{amsmath,amsfonts,amsthm,amssymb}
 \usepackage{graphicx}
+\usepackage{float}
 % \usepackage{mathbb}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -47,26 +48,37 @@
 \newcommand{\acronym}[4]{\hypertarget{#1}{\textbf{#2} & {#3} & {#4} \\ }}
 \newcommand{\glossaryDef}[4]{\hypertarget{#1}{\textbf{#2} & {#3} & {#4}\\}}
 \newcounter{var}
-\newcommand{\variable}[5]{
+\newcommand{\variable}[6]{
 	\refstepcounter{var} 
-	\subsection*{Var-\thevar: #1}
+	\subsection*{Var-\thevar}
 	\addcontentsline{toc}{subsection}{Var-\thevar: #1} 
 	\label{var:#1}
 	\renewcommand{\arraystretch}{1.2} 
 	\begin{tabularx}{\textwidth}{|p{3cm}|X|}
 		\hline 
-		\textbf{Variable} & #1 \\ 
-		\hline 
-		\textbf{Type} & #2 \\ 
+		\textbf{Variation Points} & #1 \\ 
+		\hline
+		\textbf{Symbol} & #2 \\ 
+		\hline
+		\textbf{Type} & #3 \\ 
 		\hline  
-		\textbf{Parameter} & #3 \\ 
+		\textbf{Parameter} & #4 \\ 
 		\hline 
-		\textbf{Description} & #4 \\
+		\textbf{Description} & #5 \\
 		\hline 
-		\textbf{Binding Time} & #5 \\
+		\textbf{Binding Time} & #6 \\
 		% \hline \textbf{History:} & Created -- June 12, 2007 \\ 
 		\hline 
 	\end{tabularx}
+}
+
+% Commonality Macro
+\newcounter{com}
+\newcommand{\comm}[2]{
+	\refstepcounter{com} 
+	\subsection*{Comm-\thecom: #2}
+	\addcontentsline{toc}{subsection}{Comm-\thecom: #2} 
+	\label{#1}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{../../Comments.text}
@@ -97,7 +109,10 @@
 
 \pagenumbering{roman}
 \setcounter{page}{1}		% Set page numbering to begin on this page
+
+\newpage
 \input{S0RevisionHistory.text}
+
 \newpage{}
 \input{S1Glossary.text}
 \input{S2Acronyms.text}

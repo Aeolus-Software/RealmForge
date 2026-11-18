@@ -1,0 +1,5 @@
+\begin{description}
+	\item[Secrets:]The internal logic and data structures used to manage both upgrades and resource generation rates.
+	\item[Services:]Maintains and updates state of the central hub during and between runs, including permanent and temporary upgrades which are unlocked and available to be unlocked, and their descriptions and resource costs which is then provided to the Central Hub Interface Module (\mref{mHubMenu}). Provides resource generation rates and other modifiers to the Combat Encounter Module (\mref{mEncounter}).
+	\item[Implemented By:] RealmForge
+\end{description}

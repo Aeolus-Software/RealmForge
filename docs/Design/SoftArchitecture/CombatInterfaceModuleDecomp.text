@@ -1,0 +1,10 @@
+\begin{description}
+	\item[Secrets:]The internal process behind the presentation of the 
+	combat encounter state.
+	\item[Services:]Provides a graphical user interface through which the user can view 
+	and interact with the the current encounter. Selections made using this interface are 
+	then provided to the Combat Encounter Module \mref{mEncounter} so the user input 
+	can facilitate the behavior of the current comabt encounter irrespective of how the 
+	interface is presented or constructed.
+	\item[Implemented By:] RealmForge
+\end{description}
