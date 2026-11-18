@@ -68,10 +68,14 @@
     "docs/Design/SoftArchitecture/ConfigMenuModuleDecomp.text",
     "docs/Design/SoftArchitecture/ConfigModuleDecomp.text",
     "docs/Design/SoftArchitecture/EnemyModuleDecomp.text",
+    "docs/Design/SoftArchitecture/GameWorldModuleDecomp.text",
+    "docs/Design/SoftArchitecture/GameWorldUIModuleDecomp.text",
     "docs/Design/SoftArchitecture/InputModuleDecomp.text",
     "docs/Design/SoftArchitecture/MG.tex",
     "docs/Design/SoftArchitecture/ModuleHierarchy.text",
     "docs/Design/SoftArchitecture/PlayerModuleDecomp.text",
+    "docs/Design/SoftArchitecture/SaveDataStorageModuleDecomp.text",
+    "docs/Design/SoftArchitecture/SaveIOModuleDecomp.text",
     "refs/References.bib"
   ],
   "docs/Design/SoftDetailedDes/MIS.tex": [
