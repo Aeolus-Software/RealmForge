@@ -2,7 +2,7 @@
 
 \usepackage{amsmath, mathtools}
 
-\usepackage[round]{natbib}
+% \usepackage[round]{natbib}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -31,10 +31,14 @@ urlcolor=cyan          % color of external links
 
 \usepackage{array}
 
+\newcommand{\acronym}[3]{\hypertarget{#1}{\textbf{#2} & {#3} \\ }}
+
 \externaldocument{../../SRS/SRS}
 
 \input{../../Comments.text}
 \input{../../Common.text}
+
+\newcommand{\glossaryDef}[3]{\hypertarget{#1}{\textbf{#2}} & {#3}\\}
 
 \begin{document}
 
@@ -53,18 +57,70 @@ urlcolor=cyan          % color of external links
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+11/11/2026 & Rev -1 & Andy MIS for M2,6,7,14 First Draft\\
+11/12/2026 & Rev -1 & Andreas MIS for M1,4,5,11 Completed\\
+11/11/2026 & Rev -1 & Andy MIS for M2,6,7,14 Completed\\
+11/14/2026 & Rev -1 & Andy MIS for M2,6,7,14 Revished Second Draft\\
+11/17/2026 & Rev -1 & Andy MIS for M2,6,7,14 Final Draft\\
+
 \bottomrule
 \end{tabularx}
 
 ~\newpage
 
 \section{Symbols, Abbreviations and Acronyms}
+\label{sec:Acronyms}
+\renewcommand{\arraystretch}{1.2}
+  \begin{tabularx}{\textwidth}{l p{13cm}}
+    \toprule		
+  \textbf{Abbreviation} & \textbf{Description}\\
+  \midrule 
+  % EXAMPLES BELOW
+  % \acronym{ID}{Acronym}{Description}{Section #-- USE \ref{sec:Variabilities}}
+  
+  \acronym{IO}{IO}{Input and Output. Usually is association with hardware interfaces or software environment interfaces.}
+  \acronym{MG}{MG}{Module Guide }
+  \acronym{MIS}{MIS}{Module Interface Specification }
+  \acronym{SRS}{SRS}{Software Requirements Specification}
 
-See SRS Documentation at \wss{give url}
+  \bottomrule
+  \end{tabularx}
 
-\wss{Also add any additional symbols, abbreviations or acronyms}
+\noindent \newline
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{l p{13cm}} 
+	\toprule		
+	\textbf{Symbol} & \textbf{Description}\\
+	\midrule 
+	M & Module. A component that is separate and can be added and removed with ease. \\
+	\bottomrule
+\end{tabularx}\\
+\\
+
+
+\section{Glossary}
+\label{sec:Glossary}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{l p{13cm }} 
+	\toprule		
+	\textbf{Term} & \textbf{Definition}\\
+	\midrule 
+	%EXAMPLES BELOW ARE SHOW FOR USE
+	% \glossaryDef{id}{Glossary Term} {Description}{Section # -- USE 
+	%\ref{sec:Variabilities}}
+	\glossaryDef{\progname}{\progname} {The title of the project, and its produced software product}\\
+	\bottomrule
+\end{tabularx}\\
+\noindent See SRS Documentation at 
+\href{https://github.com/Aeolus-Software/RealmForge/blob/main/pdfs/SRS/SRS.pdf}{RealmForge
+	SRS}.
+
+% EXAMPLE TO LINK
+% \hyperlink{ID}{What you want to say}
+% \hyperlink{SRS}{SRS}
+% \hyperlink{VnV}{VnV}
+% \hyperlink{SRS}{SRS}
 
 \newpage
 
@@ -74,7 +130,7 @@ See SRS Documentation at \wss{give url}
 
 \pagenumbering{arabic}
 
-\section{Introduction}
+\section{Introduction}\label{sec:introduction}
 
 The following document details the Module Interface Specifications for
 \wss{Fill in your project name and description}
@@ -85,40 +141,46 @@ found at \url{...}.  \wss{provide the url for your repo}
 
 \section{Notation}
 
-\wss{You should describe your notation.  You can use what is below as
-  a starting point.}
-
-The structure of the MIS for modules comes from \citet{HoffmanAndStrooper1995},
-with the addition that template modules have been adapted from
-\cite{GhezziEtAl2003}.  The mathematical notation comes from Chapter 3 of
-\citet{HoffmanAndStrooper1995}.  For instance, the symbol := is used for a
+The structure of the MIS for modules comes from Hoffman\cite{HoffmanAndStrooper1995},
+with the addition that template modules have been adapted from Ghezzi
+\cite{GhezziEtAl2003}.  The mathematical notation comes from Chapter 3 of Hoffman
+\cite{HoffmanAndStrooper1995}.  For instance, the symbol := is used for a
 multiple assignment statement and conditional rules follow the form $(c_1
 \Rightarrow r_1 | c_2 \Rightarrow r_2 | ... | c_n \Rightarrow r_n )$.
 
 The following table summarizes the primitive data types used by \progname. 
 
 \begin{center}
-\renewcommand{\arraystretch}{1.2}
-\noindent 
-\begin{tabular}{l l p{7.5cm}} 
-\toprule 
-\textbf{Data Type} & \textbf{Notation} & \textbf{Description}\\ 
-\midrule
-character & char & a single symbol or digit\\
-integer & $\mathbb{Z}$ & a number without a fractional component in (-$\infty$, $\infty$) \\
-natural number & $\mathbb{N}$ & a number without a fractional component in [1, $\infty$) \\
-real & $\mathbb{R}$ & any number in (-$\infty$, $\infty$)\\
-\bottomrule
-\end{tabular} 
+	\renewcommand{\arraystretch}{1.2}
+	\noindent 
+	\begin{tabular}{l l p{7.5cm}} 
+		\toprule 
+		\textbf{Data Type} & \textbf{Notation} & \textbf{Description}\\ 
+		\midrule
+		character & char & a single symbol or digit\\
+		boolean & boolean & a binary value of true or false \\
+		integer & $\mathbb{Z}$, or integer & a number without a fractional 
+		component in 
+		(-$\infty$, $\infty$) \\
+		natural number & $\mathbb{N}$ & a number without a fractional component 
+		in [1, $\infty$) \\
+		real & $\mathbb{R}$ & any number in (-$\infty$, $\infty$)\\
+		float & float & a 64-bit double-precision floating point number\\
+		
+		\bottomrule
+	\end{tabular} 
 \end{center}
 
 \noindent
-The specification of \progname \ uses some derived data types: sequences, strings, and
+The specification of \progname \ uses some derived data types: sequences, 
+strings, and
 tuples. Sequences are lists filled with elements of the same data type. Strings
 are sequences of characters. Tuples contain a list of values, potentially of
 different types. In addition, \progname \ uses functions, which
 are defined by the data types of their inputs and outputs. Local functions are
 described by giving their type signature followed by their specification.
+
+\newpage
 
 \section{Module Decomposition}
 
@@ -126,7 +188,6 @@ The following table is taken directly from the Module Guide document for this pr
 
 \input{ModuleHierarchyTable.text}
 
-\newpage
 ~\newpage
 
 \section{MIS of \wss{Module Name}} \label{Module} \wss{Use labels for
@@ -202,7 +263,12 @@ The following table is taken directly from the Module Guide document for this pr
 
 \newpage
 
-\bibliographystyle {plainnat}
+\input{M2SaveIO.text}
+\input{M6GameWorldInterface.text}
+\input{M7GameWorld.text}
+\input{M14SaveDataStorage.text}
+
+\bibliographystyle{IEEEtran}
 \bibliography {../../../refs/References}
 
 \newpage
@@ -211,42 +277,40 @@ The following table is taken directly from the Module Guide document for this pr
 
 \section{Appendix --- Generative AI Use Disclosure}
 
-\wss{ChatGPT (version 5) was used to brainstorm ideas for the template for this disclose section.}
-
 \subsection{AI Tools Used}
 
-\wss{Give the name of the AI tool(s) used and the version.}
+\begin{itemize}
+	\item Anthropic Claude Sonnet 5.5
+	\item Google Search AI Overview (Google Gemini)
+\end{itemize}
 
 \subsection{How and Where Used}
 
-\wss{Explain what the tool(s) were used for.  Examples include: brainstorming,
-explaining a technical concept, reviewing the document, generating or modifying
-text, generating or modifying diagrams, identifying errors or omissions or
-inconsistencies.}
-
-\wss{For each of the uses, identify which parts of the document were affected.}
-
-\wss{You do not need to report every interaction, but you should disclose the 
-uses that materially contributed to your work}
+AI tools were used for assistance with LaTeX syntax and commands, during 
+the development of the Module Hierarchy/Decomposition table, and the MIS 
+descriptions for modules M1, M4, M5, and M11. AI tools were used for 
+guidance on how to correctly 
+structure LaTeX code to create a hyperlink-able list of software modules and 
+include them in the module hierarchy table, as well as other various small 
+formatting 
+fixes. In these sections, 
+AI tools were not used to generate any content text, or wholly generate any of 
+the 
+ideas or conclusions presented.
 
 \subsection{Verification of AI-Generated Content}
 
-\wss{\begin{itemize}
-    \item Describe how the team checked AI-generated or AI-assisted material
-    before including it in the document.
-    \item In particular, verify factual claims, technical assertions,
-    requirements, calculations, references, and other information for which an
-    AI system may produce incorrect or fabricated results.
-    \item \textbf{The team is responsible for the accuracy, completeness,
-consistency, and appropriateness of the submitted document, regardless of
-whether material was generated by a human or an AI system.}
-\end{itemize}}
+Any LaTeX syntax or code provided by AI tools was verified by testing 
+compilation in LaTeX documents, and ensuring the resulting output was 
+correctly formatted and matched the needs of the document. No ideas or text 
+were 
+newly generated by AI tools and presented in the document.
 
 \newpage{}
 
 \section{Appendix --- Reflection}
 
-\wss{Not required for CAS 741 projects}
+\textbf{This section will be updated in Revision 0 of the document.}\\
 
 The information in this section will be used to evaluate the team members on the
 graduate attribute of Problem Analysis and Design.
@@ -282,5 +346,19 @@ graduate attribute of Problem Analysis and Design.
   You should create a PR for your implemented module.  A link to the PR should be part of your reflection.
 
 \end{enumerate}
+
+
+\textbf{Andy:}
+\begin{itemize}
+	\item We were able to get a good headstart on the major sections of the document; particularly with the Module Hierarchy and its corresponding MIS sections. I would say the team worked well once again by communicating and responding in a timely manner. I was more familiar now with the LaTeX technology, so I was able to create tables, references, and new commands much faster without it hindering me writing up my sections.
+	\item We were unfamiliar with what was required for our custom document, and we had to create an entire doc from scratch with sections that are speculated based on professor feedback. The sections were also unclear and we had long discussions regarding their content as well as more professor and TA advice.
+	\item Most of our design decisions stemmed from speaking with a professors and TA, there is currently no feedback (yet), but we surmised there will be later on in the future.
+	\item For our other documents, the Development Plan – POC section, Hazard Analysis – Requirements and considerations, and SRS – Requirements/Functionality needed to be expanded or modified. The proof-of-concept plan was revised from feedback and scope creep considerations. The Hazard Analysis requirements were naturally expanded as we refined our idea for the game; the same goes for the SRS.
+	\item The limitations are mainly time, user testing, and experience. With unlimited time (or no deadline) we would be able to fully flesh out all of our ideas and thoughts into a much more coherent project. The goals and motivations of each team member would be more aligned as each of their ideas would be integrated in some shape or form. We would then have a clear understanding of what we are making. We would have a strong motivational behaviour from each of our party members which makes for a fun and energetic environment to work with. For user testing, we would love to have target audiences, game testers, and expert gamers playtesting our game; they would provide vital feedback and interesting ideas we would never have thought of otherwise. This allows us to fine-tune our game to fit our stakeholders more appropriately. Experience goes alongside time. We need more experience with our tools and a thorough knowledge and understanding to really push the limits of what we can really do. Some of our members are still not familiar with the Godot game engine, so if they had more time to really know how to game develop, they would be more impactful with their work.
+	\item We at first thought of a Match-3 game setup that was akin to the original idea our professor proposed. This match-3 game would implement rogue-like behaviours similar to our current solution. The benefit for using a match-3 template is the simplicity of the game. Reproducing the basic game would be much easier. Creating requirements for the basic game would also be simple as the game genre is clearer to understand. This in turn would let us focus on creating and designing the rogue-like aspects of the game faster. The drawback or trade-off is that the game would be too simplistic, and we would likely have a hard time designing interesting mechanics that wouldn’t otherwise already be in the gaming market. There was also another solution for creating a rogue-like game using cards and dices as the basic gameplay mechanic. There is so many fun and interesting ways to redesign the simple card game and rule sets without overcomplicating the user. The issue with this solution is that there were already many different iterations or card rogue-likes out in the market such as `Balatro’ and `Slay the Spire’ that it would be hard to differentiate against them.
+	\item TO BE DONE LATER
+
+\end{itemize}
+
 
 \end{document}

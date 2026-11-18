@@ -1,0 +1,96 @@
+\section{MIS of Game World Interface (M6)} \label{M6-GameWorldInterface}
+\subsection{Module}
+The Game World interface handles logic for player input navigation between game areas. Displays navigational information such as the current, and travel options.
+
+
+\subsection{Uses}
+Godot Engine - Godot Control Nodes (used specifically for UI) as well as the built-in libraries.
+
+
+\subsection{Syntax}
+
+
+\subsubsection{Exported Constants}
+None.
+
+\subsubsection{Exported Access Programs}
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{4cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+% \hline
+% get\_game\_state& - & GAME\_STATE: GameState & StateException("Invalid state") \\
+\hline
+get\_current\_location& - & location: String  & LocationException \\
+\hline
+on\_travel\_button\_up& destination: String & - & InputException \\
+\hline
+show\_prompt& - & - & MissingUIComponent \\
+\hline
+confirm\_prompt& is\_true: Boolean  & action: Boolean  & InputException\\
+\hline
+diplay\_area\_name& - & - & MissingUIComponent \\
+\hline
+\end{tabularx}
+\end{center}
+
+
+\subsection{Syntax}
+\subsubsection{State Variables}
+None.
+
+
+\subsubsection{Environment Variables}
+\begin{itemize}
+    \item location: String - from GameWorld Module
+    \item ui\_components: Array[Node] - the set of ui components such as buttons.
+\end{itemize}
+
+
+\subsubsection{Assumptions}
+\begin{itemize}
+    \item The Game World UI has access to Game World variables public access routines.
+\end{itemize}
+
+
+\subsubsection{Access Routine Semantics}
+Will be updated in Revision 0 of the document
+% \begin{itemize}
+%     % \item \texttt{get_current_ui_state}
+%     \item {\verb|get_current_ui_state()| \\ 
+%     output: \verb|GAME_STATE current_ui|}
+
+
+%     \item {\verb|on_ui_change(game_state)| \\
+%     transition: \verb|ui_state := game_state|}
+%     input: \verb|GAME_STATE game_state|
+
+
+%     \item {\verb|on_travel_button_up(destination)| \\
+%     transition := \verb|current_location := destination| \\
+%     input: \verb|String destination_name| }
+
+
+%     \item {\verb|get_current_location()| \\
+%     output: \verb|STRING current_location|}
+
+
+%     \item {\verb|show_prompt()| \\
+%     transition: prompt.visible := true}
+
+
+%     \item {\verb|confirm_prompt(true)| \\
+%     input: Boolean true}
+
+
+%     \item {\verb|diplay_area(current_location)| \\
+%     transition: \verb|area.text := current_location|}
+
+
+% \end{itemize}
+\subsubsection{Local Functions}
+Will be updated in Revision 0 of the document
+
+
+\subsubsection{Considerations}
+Will be updated in Revision 0 of the document

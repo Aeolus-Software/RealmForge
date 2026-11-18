@@ -284,3 +284,7 @@ TSWLatexianTemp*
 ## Python bytecode from the build scripts
 __pycache__/
 *.pyc
+
+## GODOT  PROJECT FILES
+.godot/
+/android/

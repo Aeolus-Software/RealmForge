@@ -63,6 +63,10 @@
 \midrule
 Nov 8, 2026 & 1.0 & Andy Huynh's Anticipated Changes first draft \\
 Nov 10, 2026 & 1.0 & Andy Huynh's Anticipated Changes second draft \\
+11/8/2026 & 1.0 & Module Hierarchy Completed\\
+11/9/2026 & 1.1 & Module Decomposition for M1,4,5,11\\
+11/16/26 & Rev -1 & Christopher MG for M12,13 First Draft\\
+11/18/26 & Rev -1 & Christopher MG for M12,13 Update to Match Review\\
 \bottomrule
 \end{tabularx}
 
@@ -81,15 +85,17 @@ This section records information for easy reference.
   \midrule 
   AC & Anticipated Change\\
   DAG & Directed Acyclic Graph \\
+  ENV & Environmental Requirement\\
   M & Module \\
   MG & Module Guide \\
   OS & Operating System \\
-  R & Requirement\\
+  \progname & The title of the project, and its produced software product\\
   SC & Scientific Computing \\
+  SFR & Software Functional Requirement\\
+  SNFR & Software Non-Functional Requirement\\
   SRS & Software Requirements Specification\\
-  \progname & Explanation of program name\\
-  ULC & Unlikely Change \\
-  \wss{etc.} & \wss{...}\\
+  SSR & Software Safety Requirement\\
+  UC & Unlikely Change \\
   \bottomrule
 \end{tabular}\\
 
@@ -188,7 +194,9 @@ between requirements and modules is listed in Table~\ref{TblRT}.
   design decisions need to be made.  Rather than make these decisions implicit,
   they are explicitly recorded here.  For instance, if a program has security
   requirements, a specific design decision may be made to satisfy those
-  requirements with a password.}
+  requirements with a password.}\\
+  
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Module Decomposition} \label{SecMD}
 
@@ -200,63 +208,47 @@ without documenting \emph{how} to do it. For each module, a suggestion for the
 implementing software is given under the \emph{Implemented By} title. If the
 entry is \emph{OS}, this means that the module is provided by the operating
 system or by standard programming language libraries.  \emph{\progname{}} means the
-module will be implemented by the \progname{} software.
+module will be implemented by the \progname{} software. The software is 
+implemented using the Godot game engine. If a module's services are provided by 
+Godot's capabilities, the entry \emph{Godot Engine} signifies that the module 
+is implemented by Godot.
 
 Only the leaf modules in the hierarchy have to be implemented. If a dash
 (\emph{--}) is shown, this means that the module is not a leaf and will not have
 to be implemented.
 
-\subsection{Hardware Hiding Modules (\mref{mHH})}
+\subsection{Hardware Hiding Modules}
 
-\begin{description}
-\item[Secrets:]The data structure and algorithm used to implement the virtual
-  hardware.
-\item[Services:]Serves as a virtual hardware used by the rest of the
-  system. This module provides the interface between the hardware and the
-  software. So, the system can use it to display outputs or to accept inputs.
-\item[Implemented By:] OS
-\end{description}
+\subsubsection{User Input Module M\ref{mInput}}
+\input{InputModuleDecomp.text}
 
 \subsection{Behaviour-Hiding Module}
 
-\begin{description}
-\item[Secrets:]The contents of the required behaviours.
-\item[Services:]Includes programs that provide externally visible behaviour of
-  the system as specified in the software requirements specification (SRS)
-  documents. This module serves as a communication layer between the
-  hardware-hiding module and the software decision module. The programs in this
-  module will need to change if there are changes in the SRS.
-\item[Implemented By:] --
-\end{description}
+\subsubsection{Configuration Interface Module M\ref{mConfigMenu}}
+\input{ConfigMenuModuleDecomp.text}
 
-\subsubsection{Input Format Module (\mref{mInput})}
+\subsubsection{Variation Configuration Module M\ref{mConfig}}
+\input{ConfigModuleDecomp.text}
 
-\begin{description}
-\item[Secrets:]The format and structure of the input data.
-\item[Services:]Converts the input data into the data structure used by the
-  input parameters module.
-\item[Implemented By:] [Your Program Name Here]
-\item[Type of Module:] [Record, Library, Abstract Object, or Abstract Data Type]
-  [Information to include for leaf modules in the decomposition by secrets tree.]
-\end{description}
+\subsubsection{Combat Encounter Interface Module M\ref{mEncounterMenu}}
+\input{CombatInterfaceModuleDecomp.text}
 
-\subsubsection{Etc.}
+\subsubsection{Combat Encounter Module M\ref{mEncounter}}
+\input{CombatModuleDecomp.text}
 
+\subsubsection{Player Character Module M\ref{mPlayer}}
+\input{PlayerModuleDecomp.text}
+
+\subsubsection{Enemy Character Module M\ref{mEnemy}}
+\input{EnemyModuleDecomp.text}
+
+\subsubsection{Central Hub Interface Module M\ref{mHubMenu}}
+\input{CentralHubInterfaceModuleDecomp.text}
+
+\subsubsection{Central Hub Module M\ref{mHub}}
+\input{CentralHubModuleDecomp.text}
 
 \subsection{Software Decision Module}
-
-\begin{description}
-\item[Secrets:] The design decision based on mathematical theorems, physical
-  facts, or programming considerations. The secrets of this module are
-  \emph{not} described in the SRS.
-\item[Services:] Includes data structure and algorithms used in the system that
-  do not provide direct interaction with the user. 
-  % Changes in these modules are more likely to be motivated by a desire to
-  % improve performance than by externally imposed changes.
-\item[Implemented By:] --
-\end{description}
-
-\subsubsection{Etc.}
 
 \section{Traceability Matrix} \label{SecTM}
 
@@ -271,17 +263,43 @@ requirements and between the modules and the anticipated changes.
 \toprule
 \textbf{Req.} & \textbf{Modules}\\
 \midrule
-R1 & \mref{mHH}, \mref{mInput}, \mref{mParams}, \mref{mControl}\\
-R2 & \mref{mInput}, \mref{mParams}\\
-R3 & \mref{mVerify}\\
-R4 & \mref{mOutput}, \mref{mControl}\\
-R5 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R6 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R7 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R8 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R9 & \mref{mVerifyOut}\\
-R10 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}\\
-R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
+ENV-002 & \mref{mInput}\\
+ENV-003 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-001 & \mref{mInput}, \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-002 & \mref{mConfigMenu}\\
+SFR-003 & \mref{mConfig}\\
+SFR-004 & \mref{mInput}, \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-005 & \mref{mConfig}\\
+SFR-006 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-007 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-008 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-009 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-010 & \mref{mConfigMenu}\\
+SFR-011 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-012 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-013 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-014 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-015 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-016 & \mref{mEncounterMenu}, \mref{mEncounter}\\
+SFR-017 & \mref{mEncounter}\mref{mEnemy}\\
+SFR-019 & \mref{mEncounterMenu}, \mref{mEncounter}\\
+SFR-025 & \mref{mPlayer}\\
+SFR-026 & \mref{mPlayer}\\
+SFR-027 & \mref{mPlayer}\\
+SNFR-002 & \mref{mEnemy}\\
+SNFR-003 & \mref{mConfigMenu}, \mref{mConfig}\\
+SNFR-005 & \mref{mPlayer}\\
+SNFR-006 & \mref{mEnemy}\\
+SNFR-007 & \mref{mInput}\\
+SNFR-008 & \mref{mConfigMenu}\\
+SNFR-009 & \mref{mEncounterMenu}\\
+SNFR-010 & \mref{mConfigMenu}\\
+SNFR-011 & \mref{mInput}\\
+SSR-003 & \mref{mPlayer}\\
+SSR-007 & \mref{mEncounter}\\
+SSR-008 & \mref{mEncounter}\\
+SSR-008 & \mref{mEncounterMenu}\\
+SSR-012 & \mref{mEncounter}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Requirements and Modules}
@@ -358,25 +376,35 @@ arrows in the diagram typically correspond to the presence of import statement.}
 \section{User Interfaces}
 
 \wss{Design of user interface for software and hardware.  Attach an appendix if
-needed. Drawings, Sketches, Figma}
+needed. Drawings, Sketches, Figma}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Design of Communication Protocols}
 
 \wss{If there is communication between hardware and software, it may be necessary 
 to explain the design of the communication protocol.  This section should be filled 
-in with NA if it is not appropriate for a given project.}
+in with NA if it is not appropriate for a given project.}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Database Design}
 
 \wss{If a database is a significant component of the project, the database
 design should be summarized here.  This section should be filled in with NA if
-it is not appropriate for a given project.}
+it is not appropriate for a given project.}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Timeline}
 
 \wss{Schedule of tasks and who is responsible}
 
-\wss{You can point to GitHub if this information is included there}
+\wss{You can point to GitHub if this information is included there}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
+
+\newpage
 
 \section{Generative AI Use Disclosure}
 
@@ -391,7 +419,8 @@ it is not appropriate for a given project.}
 
 AI tools were used for assistance with LaTeX syntax and commands, during 
 the development of the Module Hierarchy, and portions of the Module 
-Decomposition section. AI tools were used for guidance on how to correctly 
+Decomposition section (for modules M1, M4, M5, and M11). AI tools were used for 
+guidance on how to correctly 
 structure LaTeX code to create a hyperlink-able list of software modules and 
 include them in the module hierarchy table, as well as other various small 
 formatting 
