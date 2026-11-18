@@ -1,6 +1,6 @@
 \begin{description}
-	\item[Secrets:]The internal state behind the presentation of a 
-	combat encounter.
+	\item[Secrets:]The internal process behind the presentation of the 
+	combat encounter state.
 	\item[Services:]Provides a graphical user interface through which the user can view 
 	and interact with the the current encounter. Selections made using this interface are 
 	then provided to the Combat Encounter Module \mref{mEncounter} so the user input 
