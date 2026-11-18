@@ -1,4 +1,4 @@
-\section{MIS of Combat Encounter Interface (M8)} \label{M8-EncounterInterface}
+\section{MIS of Combat Encounter Interface (M8)} \label{M8-CombatEncounterInterface}
 
 \subsection{Module}
 The Combat Encounter interface handles logic for displaying the state of the current combat encounter, as well as handling player selections within an encounter. 
@@ -44,7 +44,7 @@ None.
 
 \subsubsection{Environment Variables}
 \begin{itemize}
-    \item action\_index - from CombatEncounter Module
+    \item action\_index - from CombatEncounter Module (M9)
     \item ui\_components: Array[Node] - the set of ui components such as buttons.
 \end{itemize}
 
