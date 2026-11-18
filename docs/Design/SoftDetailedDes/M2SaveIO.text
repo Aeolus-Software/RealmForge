@@ -5,7 +5,7 @@ The \hyperlink{IO}{IO} module responsible for reading and writing saved data fro
 
 \subsection{Uses}
 \begin{itemize}
-    \item Godot Engine JSON class for JSON conversion
+    \item Godot Engine built-in helper functions for object accessing
 \end{itemize}
 
 
@@ -26,30 +26,30 @@ load & - & - & DataException \\
 \end{tabularx}
 \end{center}
 
-JSON Class Godot built-ins
-\begin{center}
-\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
-\hline
-\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
-\hline
-stringify & saved\_items: Dictionary & - & handled from self modules \\
-parse & json\_string: String & - & handled from self modules \\
-\hline
-\end{tabularx}
-\end{center}
-FileAccess Class Godot built-ins
-\begin{center}
-\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
-\hline
-\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
-\hline
-open & path: String & file\_open: Boolean & handled from self modules \\
-\hline
-get\_as\_text & - & text: String & handled from self modules \\
-store\_string & array: Array & - & handled from self modules \\
-\hline
-\end{tabularx}
-\end{center}
+% JSON Class Godot built-ins
+% \begin{center}
+% \begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+% \hline
+% \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+% \hline
+% stringify & saved\_items: Dictionary & - & handled from self modules \\
+% parse & json\_string: String & - & handled from self modules \\
+% \hline
+% \end{tabularx}
+% \end{center}
+% FileAccess Class Godot built-ins
+% \begin{center}
+% \begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+% \hline
+% \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+% \hline
+% open & path: String & file\_open: Boolean & handled from self modules \\
+% \hline
+% get\_as\_text & - & text: String & handled from self modules \\
+% store\_string & array: Array & - & handled from self modules \\
+% \hline
+% \end{tabularx}
+% \end{center}
 
 \subsection{Syntax}
 \subsubsection{State Variables}

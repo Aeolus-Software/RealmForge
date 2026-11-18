@@ -32,18 +32,18 @@ location\_change & destination: String & - & LocationException \\
 \end{tabularx}
 \end{center}
 
-\noindent Godot built-in routines
-\begin{center}
-\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
-\hline
-\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
-\hline
-\_ready & - & - & Handle from self modules \\
-\hline
-\_process & delta: Float & - & Handle from self modules \\
-\hline
-\end{tabularx}
-\end{center}
+% \noindent Godot built-in routines
+% \begin{center}
+% \begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+% \hline
+% \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+% \hline
+% \_ready & - & - & Handle from self modules \\
+% \hline
+% \_process & delta: Float & - & Handle from self modules \\
+% \hline
+% \end{tabularx}
+% \end{center}
 
 
 
