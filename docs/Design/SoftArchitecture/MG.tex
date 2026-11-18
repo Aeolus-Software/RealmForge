@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{longtable}
 \hypersetup{
     colorlinks,
     citecolor=blue,
@@ -241,32 +242,18 @@ to be implemented.
 \subsubsection{Variation Configuration Module M\ref{mConfig}}
 \input{ConfigModuleDecomp.text}
 
+
+\input{GameWorldUIModuleDecomp.text}
+
+\input{GameWorldModuleDecomp.text}
+
 \subsubsection{Combat Encounter Interface Module M\ref{mEncounterMenu}}
 \input{CombatInterfaceModuleDecomp.text}
 
 \subsubsection{Combat Encounter Module M\ref{mEncounter}}
 \input{CombatModuleDecomp.text}
 
-\input{GameWorldUIModuleDecomp.text}
-\input{GameWorldModuleDecomp.text}
 
-
-\subsection{Software Decision Module}
-
-\begin{description}
-\item[Secrets:] The design decision based on mathematical theorems, physical
-  facts, or programming considerations. The secrets of this module are
-  \emph{not} described in the SRS.
-\item[Services:] Includes data structure and algorithms used in the system that
-  do not provide direct interaction with the user. 
-  % Changes in these modules are more likely to be motivated by a desire to
-  % improve performance than by externally imposed changes.
-\item[Implemented By:] --
-\end{description}
-
-\subsubsection{Etc.}
-
-\input{SaveDataStorageModuleDecomp.text}
 
 \subsubsection{Player Character Module M\ref{mPlayer}}
 \input{PlayerModuleDecomp.text}
@@ -281,6 +268,9 @@ to be implemented.
 \input{CentralHubModuleDecomp.text}
 
 \subsection{Software Decision Module}
+\input{SaveDataStorageModuleDecomp.text}
+
+\newpage{}
 
 \section{Traceability Matrix} \label{SecTM}
 
@@ -315,9 +305,26 @@ SFR-015 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
 SFR-016 & \mref{mEncounterMenu}, \mref{mEncounter}\\
 SFR-017 & \mref{mEncounter}\mref{mEnemy}\\
 SFR-019 & \mref{mEncounterMenu}, \mref{mEncounter}\\
+SFR-020 & \mref{mWorldMenu} \\
+SFR-021 & \mref{mWorld} \\
+SFR-022 & \mref{mWorldMenu} \\
+SFR-023 & \mref{mWorldMenu} \\
+SFR-024 & \mref{mWorld}, \mref{mWorldMenu} \\
 SFR-025 & \mref{mPlayer}\\
 SFR-026 & \mref{mPlayer}\\
 SFR-027 & \mref{mPlayer}\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Functional/Enviromental Requirements and Modules}
+\label{TblRT}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Req.} & \textbf{Modules}\\
+\midrule
 SNFR-002 & \mref{mEnemy}\\
 SNFR-003 & \mref{mConfigMenu}, \mref{mConfig}\\
 SNFR-005 & \mref{mPlayer}\\
@@ -327,16 +334,33 @@ SNFR-008 & \mref{mConfigMenu}\\
 SNFR-009 & \mref{mEncounterMenu}\\
 SNFR-010 & \mref{mConfigMenu}\\
 SNFR-011 & \mref{mInput}\\
-SSR-003 & \mref{mPlayer}\\
-SSR-007 & \mref{mEncounter}\\
-SSR-008 & \mref{mEncounter}\\
-SSR-008 & \mref{mEncounterMenu}\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Nonfunctional Requirements and Modules}
+\label{TblRT}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Req.} & \textbf{Modules}\\
+\midrule
+SSR-001 & \mref{mSaveIO} \\
+SSR-002 & \mref{mSaveIO} \\
+SSR-003 & \mref{mSaveStore}, \mref{mPlayer} \\
+SSR-004 & \mref{mSaveIO} \\
+SSR-005 & \mref{mSaveIO}, \mref{mSaveStore}\\
+SRR-006 & \mref{mEncounter}, \mref{mWorld} \\
+SSR-007 & \mref{mSaveIO},\mref{mEncounter}, \mref{mSaveStore}\\
+SSR-008 & \mref{mEncounter}m \mref{mEncounterMenu}\\
 SSR-012 & \mref{mEncounter}\\
 \bottomrule
 \end{tabular}
-\caption{Trace Between Requirements and Modules}
+\caption{Trace Between Nonfunctional Requirements and Modules}
 \label{TblRT}
 \end{table}
+
 
 \begin{table}[H]
 \centering
@@ -357,19 +381,7 @@ SSR-012 & \mref{mEncounter}\\
 \acref{acSolver} & \mref{mSolver}\\
 \acref{acPlot} & \mref{mPlot}\\
 
-SR-020 & \mref{mWorldMenu} \\
-SR-021 & \mref{mWorld} \\
-SR-022 & \mref{mWorldMenu} \\
-SR-023 & \mref{mWorldMenu} \\
-SR-024 & \mref{mWorld}, \mref{mWorldMenu} \\
 
-SSR-001 & \mref{mSaveIO} \\
-SSR-002 & \mref{mSaveIO} \\
-SSR-003 & \mref{mSaveStore} \\
-SSR-004 & \mref{mSaveIO} \\
-SSR-005 & \mref{mSaveIO}, \mref{mSaveStore}\\
-SRR-007 & NONE FOR NOW \\
-SSR-007 & \mref{mSaveIO}, \mref{mSaveStore}\\
 
 
 \bottomrule
