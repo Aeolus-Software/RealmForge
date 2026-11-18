@@ -18,30 +18,126 @@
 
 \maketitle
 
-This document summarizes the contributions of each team member up to the POC
+\noindent This document summarizes the contributions of each team member up to 
+the POC
 Demo.  The time period of interest is the time between the beginning of the term
-and the POC demo.
+and the POC demo.\\
 
-\wss{Please do not delete sections or modify the table formats.  Standardization
-helps the instructors and TAs to review these documents. You may add sections to
-the report.}
-
-\wss{Remove the instructor guidelines/comments in the final version.}
-
-\wss{Fill in the requested information, like project url, TA name, supervisor name, etc.}
+\noindent Project URL: 
+\href{https://github.com/Aeolus-Software/RealmForge}{RealmForge 
+Repository}
 
 \section{Demo Plans}
 
-\wss{What is your feasibility risk?}
+PoC Demonstration Plan (Taken from the project's Development Plan):\\
 
-\wss{What will you be demonstrating}
+\noindent The main risks to the project's development that were identified 
+include a 
+\textbf{Large Technical Learning Curve}, the possibility of \textbf{Scope 
+	Creep}, and a \textbf{Failure to Implement Variation Capabilities}.
+\\
+
+\noindent \textbf{Large Learning Curve:} Each project team member has varying 
+experience in the field of game development, and some team members may have 
+little experience with the game engine used to develop the project's software. 
+Team members who are not experienced with the game engine used in the project 
+may suffer from a large learning curve, delaying their ability to contribute to 
+the project software's source code while they improve their skills. This could 
+lead to a failure of the team to complete the development of the software 
+within course deadlines.
+\\ 
+
+\noindent \textbf{Scope Creep:} Each project team member is passionate about 
+video games and game development, and has many ideas for how the project's 
+software (the RealmForge game) could function, behave, and look. However, the 
+software must be developed within the bounds of the time available in the 
+Capstone course. Scope creep could occur if the planned scope for the software 
+became larger than what is feasible within the Capstone course's constraints, 
+if the team plans to implement a large amount of features from their various 
+ideas. This could lead to a failure of the team to complete the development of 
+the software within course deadlines, as the majority of development time 
+would be spent on individual complex components of the entire software.
+\\
+
+\noindent \textbf{Failure to Implement Variation Capabilities:} The purpose of 
+the project is to develop a video game, but specifically to develop a video 
+game with explicit feature variation points, that can be modified to facilitate 
+deeper and more productive usability testing. If the team failed to provide 
+explicit variation capabilities for a suitable number of the implemented 
+software's features, it would not fulfill the overall goal of the project. This 
+could occur if sufficient planning and regular incremental development of the 
+software's variation capabilities was not completed, as hapharzardly 
+introducing feature variation to an already completed video game would not be 
+able to fulfill the goal of the project.
+\\
+
+\noindent The aforementioned risks could compound to result in the required 
+goals and scope of the RealmForge software not being fulfilled, or the software 
+being delivered in an incomplete or erroneous state.
+\\
+
+\noindent To demonstrate that these risks can be overcome, the project's proof 
+of concept demonstration will include the functionality outlined below. To 
+ensure that the proof of concept build of the software is feasible to complete 
+by the date of the demonstration, it is planned to be completely focused on 
+providing the minimum functionality to address each risk. The proof of concept 
+software build will include:
+\begin{itemize}
+	\item An initial version of the RealmForge software's main menu, 
+	providing options to configure its feature variations and open the 
+	primary combat game scene described below.
+	\item An initial version of one of the software's enemy combat 
+	encounter game scenes. This game scene will not include its planned 
+	complete functionality, but it will include:
+	\begin{itemize}
+		\item A representation of the player character, that displays their 
+		current health attribute
+		\item A representation of an enemy (the player's opponent within 
+		the encounter), that displays their current health attribute
+		\item An initial version of the game scene's user interface, 
+		providing buttons that correspond to the player's available actions 
+		(these butttons will not 
+		execute the complete planned game logic currently)
+		\item An initial version of the game scene's combat functionality, 
+		allowing simple actions selected by the user to damage the enemy 
+		and 
+		affect their health attribute. This could also be extended to 
+		include the enemy responding with a simple action.
+	\end{itemize}
+	\item An initial version of the software's feature variation 
+	capabilities. The following variation points will be demonstrated:
+	\begin{itemize}
+		\item A capability to modify the player's starting health (in the 
+		final version of the software, users will be able to modify the 
+		player's starting health to adjust the difficulty of their gameplay 
+		sessions)
+		\item A capability to toggle the combat encounter's initial user 
+		interface described above between at least two configurations (a 
+		different set or permutation of provided buttons)
+	\end{itemize}
+\end{itemize}
+
+\noindent This planned scope will demonstrate that the RealmForge development 
+team has 
+the capabilities required to overcome the learning curve of their chosen game 
+development tool (by completing a small version of the software, developed 
+using the tool). It will also demonstrate that the project's need for explicit 
+feature variation points can be fulfilled, and that the development team has 
+the capabilities required to produce a functional software program within a 
+feasible scope for the Capstone course.
+\\
+
+\noindent In the event of a failed proof of concept, the team has various 
+methods of regrouping. First, the scope of the project could be pared down, 
+focusing on more rigid plans and deadlines for core features. This would aid 
+the direction of the project and ensure that it stays on course, avoiding scope 
+creep through adding unnecessary features. Another method to refocus could be 
+pivoting some key structure of the game to make it easier to fully flesh out. 
+For example, changing the game engine/framework to something more familiar 
+would allow the team to worry more about the quality of the work rather than 
+learning while developing features. 
 
 \section{Team Meeting Attendance}
-
-\wss{For each team member how many team meetings have they attended over the
-time period of interest.  This number should be determined from the meeting
-issues in the team's repo.  The first entry in the table should be the total
-number of team meetings held by the team.}
 
 \begin{table}[H]
 \centering
@@ -49,28 +145,21 @@ number of team meetings held by the team.}
 \toprule
 \textbf{Student} & \textbf{Meetings}\\
 \midrule
-Total & 9\\
-Andy Huynh  & 9\\
-Andreas Sideris & 9\\
-Humna Saeed & 9\\
-Christopher Ludwig & 8\\
-Owen Johnson & 9\\
+Total & 10\\
+Andy Huynh  & 10\\
+Andreas Sideris & 10\\
+Humna Saeed & 10\\
+Christopher Ludwig & 9\\
+Owen Johnson & 10\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Christopher was excused from the 1 missed meeting for valid reason.
+Christopher was excused from 1 team meeting, due to a valid absence.
 
 \section{Supervisor/Stakeholder Meeting Attendance}
 
-\wss{For each team member how many supervisor/stakeholder team meetings have
-they attended over the time period of interest.  This number should be determined
-from the supervisor meeting issues in the team's repo.  The first entry in the
-table should be the total number of supervisor and team meetings held by the
-team.  If there is no supervisor, there will usually be meetings with
-stakeholders (potential users) that can serve a similar purpose.}
-
-\noindent \textbf{Supervisor's Name: } Dr. Charles Welch
+\noindent \textbf{Supervisor's Name: } Dr.~Charles Welch
 
 \begin{table}[H]
 \centering
@@ -88,22 +177,12 @@ Owen Johnson & 1\\
 \end{tabular}
 \end{table}
 
-\wss{If needed, an explanation for the counts can be provided here.}
-Preliminary meetings with supervisor were held before issue tracking began. 
-\wss{If able, find documentation and/or attendance of initial supervisor meetings.}
+\noindent 1 preliminary meeting was held with the project's supervisor prior to 
+the 
+project's start, to finalize its details. All team members attended this 
+meeting.
 
 \section{Lecture Attendance}
-
-\wss{For each team member how many lectures have they attended over the time
-period of interest.  This number should be determined from the lecture issues in
-the team's repo. You can find the number of lectures in the time period of
-interest by looking at the
-\href{https://calendar.google.com/calendar/u/0/embed?src=rnboqiaki1k2la7rpu3bn0um58@group.calendar.google.com&ctz=America/Toronto}
-{Google calendar} for the capstone course. The first entry in the
-table should be the total number of lectures held for the class during the period of interest.}
-
-\wss{NOTE: There will be approximately 13 lectures between the start of class
-and the POC demos}
 
 \begin{table}[H]
 \centering
@@ -121,17 +200,13 @@ Owen Johnson & 6\\
 \end{tabular}
 \end{table}
 
-There were 13 lectures in total. 2 of them were TRON lectures, and 5 of them were from before issue tracking was mandatory/set up, which leaves 6 that attendance can be confirmed for. 
-
-\wss{TODO: decide how to count the lectures that do not have issues associated to them.}
-
-\wss{If needed, an explanation for the lecture attendance can be provided here.}
+There were 13 lectures in total. 2 of them were TRON lectures, and 5 of them 
+were from before issue tracking was mandatory/set up, which leaves 6 that 
+attendance can be confirmed for. The team was not aware that lecture issues 
+were required to be created prior to September 23rd, as this information was 
+only provided in a line of the course navigation document that was missed.
 
 \section{TA Document Discussion Attendance}
-
-\wss{For each team member how many of the informal document discussion meetings
-with the TA were attended over the time period of interest. The first row is the
-total number of discussion meetings scheduled by the TA with the team.}
 
 \noindent \textbf{TA's Name: }Rashad Bhuiyan
 
@@ -151,25 +226,9 @@ Owen Johnson & 4\\
 \end{tabular}
 \end{table}
 
-Humna was excused from the 1 missed meeting for valid reason.
+Humna was excused from 1 meeting for a valid reason.
 
 \section{Commits, Lines Added and Lines Deleted, Pull Requests}
-
-\wss{For each team member how many commits to the main branch have been made
-over the time period of interest.  The total is the total number of commits for
-the entire team since the beginning of the term.  The percentage is the
-percentage of the total commits made by each team member.}
-
-\wss{There are also columns for lines added and lines deleted to give a sense of
-the magnitude of each team member's contributions.  Note that these numbers can
-be somewhat misleading, as a team member who does refactoring may have high
-numbers in both columns, while a team member who implements a large new feature
-may have a high number of lines added, but few lines deleted.  As for all commit
-information, these numbers will be interpreted with care.}
-
-\wss{The pull requests column counts the number of pull requests created by each
-team member.  This is a measure of how many contributions were made in branches,
-which may not be reflected in the commit counts for the main branch.}
 
 \begin{table}[H]
 \centering
@@ -188,16 +247,7 @@ Owen Johnson & Num & \% & num & num & num\\
 \end{tabular}
 \end{table}
 
-\wss{If needed, an explanation for the counts can be provided here.  For
-instance, if a team member has more commits to unmerged branches, these numbers
-can be provided here.  If multiple people contribute to a commit, git allows for
-multi-author commits.}
-
 \section{Issue Tracker}
-
-\wss{For each team member how many issues have they authored (including open and
-closed issues (O+C)) and how many have they been assigned (only counting closed
-issues (C only)) over the time period of interest.}
 
 \begin{table}[H]
 \centering
@@ -206,7 +256,7 @@ issues (C only)) over the time period of interest.}
 \textbf{Student} & \textbf{Authored (O+C)} & \textbf{Assigned (C only)}\\
 \midrule
 Andy Huynh & 31 & 70 \\
-Andreas Sideris & 62 & 67 \\
+Andreas Sideris & 65 & 67 \\
 Humna Saeed & 14 & 52 \\
 Christopher Ludwig & 23 & 63 \\
 Owen Johnson & 42 & 71 \\
@@ -214,9 +264,8 @@ Owen Johnson & 42 & 71 \\
 \end{tabular}
 \end{table}
 
-\wss{If needed, an explanation for the counts can be provided here.}
-Some issues were created regarding multiple features at once, whereas others were more granular. 
-\wss{TODO: Not every reviewer assigned themself to all of their reviewed issues. Either fix this or explain it.}
+\noindent Some issues were created regarding multiple features at once, whereas 
+others were more granular. 
 
 \section{CICD via GitHub Actions}
 
@@ -226,23 +275,29 @@ Some issues were created regarding multiple features at once, whereas others wer
 
 \section{Custom Documents (CDs)}
 
-\wss{What is the plan (as documented in TeamComposition.csv) for the team's
-CDs?  Should the CDs be modified now that the team knows more about the
-project?}
+The team will complete the following two CDs:
+
+\begin{itemize}
+	\item \textbf{CD-Fall:} Feature-Oriented Domain Analysis Report - initial 
+	revision completed as of November 18. This document was suggested by 
+	Dr.~Smith, as it is particularly relevant to the project due to the 
+	software's 
+	requirements for explicit feature variation points.
+	\item \textbf{CD-Winter:} Usability Report - this document was selected 
+	since 
+	usability testing is a central focus of the project. It is still planned as 
+	the project's CD-Winter.
+\end{itemize}
 
 \section{Team Charter Trigger Items}
 
-\wss{Provide a summary of the quantified triggers identified in the team's
-charter.}
-
-\wss{Provide a list of any violations of the triggers.  If the team wishes, the
-violations can be summarized on aggregate, instead of naming specific team
-members.}
-
-\wss{Provide a plan to address the violations.  This could include revising the
-triggers, if they are found to be too weak, strong or ambiguous.}
+No specific trigger items are outlined in the team charter as of this point. 
+All team members have generally attended all (or almost all) required meetings, 
+and completed their work to an acceptable standard.
 
 \section{Additional Productivity Metrics}
+
+No other additional productivity metrics are collected currently.\\
 
 \wss{If your team has additional metrics of productivity, please feel free to
 add them to this report.  If not, please explicitly state that there are no additional
