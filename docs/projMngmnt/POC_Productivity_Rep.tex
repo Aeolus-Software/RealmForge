@@ -4,6 +4,7 @@
 \restylefloat{table}
 
 \usepackage{booktabs}
+\usepackage{hyperref}
 
 \title{Team Productivity: POC\\\progname}
 
@@ -277,20 +278,16 @@ others were more granular.
 \noindent The current CI/CD checks for all major LaTeX files for correct file structure listed 
 on the script/python documents (\textbf{select\_docs.py, buid.py}).
 Once the CI/CD finishes checking for correctness, it builds the LaTeX files and deploys
-them onto the GitHub page website (\textbf{https://aeolus-software.github.io/RealmForge/}). \\
-
-\noindent See the latex-page.yml on the repository: \\
-(\textbf{https://github.com/Aeolus-Software/RealmForge/blob/main/.github/workflows/latex-pages.yml}). 
-
+them onto the GitHub page \href{https://aeolus-software.github.io/RealmForge/}{website} as PDFs downloadable.
+See the \href{https://github.com/Aeolus-Software/RealmForge/blob/main/.github/workflows/latex-pages.yml}{latex-page.yml} on the repository.
+\\
 \noindent The CI/CD will provide a syntax linting and unit testing for the code in the 'src' file. These will 
 help with catching early major errors and faults.
-See the godot.yml on the repository: \\
-(\textbf{https://github.com/Aeolus-Software/RealmForge/blob/main/.github/workflows/godot.yml}).\\ 
-
+See the \href{https://github.com/Aeolus-Software/RealmForge/blob/main/.github/workflows/godot.yml}{godot.yml} on the repository.
+\\
 \noindent The CI/CD will provide a online Markdown version for the list of requirements, tests, and use cases such that
 traceability and linking is available without access between the PDF documents. 
-See the requirements.yml on the repository: \\
-(\textbf{https://github.com/Aeolus-Software/RealmForge/blob/main/.github/workflows/requirements.yml}).\\ 
+See the \href{https://github.com/Aeolus-Software/RealmForge/blob/main/.github/workflows/requirements.yml}{requirements.yml} on the repository.
 
 
 
