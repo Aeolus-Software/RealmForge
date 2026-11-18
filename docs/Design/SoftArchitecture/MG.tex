@@ -236,6 +236,15 @@ to be implemented.
 \subsubsection{Variation Configuration Module M\ref{mConfig}}
 \input{ConfigModuleDecomp.text}
 
+\subsubsection{Combat Encounter Interface Module M\ref{mEncounterMenu}}
+\input{CombatInterfaceModuleDecomp.text}
+
+\subsubsection{Combat Encounter Module M\ref{mEncounter}}
+\input{CombatModuleDecomp.text}
+
+\subsubsection{Player Character Module M\ref{mPlayer}}
+\input{PlayerModuleDecomp.text}
+
 \subsubsection{Enemy Character Module M\ref{mEnemy}}
 \input{EnemyModuleDecomp.text}
 
@@ -266,19 +275,31 @@ SFR-007 & \mref{mConfigMenu}, \mref{mConfig}\\
 SFR-008 & \mref{mConfigMenu}, \mref{mConfig}\\
 SFR-009 & \mref{mConfigMenu}, \mref{mConfig}\\
 SFR-010 & \mref{mConfigMenu}\\
-SFR-011 & \mref{mEnemy}\\
-SFR-012 & \mref{mEnemy}\\
-SFR-013 & \mref{mEnemy}\\
-SFR-014 & \mref{mEnemy}\\
-SFR-015 & \mref{mEnemy}\\
-SFR-017 & \mref{mEnemy}\\
+SFR-011 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-012 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-013 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-014 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-015 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-016 & \mref{mEncounterMenu}, \mref{mEncounter}\\
+SFR-017 & \mref{mEncounter}\mref{mEnemy}\\
+SFR-019 & \mref{mEncounterMenu}, \mref{mEncounter}\\
+SFR-025 & \mref{mPlayer}\\
+SFR-026 & \mref{mPlayer}\\
+SFR-027 & \mref{mPlayer}\\
 SNFR-002 & \mref{mEnemy}\\
 SNFR-003 & \mref{mConfigMenu}, \mref{mConfig}\\
+SNFR-005 & \mref{mPlayer}\\
 SNFR-006 & \mref{mEnemy}\\
 SNFR-007 & \mref{mInput}\\
 SNFR-008 & \mref{mConfigMenu}\\
+SNFR-009 & \mref{mEncounterMenu}\\
 SNFR-010 & \mref{mConfigMenu}\\
 SNFR-011 & \mref{mInput}\\
+SSR-003 & \mref{mPlayer}\\
+SSR-007 & \mref{mEncounter}\\
+SSR-008 & \mref{mEncounter}\\
+SSR-008 & \mref{mEncounterMenu}\\
+SSR-012 & \mref{mEncounter}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Requirements and Modules}
