@@ -1,0 +1,13 @@
+\begin{description}
+    \item[Secrets:]The programmed logic used to display
+    the main menu and manage player's interactions
+    with the graphical interface.
+
+    \item[Services:]Provides the player with a graphical
+    main menu that allows them to access different features
+    of RealmForge. Based on the option selected by the
+    player, the interface allows navigation to the corresponding
+    screen or game functionality.
+
+    \item[Implemented By:] RealmForge
+\end{description}
