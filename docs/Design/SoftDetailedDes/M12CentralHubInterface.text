@@ -1,0 +1,69 @@
+\section{MIS of Central Hub Interface (M12)} \label{M12-CentralHubMenu}
+\subsection{Module}
+This module will provide a graphical interface with buttons and controls for the user to upgrade and modify the central hub as well as displaying information about the Central Hub to the user.
+
+\subsection{Uses}
+\begin{itemize}
+    \item Central Hub Module (M13) \mref{M13-CentralHub}
+    \item User Input Module (M1) \mref{}
+\end{itemize}
+
+\subsection{Syntax}
+\subsubsection{Exported Constants}
+\begin{itemize}
+    \item None
+\end{itemize}
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2.5cm} p{3.5cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+open\_hub\_menu &  - & - & -\\
+\hline
+close\_hub\_menu &  - & - & -\\
+\hline
+refresh\_hub\_menu &  - & - & -\\
+\hline
+\end{tabularx}
+\end{center}
+
+\noindent Godot built-in routines
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2.5cm} p{3.5cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+\_ready & - & - & Handle from self modules \\
+\hline
+\end{tabularx}
+\end{center}
+
+\subsection{Semantics}
+\subsubsection{State Variables}
+\begin{itemize}
+    \item \verb|[BLANK - var_name: Type]| - \verb|[BLANK - Description of UI state]|
+\end{itemize}
+
+\subsubsection{Environment Variables}
+\begin{itemize}
+    \item \verb|[BLANK - e.g., hub_display: DisplayOutput]| - \verb|[BLANK - Graphical UI rendered to the user's monitor (upgrade buttons, costs, descriptions, currency count).]|
+    \item \verb|[BLANK - e.g., user_input: InputEvent]| - \verb|[BLANK - Button clicks or controller selections received from the player.]|
+\end{itemize}
+
+\subsubsection{Assumptions}
+\begin{itemize}
+    \item \verb|[BLANK - e.g., The Central Hub Module (M13) is initialized before the Central Hub Interface is opened.]|
+    \item \verb|[BLANK - e.g., UI elements clearly distinguish available and unavailable upgrades using text/icons in addition to colour (SSR-008, SSR-009).]|
+\end{itemize}
+
+\subsubsection{Access Routine Semantics}
+Will be updated in Revision 0 of document
+
+\subsubsection{Local Functions}
+Will be updated in Revision 0 of document
+
+\subsubsection{Considerations}
+Will be updated in Revision 0 of document
