@@ -1,5 +1,5 @@
 \begin{description}
-\item[Secrets:]The visual layout used to present the Central Hub menu interface to the user, and the internal logic used for managing the received user interactions.
+\item[Secrets:]The visual layout used to present the Central Hub menu interface to the user, the internal logic used for managing the received user interactions.
 \item[Services:]Provides a graphical user interface allowing the player to view unlocked permanent/temporary upgrades as well as ones available to unlock, read descriptions, check resource costs which is recieved from the Central Hub Module (\mref{mHub}). Communicates user selections to the Central Hub Module (\mref{mHub}) and handles input to begin navigation back to the game world or main menu.
 \item[Implemented By:] RealmForge
 \end{description}
