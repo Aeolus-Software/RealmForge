@@ -1,0 +1,80 @@
+\section{MIS of Game World (M7)} \label{M7-GameWorld}
+
+\subsection{Module}
+The game world module handles game state and player location changes. It communicates with the respective Game World UI for player input.  
+
+\subsection{Uses}
+\begin{itemize}
+    \item Uses the Godot Singleton class
+    \item Godot World Interface Module
+\end{itemize}
+
+
+\subsection{Syntax}
+\subsubsection{Exported Constants}
+\begin{itemize}
+    \item GameState constants
+\end{itemize}
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+state\_change & new\_state: GameState & - & StateException \\
+\hline
+location\_change & destination: String & - & LocationException \\
+\hline
+
+% \hline
+% set\_focus\_node & focus\_node: Node & - & Logs an error message when a invalid node is inputted.\\
+\end{tabularx}
+\end{center}
+
+\noindent Godot built-in routines
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+\_ready & - & - & Handle from self modules \\
+\hline
+\_process & delta: Float & - & Handle from self modules \\
+\hline
+\end{tabularx}
+\end{center}
+
+
+
+\subsection{Syntax}
+\subsubsection{State Variables}
+\begin{itemize}
+    \item state: GameState - The state of the game. This is important so that the game knows what sequence or step it is currently on. The game should be follow a strict flowchart guideline (See SRS Figure: RealmForge System Flowchart \cite{SRS}). 
+    \item \verb|current_location|: String - The designated current area shown and process.
+\end{itemize}
+
+
+\subsubsection{Environment Variables}
+
+
+
+\subsubsection{Assumptions}
+\begin{itemize}
+    \item This module maintains the state of the overall game.   
+    \item No other module should be able to change the state of the game.
+    \item The other modules may signal to the game world module for a game state change.
+    \item One instance of Game World Module
+\end{itemize}
+
+
+\subsubsection{Access Routine Semantics}
+Will be updated in Revision 0 of document
+\subsubsection{Local Functions}
+Will be updated in Revision 0 of document
+\subsubsection{Considerations}
+Will be updated in Revision 0 of document
+
+
+
+

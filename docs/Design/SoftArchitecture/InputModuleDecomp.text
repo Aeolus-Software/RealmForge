@@ -1,0 +1,10 @@
+\begin{description}
+	\item[Secrets:]The details of how user input is received from the user's 
+	input device (a controller, or keyboard and mouse), through the user's 
+	machine.
+	\item[Services:]Serves as an abstraction of the physical input provided to 
+	the system by the user. This module receives input from the user's 
+	input device, and provides the input to other system modules, irrespective 
+	of how the input is physically provided.
+	\item[Implemented By:] Godot Engine
+\end{description}
