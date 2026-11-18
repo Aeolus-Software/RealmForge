@@ -4,8 +4,8 @@ This module will provide a graphical interface with buttons and controls for the
 
 \subsection{Uses}
 \begin{itemize}
-    \item Central Hub Module (M13)
-    \item User Input Module (M1)
+    \item Central Hub Module %\mref{M13-CentralHub}
+    \item User Input Module %\mref{M1-Intro}
 \end{itemize}
 
 \subsection{Syntax}
@@ -21,30 +21,11 @@ This module will provide a graphical interface with buttons and controls for the
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-<<<<<<< HEAD
-open\_hub\_menu &  - & - & - \\
+open\_hub\_menu &  - & - & InvalidStateTransitionException\\
 \hline
-close\_hub\_menu &  - & - & - \\
+close\_hub\_menu &  - & - & InvalidStateTransitionException\\
 \hline
-refresh\_hub\_menu &  - & - & - \\
-=======
-open\_hub\_menu &  - & - & -\\
-\hline
-close\_hub\_menu &  - & - & -\\
-\hline
-refresh\_hub\_menu &  - & - & -\\
->>>>>>> 67939e7a661e37d090bf32d51ca4f8627d1a0322
-\hline
-\end{tabularx}
-\end{center}
-
-\noindent Godot built-in routines
-\begin{center}
-\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2.5cm} p{3.5cm}}
-\hline
-\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
-\hline
-\_ready & - & - & Handle from self modules \\
+refresh\_hub\_menu &  - & - & ModuleNotInitializedException\\
 \hline
 \end{tabularx}
 \end{center}
@@ -52,15 +33,14 @@ refresh\_hub\_menu &  - & - & -\\
 \subsection{Semantics}
 \subsubsection{State Variables}
 \begin{itemize}
-    \item selected\_upgrade\_id: String - tracks which upgrade is selected to visually indicate it and then pass it when selected upgrade is purchased
-    \item selected\_building\_id: String - tracks which building is selected or if any are to provide further details and options with the selected building
-    \item is\_popup\_active: bool - tracks if any popup is active to disable other menus until addressed like the insufficient fund popup
+    \item \verb|selected\_upgrade\_id: String| - tracks which upgrade is selected to visually indicate it and then pass it when selected upgrade is purchased
+    \item \verb|selected\_building\_id: String| - tracks which building is selected or if any are to provide further details and options with the selected building
+    \item \verb|is\_popup\_active: bool| - tracks if any popup is active to disable other menus until addressed like the insufficient fund popup
 \end{itemize}
 
 \subsubsection{Environment Variables}
 \begin{itemize}
-    \item hub\_display: DisplayOutput - the graphical output of the UI from Godot
-    \item user\_input: InputEvent - stores user input
+    \item \verb|hub\_display: DisplayOutput| - the graphical output of the UI from Godot
 \end{itemize}
 
 \subsubsection{Assumptions}

@@ -5,7 +5,7 @@ This module will store and update information concerning the player's temporary 
 
 \subsection{Uses}
 \begin{itemize}
-    \item Save Data IO Module (M2)
+    \item Save Data IO Module %\mref{M2-SaveDataIO}
 \end{itemize}
 
 \subsection{Syntax}
@@ -16,8 +16,8 @@ This module will store and update information concerning the player's temporary 
 
 \subsubsection{Exported Types}
 \begin{itemize}
-    \item \verb|Modifier| = tuple of (\verb|stat\_name: String, value: float|)
-    \item \verb|Upgrade| = tuple of (\verb|id: String, name: String, description: String, cost: int, is\_permanent: bool, is\_unlocked: bool|)
+    \item \verb|Modifier| = dictionary of (stat\_name: String, value: float)
+    \item \verb|Upgrade| = dictionary of (|id: String, name: String, desc: String, cost: int, is\_perm\: bool, is\_locked: bool)
 \end{itemize}
 
 \subsubsection{Exported Access Programs}
@@ -27,11 +27,11 @@ This module will store and update information concerning the player's temporary 
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-get\_resource\_rates & - & rates: Array[float] & - \\
+get\_resource\_rates & - & rates: Array[float] & ModuleNotInitializedException\\
 \hline
-get\_modifiers & - & modifiers: Array[Modifier] & - \\
+get\_modifiers & - & modifiers: Array[Modifier] & ModuleNotInitializedException\\
 \hline
-get\_upgrades & - & upgrades: Array[Upgrade] & - \\
+get\_upgrades & - & upgrades: Array[Upgrade] & ModuleNotInitializedException\\
 \hline
 get\_available\_upgrades & - & upgrades: Array[Upgrade] & - \\
 \hline
@@ -40,24 +40,13 @@ purchase\_upgrade & upgrade\_id: String & - & InsufficientFundsException, Invali
 \end{tabularx}
 \end{center}
 
-\noindent Godot built-in routines
-\begin{center}
-\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2.5cm} p{3.5cm}}
-\hline
-\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
-\hline
-\_ready & - & - & Handle from self modules \\
-\hline
-\end{tabularx}
-\end{center}
-
 \subsection{Semantics}
 \subsubsection{State Variables}
 \begin{itemize}
-    \item currency: int - Tracks the player's current available resource/currency count for purchasing upgrades.
-    \item permanent\_upgrades: Array[Upgrade]| - Stores the collection of permanent hub upgrades unlocked by the player.
-    \item temporary\_upgrades: Array[Upgrade]| - Stores the collection of active run-specific temporary upgrades.
-    \item available\_upgrades: Array[Upgrade]| - Stores the subset of upgrades currently eligible for purchase based on stage progression.
+    \item \verb|currency: int| - Tracks the player's current available resource/currency count for purchasing upgrades.
+    \item \verb|permanent\_upgrades: Array[Upgrade]| - Stores the collection of permanent hub upgrades unlocked by the player.
+    \item \verb|temporary\_upgrades: Array[Upgrade]| - Stores the collection of active run-specific temporary upgrades.
+    \item \verb|available\_upgrades: Array[Upgrade]| - Stores the subset of upgrades currently eligible for purchase based on stage progression.
 \end{itemize}
 
 \subsubsection{Environment Variables}
