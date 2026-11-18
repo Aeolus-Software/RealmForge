@@ -1,0 +1,11 @@
+name: Create Online Requirements
+
+on:
+    push:
+        # NONE
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+    # NONE

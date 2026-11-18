@@ -1,0 +1,11 @@
+name: Check game code syntax and test
+
+on:
+    push:
+        # NONE
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+    # NONE
