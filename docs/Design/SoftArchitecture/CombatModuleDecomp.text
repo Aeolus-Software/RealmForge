@@ -1,0 +1,11 @@
+\begin{description}
+	\item[Secrets:]The logic of combat encounters in the RealmForge game's internal state.
+	\item[Services:]Provides the state of the current combat encounter to 
+	other system modules where needed, namely the Combat Interface Module 
+	\mref{mEncounterMenu}. Uses attributes provided by the states of the Player 
+	Character Module \mref{mPlayer} and Enemy Character Module \mref{mEnemy} 
+	like health, actions and other relevant statistics. This information, along with 
+	the turn state and win/loss condition state, are used to facilitate and update 
+	combat encounter game scenes.  
+	\item[Implemented By:] RealmForge
+\end{description}
