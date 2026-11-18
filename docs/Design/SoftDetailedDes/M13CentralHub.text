@@ -54,10 +54,10 @@ purchase\_upgrade & upgrade\_id: String & - & InsufficientFundsException, Invali
 \subsection{Semantics}
 \subsubsection{State Variables}
 \begin{itemize}
-    \item \verb|currency: int| - \verb|Tracks the player's current available resource/currency count for purchasing upgrades.|
-    \item \verb|permanent\_upgrades: Array[Upgrade]| - \verb|Stores the collection of permanent hub upgrades unlocked by the player.|
-    \item \verb|temporary\_upgrades: Array[Upgrade]| - \verb|Stores the collection of active run-specific temporary upgrades.|
-    \item \verb|available\_upgrades: Array[Upgrade]| - \verb|Stores the subset of upgrades currently eligible for purchase based on stage progression.|
+    \item currency: int - Tracks the player's current available resource/currency count for purchasing upgrades.
+    \item permanent\_upgrades: Array[Upgrade]| - Stores the collection of permanent hub upgrades unlocked by the player.
+    \item temporary\_upgrades: Array[Upgrade]| - Stores the collection of active run-specific temporary upgrades.
+    \item available\_upgrades: Array[Upgrade]| - Stores the subset of upgrades currently eligible for purchase based on stage progression.
 \end{itemize}
 
 \subsubsection{Environment Variables}
