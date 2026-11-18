@@ -36,6 +36,8 @@ N/A
 		\hline
 		get\_inventory & - & custom inventory resource & InventoryNotInitializedException \\
 		\hline
+		add\_item & custom item resource & - & InventoryNotInitializedException, ItemNotInitializedException \\
+		\hline
 	\end{tabular}
 \end{center}
 
@@ -45,6 +47,8 @@ N/A
 
 \begin{itemize}
 	\item health : integer
+	\item max\_health : integer
+	\item inventory : array of custom resources (a resource will be defined to store data related to an item in the inventory)
 	\item available\_actions : array of custom resources (a resource will be 
 	defined to store data related to each possible action the player character 
 	can take in combat, such as its damage, speed, or other qualities).
