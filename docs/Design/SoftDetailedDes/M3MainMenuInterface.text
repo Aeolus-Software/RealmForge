@@ -6,14 +6,13 @@
 The Main Menu Interface Module provides the player with
 an interactive graphical interface to navigate through
 different menu options. The interface allows players to
-access various features and elements of RealmForge.
+start the game, access configuration settings, or exit
+RealmForge.
 
 \subsection{Uses}
 \begin{itemize}
-    \item Godot Engine for displaying and managing
-    the graphical interface.
-    \item Game World Module for handling game state
-    changes based on the player's menu selections.
+    \item Utilizes Godot Engine built-in libraries and
+    graphical design modules.
 \end{itemize}
 
 \subsection{Syntax}
@@ -50,8 +49,6 @@ None.
 \begin{itemize}
     \item The main menu has access to the required
     graphical interface components.
-    \item The Game World Module is available to handle
-    game state changes requested through the main menu.
 \end{itemize}
 
 \subsubsection{Access Routine Semantics}
