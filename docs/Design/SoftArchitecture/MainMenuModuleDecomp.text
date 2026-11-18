@@ -1,7 +1,6 @@
 \begin{description}
     \item[Secrets:]The programmed logic used to display
-    the main menu and manage player's interactions
-    with the graphical interface.
+    the main menu.
 
     \item[Services:]Provides the player with a graphical
     main menu that allows them to access different features
