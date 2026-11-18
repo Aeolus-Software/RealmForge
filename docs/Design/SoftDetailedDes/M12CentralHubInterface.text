@@ -21,11 +21,19 @@ This module will provide a graphical interface with buttons and controls for the
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
+<<<<<<< HEAD
 open\_hub\_menu &  - & - & - \\
 \hline
 close\_hub\_menu &  - & - & - \\
 \hline
 refresh\_hub\_menu &  - & - & - \\
+=======
+open\_hub\_menu &  - & - & -\\
+\hline
+close\_hub\_menu &  - & - & -\\
+\hline
+refresh\_hub\_menu &  - & - & -\\
+>>>>>>> 67939e7a661e37d090bf32d51ca4f8627d1a0322
 \hline
 \end{tabularx}
 \end{center}
