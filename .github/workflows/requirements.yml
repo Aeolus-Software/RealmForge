@@ -1,11 +1,11 @@
 name: Create Online Requirements
 
 on:
-    push:
-        # NONE
+  push:
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-    # NONE
+    # TODO: Add workflow steps later
+    steps: []
