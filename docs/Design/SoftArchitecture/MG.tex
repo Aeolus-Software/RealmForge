@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{longtable}
 \hypersetup{
     colorlinks,
     citecolor=blue,
@@ -46,6 +47,7 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
+Nov 10, 2026 & 1.0 & SaveIO/Storage, GameWorld/UI first draft \\
 11/8/2026 & 1.0 & Module Hierarchy Completed\\
 11/9/2026 & 1.1 & Module Decomposition for M1,4,5,11\\
 11/16/26 & Rev -1 & Christopher MG for M12,13 First Draft\\
@@ -230,6 +232,8 @@ to be implemented.
 \subsubsection{User Input Module M\ref{mInput}}
 \input{InputModuleDecomp.text}
 
+\input{SaveIOModuleDecomp.text}
+
 \subsection{Behaviour-Hiding Module}
 
 \subsubsection{Configuration Interface Module M\ref{mConfigMenu}}
@@ -238,11 +242,18 @@ to be implemented.
 \subsubsection{Variation Configuration Module M\ref{mConfig}}
 \input{ConfigModuleDecomp.text}
 
+
+\input{GameWorldUIModuleDecomp.text}
+
+\input{GameWorldModuleDecomp.text}
+
 \subsubsection{Combat Encounter Interface Module M\ref{mEncounterMenu}}
 \input{CombatInterfaceModuleDecomp.text}
 
 \subsubsection{Combat Encounter Module M\ref{mEncounter}}
 \input{CombatModuleDecomp.text}
+
+
 
 \subsubsection{Player Character Module M\ref{mPlayer}}
 \input{PlayerModuleDecomp.text}
@@ -257,6 +268,9 @@ to be implemented.
 \input{CentralHubModuleDecomp.text}
 
 \subsection{Software Decision Module}
+\input{SaveDataStorageModuleDecomp.text}
+
+\newpage{}
 
 \section{Traceability Matrix} \label{SecTM}
 
@@ -291,9 +305,26 @@ SFR-015 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
 SFR-016 & \mref{mEncounterMenu}, \mref{mEncounter}\\
 SFR-017 & \mref{mEncounter}\mref{mEnemy}\\
 SFR-019 & \mref{mEncounterMenu}, \mref{mEncounter}\\
+SFR-020 & \mref{mWorldMenu} \\
+SFR-021 & \mref{mWorld} \\
+SFR-022 & \mref{mWorldMenu} \\
+SFR-023 & \mref{mWorldMenu} \\
+SFR-024 & \mref{mWorld}, \mref{mWorldMenu} \\
 SFR-025 & \mref{mPlayer}\\
 SFR-026 & \mref{mPlayer}\\
 SFR-027 & \mref{mPlayer}\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Functional/Enviromental Requirements and Modules}
+\label{TblRT}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Req.} & \textbf{Modules}\\
+\midrule
 SNFR-002 & \mref{mEnemy}\\
 SNFR-003 & \mref{mConfigMenu}, \mref{mConfig}\\
 SNFR-005 & \mref{mPlayer}\\
@@ -303,16 +334,33 @@ SNFR-008 & \mref{mConfigMenu}\\
 SNFR-009 & \mref{mEncounterMenu}\\
 SNFR-010 & \mref{mConfigMenu}\\
 SNFR-011 & \mref{mInput}\\
-SSR-003 & \mref{mPlayer}\\
-SSR-007 & \mref{mEncounter}\\
-SSR-008 & \mref{mEncounter}\\
-SSR-008 & \mref{mEncounterMenu}\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Nonfunctional Requirements and Modules}
+\label{TblRT}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Req.} & \textbf{Modules}\\
+\midrule
+SSR-001 & \mref{mSaveIO} \\
+SSR-002 & \mref{mSaveIO} \\
+SSR-003 & \mref{mSaveStore}, \mref{mPlayer} \\
+SSR-004 & \mref{mSaveIO} \\
+SSR-005 & \mref{mSaveIO}, \mref{mSaveStore}\\
+SRR-006 & \mref{mEncounter}, \mref{mWorld} \\
+SSR-007 & \mref{mSaveIO},\mref{mEncounter}, \mref{mSaveStore}\\
+SSR-008 & \mref{mEncounter}m \mref{mEncounterMenu}\\
 SSR-012 & \mref{mEncounter}\\
 \bottomrule
 \end{tabular}
-\caption{Trace Between Requirements and Modules}
+\caption{Trace Between Nonfunctional Requirements and Modules}
 \label{TblRT}
 \end{table}
+
 
 \begin{table}[H]
 \centering
@@ -332,6 +380,10 @@ SSR-012 & \mref{mEncounter}\\
 \acref{acSeqDS} & \mref{mSeqDS}\\
 \acref{acSolver} & \mref{mSolver}\\
 \acref{acPlot} & \mref{mPlot}\\
+
+
+
+
 \bottomrule
 \end{tabular}
 \caption{Trace Between Anticipated Changes and Modules}
