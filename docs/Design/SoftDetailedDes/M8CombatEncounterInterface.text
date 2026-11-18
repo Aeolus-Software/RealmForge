@@ -6,6 +6,8 @@ The Combat Encounter interface handles logic for displaying the state of the cur
 \subsection{Uses}
 \begin{itemize}
     \item Godot Engine - Godot Control Nodes (used specifically for UI) as well as the built-in libraries.
+    \item Combat Encounter Module (M9)
+    \item User Input Module (M1)
 \end{itemize}
 
 
