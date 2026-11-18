@@ -6,6 +6,7 @@ This module will provide a graphical interface with buttons and controls for the
 \begin{itemize}
     \item Central Hub Module %\mref{M13-CentralHub}
     \item User Input Module %\mref{M1-Intro}
+    \item Godot Engine
 \end{itemize}
 
 \subsection{Syntax}
@@ -33,14 +34,14 @@ refresh\_hub\_menu &  - & - & ModuleNotInitializedException\\
 \subsection{Semantics}
 \subsubsection{State Variables}
 \begin{itemize}
-    \item \verb|selected\_upgrade\_id: String| - tracks which upgrade is selected to visually indicate it and then pass it when selected upgrade is purchased
-    \item \verb|selected\_building\_id: String| - tracks which building is selected or if any are to provide further details and options with the selected building
-    \item \verb|is\_popup\_active: bool| - tracks if any popup is active to disable other menus until addressed like the insufficient fund popup
+    \item \verb|selected_upgrade_id: String| - tracks which upgrade is selected to visually indicate it and then pass it when selected upgrade is purchased
+    \item \verb|selected_building_id: String| - tracks which building is selected or if any are to provide further details and options with the selected building
+    \item \verb|is_popup_active: bool| - tracks if any popup is active to disable other menus until addressed like the insufficient fund popup
 \end{itemize}
 
 \subsubsection{Environment Variables}
 \begin{itemize}
-    \item \verb|hub\_display: DisplayOutput| - the graphical output of the UI from Godot
+    \item \verb|hub_display: DisplayOutput| - the graphical output of the UI from Godot
 \end{itemize}
 
 \subsubsection{Assumptions}
