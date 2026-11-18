@@ -21,11 +21,11 @@ This module will provide a graphical interface with buttons and controls for the
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-open\_hub\_menu &  - & - & -
+open\_hub\_menu &  - & - & - \\
 \hline
-close\_hub\_menu &  - & - & -
+close\_hub\_menu &  - & - & - \\
 \hline
-refresh\_hub\_menu &  - & - & -
+refresh\_hub\_menu &  - & - & - \\
 \hline
 \end{tabularx}
 \end{center}
@@ -44,19 +44,20 @@ refresh\_hub\_menu &  - & - & -
 \subsection{Semantics}
 \subsubsection{State Variables}
 \begin{itemize}
-    \item \verb|[BLANK - var_name: Type]| - \verb|[BLANK - Description of UI state]|
+    \item selected\_upgrade\_id: String - tracks which upgrade is selected to visually indicate it and then pass it when selected upgrade is purchased
+    \item selected\_building\_id: String - tracks which building is selected or if any are to provide further details and options with the selected building
+    \item is\_popup\_active: bool - tracks if any popup is active to disable other menus until addressed like the insufficient fund popup
 \end{itemize}
 
 \subsubsection{Environment Variables}
 \begin{itemize}
-    \item \verb|[BLANK - e.g., hub_display: DisplayOutput]| - \verb|[BLANK - Graphical UI rendered to the user's monitor (upgrade buttons, costs, descriptions, currency count).]|
-    \item \verb|[BLANK - e.g., user_input: InputEvent]| - \verb|[BLANK - Button clicks or controller selections received from the player.]|
+    \item hub\_display: DisplayOutput - the graphical output of the UI from Godot
+    \item user\_input: InputEvent - stores user input
 \end{itemize}
 
 \subsubsection{Assumptions}
 \begin{itemize}
-    \item \verb|[BLANK - e.g., The Central Hub Module (M13) is initialized before the Central Hub Interface is opened.]|
-    \item \verb|[BLANK - e.g., UI elements clearly distinguish available and unavailable upgrades using text/icons in addition to colour (SSR-008, SSR-009).]|
+    \item The Central Hub Module (M13) is initialized before the Central Hub Interface is opened.
 \end{itemize}
 
 \subsubsection{Access Routine Semantics}
