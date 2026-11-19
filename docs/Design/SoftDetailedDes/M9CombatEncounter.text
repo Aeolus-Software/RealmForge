@@ -7,9 +7,10 @@ It communicates with the respective Combat Encounter UI for player input.
 
 \subsection{Uses}
 \begin{itemize}
-	\item Player Character Module (M10)
-	\item Enemy Character Module (M11)
 	\item Godot Engine (functions, nodes, and signals provided by the engine automatically)
+	\item M8 Combat Encounter Interface Module
+	\item M10 Player Character Module 
+	\item M11 Enemy Character Module 
 \end{itemize}
 
 

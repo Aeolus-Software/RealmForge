@@ -7,8 +7,8 @@ as needed.
 \subsection{Uses}
 
 \begin{enumerate}
-	\item Godot Engine (functions, nodes, and signals provided by the engine 
-	automatically)
+	\item Godot Engine (functions, nodes, and signals provided by the engine automatically)
+	\item M5 Variation Configuration 
 \end{enumerate}
 
 \subsection{Syntax}

@@ -5,8 +5,9 @@ This module will store and update information concerning the player's temporary 
 
 \subsection{Uses}
 \begin{itemize}
-    \item Save Data IO Module (M2) %\mref{M2-SaveDataIO}
     \item Godot Engine
+    \item M2 Save Data IO Module  %\mref{M2-SaveDataIO}
+    \item M12 Central Hub Interface Module  %\mref{M2-SaveDataIO}
 \end{itemize}
 
 \subsection{Syntax}

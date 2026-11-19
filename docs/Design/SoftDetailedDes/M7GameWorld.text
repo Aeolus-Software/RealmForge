@@ -6,7 +6,7 @@ The game world module handles game state and player location changes. It communi
 \subsection{Uses}
 \begin{itemize}
     \item Uses the Godot Singleton class
-    \item Godot World Interface Module
+    \item M6 Godot World Interface Module
 \end{itemize}
 
 

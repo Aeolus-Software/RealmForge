@@ -5,7 +5,7 @@ The save module that maintains save data structure along with checking valid and
 
 \subsection{Uses}
 \begin{itemize}
-    \item M2 Save Data IO
+    \item M2 Save Data IO Module
 \end{itemize}
 
 \subsection{Syntax}

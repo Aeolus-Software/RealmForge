@@ -4,7 +4,10 @@ The Game World interface handles logic for player input navigation between game 
 
 
 \subsection{Uses}
-Godot Engine - Godot Control Nodes (used specifically for UI) as well as the built-in libraries.
+\begin{itemize}
+    \item Godot Engine - Godot Control Nodes (used specifically for UI) as well as the built-in libraries.
+    \item M1 User Input Module
+\end{itemize}
 
 
 \subsection{Syntax}

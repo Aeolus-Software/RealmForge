@@ -9,8 +9,11 @@ modules as needed.
 \subsection{Uses}
 
 \begin{enumerate}
-	\item Godot Engine (functions, nodes, and signals provided by the engine 
-	automatically)
+	\item Godot Engine (functions, nodes, and signals provided by the engine automatically)
+	\item M2 Save Data IO Module
+	\item M5 Variation Configuration 
+	\item M13 Central Hub Module
+
 \end{enumerate}
 
 \subsection{Syntax}

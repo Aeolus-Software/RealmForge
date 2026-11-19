@@ -1,4 +1,4 @@
-\section{MIS of Combat Encounter Interface (M8)} \label{M8-CombatEncounterInterface}
+\section{MIS of Combat Encounter Interface M8} \label{M8-CombatEncounterInterface}
 
 \subsection{Module}
 The Combat Encounter interface handles logic for displaying the state of the current combat encounter, as well as handling player selections within an encounter. 
@@ -6,8 +6,8 @@ The Combat Encounter interface handles logic for displaying the state of the cur
 \subsection{Uses}
 \begin{itemize}
     \item Godot Engine - Godot Control Nodes (used specifically for UI) as well as the built-in libraries.
-    \item Combat Encounter Module (M9)
-    \item User Input Module (M1)
+    \item M1 User Input Module 
+    % \item M9 Combat Encounter Module 
 \end{itemize}
 
 
