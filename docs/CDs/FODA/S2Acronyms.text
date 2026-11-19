@@ -15,7 +15,7 @@
   \acronym{UI}{UI}{User Interface. The elements of interaction between the user and the software that is displayed on the screen.}{ \ref{sec:Acronyms}, \ref{sec:Commonalities}, \ref{sec:Variabilities},}
   \acronym{Int}{Int}{Short form for integer.}{\ref{sec:Variabilities}}
   \acronym{Str}{Str}{Short form for string.}{\ref{sec:Variabilities}}
-  \acronym{ID}{ID}{Identification document. Used to reveal an object's identification identifier.}{\ref{sec:Variabilities}}
+  % \acronym{ID}{ID}{Identification document. Used to reveal an object's identification identifier.}{\ref{sec:Variabilities}}
 
   % \acronym{CI}{CI}{Continuous Integration} {{ \ref{sec:Commonalities}}}
   \bottomrule
@@ -42,8 +42,8 @@ The notation used to explain type terminology in Section \ref{sec:Variabilities}
   % UI Options & The UI components such as buttons, labels and text fields. \\
   Integer & A number that contains strictly whole positive, negative, and zero up to a limit (commonly +/-2147483647). \\
   String & The text supplied for attributes, buttons, labels and text fields. \\
-  Bool & A binary space indicating either 1 or 0, or True or False.\\
-  Array & A collection of items. If specified, can house only a certain type of item, e.g., Array[Integer].\\
+  % Bool & A binary space indicating either 1 or 0, or True or False.\\
+  % Array & A collection of items. If specified, can house only a certain type of item, e.g., Array[Integer].\\
   Dictionary & Key-value pair that maps a type with another type space. \\ 
   
   \bottomrule
