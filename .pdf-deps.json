@@ -89,6 +89,8 @@
     "docs/Design/SoftDetailedDes/ConfigMIS.text",
     "docs/Design/SoftDetailedDes/EnemyMIS.text",
     "docs/Design/SoftDetailedDes/M10Player.text",
+    "docs/Design/SoftDetailedDes/M12CentralHubInterface.text",
+    "docs/Design/SoftDetailedDes/M13CentralHub.text",
     "docs/Design/SoftDetailedDes/M14SaveDataStorage.text",
     "docs/Design/SoftDetailedDes/M2SaveIO.text",
     "docs/Design/SoftDetailedDes/M3MainMenuInterface.text",
