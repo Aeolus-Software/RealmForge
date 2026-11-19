@@ -1,0 +1,84 @@
+\subsection{Module}
+
+This module abstracts the logic used to provide a graphical interface to the 
+user to allow them to configure the system at its variation points, as managed 
+by the Variation Configuration Module. User inputs received by this module are 
+provided to the Variation Configuration Module, irrespective of how they are 
+received by the interface. This module provides user input values to other 
+modules by emitting \hyperlink{signal}{signals} in the Godot Engine, that are 
+received 
+and handled by those modules (in line with the engine's implementation of the 
+Observer pattern, in favour of providing access programs for each user input 
+value).
+
+\subsection{Uses}
+
+\begin{enumerate}
+\item Godot Engine (functions, nodes, and signals provided by the engine 
+automatically)
+\end{enumerate}
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+
+N/A
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+	\begin{tabular}{p{4cm} p{2cm} p{2cm} p{7cm}}
+		\hline
+		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+		\hline
+		open\_config\_interface & - & - & 
+		ConfigInterfaceNotInitializedException \\
+		\hline
+		close\_config\_interface & - & - & 
+		ConfigInterfaceNotInitializedException \\
+		\hline
+		is\_visible & - & Boolean & ConfigInterfaceNotInitializedException \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+
+\begin{itemize}
+	\item selected\_input\_device : integer
+	\item selected\_player\_starting\_health : integer
+	\item selected\_avg\_encounter\_rewards : integer
+	\item selected\_hub\_cost\_config : integer
+	\item selected\_combat\_pace : integer
+\end{itemize}
+
+\subsubsection{Environment Variables}
+
+\begin{itemize}
+	\item The displayed image and state of the interface element used to select 
+	the user's chosen input device
+	\item The displayed image and state of the interface element used to select 
+	the player's starting health
+	\item The displayed image and state of the interface element used to select 
+	the configuration of average rewards received by the player following a 
+	successful combat encounter
+	\item The displayed image and state of the interface element used to select 
+	the configuration of costs of gameplay upgrades purchased in the 
+	central hub menu
+	\item The displayed image and state of the interface element used to select 
+	the pace of combat encounter game scenes
+\end{itemize}
+
+\subsubsection{Assumptions}
+
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Access Routine Semantics}
+
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Local Functions}
+
+Will be updated in Revision 0 of the document.
