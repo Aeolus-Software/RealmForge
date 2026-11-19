@@ -13,6 +13,8 @@ RealmForge.
 \begin{itemize}
     \item Utilizes Godot Engine built-in libraries and
     graphical design modules.
+    \item M2 User Input
+    \item M1 Save Data IO
 \end{itemize}
 
 \subsection{Syntax}

@@ -5,7 +5,7 @@ The \hyperlink{IO}{IO} module responsible for reading and writing saved data fro
 
 \subsection{Uses}
 \begin{itemize}
-    \item Godot Engine JSON class for JSON conversion
+    \item Godot Engine JSON and FileAcess built-ins
 \end{itemize}
 
 
