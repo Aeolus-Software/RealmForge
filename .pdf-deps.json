@@ -79,6 +79,7 @@
     "docs/Design/SoftArchitecture/S42UnlikelyChanges.text",
     "docs/Design/SoftArchitecture/SaveDataStorageModuleDecomp.text",
     "docs/Design/SoftArchitecture/SaveIOModuleDecomp.text",
+    "docs/Design/SoftArchitecture/images/UsesHierarchy-1.png",
     "refs/References.bib"
   ],
   "docs/Design/SoftDetailedDes/MIS.tex": [
