@@ -17,6 +17,9 @@
     urlcolor=blue
 }
 
+% Setting up graphics path
+\graphicspath{{./images/}}
+
 \input{../../Comments.text}
 \input{../../Common.text}
 
@@ -68,7 +71,9 @@
 11/10/26 & Rev -1 & Andy Huynh's Anticipated Changes second draft \\
 11/10/26 & Rev -1 & Andy SaveIO/Storage, GameWorld/UI first draft \\
 11/16/26 & Rev -1 & Christopher MG for M12,13 First Draft\\
+11/16/26 & Rev -1 & Owen Module Decomposition for M8,9,10\\
 11/18/26 & Rev -1 & Christopher MG for M12,13 Update to Match Review\\
+11/18/26 & Rev -1 & Owen Use Hierarchy Between Modules Completed\\
 11/18/26 & Rev -1 & Andy Huynh's Anticipated Changes Final draft \\
 
 \bottomrule
@@ -292,7 +297,7 @@ SFR-004 & \mref{mInput}, \mref{mConfigMenu}, \mref{mConfig}\\
 SFR-005 & \mref{mConfig}\\
 SFR-006 & \mref{mConfigMenu}, \mref{mConfig}\\
 SFR-007 & \mref{mConfigMenu}, \mref{mConfig}\\
-SFR-008 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-008 & \mref{mConfigMenu}, \mref{mConfig}, \mref{mHub}\\
 SFR-009 & \mref{mConfigMenu}, \mref{mConfig}\\
 SFR-010 & \mref{mConfigMenu}\\
 SFR-011 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
@@ -309,9 +314,12 @@ SFR-021 & \mref{mWorld} \\
 SFR-022 & \mref{mWorldMenu} \\
 SFR-023 & \mref{mWorldMenu} \\
 SFR-024 & \mref{mWorld}, \mref{mWorldMenu} \\
-SFR-025 & \mref{mPlayer}\\
-SFR-026 & \mref{mPlayer}\\
-SFR-027 & \mref{mPlayer}\\
+SFR-025 & \mref{mPlayer}, \mref{mHub}\\
+SFR-026 & \mref{mPlayer}, \mref{mHub}\\
+SFR-027 & \mref{mPlayer}, \mref{mHub}\\
+SFR-028 & \mref{mHub}\\
+SFR-029 & \mref{mHub}\\
+SFR-030 & \mref{mHub}, \mref{mHubMenu}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Functional/Enviromental Requirements and Modules}
@@ -324,6 +332,7 @@ SFR-027 & \mref{mPlayer}\\
 \toprule
 \textbf{Nonfunctional Req.} & \textbf{Modules}\\
 \midrule
+SNFR-001 & \mref{mHub}\\
 SNFR-002 & \mref{mEnemy}\\
 SNFR-003 & \mref{mConfigMenu}, \mref{mConfig}\\
 SNFR-004 & \mref{mWorld}, \mref{mWorldMenu}\\
@@ -413,18 +422,9 @@ the modules. It can be seen that the graph is a directed acyclic graph
 system, and modules in the higher level of the hierarchy are essentially simpler
 because they use modules from the lower levels.
 
-\wss{The uses relation is not a data flow diagram.  In the code there will often
-be an import statement in module A when it directly uses module B.  Module B
-provides the services that module A needs.  The code for module A needs to be
-able to see these services (hence the import statement).  Since the uses
-relation is transitive, there is a use relation without an import, but the
-arrows in the diagram typically correspond to the presence of import statement.}
-
-\wss{If module A uses module B, the arrow is directed from A to B.}
-
 \begin{figure}[H]
 \centering
-%\includegraphics[width=0.7\textwidth]{UsesHierarchy.png}
+\includegraphics[width=0.8\textwidth]{UsesHierarchy-1.png}
 \caption{Use hierarchy among modules}
 \label{FigUH}
 \end{figure}

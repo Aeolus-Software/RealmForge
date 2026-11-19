@@ -1,1 +1,23 @@
-% \wss{the relationship between commonalities and variabilities - examples of relationships are when picking one variabilities means you cannot pick another one (the variabilities are mutually exclusive). For instance, if you have a variability between a command line interface and a gui, once you pick command line interface, any variabilities related to graphics are not options}
+There are many things relating these commonalities and variabilities, making for a diverse array of options.
+
+\begin{itemize}
+	\item Game Characters (Comm-4) are present in every configuration, so the following variabilities are always applicable:
+	\begin{itemize}
+		\item Player Health (Var-1)
+		\item Enemy Health (Var-2)
+		\item Enemy Types (Var-3)
+		\item Attack Types (Var-4)
+	\end{itemize}
+
+	\item The Core Gameplay Loop (Comm-3) remains the same in every configuration, meaning that the Central Hub module is always present and always able to be varied. This means that the following variabilities are always applicable:
+	\begin{itemize}
+		\item Resource Distribution (Var-5)
+		\item Purchase Options (Var-6)
+	\end{itemize}
+
+	\item Primary Menus (Comm-2) will function the same across all configurations, which supports the notion that Save Data (Comm-5) will be handled the same way for all configurations as well. This also facilitates the function of the configuration menu, which allows the variabilities to exist.
+
+	\item Primary Menus functioning the same also facilitates the Component Position variability (Var-7) since the UI will function the same regardless of the UI's positioning.
+\end{itemize}
+
+\noindent There is no relationship that causes any commonality or variability to be mutually exclusive with another.

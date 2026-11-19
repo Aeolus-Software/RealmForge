@@ -1,0 +1,75 @@
+\section{MIS of Combat Encounter (M9)} \label{M9-CombatEncounter}
+
+\subsection{Module}
+The combat encounter module handles the state of a combat encounter, 
+such as turn order, player/enemy health, actions, and win/loss conditions. 
+It communicates with the respective Combat Encounter UI for player input.  
+
+\subsection{Uses}
+\begin{itemize}
+	\item Player Character Module (M10)
+	\item Enemy Character Module (M11)
+	\item Godot Engine (functions, nodes, and signals provided by the engine automatically)
+\end{itemize}
+
+
+\subsection{Syntax}
+\subsubsection{Exported Constants}
+\begin{itemize}
+	\item TurnState constants
+	\item EncounterState constants
+\end{itemize}
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{3cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+turn\_change & next\_turn: TurnState & - & StateException \\
+\hline
+get\_turn & - & current\_turn: TurnState & StateException \\
+\hline
+submit\_player\_action & action\_index: Integer & - & StateException \\
+\hline
+get\_encounter\_result & - & encounter\_state: EncounterState & StateException \\
+\hline
+
+\end{tabularx}
+\end{center}
+
+\subsection{Syntax}
+\subsubsection{State Variables}
+\begin{itemize}
+	\item \verb|turn_state|: TurnState - The state of the current turn. 
+	This is important so that the game knows what step the encounter 
+	is currently on (player turn, enemy turn, or encounter completed). 
+	\item \verb|encounter_state|: EncounterState - The state of the combat 
+	encounter (ongoing, win, or loss). This is important to keep track of in 
+	order to properly end the battle when needed.
+	\item \verb|action_index| - The action queued by the player from the list of options.
+\end{itemize}
+
+
+\subsubsection{Environment Variables}
+
+N/A
+
+\subsubsection{Assumptions}
+\begin{itemize}
+	\item This module maintains the state of the current combat encounter.
+	\item The Combat Encounter has access to properly initialized Player and Enemy modules.
+	\item One instance of Combat Encounter Module at a time.
+\end{itemize}
+
+
+\subsubsection{Access Routine Semantics}
+Will be updated in Revision 0 of document
+\subsubsection{Local Functions}
+Will be updated in Revision 0 of document
+\subsubsection{Considerations}
+Will be updated in Revision 0 of document
+
+
+
+

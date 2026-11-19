@@ -4,8 +4,9 @@ This module will provide a graphical interface with buttons and controls for the
 
 \subsection{Uses}
 \begin{itemize}
-    \item Central Hub Module (M13) \mref{M13-CentralHub}
-    \item User Input Module (M1) \mref{}
+    \item Central Hub Module (M13) %\mref{M13-CentralHub}
+    \item User Input Module (M1) %\mref{mInput}
+    \item Godot Engine
 \end{itemize}
 
 \subsection{Syntax}
@@ -21,22 +22,11 @@ This module will provide a graphical interface with buttons and controls for the
 \hline
 \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
 \hline
-open\_hub\_menu &  - & - & -\\
+open\_hub\_menu &  - & - & InvalidStateTransitionException\\
 \hline
-close\_hub\_menu &  - & - & -\\
+close\_hub\_menu &  - & - & InvalidStateTransitionException\\
 \hline
-refresh\_hub\_menu &  - & - & -\\
-\hline
-\end{tabularx}
-\end{center}
-
-\noindent Godot built-in routines
-\begin{center}
-\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2.5cm} p{3.5cm}}
-\hline
-\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
-\hline
-\_ready & - & - & Handle from self modules \\
+refresh\_hub\_menu &  - & - & ModuleNotInitializedException\\
 \hline
 \end{tabularx}
 \end{center}
@@ -44,19 +34,19 @@ refresh\_hub\_menu &  - & - & -\\
 \subsection{Semantics}
 \subsubsection{State Variables}
 \begin{itemize}
-    \item \verb|[BLANK - var_name: Type]| - \verb|[BLANK - Description of UI state]|
+    \item \verb|selected_upgrade_id: String| - tracks which upgrade is selected to visually indicate it and then pass it when selected upgrade is purchased
+    \item \verb|selected_building_id: String| - tracks which building is selected or if any are to provide further details and options with the selected building
+    \item \verb|is_popup_active: bool| - tracks if any popup is active to disable other menus until addressed like the insufficient fund popup
 \end{itemize}
 
 \subsubsection{Environment Variables}
 \begin{itemize}
-    \item \verb|[BLANK - e.g., hub_display: DisplayOutput]| - \verb|[BLANK - Graphical UI rendered to the user's monitor (upgrade buttons, costs, descriptions, currency count).]|
-    \item \verb|[BLANK - e.g., user_input: InputEvent]| - \verb|[BLANK - Button clicks or controller selections received from the player.]|
+    \item \verb|hub_display: DisplayOutput| - the graphical output of the UI from Godot
 \end{itemize}
 
 \subsubsection{Assumptions}
 \begin{itemize}
-    \item \verb|[BLANK - e.g., The Central Hub Module (M13) is initialized before the Central Hub Interface is opened.]|
-    \item \verb|[BLANK - e.g., UI elements clearly distinguish available and unavailable upgrades using text/icons in addition to colour (SSR-008, SSR-009).]|
+    \item The Central Hub Module (M13) is initialized before the Central Hub Interface is opened.
 \end{itemize}
 
 \subsubsection{Access Routine Semantics}
