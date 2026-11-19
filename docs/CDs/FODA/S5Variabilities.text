@@ -1,20 +1,74 @@
-\wss{list of variabilities (the variation points between games)} \\
-\wss{list of parameters of variation (the possible values for each of the variabilities)}\\
-\wss{the binding time for each variability - pre-compilation time, compile time, runtime. Pre-compilation means that you are using tools, like model driven development tools to customize the application. Compile time means that the binding happens during the build process, like with conditional compilation. Runtime means that the binding happens during live execution. If you allow the user to change the variabilities while running your game, then your binding time is runtime.}
+% \wss{list of variabilities (the variation points between games)} \\
+% \wss{list of parameters of variation (the possible values for each of the variabilities)}\\
+% \wss{the binding time for each variability - pre-compilation time, compile time, runtime. Pre-compilation means that you are using tools, like model driven development tools to customize the application. Compile time means that the binding happens during the build process, like with conditional compilation. Runtime means that the binding happens during live execution. If you allow the user to change the variabilities while running your game, then your binding time is runtime.}
 
 % LAST ARGUMENT CAN BE:
 % runtime
 % compile time
 % precompile time
 
-\variable{Health}{$\mathbb{Z}^{+}$}{Intervals between 50, 100, 150}
-{The player health. A resource and condition value that determines whether the game continues or not depending on if the values reaches zero.}     
+% \variable{User controls}
+% {Integer}
+% {{Integer}}
+% {}
+% {}
+% \textbf{Note:} The parameter ranges and 
+
+\variable{Player Health}
+{player\_health}
+{Integer (non-negative values)}
+{50\dots 200}
+{The player contains attributes such as health (and variety of components) that can be customized later on when designing the game. Health is the life condition which determines whether the game continues or not depending on if the values reach zero. The variation should ranges between something simple such as 50 to 200 which is subject to change and could be much higher. This is a basic setting to test how well the player can last with different starting amounts.}     
 {runtime} 
 
-\variable{Enemy Health}{$\mathbb{Z}^{+}$}{Intervals between 20, 60, 90}
-{The enemy health. A condition value that determines whether the enemy is defeated or not depending on if the values reaches zero.}     
+\variable{Enemy Health}
+{enemy\_health}
+{Integer (non-negative values)}
+{60\dots 120}
+{Similar to the player variation, the enemy contains health. This is another difficulty setting to test how well a player does against an enemy with high or low amounts of health.}     
 {runtime} 
 
-Reference Examples (Please remove later)
-\nameref{var:Health}
-\nameref{var:Enemy Health}
+\variable{Enemy Types}
+{enemy\_type\#, \# is a number}
+{set of string}
+{Weak, Normal, Strong, ...`adjectives'}
+{The type of the enemy is meant to convey broad details of the opponent such that the player knows how to categorize and deal with certain enemies.}
+{compile-time}
+
+\variable{Attack Types}
+{attack\_type\#, \# is a number}
+{set of string}
+{Attack, Block, Poison,... `action phrases'}
+{These are the actions that allow the player and enemy to interact and convey progress in combat. They will also appear on the UI options for the player combat screen.
+Each action will have a unique logic to how it effects the target opposition.}
+{compile-time}
+
+% \variable{Attack modifier}
+
+\variable{Resource Distribution}
+{resource\_amount}
+{Integer}
+{15\dots 30}
+{These are the possible rewards amounts that can take place when completing a combat encounter. These values can once again be tuned in the configuration menu for pacing, and difficulty.}
+{runtime}
+
+\variable{Purchase Options}
+{purchase\_option\_x, (x is a number or component name)}
+{Dictionary:  $string \mapsto string \cap integer$}
+{\{`purchase\_name': vigor ... `noun' , `cost': 50\dots 500, description: a descriptive string\}}
+{These are the requirements and description of a purchasable. The name of the purchasable and description will hint at the effect of the item. The cost is the requirement needed to obtain the purchasable.}
+{compile-time}
+
+\subsection {Family of User Interface Variations}
+There are multiple different kinds of interface variations with a more all kinds of configurable settings. This variation only showcases the fundamental variables such as position, size, and description. \textbf{Constraint}: \textbf{Screen setting constants} can be relative to a certain item or monitor dimensions.
+\variable{Component position x}
+{component\_x, (x is a number or component name)}
+{Dictionary: $string \mapsto integer \cap string$}
+{\{`x':0\dots ScreenWidth, `y':0\dots ScreenHeight, `width':0\dots MaxWidth, `height':0\dots MaxHeight, `text': a descriptive string\}}
+{The UI elements can vary in size, shape, and positioning. These values can be tuned to improve the look and feel of the game. A clean UI is something that will prevent confusion and frustration for the user. The look and feel for a game UI is different based on the preference of the user, so different UI configurations are available on the configuration menu.}
+{compile, runtime (as configuration setting)}
+
+
+% Reference Examples (Please remove later)
+% \nameref{var:Health}
+% \nameref{var:Enemy Health}
