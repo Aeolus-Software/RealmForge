@@ -1,0 +1,149 @@
+\subsection{Module}
+
+This module handles external input from the user, via a physical input device 
+(a 
+controller, or a keyboard and mouse combination). It is implemented by the 
+Godot Engine 
+(through its provided input functionality spread throughtout the engine) for 
+use by the RealmForge software. The details provided in this MIS description 
+are provided by the Godot Engine Documentation \cite{GodotDocs}. The full set 
+of access programs, exported constants, and other functionalities the Godot 
+Engine provides for input will not be enumerated (as it is quite lengthy); 
+details relevant to the RealmForge software's development are included.
+
+\subsection{Uses}
+
+\begin{enumerate}
+	\item Simple Directmedia Layer 3 (SDL) Library (used to manage controller 
+	input)
+	\item Win32 API (native Windows API, to manage keyboard and mouse input)
+\end{enumerate}
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+
+\noindent InputEvent class (provides a class to type system events related to 
+user input by, 
+that can be handled accordingly by the software):
+
+\begin{itemize}
+	\item DEVICE\_ID\_EMULATION = -1
+	\item DEVICE\_ID\_KEYBOARD = 16
+	\item DEVICE\_ID\_MOUSE = 32
+\end{itemize}
+
+\subsubsection{Exported Access Programs}
+
+The Godot Engine does not provide functionality for exceptions (in its own 
+provided classes and functions, as well as in code written by developers), in 
+favour of 
+methods returning error values, or raising error warnings/flags (to avoid 
+crashing or halting the software, so that errors can be handled and the game 
+can continue to execute).\\
+
+\noindent Custom exception names will be provided for access 
+programs in this document, to correctly follow the MIS structure.
+However, these exceptions may be implemented in the system by custom logged 
+error 
+messages or returned error values, as opposed to the traditional "try-catch" 
+pattern used in other software. \\
+
+\noindent Input singleton (provides a globally accessible interface to the user 
+input 
+state):
+
+\begin{center}
+	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{6.5cm}}
+		\hline
+		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+		\hline
+		is\_action\_pressed & \shortstack[l]{\strut action : string \\ 
+		exact\_match : 
+		boolean} & 
+		boolean & Returns false if an error occurs \\
+		\hline
+	\end{tabular}\newline
+\end{center}
+
+\noindent InputMap singleton (provided to manage InputEventActions, describes 
+the actions 
+that the Input singleton can handle):
+
+\begin{center}
+	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{6.5cm}}
+		\hline
+		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+		\hline
+		add\_action & \shortstack[l]{\strut action : string \\ 
+		deadzone : 
+		Float} & 
+		- & ActionAlreadyExistsException \\
+		\hline
+		action\_add\_event & \shortstack[l]{\strut action : string \\ 
+		event : InputEvent} & 
+		- & ActionDoesNotExistException \\
+		\hline
+	\end{tabular}\newline
+\end{center}
+
+\noindent InputEvent:
+
+\begin{center}
+	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{6.5cm}}
+		\hline
+		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+		\hline
+		is\_action\_pressed & \shortstack[l]{\strut action : string \\ 
+		allow\_echo : boolean \\ exact\_match : 
+		 boolean} & 
+		boolean & Returns false if an error occurs \\
+		\hline
+		is\_action & \shortstack[l]{\strut action : string \\ 
+		exact\_match : 
+		boolean} & 
+		boolean & ActionDoesNotExistException \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+
+All internal variables related to the current state of the user's input, and 
+its connection to the user's machine. These variables are used internally by 
+the Godot Engine and hidden to RealmForge's implemented software.
+
+\subsubsection{Environment Variables}
+
+For a controller used as an input device:
+\begin{itemize}
+	\item states of controller buttons
+	\item joystick positions
+	\item trigger positions
+\end{itemize}
+
+\noindent For a keyboard and mouse combination used as input devices:
+\begin{itemize}
+\item currently pressed keys
+\item mouse cursor position
+\item states of mouse buttons
+\end{itemize}
+
+\subsubsection{Assumptions}
+
+\begin{itemize}
+	\item Input variables and data provided by the Godot Engine's Input, 
+	InputEvent, and InputMap classes are valid, when a valid physical input 
+	device is correctly connected to the user's machine.
+\end{itemize}
+
+\subsubsection{Access Routine Semantics}
+
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Local Functions}
+
+The local functions used to provide input functionality by the Godot Engine are 
+hidden to RealmForge's implemented software.
