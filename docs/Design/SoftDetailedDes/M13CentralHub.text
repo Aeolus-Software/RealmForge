@@ -1,4 +1,4 @@
-\section{MIS of Central Hub (M13)} \label{M13-CentralHub}
+\section{MIS of Central Hub M13} \label{M13-CentralHub}
 
 \subsection{Module}
 This module will store and update information concerning the player's temporary and permanent upgrades towards their Central Hub as well as having an algorithm to determine which upgrades to allow for unlock at certain stages. With the stored upgrade information, this module will calculate resource generation rates and game modifiers to be accessed by other modules.

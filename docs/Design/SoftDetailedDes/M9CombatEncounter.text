@@ -1,4 +1,4 @@
-\section{MIS of Combat Encounter (M9)} \label{M9-CombatEncounter}
+\section{MIS of Combat Encounter M9} \label{M9-CombatEncounter}
 
 \subsection{Module}
 The combat encounter module handles the state of a combat encounter, 

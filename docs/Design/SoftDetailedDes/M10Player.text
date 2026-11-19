@@ -1,4 +1,4 @@
-\section{MIS of Player (M10)} \label{M10-Player}
+\section{MIS of Player M10} \label{M10-Player}
 
 \subsection{Module}
 
@@ -8,13 +8,13 @@ modules as needed.
 
 \subsection{Uses}
 
-\begin{enumerate}
+\begin{itemize}
 	\item Godot Engine (functions, nodes, and signals provided by the engine automatically)
 	\item M2 Save Data IO Module
 	\item M5 Variation Configuration 
 	\item M13 Central Hub Module
 
-\end{enumerate}
+\end{itemize}
 
 \subsection{Syntax}
 
