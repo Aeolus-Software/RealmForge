@@ -1,4 +1,4 @@
-\section{MIS of Game World Interface (M6)} \label{M6-GameWorldInterface}
+\section{MIS of Game World Interface M6} \label{M6-GameWorldInterface}
 \subsection{Module}
 The Game World interface handles logic for player input navigation between game areas. Displays navigational information such as the current, and travel options.
 

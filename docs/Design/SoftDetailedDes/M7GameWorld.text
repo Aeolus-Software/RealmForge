@@ -1,4 +1,4 @@
-\section{MIS of Game World (M7)} \label{M7-GameWorld}
+\section{MIS of Game World M7} \label{M7-GameWorld}
 
 \subsection{Module}
 The game world module handles game state and player location changes. It communicates with the respective Game World UI for player input.  

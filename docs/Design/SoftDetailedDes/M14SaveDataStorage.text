@@ -1,4 +1,4 @@
-\section{MIS of Save Data Storage (M14)} \label{M14-SaveStorage}
+\section{MIS of Save Data Storage M14} \label{M14-SaveStorage}
 
 \subsection{Module}
 The save module that maintains save data structure along with checking valid and invalid save data files.
