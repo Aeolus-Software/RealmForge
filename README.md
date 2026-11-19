@@ -3,11 +3,11 @@
 #### Developer Names: 
 - Andy Huynh
 - Andreas Sideris
-- Owen John
+- Owen Johnson
 - Humna Saeed
 - Christoper Ludwig
 
-#### Date of project start: Sept 18, 2025
+#### Date of project start: Sept 18, 2026
 
 ## Project Description:
 RealmForge is a roguelite adventure game, where players explore and battle through a world of turn-based enemy encounters. During each encounter, the player character will battle enemies by selecting various actions. Each action the player can use depends on certain resources, provided by a central hub, which is integral to the gameplay loop. While playing the game, the player is able to upgrade the central hub to improve its abilities to generate resources. Upgrading the central hub can also modify the player’s available actions to improve their effectiveness. After succeeding in an encounter, the player is rewarded with a currency that is used to upgrade the hub. Various encounters available to the player will reward them with different types of currency that can be used in different ways. When the player fails at some point in their adventure, they are returned to the beginning, and their hub and resources are reset. However, major upgrades to the hub can be retained through different ‘runs’ of the game.

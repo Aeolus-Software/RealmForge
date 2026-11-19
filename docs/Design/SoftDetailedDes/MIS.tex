@@ -2,7 +2,7 @@
 
 \usepackage{amsmath, mathtools}
 
-% \usepackage[round]{natbib}
+\usepackage[numbers, square]{natbib}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -58,10 +58,11 @@ urlcolor=cyan          % color of external links
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
 11/11/2026 & Rev -1 & Andy MIS for M2,6,7,14 First Draft\\
-11/12/2026 & Rev -1 & Andreas MIS for M1,4,5,11 Completed\\
 11/11/2026 & Rev -1 & Andy MIS for M2,6,7,14 Completed\\
+11/12/2026 & Rev -1 & Andreas MIS for M1,4,5,11 Completed\\
 11/14/2026 & Rev -1 & Andy MIS for M2,6,7,14 Revished Second Draft\\
 11/17/2026 & Rev -1 & Andy MIS for M2,6,7,14 Final Draft\\
+11/18/2026 & Rev -1 & Owen Intro Completed\\
 
 \bottomrule
 \end{tabularx}
@@ -105,7 +106,24 @@ urlcolor=cyan          % color of external links
 \begin{tabularx}{\textwidth}{l p{13cm }} 
 	\toprule		
 	\textbf{Term} & \textbf{Definition}\\
-	\midrule 
+	\midrule
+	\glossaryDef{singleton}{Godot Singleton}{A globally accessible single 
+	instance of a class provided by the Godot Engine. An example of a Godot 
+	Singleton is the Input singleton, which is provided by the engine to allow 
+	any game code to access inputs provided by the user.}
+	\glossaryDef{node}{Godot Node}{An abstract object that Godot Scenes, and 
+	by extension Godot game projects are composed of. Nodes can be a game 
+	character, an interface button, or any other various game objects that the 
+	engine provides support for \cite{GodotDocs}.}
+	\glossaryDef{scene}{Godot Scene}{A reusable and instantiable tree of Godot 
+	Nodes. Godot game projects are created as a collection of scenes 
+	\cite{GodotDocs}.}
+	\glossaryDef{signal}{Godot Signal}{A message emitted by nodes, that can be 
+	received by other nodes and handled accordingly. Signals follow the 
+	Observer pattern \cite{GodotDocs}.}
+	\glossaryDef{resource}{Godot Resource}{A data container object, without 
+	associated behaviour or functions. Custom resources can be created and used 
+	as needed in Godot game projects \cite{GodotDocs}.}
 	%EXAMPLES BELOW ARE SHOW FOR USE
 	% \glossaryDef{id}{Glossary Term} {Description}{Section # -- USE 
 	%\ref{sec:Variabilities}}
@@ -132,12 +150,11 @@ urlcolor=cyan          % color of external links
 
 \section{Introduction}\label{sec:introduction}
 
-The following document details the Module Interface Specifications for
-\wss{Fill in your project name and description}
+The following document details the Module Interface Specifications for RealmForge, a roguelite adventure game where players explore and battle through a world of turn-based enemy encounters. The game was developed to incorporate runtime feature variations to facilitate usability testing.
 
 Complementary documents include the System Requirement Specifications
 and Module Guide.  The full documentation and implementation can be
-found at \url{...}.  \wss{provide the url for your repo}
+found at \url{https://github.com/Aeolus-Software/RealmForge}. 
 
 \section{Notation}
 
@@ -188,7 +205,7 @@ The following table is taken directly from the Module Guide document for this pr
 
 \input{ModuleHierarchyTable.text}
 
-~\newpage
+\newpage
 
 \section{MIS of \wss{Module Name}} \label{Module} \wss{Use labels for
   cross-referencing}
@@ -263,10 +280,46 @@ The following table is taken directly from the Module Guide document for this pr
 
 \newpage
 
+\section{MIS of User Input Module M1} \label{mInput}
+
+\input{UserInputMIS.text}
+
+\newpage
+
 \input{M2SaveIO.text}
+\input{M3MainMenuInterface.text}
+
+\newpage
+
+\section{MIS of Configuration Interface Module M4} \label{mConfigMenu}
+
+\input{ConfigInterfaceMIS.text}
+
+\newpage
+
+\section{MIS of Variation Configuration Module M5} \label{mConfig}
+
+\input{ConfigMIS.text}
+
+\newpage
+
 \input{M6GameWorldInterface.text}
+
+\newpage
+
 \input{M7GameWorld.text}
+
+\newpage
+
+\section{MIS of Enemy Character Module M11} \label{mEnemy}
+
+\input{EnemyMIS.text}
+
+\newpage
+
 \input{M14SaveDataStorage.text}
+
+\newpage
 
 \bibliographystyle{IEEEtran}
 \bibliography {../../../refs/References}

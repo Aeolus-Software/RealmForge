@@ -1,6 +1,6 @@
-\wss{list of variabilities (the variation points between games)} \\
-\wss{list of parameters of variation (the possible values for each of the variabilities)}\\
-\wss{the binding time for each variability - pre-compilation time, compile time, runtime. Pre-compilation means that you are using tools, like model driven development tools to customize the application. Compile time means that the binding happens during the build process, like with conditional compilation. Runtime means that the binding happens during live execution. If you allow the user to change the variabilities while running your game, then your binding time is runtime.}
+% \wss{list of variabilities (the variation points between games)} \\
+% \wss{list of parameters of variation (the possible values for each of the variabilities)}\\
+% \wss{the binding time for each variability - pre-compilation time, compile time, runtime. Pre-compilation means that you are using tools, like model driven development tools to customize the application. Compile time means that the binding happens during the build process, like with conditional compilation. Runtime means that the binding happens during live execution. If you allow the user to change the variabilities while running your game, then your binding time is runtime.}
 
 % LAST ARGUMENT CAN BE:
 % runtime
@@ -17,14 +17,14 @@
 \variable{Player Health}
 {player\_health}
 {Integer (non-negative values)}
-{0\dots MAX\_INTEGER}
+{50\dots 200}
 {The player contains attributes such as health (and variety of components) that can be customized later on when designing the game. Health is the life condition which determines whether the game continues or not depending on if the values reach zero. The variation should ranges between something simple such as 50 to 200 which is subject to change and could be much higher. This is a basic setting to test how well the player can last with different starting amounts.}     
 {runtime} 
 
 \variable{Enemy Health}
 {enemy\_health}
 {Integer (non-negative values)}
-{0\dots MAX\_INTEGER}
+{60\dots 120}
 {Similar to the player variation, the enemy contains health. This is another difficulty setting to test how well a player does against an enemy with high or low amounts of health.}     
 {runtime} 
 
@@ -48,19 +48,19 @@ Each action will have a unique logic to how it effects the target opposition.}
 \variable{Resource Distribution}
 {resource\_amount}
 {Integer}
-{0\dots MAX\_INTEGER}
+{15\dots 30}
 {These are the possible rewards amounts that can take place when completing a combat encounter. These values can once again be tuned in the configuration menu for pacing, and difficulty.}
 {runtime}
 
 \variable{Purchase Options}
 {purchase\_option\_x, (x is a number or component name)}
 {Dictionary:  $string \mapsto string \cap integer$}
-{\{`purchase\_name': vigor ... `noun' , `cost': 0\dots MAX\_INTEGER, description: a descriptive string\}}
+{\{`purchase\_name': vigor ... `noun' , `cost': 50\dots 500, description: a descriptive string\}}
 {These are the requirements and description of a purchasable. The name of the purchasable and description will hint at the effect of the item. The cost is the requirement needed to obtain the purchasable.}
 {compile-time}
 
 \subsection {Family of User Interface Variations}
-There are multiple different kinds of interface variations with a more all kinds of configurable settings. This variation only showcases the fundamental variables such as position, size, and description. \textbf{Constraint}: Screen setting values can be relative to a certain item or monitor dimensions.
+There are multiple different kinds of interface variations with a more all kinds of configurable settings. This variation only showcases the fundamental variables such as position, size, and description. \textbf{Constraint}: \textbf{Screen setting constants} can be relative to a certain item or monitor dimensions.
 \variable{Component position x}
 {component\_x, (x is a number or component name)}
 {Dictionary: $string \mapsto integer \cap string$}
