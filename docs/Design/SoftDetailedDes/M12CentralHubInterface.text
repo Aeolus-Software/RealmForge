@@ -4,8 +4,8 @@ This module will provide a graphical interface with buttons and controls for the
 
 \subsection{Uses}
 \begin{itemize}
-    \item Central Hub Module \mref{M13-CentralHub}
-    \item User Input Module \mref{mInput}
+    \item Central Hub Module (M13) %\mref{M13-CentralHub}
+    \item User Input Module (M1) %\mref{mInput}
     \item Godot Engine
 \end{itemize}
 
