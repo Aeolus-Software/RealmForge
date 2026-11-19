@@ -1,0 +1,6 @@
+\subsubsection{Game World Interface Module {\mref{mWorldMenu}}}
+\begin{description}
+\item[Secrets:] UI interface for user travel information prompting.
+\item[Services:] Shows interface overworld information such as player location, travel destination area name.
+\item[Implemented By:] Realmforge
+\end{description}

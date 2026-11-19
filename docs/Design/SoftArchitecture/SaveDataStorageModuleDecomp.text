@@ -1,0 +1,6 @@
+\subsubsection{Save Data Storage Module {\mref{mSaveStore}}} 
+\begin{description}
+\item[Secrets:] Logic for checking correct save data objects. 
+\item[Services:] Serves as informing the user of any malformed data and rejects it.
+\item[Implemented By:] Godot Engine
+\end{description}
