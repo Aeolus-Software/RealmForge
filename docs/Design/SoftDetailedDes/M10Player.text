@@ -1,0 +1,76 @@
+\section{MIS of Player (M10)} \label{M10-Player}
+
+\subsection{Module}
+
+This module abstracts the attributes of the player character 
+in the RealmForge game, and provides these details to other 
+modules as needed.
+
+\subsection{Uses}
+
+\begin{enumerate}
+	\item Godot Engine (functions, nodes, and signals provided by the engine 
+	automatically)
+\end{enumerate}
+
+\subsection{Syntax}
+
+\subsubsection{Exported Constants}
+
+N/A
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+	\begin{tabular}{p{3cm} p{4cm} p{2cm} p{7cm}}
+		\hline
+		\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+		\hline
+		get\_health & - & integer & PlayerHealthNotInitializedException \\
+		\hline
+		set\_health & health : integer & - & InvalidHealthException \\
+		\hline
+		get\_max\_health & - & integer & InvalidHealthException \\
+		\hline
+		get\_actions & - & custom player action resource & AvailableActionsNotInitializedException \\
+		\hline
+		get\_inventory & - & custom inventory resource & InventoryNotInitializedException \\
+		\hline
+		add\_item & custom item resource & - & InventoryNotInitializedException, ItemNotInitializedException \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Semantics}
+
+\subsubsection{State Variables}
+
+\begin{itemize}
+	\item health : integer
+	\item max\_health : integer
+	\item inventory : array of custom resources (a resource will be defined to store data related to an item in the inventory)
+	\item available\_actions : array of custom resources (a resource will be 
+	defined to store data related to each possible action the player character 
+	can take in combat, such as its damage, speed, or other qualities).
+\end{itemize}
+
+\subsubsection{Environment Variables}
+
+\begin{itemize}
+	\item the player character's visual depiction (two-dimensional sprite) 
+	displayed by the user's display device
+	\item the player character's visual animations displayed by the user's 
+	display device
+\end{itemize}
+
+\subsubsection{Assumptions}
+
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Access Routine Semantics}
+
+Will be updated in Revision 0 of the document.
+
+\subsubsection{Local Functions}
+
+Will be updated in Revision 0 of the document.

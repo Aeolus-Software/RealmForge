@@ -79,6 +79,7 @@
     "docs/Design/SoftArchitecture/S42UnlikelyChanges.text",
     "docs/Design/SoftArchitecture/SaveDataStorageModuleDecomp.text",
     "docs/Design/SoftArchitecture/SaveIOModuleDecomp.text",
+    "docs/Design/SoftArchitecture/images/UsesHierarchy-1.png",
     "refs/References.bib"
   ],
   "docs/Design/SoftDetailedDes/MIS.tex": [
@@ -87,11 +88,14 @@
     "docs/Design/SoftDetailedDes/ConfigInterfaceMIS.text",
     "docs/Design/SoftDetailedDes/ConfigMIS.text",
     "docs/Design/SoftDetailedDes/EnemyMIS.text",
+    "docs/Design/SoftDetailedDes/M10Player.text",
     "docs/Design/SoftDetailedDes/M14SaveDataStorage.text",
     "docs/Design/SoftDetailedDes/M2SaveIO.text",
     "docs/Design/SoftDetailedDes/M3MainMenuInterface.text",
     "docs/Design/SoftDetailedDes/M6GameWorldInterface.text",
     "docs/Design/SoftDetailedDes/M7GameWorld.text",
+    "docs/Design/SoftDetailedDes/M8CombatEncounterInterface.text",
+    "docs/Design/SoftDetailedDes/M9CombatEncounter.text",
     "docs/Design/SoftDetailedDes/MIS.tex",
     "docs/Design/SoftDetailedDes/ModuleHierarchyTable.text",
     "docs/Design/SoftDetailedDes/UserInputMIS.text",
