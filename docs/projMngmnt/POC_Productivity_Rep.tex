@@ -4,6 +4,7 @@
 \restylefloat{table}
 
 \usepackage{booktabs}
+\usepackage{hyperref}
 
 \title{Team Productivity: POC\\\progname}
 
@@ -238,7 +239,7 @@ Humna was excused from 1 meeting for a valid reason.
 \textbf{Lines Deleted} & \textbf{Pull Requests}\\
 \midrule
 Total & Num & 100\% & total added & total deleted & total PRs\\
-Andy Huynh & Num & \% & num & num & num\\
+Andy Huynh & 173 & \% & 17126 & 6685 & 18\\
 Andreas Sideris & Num & \% & num & num & num\\
 Humna Saeed & Num & \% & num & num & num\\
 Christopher Ludwig & Num & \% & num & num & num\\
@@ -246,7 +247,9 @@ Owen Johnson & Num & \% & num & num & num\\
 \bottomrule
 \end{tabular}
 \end{table}
-
+Andy was responsible for forking the template repository and providing GitHub 
+properties such as extra GitHub Actions and Issue Templates. This is why his line 
+count and commit history is much higher than the rest. Roughly 12000 lines added and +50 commits. 
 \section{Issue Tracker}
 
 \begin{table}[H]
@@ -269,9 +272,24 @@ others were more granular.
 
 \section{CICD via GitHub Actions}
 
-\wss{Say how CICD technology is used and will be used in your project.}
+% \wss{Say how CICD technology is used and will be used in your project.}
 
-\wss{Provide links to your CICD yaml files}
+% \wss{Provide links to your CICD yaml files}
+\noindent The current CI/CD checks for all major LaTeX files for correct file structure listed 
+on the script/python documents (\textbf{select\_docs.py, buid.py}).
+Once the CI/CD finishes checking for correctness, it builds the LaTeX files and deploys
+them onto the GitHub page \href{https://aeolus-software.github.io/RealmForge/}{website} as PDFs downloadable.
+See the \href{https://github.com/Aeolus-Software/RealmForge/blob/main/.github/workflows/latex-pages.yml}{latex-page.yml} on the repository.
+\\
+\noindent The CI/CD will provide a syntax linting and unit testing for the code in the 'src' file. These will 
+help with catching early major errors and faults.
+See the \href{https://github.com/Aeolus-Software/RealmForge/blob/main/.github/workflows/godot.yml}{godot.yml} on the repository.
+\\
+\noindent The CI/CD will provide a online Markdown version for the list of requirements, tests, and use cases such that
+traceability and linking is available without access between the PDF documents. 
+See the \href{https://github.com/Aeolus-Software/RealmForge/blob/main/.github/workflows/requirements.yml}{requirements.yml} on the repository.
+
+
 
 \section{Custom Documents (CDs)}
 
@@ -299,16 +317,16 @@ and completed their work to an acceptable standard.
 
 No other additional productivity metrics are collected currently.\\
 
-\wss{If your team has additional metrics of productivity, please feel free to
-add them to this report.  If not, please explicitly state that there are no additional
-metrics.}
+% \wss{If your team has additional metrics of productivity, please feel free to
+% add them to this report.  If not, please explicitly state that there are no additional
+% metrics.}
 
-\wss{Additional metrics can include things like code reviews done, pull requests
-created, count of joining meetings late, count of number of times contributions
-had to be corrected, number of internal deadlines missed, test cases written, etc.}
+% \wss{Additional metrics can include things like code reviews done, pull requests
+% created, count of joining meetings late, count of number of times contributions
+% had to be corrected, number of internal deadlines missed, test cases written, etc.}
 
-\wss{We are looking for data on these metrics, not just a list of additional
-metrics the team is planning on tracking.  However, if all you have is a plan,
-please share it here.}
+% \wss{We are looking for data on these metrics, not just a list of additional
+% metrics the team is planning on tracking.  However, if all you have is a plan,
+% please share it here.}
 
 \end{document}
