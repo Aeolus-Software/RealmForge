@@ -1,0 +1,82 @@
+\section{MIS of Save Data IO M2} \label{M2-SaveIO}
+
+\subsection{Module}
+The \hyperlink{IO}{IO} module responsible for reading and writing saved data from storage.
+
+\subsection{Uses}
+\begin{itemize}
+    \item Godot Engine JSON and FileAcess built-ins
+\end{itemize}
+
+
+\subsection{Syntax}
+\subsubsection{Exported Constants}
+
+
+
+\subsubsection{Exported Access Programs}
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+save & - & - & DataException \\
+load & - & - & DataException \\
+\hline
+\end{tabularx}
+\end{center}
+
+% JSON Class Godot built-ins
+% \begin{center}
+% \begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+% \hline
+% \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+% \hline
+% stringify & saved\_items: Dictionary & - & handled from self modules \\
+% parse & json\_string: String & - & handled from self modules \\
+% \hline
+% \end{tabularx}
+% \end{center}
+% FileAccess Class Godot built-ins
+% \begin{center}
+% \begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+% \hline
+% \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+% \hline
+% open & path: String & file\_open: Boolean & handled from self modules \\
+% \hline
+% get\_as\_text & - & text: String & handled from self modules \\
+% store\_string & array: Array & - & handled from self modules \\
+% \hline
+% \end{tabularx}
+% \end{center}
+
+\subsection{Syntax}
+\subsubsection{State Variables}
+\begin{itemize}
+    \item saved\_items: Dictionary - The current set of key-value pair data structure that is set to be saved.
+\end{itemize}
+
+\subsubsection{Environment Variables}
+\begin{itemize}
+    \item save\_directory: String
+\end{itemize}
+\begin{itemize}
+    \item load\_directory: String
+\end{itemize}
+
+
+\subsubsection{Assumptions}
+This module will have access to all variables, and configurations that need saving in some way.
+
+
+\subsubsection{Access Routine Semantics}
+Will be updated in Revision 0 of document
+\subsubsection{Local Functions}
+Will be updated in Revision 0 of document
+\subsubsection{Considerations}
+Will be updated in Revision 0 of document
+
+
+
+

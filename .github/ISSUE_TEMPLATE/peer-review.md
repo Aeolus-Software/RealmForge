@@ -1,7 +1,7 @@
 ---
 name: Peer Review
 about: Someone outside of the team reviews one of the artifacts.
-title: Peer Review by TXX - DOCNAME - clear name for issue
+title: Peer Review by TXX - DOCNAME - section - clear name for issue
 labels: documentation, Peer Review
 assignees: ''
 type: Feature
@@ -9,6 +9,7 @@ type: Feature
 ---
 
 ## Artifact Under Review
+SRS Requirement 001, VNV Plan Glossary, .....
 
 ### Team Number for Team Doing the Review
 Team Numer ##
@@ -18,3 +19,5 @@ Team Numer ##
 
 ### Closing Remarks
 *I apologize for my behaviour, you did great!*
+
+@DONTFORGETTOATYOURTA

@@ -1,7 +1,7 @@
 ---
 name: 'Custom Template: Feature'
 about: Describes a Feature to be developed.
-title: ''
+title: 'PROJECT_NAME: FEATURE_NAME'
 labels: ''
 assignees: ''
 type: Feature

@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{longtable}
 \hypersetup{
     colorlinks,
     citecolor=blue,
@@ -16,20 +17,38 @@
     urlcolor=blue
 }
 
+% Setting up graphics path
+\graphicspath{{./images/}}
+
 \input{../../Comments.text}
 \input{../../Common.text}
 
 \newcounter{acnum}
-\newcommand{\actheacnum}{AC\theacnum}
-\newcommand{\acref}[1]{AC\ref{#1}}
+\newcommand{\actheacnum}{AC-\theacnum}
+\newcommand{\acref}[1]{AC-\ref{#1}}
 
 \newcounter{ucnum}
-\newcommand{\uctheucnum}{UC\theucnum}
-\newcommand{\uref}[1]{UC\ref{#1}}
+\newcommand{\uctheucnum}{ULC-\theucnum}
+\newcommand{\uref}[1]{ULC-\ref{#1}}
 
 \newcounter{mnum}
 \newcommand{\mthemnum}{M\themnum}
 \newcommand{\mref}[1]{M\ref{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%NEW COMMANDS%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\newcommand{\AC}[3]{
+  \item[\refstepcounter{acnum} \actheacnum \label{ac#1} #1:]
+  #2\par
+  \noindent\textbf{Rationale}: #3 \par
+	\addcontentsline{toc}{subsubsection}{AC--\theacnum: #1}
+}
+\newcommand{\ULC}[3]{
+  \item[\refstepcounter{ucnum} \uctheucnum \label{ULC-#1} #1:]
+  #2\par
+  \noindent\textbf{Rationale}: #3 \par
+	\addcontentsline{toc}{subsubsection}{ULC--\theucnum: #1} 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%NEW COMMANDS%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 
 \begin{document}
 
@@ -46,8 +65,17 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+11/8/26 & Rev -1 & Andy Huynh's Anticipated Changes first draft \\
+11/8/26 & Rev -1 & Andreas Module Hierarchy Completed\\
+11/9/26 & Rev -1 & Andreas Module Decomposition for M1,4,5,11\\
+11/10/26 & Rev -1 & Andy Huynh's Anticipated Changes second draft \\
+11/10/26 & Rev -1 & Andy SaveIO/Storage, GameWorld/UI first draft \\
+11/16/26 & Rev -1 & Christopher MG for M12,13 First Draft\\
+11/16/26 & Rev -1 & Owen Module Decomposition for M8,9,10\\
+11/18/26 & Rev -1 & Christopher MG for M12,13 Update to Match Review\\
+11/18/26 & Rev -1 & Owen Use Hierarchy Between Modules Completed\\
+11/18/26 & Rev -1 & Andy Huynh's Anticipated Changes Final draft \\
+
 \bottomrule
 \end{tabularx}
 
@@ -66,15 +94,17 @@ This section records information for easy reference.
   \midrule 
   AC & Anticipated Change\\
   DAG & Directed Acyclic Graph \\
+  ENV & Environmental Requirement\\
   M & Module \\
   MG & Module Guide \\
   OS & Operating System \\
-  R & Requirement\\
+  \progname & The title of the project, and its produced software product\\
   SC & Scientific Computing \\
+  SFR & Software Functional Requirement\\
+  SNFR & Software Non-Functional Requirement\\
   SRS & Software Requirements Specification\\
-  \progname & Explanation of program name\\
-  UC & Unlikely Change \\
-  \wss{etc.} & \wss{...}\\
+  SSR & Software Safety Requirement\\
+  ULC & Unlikely Change \\
   \bottomrule
 \end{tabular}\\
 
@@ -146,42 +176,17 @@ other shows the relation between anticipated changes and the modules. Section
 This section lists possible changes to the system. According to the likeliness
 of the change, the possible changes are classified into two
 categories. Anticipated changes are listed in Section \ref{SecAchange}, and
-unlikely changes are listed in Section \ref{SecUchange}.
+unlikely changes are listed in Section \ref{SecUchange}. Each Anticipated and
+unlikely change is denoted by AC-X, and ULC-X for reference in the tracability tables.
 
 \subsection{Anticipated Changes} \label{SecAchange}
-
-Anticipated changes are the source of the information that is to be hidden
-inside the modules. Ideally, changing one of the anticipated changes will only
-require changing the one module that hides the associated decision. The approach
-adapted here is called design for
-change.
-
-\begin{description}
-\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
-  hardware on which the software is running.
-\item[\refstepcounter{acnum} \actheacnum \label{acInput}:] The format of the
-  initial input data.
-\item ...
-\end{description}
-
-\wss{Anticipated changes relate to changes that would be made in requirements,
-design or implementation choices.  They are not related to changes that are made
-at run-time, like the values of parameters.}
+\input{S41AnticipatedChanges.text}
 
 \subsection{Unlikely Changes} \label{SecUchange}
+\input{S42UnlikelyChanges.text}
 
-The module design should be as general as possible. However, a general system is
-more complex. Sometimes this complexity is not necessary. Fixing some design
-decisions at the system architecture stage can simplify the software design. If
-these decision should later need to be changed, then many parts of the design
-will potentially need to be modified. Hence, it is not intended that these
-decisions will be changed.
 
-\begin{description}
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
-  (Input: File and/or Keyboard, Output: File, Memory, and/or Screen).
-\item ...
-\end{description}
+
 
 \section{Module Hierarchy} \label{SecMH}
 
@@ -198,7 +203,9 @@ between requirements and modules is listed in Table~\ref{TblRT}.
   design decisions need to be made.  Rather than make these decisions implicit,
   they are explicitly recorded here.  For instance, if a program has security
   requirements, a specific design decision may be made to satisfy those
-  requirements with a password.}
+  requirements with a password.}\\
+  
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Module Decomposition} \label{SecMD}
 
@@ -224,7 +231,12 @@ to be implemented.
 \subsubsection{User Input Module M\ref{mInput}}
 \input{InputModuleDecomp.text}
 
+\input{SaveIOModuleDecomp.text}
+
 \subsection{Behaviour-Hiding Module}
+
+\subsubsection{Main Menu Interface Module M\ref{mMainMenu}}
+\input{MainMenuModuleDecomp.text}
 
 \subsubsection{Configuration Interface Module M\ref{mConfigMenu}}
 \input{ConfigMenuModuleDecomp.text}
@@ -232,10 +244,35 @@ to be implemented.
 \subsubsection{Variation Configuration Module M\ref{mConfig}}
 \input{ConfigModuleDecomp.text}
 
+
+\input{GameWorldUIModuleDecomp.text}
+
+\input{GameWorldModuleDecomp.text}
+
+\subsubsection{Combat Encounter Interface Module M\ref{mEncounterMenu}}
+\input{CombatInterfaceModuleDecomp.text}
+
+\subsubsection{Combat Encounter Module M\ref{mEncounter}}
+\input{CombatModuleDecomp.text}
+
+
+
+\subsubsection{Player Character Module M\ref{mPlayer}}
+\input{PlayerModuleDecomp.text}
+
 \subsubsection{Enemy Character Module M\ref{mEnemy}}
 \input{EnemyModuleDecomp.text}
 
+\subsubsection{Central Hub Interface Module M\ref{mHubMenu}}
+\input{CentralHubInterfaceModuleDecomp.text}
+
+\subsubsection{Central Hub Module M\ref{mHub}}
+\input{CentralHubModuleDecomp.text}
+
 \subsection{Software Decision Module}
+\input{SaveDataStorageModuleDecomp.text}
+
+\newpage{}
 
 \section{Traceability Matrix} \label{SecTM}
 
@@ -246,10 +283,11 @@ requirements and between the modules and the anticipated changes.
 % like fref
 \begin{table}[H]
 \centering
-\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\begin{tabular}{p{0.4\textwidth} p{0.6\textwidth}}
 \toprule
-\textbf{Req.} & \textbf{Modules}\\
+\textbf{Func \& Enviro Req.} & \textbf{Modules}\\
 \midrule
+ENV-001 & \mref{mInput}, \mref{mSaveIO}\\
 ENV-002 & \mref{mInput}\\
 ENV-003 & \mref{mConfigMenu}, \mref{mConfig}\\
 SFR-001 & \mref{mInput}, \mref{mConfigMenu}, \mref{mConfig}\\
@@ -259,25 +297,32 @@ SFR-004 & \mref{mInput}, \mref{mConfigMenu}, \mref{mConfig}\\
 SFR-005 & \mref{mConfig}\\
 SFR-006 & \mref{mConfigMenu}, \mref{mConfig}\\
 SFR-007 & \mref{mConfigMenu}, \mref{mConfig}\\
-SFR-008 & \mref{mConfigMenu}, \mref{mConfig}\\
+SFR-008 & \mref{mConfigMenu}, \mref{mConfig}, \mref{mHub}\\
 SFR-009 & \mref{mConfigMenu}, \mref{mConfig}\\
 SFR-010 & \mref{mConfigMenu}\\
-SFR-011 & \mref{mEnemy}\\
-SFR-012 & \mref{mEnemy}\\
-SFR-013 & \mref{mEnemy}\\
-SFR-014 & \mref{mEnemy}\\
-SFR-015 & \mref{mEnemy}\\
-SFR-017 & \mref{mEnemy}\\
-SNFR-002 & \mref{mEnemy}\\
-SNFR-003 & \mref{mConfigMenu}, \mref{mConfig}\\
-SNFR-006 & \mref{mEnemy}\\
-SNFR-007 & \mref{mInput}\\
-SNFR-008 & \mref{mConfigMenu}\\
-SNFR-010 & \mref{mConfigMenu}\\
-SNFR-011 & \mref{mInput}\\
+SFR-011 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-012 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-013 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-014 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-015 & \mref{mEncounterMenu}, \mref{mPlayer}, \mref{mEnemy}\\
+SFR-016 & \mref{mEncounterMenu}, \mref{mEncounter}\\
+SFR-017 & \mref{mEncounter}\mref{mEnemy}\\
+SFR-018 & \mref{mMainMenu}\\
+SFR-019 & \mref{mMainMenu}, \mref{mEncounterMenu}, \mref{mEncounter}\\
+SFR-020 & \mref{mWorldMenu} \\
+SFR-021 & \mref{mWorld} \\
+SFR-022 & \mref{mWorldMenu} \\
+SFR-023 & \mref{mWorldMenu} \\
+SFR-024 & \mref{mWorld}, \mref{mWorldMenu} \\
+SFR-025 & \mref{mPlayer}, \mref{mHub}\\
+SFR-026 & \mref{mPlayer}, \mref{mHub}\\
+SFR-027 & \mref{mPlayer}, \mref{mHub}\\
+SFR-028 & \mref{mHub}\\
+SFR-029 & \mref{mHub}\\
+SFR-030 & \mref{mHub}, \mref{mHubMenu}\\
 \bottomrule
 \end{tabular}
-\caption{Trace Between Requirements and Modules}
+\caption{Trace Between Functional/Enviromental Requirements and Modules}
 \label{TblRT}
 \end{table}
 
@@ -285,20 +330,79 @@ SNFR-011 & \mref{mInput}\\
 \centering
 \begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
 \toprule
+\textbf{Nonfunctional Req.} & \textbf{Modules}\\
+\midrule
+SNFR-001 & \mref{mHub}\\
+SNFR-002 & \mref{mEnemy}\\
+SNFR-003 & \mref{mConfigMenu}, \mref{mConfig}\\
+SNFR-004 & \mref{mWorld}, \mref{mWorldMenu}\\
+SNFR-005 & \mref{mPlayer}\\
+SNFR-006 & \mref{mEnemy}\\
+SNFR-007 & \mref{mInput}\\
+SNFR-008 & \mref{mConfigMenu}\\
+SNFR-009 & \mref{mEncounterMenu}\\
+
+\bottomrule
+\end{tabular}
+\caption{Trace Between Nonfunctional Requirements and Modules}
+\label{TblRT}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Safety Req.} & \textbf{Modules}\\
+\midrule
+SSR-001 & \mref{mSaveIO} \\
+SSR-002 & \mref{mSaveIO} \\
+SSR-003 & \mref{mSaveStore}, \mref{mPlayer} \\
+SSR-004 & \mref{mSaveIO} \\
+SSR-005 & \mref{mSaveIO}, \mref{mSaveStore}\\
+SRR-006 & \mref{mEncounter}, \mref{mWorld} \\
+SSR-007 & \mref{mSaveIO},\mref{mEncounter}, \mref{mSaveStore}\\
+SSR-008 & \mref{mEncounter} \mref{mEncounterMenu}\\
+SSR-009 & \mref{mMainMenu},\mref{mConfigMenu}, \mref{mWorldMenu}, \mref{mEncounterMenu}, \mref{mHubMenu}\\
+SSR-010 & \mref{mConfigMenu}\\
+SSR-011 & \mref{mInput}\\
+SSR-012 & \mref{mEncounter}\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Nonfunctional Requirements and Modules}
+\label{TblRT}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
 \textbf{AC} & \textbf{Modules}\\
 \midrule
-\acref{acHardware} & \mref{mHH}\\
-\acref{acInput} & \mref{mInput}\\
-\acref{acParams} & \mref{mParams}\\
-\acref{acVerify} & \mref{mVerify}\\
-\acref{acOutput} & \mref{mOutput}\\
-\acref{acVerifyOut} & \mref{mVerifyOut}\\
-\acref{acODEs} & \mref{mODEs}\\
-\acref{acEnergy} & \mref{mEnergy}\\
-\acref{acControl} & \mref{mControl}\\
-\acref{acSeqDS} & \mref{mSeqDS}\\
-\acref{acSolver} & \mref{mSolver}\\
-\acref{acPlot} & \mref{mPlot}\\
+% \acref{acHardware} & \mref{mHH}\\
+% \acref{acInput} & \mref{mInput}\\
+% \acref{acParams} & \mref{mParams}\\
+% \acref{acVerify} & \mref{mVerify}\\
+% \acref{acOutput} & \mref{mOutput}\\
+% \acref{acVerifyOut} & \mref{mVerifyOut}\\
+% \acref{acODEs} & \mref{mODEs}\\
+% \acref{acEnergy} & \mref{mEnergy}\\
+% \acref{acControl} & \mref{mControl}\\
+% \acref{acSeqDS} & \mref{mSeqDS}\\
+% \acref{acSolver} & \mref{mSolver}\\
+% \acref{acPlot} & \mref{mPlot}\\
+\acref{acUser Input} & \mref{mInput} \\
+\acref{acSave Data Configurations} & \mref{mSaveIO}, \mref{mSaveStore} \\
+\acref{acUI Interface} & \mref{mConfigMenu}, \mref{mEncounterMenu}, \mref{mHubMenu}, \mref{mMainMenu}, \mref{mWorldMenu} \\
+\acref{acVariation points} & \mref{mConfig} \\
+\acref{acCombat Effects} & \mref{mEncounter} \\ 
+\acref{acCentral Hub Design and Upgrade Options} & \mref{mHub} \\
+\acref{acPlayer Model} & \mref{mPlayer} \\
+\acref{acEnemy Model} & \mref{mEnemy} \\
+\acref{acGame World Design} & \mref{mWorld} \\
+\acref{acReward System} & \mref{mWorld} \\
+
+
 \bottomrule
 \end{tabular}
 \caption{Trace Between Anticipated Changes and Modules}
@@ -318,18 +422,9 @@ the modules. It can be seen that the graph is a directed acyclic graph
 system, and modules in the higher level of the hierarchy are essentially simpler
 because they use modules from the lower levels.
 
-\wss{The uses relation is not a data flow diagram.  In the code there will often
-be an import statement in module A when it directly uses module B.  Module B
-provides the services that module A needs.  The code for module A needs to be
-able to see these services (hence the import statement).  Since the uses
-relation is transitive, there is a use relation without an import, but the
-arrows in the diagram typically correspond to the presence of import statement.}
-
-\wss{If module A uses module B, the arrow is directed from A to B.}
-
 \begin{figure}[H]
 \centering
-%\includegraphics[width=0.7\textwidth]{UsesHierarchy.png}
+\includegraphics[width=0.8\textwidth]{UsesHierarchy-1.png}
 \caption{Use hierarchy among modules}
 \label{FigUH}
 \end{figure}
@@ -339,25 +434,35 @@ arrows in the diagram typically correspond to the presence of import statement.}
 \section{User Interfaces}
 
 \wss{Design of user interface for software and hardware.  Attach an appendix if
-needed. Drawings, Sketches, Figma}
+needed. Drawings, Sketches, Figma}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Design of Communication Protocols}
 
 \wss{If there is communication between hardware and software, it may be necessary 
 to explain the design of the communication protocol.  This section should be filled 
-in with NA if it is not appropriate for a given project.}
+in with NA if it is not appropriate for a given project.}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Database Design}
 
 \wss{If a database is a significant component of the project, the database
 design should be summarized here.  This section should be filled in with NA if
-it is not appropriate for a given project.}
+it is not appropriate for a given project.}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
 
 \section{Timeline}
 
 \wss{Schedule of tasks and who is responsible}
 
-\wss{You can point to GitHub if this information is included there}
+\wss{You can point to GitHub if this information is included there}\\
+
+\noindent \textbf{This section will be updated in Revision 0 of the document.}
+
+\newpage
 
 \section{Generative AI Use Disclosure}
 
@@ -372,7 +477,8 @@ it is not appropriate for a given project.}
 
 AI tools were used for assistance with LaTeX syntax and commands, during 
 the development of the Module Hierarchy, and portions of the Module 
-Decomposition section. AI tools were used for guidance on how to correctly 
+Decomposition section (for modules M1, M4, M5, and M11). AI tools were used for 
+guidance on how to correctly 
 structure LaTeX code to create a hyperlink-able list of software modules and 
 include them in the module hierarchy table, as well as other various small 
 formatting 

@@ -1,0 +1,59 @@
+\section{MIS of Central Hub Interface M12} \label{M12-CentralHubMenu}
+\subsection{Module}
+This module will provide a graphical interface with buttons and controls for the user to upgrade and modify the central hub as well as displaying information about the Central Hub to the user.
+
+\subsection{Uses}
+\begin{itemize}
+    \item Godot Engine
+    \item M1 User Input Module  %\mref{mInput}
+    % \item M13 Central Hub Module %\mref{M13-CentralHub}
+\end{itemize}
+
+\subsection{Syntax}
+\subsubsection{Exported Constants}
+\begin{itemize}
+    \item None
+\end{itemize}
+
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2.5cm} p{3.5cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+open\_hub\_menu &  - & - & InvalidStateTransitionException\\
+\hline
+close\_hub\_menu &  - & - & InvalidStateTransitionException\\
+\hline
+refresh\_hub\_menu &  - & - & ModuleNotInitializedException\\
+\hline
+\end{tabularx}
+\end{center}
+
+\subsection{Semantics}
+\subsubsection{State Variables}
+\begin{itemize}
+    \item \verb|selected_upgrade_id: String| - tracks which upgrade is selected to visually indicate it and then pass it when selected upgrade is purchased
+    \item \verb|selected_building_id: String| - tracks which building is selected or if any are to provide further details and options with the selected building
+    \item \verb|is_popup_active: bool| - tracks if any popup is active to disable other menus until addressed like the insufficient fund popup
+\end{itemize}
+
+\subsubsection{Environment Variables}
+\begin{itemize}
+    \item \verb|hub_display: DisplayOutput| - the graphical output of the UI from Godot
+\end{itemize}
+
+\subsubsection{Assumptions}
+\begin{itemize}
+    \item The Central Hub Module (M13) is initialized before the Central Hub Interface is opened.
+\end{itemize}
+
+\subsubsection{Access Routine Semantics}
+Will be updated in Revision 0 of document
+
+\subsubsection{Local Functions}
+Will be updated in Revision 0 of document
+
+\subsubsection{Considerations}
+Will be updated in Revision 0 of document

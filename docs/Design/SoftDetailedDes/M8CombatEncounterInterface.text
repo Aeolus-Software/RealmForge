@@ -1,0 +1,70 @@
+\section{MIS of Combat Encounter Interface M8} \label{M8-CombatEncounterInterface}
+
+\subsection{Module}
+The Combat Encounter interface handles logic for displaying the state of the current combat encounter, as well as handling player selections within an encounter. 
+
+\subsection{Uses}
+\begin{itemize}
+    \item Godot Engine - Godot Control Nodes (used specifically for UI) as well as the built-in libraries.
+    \item M1 User Input Module 
+    % \item M9 Combat Encounter Module 
+\end{itemize}
+
+
+\subsection{Syntax}
+\subsubsection{Exported Constants}
+\begin{itemize}
+    \item None
+\end{itemize}
+\subsubsection{Exported Access Programs}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{p{4cm} p{3cm} p{2cm} p{4cm}}
+\hline
+\textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Exceptions} \\
+\hline
+get\_highlighted\_action& - & action\_index: Integer  & MissingUIComponent \\
+\hline
+on\_action\_button\_up& action\_index: Integer & - & InputException \\
+\hline
+show\_actions\_menu& - & - & MissingUIComponent \\
+\hline
+update\_encounter\_state& -  & - & InputException\\
+\hline
+diplay\_encounter\_result& result: Integer & - & MissingUIComponent \\
+\hline
+
+% \hline
+% set\_focus\_node & focus\_node: Node & - & Logs an error message when a invalid node is inputted.\\
+\end{tabularx}
+\end{center}
+
+\subsection{Syntax}
+\subsubsection{State Variables}
+None.
+
+
+\subsubsection{Environment Variables}
+\begin{itemize}
+    \item action\_index - from CombatEncounter Module (M9)
+    \item ui\_components: Array[Node] - the set of ui components such as buttons.
+\end{itemize}
+
+
+\subsubsection{Assumptions}
+
+\begin{itemize}
+    \item The Combat Encounter UI has access to Combat Encounter variables public access routines.
+\end{itemize}
+
+
+\subsubsection{Access Routine Semantics}
+Will be updated in Revision 0 of document
+\subsubsection{Local Functions}
+Will be updated in Revision 0 of document
+\subsubsection{Considerations}
+Will be updated in Revision 0 of document
+
+
+
+
