@@ -14,6 +14,10 @@ config/name="RealmForge"
 run/main_scene="uid://dqbt1thb6854l"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
+[autoload]
+
+VariationConfigs="*uid://3c8b8oex0p3o"
+
 [display]
 
 window/size/viewport_width=1920

@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://konhlrfa1yhw"]
 
 [ext_resource type="Script" uid="uid://460cna71fmo0" path="res://configure_feature/configure_script.gd" id="1_ffr7g"]
+[ext_resource type="Script" uid="uid://uw4xob2ct6x5" path="res://configure_feature/combat_ui_button_config.gd" id="2_20i8a"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_m3ewx"]
+resource_name = "CombatUIButtonGroup"
 
 [node name="ConfigureScreen" type="Control" unique_id=451216846]
 layout_mode = 3
@@ -39,4 +43,89 @@ theme_override_font_sizes/font_size = 72
 text = "Variation Configuration Menu"
 horizontal_alignment = 1
 
+[node name="PlayerHealthOverallContainer" type="VBoxContainer" parent="." unique_id=1149093678]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -290.0
+offset_right = 700.0
+offset_bottom = -190.0
+grow_vertical = 2
+
+[node name="PlayerHealthConfigLabel" type="Label" parent="PlayerHealthOverallContainer" unique_id=1406886811]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Player Starting Health"
+
+[node name="PlayerHealthControlContainer" type="HBoxContainer" parent="PlayerHealthOverallContainer" unique_id=2118963558]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="PlayerHealthSlider" type="HSlider" parent="PlayerHealthOverallContainer/PlayerHealthControlContainer" unique_id=1638721576]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 50.0
+max_value = 200.0
+value = 50.0
+rounded = true
+tick_count = 11
+
+[node name="PlayerHealthSpinbox" type="SpinBox" parent="PlayerHealthOverallContainer/PlayerHealthControlContainer" unique_id=1719108077]
+layout_mode = 2
+min_value = 50.0
+max_value = 200.0
+value = 50.0
+rounded = true
+alignment = 1
+custom_arrow_step = 1.0
+
+[node name="CombatUIConfigContainer" type="VBoxContainer" parent="." unique_id=37035971]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -90.0
+offset_right = 700.0
+offset_bottom = 10.0
+grow_vertical = 2
+theme_override_constants/separation = 10
+script = ExtResource("2_20i8a")
+
+[node name="CombatUIConfigLabel" type="Label" parent="CombatUIConfigContainer" unique_id=334257106]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Combat User Interface Selection"
+
+[node name="CombatUIConfigButtons" type="HBoxContainer" parent="CombatUIConfigContainer" unique_id=313468928]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="CombatUIOption1" type="Button" parent="CombatUIConfigContainer/CombatUIConfigButtons" unique_id=577117040]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+toggle_mode = true
+button_group = SubResource("ButtonGroup_m3ewx")
+text = "Combat UI Option 1"
+
+[node name="CombatUIOption2" type="Button" parent="CombatUIConfigContainer/CombatUIConfigButtons" unique_id=2061247635]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+toggle_mode = true
+button_group = SubResource("ButtonGroup_m3ewx")
+text = "Combat UI Option 2"
+
+[node name="SelectedUIOption" type="Label" parent="CombatUIConfigContainer" unique_id=1387858204]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
 [connection signal="button_up" from="ReturnButton" to="." method="return_to_debug"]
+[connection signal="toggled" from="CombatUIConfigContainer/CombatUIConfigButtons/CombatUIOption1" to="CombatUIConfigContainer" method="_on_combat_ui_option_1_toggled"]
+[connection signal="toggled" from="CombatUIConfigContainer/CombatUIConfigButtons/CombatUIOption2" to="CombatUIConfigContainer" method="_on_combat_ui_option_2_toggled"]
