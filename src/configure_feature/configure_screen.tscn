@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://460cna71fmo0" path="res://configure_feature/configure_script.gd" id="1_ffr7g"]
 [ext_resource type="Script" uid="uid://uw4xob2ct6x5" path="res://configure_feature/combat_ui_button_config.gd" id="2_20i8a"]
+[ext_resource type="Script" uid="uid://cja2efhvbcc4h" path="res://configure_feature/player_starting_health_config.gd" id="2_oo6kw"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_m3ewx"]
 resource_name = "CombatUIButtonGroup"
@@ -53,6 +54,7 @@ offset_top = -290.0
 offset_right = 700.0
 offset_bottom = -190.0
 grow_vertical = 2
+script = ExtResource("2_oo6kw")
 
 [node name="PlayerHealthConfigLabel" type="Label" parent="PlayerHealthOverallContainer" unique_id=1406886811]
 layout_mode = 2
@@ -127,5 +129,7 @@ theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 
 [connection signal="button_up" from="ReturnButton" to="." method="return_to_debug"]
+[connection signal="player_starting_health_edited" from="PlayerHealthOverallContainer" to="." method="_on_player_health_config_player_starting_health_edited"]
+[connection signal="combat_ui_type_edited" from="CombatUIConfigContainer" to="." method="_on_combat_ui_config_combat_ui_type_edited"]
 [connection signal="toggled" from="CombatUIConfigContainer/CombatUIConfigButtons/CombatUIOption1" to="CombatUIConfigContainer" method="_on_combat_ui_option_1_toggled"]
 [connection signal="toggled" from="CombatUIConfigContainer/CombatUIConfigButtons/CombatUIOption2" to="CombatUIConfigContainer" method="_on_combat_ui_option_2_toggled"]
