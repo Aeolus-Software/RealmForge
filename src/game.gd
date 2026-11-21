@@ -19,13 +19,9 @@ func _on_configure_button_up() -> void:
 	print("Configure button pressed")
 	get_tree().change_scene_to_packed(load("res://configure_feature/configure_screen.tscn"))
 
-
-<<<<<<< HEAD
 func make_random_button() -> void:
 	print("Hellow World")
 	
-=======
 func _on_ui_button_button_up():
 	# This could be changed to hide and show
 	print("UI button pressed")
->>>>>>> a5860935d76bab9ed59c39bd90e8fe4d53baf837
