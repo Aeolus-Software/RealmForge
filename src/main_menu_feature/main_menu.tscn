@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://kf3jslpg77uu"]
 
+[ext_resource type="Script" uid="uid://syyqwegawrc7" path="res://main_menu_feature/main_menu.gd" id="1_ak3i1"]
+
 [sub_resource type="Theme" id="Theme_g2ltg"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=505825357]
+script = ExtResource("1_ak3i1")
 
 [node name="Control" type="Control" parent="." unique_id=388358737]
 layout_mode = 3
@@ -58,3 +61,9 @@ size_flags_horizontal = 4
 theme = SubResource("Theme_g2ltg")
 theme_override_font_sizes/font_size = 45
 text = "Exit Game"
+
+[connection signal="button_up" from="Control/VBoxContainer/Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="Control/VBoxContainer/Configure" to="." method="_on_configure_button_up"]
+[connection signal="button_up" from="Control/VBoxContainer/Combat" to="." method="_on_combat_button_up"]
+[connection signal="button_up" from="Control/VBoxContainer/UI" to="." method="_on_ui_button_up"]
+[connection signal="button_up" from="Control/VBoxContainer/Exit" to="." method="_on_exit_button_up"]
