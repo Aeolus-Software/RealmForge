@@ -3,13 +3,12 @@
 Explicitly identify what code provides the interfaces and services documented in the design
 
 Configuration Module:
-    - Configuration Feature
+	- Configuration Feature
 
 UI Module: 
-    - User Interface feature
+	- User Interface feature
 
 Combat Module:
-    - Combat Features
+	- Combat Features
 
 Please add more stuff
-
