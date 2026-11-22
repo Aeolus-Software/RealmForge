@@ -1,15 +1,10 @@
 extends Control
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func return_to_debug() -> void:
-	print("returning to debug menu")
 	get_tree().change_scene_to_packed(load("res://game.tscn"))
+
+func _on_player_health_config_player_starting_health_edited(health: int) -> void:
+	VariationConfigs.player_starting_health = health
+
+func _on_combat_ui_config_combat_ui_type_edited(ui_type: VariationConfigs.CombatUIType) -> void:
+	VariationConfigs.selected_combat_ui = ui_type
