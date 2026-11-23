@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjrs1eajj0u4v"
-path="res://.godot/imported/health meter-34.png-2e3ccac5bd58c7f404173cc78020e857.ctex"
+uid="uid://b7kkrgobf74n7"
+path="res://.godot/imported/health meter-38.png-559cfe18ec214afab1ca9aaa8dbbd5a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://combat_feature/HealthAssets/health meter-34.png"
-dest_files=["res://.godot/imported/health meter-34.png-2e3ccac5bd58c7f404173cc78020e857.ctex"]
+source_file="res://combat_feature/HealthFeatures/HealthAssets/health meter-38.png"
+dest_files=["res://.godot/imported/health meter-38.png-559cfe18ec214afab1ca9aaa8dbbd5a9.ctex"]
 
 [params]
 

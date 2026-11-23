@@ -29,7 +29,7 @@ func _on_health_changed(new_health: int) -> void:
 
 	# Animate health bar
 	health_tween = create_tween()
-	health_tween.tween_property(self, "value", new_health, 1.0).set_trans(Tween.TRANS_SINE).set_delay(0.5)
+	health_tween.tween_property(self, "value", new_health, 1.0).set_trans(Tween.TRANS_SINE)
 
 	_update_health_label()
 

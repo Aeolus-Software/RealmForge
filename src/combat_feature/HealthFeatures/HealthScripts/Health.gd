@@ -1,4 +1,4 @@
-class_name Health extends CharacterBody2D
+class_name Health extends Node2D
 
 signal health_changed(new_health: int)
 signal max_health_changed(new_max_health: int)
@@ -36,3 +36,11 @@ func take_damage(amount: int) -> void:
 func heal(amount: int) -> void:
 	current_health = min(max_health, current_health + amount)
 	
+
+
+func _on_button_pressed() -> void:
+	take_damage(25)
+
+
+func _on_button_2_pressed() -> void:
+	heal(10)

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bs0xsfha6otf5"]
+
+[ext_resource type="Script" uid="uid://biqva732comw5" path="res://combat_feature/HealthFeatures/HealthScripts/Health.gd" id="1_ibta0"]
+[ext_resource type="Texture2D" uid="uid://bjrs1eajj0u4v" path="res://combat_feature/HealthFeatures/HealthAssets/health meter-34.png" id="1_v1n6y"]
+[ext_resource type="Texture2D" uid="uid://caov832b6mdip" path="res://combat_feature/HealthFeatures/HealthAssets/health meter-40.png" id="2_ibta0"]
+[ext_resource type="Script" uid="uid://bp3dhnlvmx0ri" path="res://combat_feature/HealthFeatures/HealthScripts/HealthUI.gd" id="3_v1n6y"]
+
+[node name="EnemyHealth" type="Node2D" unique_id=225602754]
+script = ExtResource("1_ibta0")
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1282312380]
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 784.0
+offset_bottom = 209.0
+scale = Vector2(0.56, 0.56)
+value = 100.0
+fill_mode = 1
+texture_under = ExtResource("1_v1n6y")
+texture_progress = ExtResource("2_ibta0")
+texture_progress_offset = Vector2(50, 28)
+script = ExtResource("3_v1n6y")
+
+[node name="HealthLabel" type="Label" parent="HealthBar" unique_id=2059634110]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 85.71429
+offset_right = 744.6429
+offset_bottom = 155.7143
+offset_transform_enabled = true
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "0
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=782571643]
+offset_left = 51.0
+offset_top = 68.0
+offset_right = 183.0
+offset_bottom = 178.0
+text = "Deal 25 damage"
+
+[node name="Button2" type="Button" parent="." unique_id=1505002486]
+offset_left = 190.0
+offset_top = 70.0
+offset_right = 312.0
+offset_bottom = 180.0
+text = "Heal 10 Health"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
