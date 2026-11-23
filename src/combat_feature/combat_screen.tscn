@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://bn2yggawt61at"]
 
 [ext_resource type="Script" uid="uid://dww8ep8mtdamt" path="res://combat_feature/combat_script.gd" id="1_obaly"]
+[ext_resource type="Script" uid="uid://biqva732comw5" path="res://combat_feature/Health.gd" id="2_hc44s"]
+[ext_resource type="Texture2D" uid="uid://bjrs1eajj0u4v" path="res://combat_feature/HealthAssets/health meter-34.png" id="3_t53nf"]
+[ext_resource type="Texture2D" uid="uid://caov832b6mdip" path="res://combat_feature/HealthAssets/health meter-40.png" id="4_t53nf"]
+[ext_resource type="Script" uid="uid://bp3dhnlvmx0ri" path="res://combat_feature/HealthUI.gd" id="5_8lrsv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfxu0"]
+radius = 34.36568
 
 [node name="CombatScreen" type="Node2D" unique_id=814379326]
 script = ExtResource("1_obaly")
@@ -21,5 +28,36 @@ offset_bottom = 656.0
 scale = Vector2(2, 2)
 text = "Return To Debug Menu
 "
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1553611142]
+script = ExtResource("2_hc44s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1421656312]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_lfxu0")
+
+[node name="HealthBar" type="TextureProgressBar" parent="CharacterBody2D" unique_id=2143736787]
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 784.0
+offset_bottom = 209.0
+scale = Vector2(0.56, 0.56)
+texture_under = ExtResource("3_t53nf")
+texture_progress = ExtResource("4_t53nf")
+texture_progress_offset = Vector2(114, 29)
+script = ExtResource("5_8lrsv")
+
+[node name="HealthLabel" type="Label" parent="CharacterBody2D/HealthBar" unique_id=2134703444]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(69, 88)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_up" from="ReturnButton" to="." method="return_to_debug"]
