@@ -2,7 +2,7 @@
 extends TextureProgressBar
 
 # Reference to the parent entity
-@onready var player: Health = get_parent()
+@onready var entity: Health = get_parent()
 
 @onready var health_label: Label = $HealthLabel
 
@@ -11,12 +11,12 @@ var health_tween: Tween
 
 func _ready() -> void:
 	# Connect signals
-	player.health_changed.connect(_on_health_changed)
-	player.max_health_changed.connect(_on_max_health_changed)
+	entity.health_changed.connect(_on_health_changed)
+	entity.max_health_changed.connect(_on_max_health_changed)
 
 	# Initialize health bar
-	max_value = player.max_health
-	value = player.current_health
+	max_value = entity.max_health
+	value = entity.current_health
 
 	# Initialize label
 	_update_health_label()
@@ -41,4 +41,4 @@ func _on_max_health_changed(new_max_health: int) -> void:
 
 
 func _update_health_label() -> void:
-	health_label.text = str(player.current_health) + "/" + str(player.max_health)
+	health_label.text = str(entity.current_health) + "/" + str(entity.max_health)

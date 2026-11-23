@@ -24,8 +24,7 @@ func set_health(new_health: int) -> void:
 	health_changed.emit(current_health)
 
 func _die() -> void:
-	print("Entity has died")
-	queue_free()
+	pass
 
 func take_damage(amount: int) -> void:
 	current_health = max(0, current_health - amount)
@@ -37,10 +36,8 @@ func heal(amount: int) -> void:
 	current_health = min(max_health, current_health + amount)
 	
 
-
 func _on_button_pressed() -> void:
 	take_damage(25)
-
 
 func _on_button_2_pressed() -> void:
 	heal(10)

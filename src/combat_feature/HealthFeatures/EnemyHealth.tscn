@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bs0xsfha6otf5"]
 
-[ext_resource type="Script" uid="uid://biqva732comw5" path="res://combat_feature/HealthFeatures/HealthScripts/Health.gd" id="1_ibta0"]
+[ext_resource type="Script" uid="uid://b0m0ehxfdhaly" path="res://combat_feature/HealthFeatures/HealthScripts/EnemyHealth.gd" id="1_ibta0"]
 [ext_resource type="Texture2D" uid="uid://bjrs1eajj0u4v" path="res://combat_feature/HealthFeatures/HealthAssets/health meter-34.png" id="1_v1n6y"]
 [ext_resource type="Texture2D" uid="uid://caov832b6mdip" path="res://combat_feature/HealthFeatures/HealthAssets/health meter-40.png" id="2_ibta0"]
 [ext_resource type="Script" uid="uid://bp3dhnlvmx0ri" path="res://combat_feature/HealthFeatures/HealthScripts/HealthUI.gd" id="3_v1n6y"]
