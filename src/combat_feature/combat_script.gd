@@ -1,9 +1,10 @@
 extends Node
 
+var ui_config = VariationConfigs.selected_combat_ui
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	print("UI option ", ui_config, " Selected")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
