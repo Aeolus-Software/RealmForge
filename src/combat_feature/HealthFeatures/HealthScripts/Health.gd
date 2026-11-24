@@ -3,8 +3,8 @@ class_name Health extends Node2D
 signal health_changed(new_health: int)
 signal max_health_changed(new_max_health: int)
 
-@export_range(60, 120) var max_health: int = 100: set = set_max_health, get = get_max_health
-var current_health: int = max_health: set = set_health, get = get_current_health
+var max_health: int: set = set_max_health, get = get_max_health
+var current_health: int: set = set_health, get = get_current_health
 
 func get_max_health() -> int:
 	return max_health
