@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bd3pephgu6lpy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pg3lg"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_b18il"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1355598761]
+scale = Vector2(10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1702538005]
+scale = Vector2(0.6, 0.6)
+shape = SubResource("RectangleShape2D_pg3lg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2056430148]
+modulate = Color(0, 1, 1, 1)
+scale = Vector2(10, 10)
+texture = SubResource("CanvasTexture_b18il")

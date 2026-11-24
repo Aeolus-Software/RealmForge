@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bs6puou7eh1py"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6bhq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_r6bhq"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1555113031]
+scale = Vector2(10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=974996314]
+scale = Vector2(0.6, 0.6)
+shape = SubResource("RectangleShape2D_r6bhq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2124611228]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(10, 10)
+texture = SubResource("CanvasTexture_r6bhq")
