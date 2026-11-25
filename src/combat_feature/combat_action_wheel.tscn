@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b21tpj4t3o2bt"]
+
+[ext_resource type="Script" uid="uid://cmwy8m6ntpqpa" path="res://combat_feature/combat_action_wheel.gd" id="1_ahbb7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahbb7"]
+bg_color = Color(0.13333334, 0.78039217, 0.9098039, 1)
+
+[node name="CombatActionWheel" type="CanvasLayer" unique_id=1968697669]
+script = ExtResource("1_ahbb7")
+
+[node name="WheelContainer" type="Control" parent="." unique_id=1558324850]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -97.0
+offset_right = -102.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="PlayerButton" type="Button" parent="WheelContainer" unique_id=1824088579]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ahbb7")
+
+[node name="Attack1Button" type="Button" parent="WheelContainer" unique_id=1324431690]
+layout_mode = 0
+offset_left = 13.75
+offset_top = -53.5
+offset_right = 43.75
+offset_bottom = -23.166656
+text = "⚔"
+
+[node name="Attack2Button" type="Button" parent="WheelContainer" unique_id=1104424747]
+layout_mode = 0
+offset_left = 79.5
+offset_top = 11.0
+offset_right = 109.5
+offset_bottom = 41.333344
+text = "⚡"
+
+[node name="HealButton" type="Button" parent="WheelContainer" unique_id=1885500844]
+layout_mode = 0
+offset_left = -50.5
+offset_top = 14.25
+offset_right = -20.5
+offset_bottom = 44.583344
+text = "❤️"
+
+[node name="BlockButton" type="Button" parent="WheelContainer" unique_id=1017903231]
+layout_mode = 0
+offset_left = 12.25
+offset_top = 71.0
+offset_right = 51.25
+offset_bottom = 102.0
+text = " 🛡️ "
+
+[node name="ExitButton" type="Button" parent="WheelContainer" unique_id=143105964]
+layout_mode = 0
+offset_left = -191.5
+offset_top = 109.5
+offset_right = -4.5
+offset_bottom = 140.5
+text = "Return To Debug Menu"
