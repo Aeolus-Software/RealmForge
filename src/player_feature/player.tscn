@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bd3pephgu6lpy"]
 
 [ext_resource type="Script" uid="uid://nrreu1wwn0gq" path="res://player_feature/player.gd" id="1_b18il"]
+[ext_resource type="PackedScene" uid="uid://3gqj3e6ojukh" path="res://combat_feature/HealthFeatures/PlayerHealth.tscn" id="2_v2m5o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pg3lg"]
 
@@ -18,3 +19,6 @@ shape = SubResource("RectangleShape2D_pg3lg")
 modulate = Color(0, 1, 1, 1)
 scale = Vector2(10, 10)
 texture = SubResource("CanvasTexture_b18il")
+
+[node name="PlayerHealth" parent="." unique_id=225602754 instance=ExtResource("2_v2m5o")]
+position = Vector2(-25, -20)

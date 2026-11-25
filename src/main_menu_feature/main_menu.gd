@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 func _on_combat_button_up() -> void:
 	print("Combat button pressed")
 	# This could be changed to hide and show
-	get_tree().change_scene_to_packed(load("res://combat_feature/combat_screen.tscn"))
+	get_tree().change_scene_to_packed(load("res://combat_feature/combat_encounter.tscn"))
 
 func _on_configure_button_up() -> void:
 	# This could be changed to hide and show
