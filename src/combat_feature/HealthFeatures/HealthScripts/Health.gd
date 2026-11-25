@@ -35,9 +35,3 @@ func take_damage(amount: int) -> void:
 func heal(amount: int) -> void:
 	current_health = min(max_health, current_health + amount)
 	health_changed.emit(current_health)
-
-func _on_button_pressed() -> void:
-	take_damage(25)
-
-func _on_button_2_pressed() -> void:
-	heal(10)

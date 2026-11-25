@@ -34,20 +34,3 @@ theme_override_font_sizes/font_size = 24
 text = "0
 "
 horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="." unique_id=782571643]
-offset_left = 160.0
-offset_top = -126.66667
-offset_right = 292.0
-offset_bottom = -16.666672
-text = "Deal 25 damage"
-
-[node name="Button2" type="Button" parent="." unique_id=1505002486]
-offset_left = 299.0
-offset_top = -124.66667
-offset_right = 421.0
-offset_bottom = -14.666672
-text = "Heal 10 Health"
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
