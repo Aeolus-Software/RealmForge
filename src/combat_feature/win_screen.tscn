@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://diq50nmgvuukr"]
+
+[ext_resource type="Script" uid="uid://c6f1ribjn7wx2" path="res://combat_feature/death_screen.gd" id="1_ir5mi"]
+
+[node name="DeathScreen" type="CanvasLayer" unique_id=538000208]
+script = ExtResource("1_ir5mi")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=278039378]
+offset_top = -1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.34901962)
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=919223247]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1929.0
+offset_bottom = 1203.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 0)
+text = "Click anywhere to continue"
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1312612308]
+layout_mode = 0
+offset_right = 1911.0
+offset_bottom = 1078.0
+theme_override_colors/font_color = Color(0, 0.76862746, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "YOU WIN!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="ColorRect/Button" to="." method="_on_button_button_down"]

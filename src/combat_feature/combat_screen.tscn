@@ -91,3 +91,4 @@ text = "Block"
 [connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action1" to="." method="_on_action_1_button_up"]
 [connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action2" to="." method="_on_action_2_button_up"]
 [connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action3" to="." method="_on_action_3_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action4" to="." method="_on_action_4_button_up"]

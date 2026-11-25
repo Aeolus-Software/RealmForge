@@ -9,6 +9,7 @@ func _ready() -> void:
 	health.enemy_die.connect(_is_dead)
 	
 func do_action():
+	print("Enemy attacks player for 10 health")
 	enemy_action.emit(10)
 
 func _is_dead():
