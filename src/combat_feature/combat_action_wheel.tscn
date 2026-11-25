@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://b21tpj4t3o2bt"]
+
+[ext_resource type="Script" uid="uid://cmwy8m6ntpqpa" path="res://combat_feature/combat_action_wheel.gd" id="1_ahbb7"]
+[ext_resource type="Texture2D" uid="uid://c0f0rk2laku6i" path="res://combat_feature/CombatUI2Files/sword-fight-svgrepo-com.svg" id="2_iw2p4"]
+[ext_resource type="Texture2D" uid="uid://dfubs0tpf4obk" path="res://combat_feature/CombatUI2Files/lightning-svgrepo-com.svg" id="3_8kmkf"]
+[ext_resource type="Texture2D" uid="uid://c54gtiwnfvm6v" path="res://combat_feature/CombatUI2Files/heal-svgrepo-com.svg" id="4_vofty"]
+[ext_resource type="Texture2D" uid="uid://bixggt88wpwjf" path="res://combat_feature/CombatUI2Files/shield-svgrepo-com.svg" id="5_0dba0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahbb7"]
+bg_color = Color(0.13333334, 0.78039217, 0.9098039, 1)
+
+[node name="CombatActionWheel" type="CanvasLayer" unique_id=1968697669]
+script = ExtResource("1_ahbb7")
+
+[node name="WheelContainer" type="Control" parent="." unique_id=1558324850]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -97.0
+offset_right = -102.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="PlayerButton" type="Button" parent="WheelContainer" unique_id=1824088579]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ahbb7")
+
+[node name="Attack1Button" type="Button" parent="WheelContainer" unique_id=1324431690]
+layout_mode = 0
+offset_left = -8.75
+offset_top = -88.5
+offset_right = 66.25
+offset_bottom = -14.75
+icon = ExtResource("2_iw2p4")
+expand_icon = true
+
+[node name="Attack2Button" type="Button" parent="WheelContainer" unique_id=1104424747]
+layout_mode = 0
+offset_left = 95.25
+offset_top = -14.5
+offset_right = 173.5
+offset_bottom = 65.5
+icon = ExtResource("3_8kmkf")
+expand_icon = true
+
+[node name="HealButton" type="Button" parent="WheelContainer" unique_id=1885500844]
+layout_mode = 0
+offset_left = -111.0
+offset_top = -14.5
+offset_right = -35.0
+offset_bottom = 63.5
+icon = ExtResource("4_vofty")
+expand_icon = true
+
+[node name="BlockButton" type="Button" parent="WheelContainer" unique_id=1017903231]
+layout_mode = 0
+offset_left = -8.75
+offset_top = 75.25
+offset_right = 67.5
+offset_bottom = 152.75
+icon = ExtResource("5_0dba0")
+expand_icon = true
+
+[node name="ExitButton" type="Button" parent="WheelContainer" unique_id=143105964]
+layout_mode = 0
+offset_left = -200.75
+offset_top = 122.5
+offset_right = -13.75
+offset_bottom = 153.5
+text = "Return To Debug Menu"
