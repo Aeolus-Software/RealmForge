@@ -16,6 +16,7 @@ func _is_dead():
 	
 	
 func _action_incoming(amount):
-	var new_health = health.get_current_health()-amount
-	health.set_health(new_health)
-	health.health_changed.emit(new_health)
+	if(amount > 0):
+		health.take_damage(amount)
+	else:
+		health.heal(amount)

@@ -8,6 +8,3 @@ func _ready() -> void:
 
 func _die() -> void:
 	player_die.emit()
-	var death_screen_scene = preload("res://combat_feature/death_screen.tscn")
-	var death_screen = death_screen_scene.instantiate()
-	get_tree().root.add_child(death_screen)

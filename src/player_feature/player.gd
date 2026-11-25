@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-signal dead
-
 @onready var health: PlayerHealth = $PlayerHealth
 
 func _ready() -> void:
@@ -10,11 +8,11 @@ func _ready() -> void:
 	health.player_die.connect(_is_dead)
 
 func _is_dead():
-	dead.emit()
+	pass
 	
 	
 func _action_incoming(amount):
 	if(amount > 0):
 		health.take_damage(amount)
 	else:
-		health.heal(amount)
+		health.heal(-amount)
