@@ -17,21 +17,35 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=2141862352]
+[node name="Title" type="Label" parent="Control" unique_id=1149512552]
 layout_mode = 0
 offset_left = 373.0
 offset_top = 340.0
 offset_right = 1547.0
-offset_bottom = 740.0
-
-[node name="Title" type="Label" parent="Control/VBoxContainer" unique_id=1149512552]
-layout_mode = 2
+offset_bottom = 634.5209
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, -201)
 theme_override_font_sizes/font_size = 211
 text = "Realmforge"
 
+[node name="Panel" type="Panel" parent="Control" unique_id=289635204]
+modulate = Color(1, 1, 1, 0.6745098)
+layout_mode = 0
+offset_left = 610.0
+offset_top = 675.0
+offset_right = 1310.0
+offset_bottom = 975.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=2141862352]
+layout_mode = 0
+offset_left = 610.0
+offset_top = 700.0
+offset_right = 1310.0
+offset_bottom = 1000.0
+theme_override_constants/separation = 16
+
 [node name="Play" type="Button" parent="Control/VBoxContainer" unique_id=353314123]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 45
@@ -41,19 +55,13 @@ text = "Start Game"
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 45
-text = "Configure Settings"
+text = "Configuration Menu"
 
 [node name="Combat" type="Button" parent="Control/VBoxContainer" unique_id=253939626]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 45
-text = "Debug: Combat"
-
-[node name="UI" type="Button" parent="Control/VBoxContainer" unique_id=633632894]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 45
-text = "Debug: User Interface"
+text = "Combat Screen"
 
 [node name="Exit" type="Button" parent="Control/VBoxContainer" unique_id=1342966374]
 layout_mode = 2
@@ -65,5 +73,4 @@ text = "Exit Game"
 [connection signal="button_up" from="Control/VBoxContainer/Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="Control/VBoxContainer/Configure" to="." method="_on_configure_button_up"]
 [connection signal="button_up" from="Control/VBoxContainer/Combat" to="." method="_on_combat_button_up"]
-[connection signal="button_up" from="Control/VBoxContainer/UI" to="." method="_on_ui_button_up"]
 [connection signal="button_up" from="Control/VBoxContainer/Exit" to="." method="_on_exit_button_up"]

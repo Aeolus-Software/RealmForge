@@ -7,7 +7,7 @@ signal action_selected(action)
 @onready var attack2_button = $WheelContainer/Attack2Button
 @onready var heal_button = $WheelContainer/HealButton
 @onready var block_button = $WheelContainer/BlockButton
-@onready var exit_button = $WheelContainer/ExitButton
+@onready var exit_button = $ExitButton
 
 var wheel_open = false
 
@@ -49,6 +49,14 @@ func combat_action_chosen(combat_action):
 	action_selected.emit(combat_action)
 	wheel_open = false
 	open_buttons(false)
+
+func set_input_enabled(enabled):
+	if enabled:
+		print("Player Turn")
+	attack1_button.disabled = not enabled
+	attack2_button.disabled = not enabled
+	heal_button.disabled = not enabled
+	block_button.disabled = not enabled
 
 func return_to_menu():
 	print("returning to debug menu")

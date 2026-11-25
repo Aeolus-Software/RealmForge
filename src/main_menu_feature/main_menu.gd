@@ -20,10 +20,6 @@ func _on_configure_button_up() -> void:
 	print("Configure button pressed")
 	get_tree().change_scene_to_packed(load("res://configure_feature/configure_screen.tscn"))
 
-func _on_ui_button_button_up():
-	# This could be changed to hide and show
-	print("UI button pressed")
-
 func _on_play_button_up():
 	print("Start Game Button pressed")
 
