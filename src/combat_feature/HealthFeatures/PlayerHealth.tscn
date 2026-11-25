@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bp3dhnlvmx0ri" path="res://combat_feature/HealthFeatures/HealthScripts/HealthUI.gd" id="4_hekld"]
 
 [node name="PlayerHealth" type="Node2D" unique_id=225602754]
+scale = Vector2(0.15, 0.15)
 script = ExtResource("1_qfac1")
 
 [node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1282312380]
@@ -32,20 +33,3 @@ theme_override_font_sizes/font_size = 24
 text = "0
 "
 horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="." unique_id=782571643]
-offset_left = 117.0
-offset_top = 69.0
-offset_right = 220.0
-offset_bottom = 179.0
-text = "Deal 25 damage"
-
-[node name="Button2" type="Button" parent="." unique_id=1505002486]
-offset_left = 258.0
-offset_top = 70.0
-offset_right = 380.0
-offset_bottom = 180.0
-text = "Heal 10 Health"
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

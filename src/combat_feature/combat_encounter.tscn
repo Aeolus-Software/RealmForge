@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dtkdsrl5ljhhe"]
+
+[ext_resource type="Script" uid="uid://cxktnvt6d6m8q" path="res://combat_feature/combat_encounter.gd" id="1_uvph4"]
+[ext_resource type="PackedScene" uid="uid://bd3pephgu6lpy" path="res://player_feature/player.tscn" id="2_2yjwb"]
+[ext_resource type="PackedScene" uid="uid://bs6puou7eh1py" path="res://enemy_feature/enemy.tscn" id="3_t6ym8"]
+
+[node name="CombatEncounter" type="Node2D" unique_id=810949549]
+script = ExtResource("1_uvph4")
+
+[node name="Player" parent="." unique_id=1355598761 instance=ExtResource("2_2yjwb")]
+position = Vector2(350, 550)
+
+[node name="Enemy" parent="." unique_id=1555113031 instance=ExtResource("3_t6ym8")]
+position = Vector2(1550, 550)

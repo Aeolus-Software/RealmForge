@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bn2yggawt61at"]
 
 [ext_resource type="Script" uid="uid://dww8ep8mtdamt" path="res://combat_feature/combat_script.gd" id="1_obaly"]
-[ext_resource type="PackedScene" uid="uid://bd3pephgu6lpy" path="res://player_feature/player.tscn" id="3_db1g3"]
 
 [node name="CombatScreen" type="CanvasLayer" unique_id=1921978951]
 script = ExtResource("1_obaly")
@@ -88,11 +87,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "Block"
 
-[node name="Player" parent="." unique_id=1355598761 instance=ExtResource("3_db1g3")]
-position = Vector2(424.99997, 500.99997)
-
 [connection signal="button_up" from="Control/ReturnButton" to="." method="return_to_debug"]
-[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action1" to="Player" method="_on_action_1_button_up"]
-[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action2" to="Player" method="_on_action_2_button_up"]
-[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action3" to="Player" method="_on_action_3_button_up"]
-[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action4" to="Player" method="_on_action_4_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action1" to="." method="_on_action_1_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action2" to="." method="_on_action_2_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action3" to="." method="_on_action_3_button_up"]
+[connection signal="button_up" from="Control/MarginContainer/VBoxContainer/Action4" to="." method="_on_action_4_button_up"]

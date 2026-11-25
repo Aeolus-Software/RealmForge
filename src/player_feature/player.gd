@@ -1,15 +1,18 @@
 extends CharacterBody2D
-func _ready():
+
+@onready var health: PlayerHealth = $PlayerHealth
+
+func _ready() -> void:
 	print("Player starts with ", VariationConfigs.player_starting_health, " HP")
+	get_parent().player_targeted.connect(_action_incoming)
+	health.player_die.connect(_is_dead)
 
-func _on_action_1_button_up():
-	print("Attack #1 pressed")
-
-func _on_action_2_button_up():
-	print("Attack #2")
+func _is_dead():
+	pass
 	
-func _on_action_3_button_up():
-	print("Heal")
 	
-func _on_action_4_button_up():
-	print("Block")
+func _action_incoming(amount):
+	if(amount > 0):
+		health.take_damage(amount)
+	else:
+		health.heal(-amount)

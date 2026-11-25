@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6f1ribjn7wx2" path="res://combat_feature/death_screen.gd" id="1_7054p"]
 
-[node name="DeathScreen" type="Node2D" unique_id=768931025]
+[node name="DeathScreen" type="CanvasLayer" unique_id=538000208]
 script = ExtResource("1_7054p")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=278039378]
