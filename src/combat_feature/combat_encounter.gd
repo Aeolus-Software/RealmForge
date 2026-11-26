@@ -22,7 +22,8 @@ func _ready() -> void:
 		ui_scene = load("res://combat_feature/combat_screen.tscn")
 		ui_instance = ui_scene.instantiate()
 	else:
-		pass
+		ui_scene = load("res://combat_feature/combat_action_wheel.tscn")
+		ui_instance = ui_scene.instantiate()
 	add_child(ui_instance)
 	ui_instance.action_selected.connect(_on_action_selected)
 	enemy.enemy_action.connect(_on_enemy_action_selected)

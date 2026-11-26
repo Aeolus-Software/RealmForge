@@ -21,4 +21,4 @@ scale = Vector2(10, 10)
 texture = SubResource("CanvasTexture_b18il")
 
 [node name="PlayerHealth" parent="." unique_id=225602754 instance=ExtResource("2_v2m5o")]
-position = Vector2(-25, -20)
+position = Vector2(-30, -37.5)

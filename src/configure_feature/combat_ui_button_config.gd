@@ -4,10 +4,11 @@ extends VBoxContainer
 const CombatUIType = VariationConfigs.CombatUIType
 signal combat_ui_type_edited(ui_type: VariationConfigs.CombatUIType)
 
-var _selected_combat_ui: CombatUIType = CombatUIType.OPTION_1
+var _selected_combat_ui: CombatUIType = VariationConfigs.selected_combat_ui
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	_selected_combat_ui = VariationConfigs.selected_combat_ui
 	_update_combat_ui_type(_selected_combat_ui)
 
 func _on_combat_ui_option_1_toggled(toggled_on: bool) -> void:
